@@ -1,0 +1,13 @@
+embedding_size: 768
+hidden_size: 128
+model_path: Hello/ner_ch/src/lstm_crf/models/
+batch_size: 64
+max_length: 128
+dropout: 0.5
+tags:
+  - AIR
+  - WEA
+  - MATH
+  - SYS
+  - TAR
+  - DOC

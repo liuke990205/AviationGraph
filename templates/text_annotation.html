@@ -1,0 +1,452 @@
+{% extends 'index.html' %}
+{% block en %}
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <title>文本标注界面</title>
+
+
+    <link href="/static/css/style.css" rel="stylesheet">
+    <link href="/static/css/elegant-icons-style.css" rel="stylesheet">
+    <link rel="stylesheet" href="/static/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="http://cdn.static.runoob.com/libs/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link href="/static/css/font-awesome.min.css" rel="stylesheet"/>
+    <link rel="stylesheet" href="/static/css/bootstrap.css"/>
+    <link rel="stylesheet" href="/static/css/style2.css"/>
+
+    <script type="text/javascript" src="/static/js/jquery.min.js"></script>
+    <script type="text/javascript" src="/static/js/bootstrap.min.js"></script>
+    <script src="/static/js/echarts.common.min.js"></script>
+    <script src="http://cdn.static.runoob.com/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script src="http://cdn.static.runoob.com/libs/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="http://echarts.baidu.com/gallery/vendors/echarts/echarts-all-3.js"></script>
+
+    <style>
+        .file input {
+            position: absolute;
+            font-size: 100px;
+            right: 0;
+            top: 0;
+            opacity: 0;
+        }
+
+        input[type="checkbox"] {
+            -webkit-appearance: none;
+            vertical-align: middle;
+            margin-top: 0;
+            background: #fff;
+            border: #999 solid 1px;
+            border-radius: 3px;
+            min-height: 12px;
+            min-width: 12px;
+        }
+
+        input[type="checkbox"]:checked {
+            background: #3190e8;
+        }
+
+        input[type="checkbox"]:checked::after {
+            content: '';
+            top: 3px;
+            left: 3px;
+            position: absolute;
+            background: transparent;
+            border: #fff solid 2px;
+            border-top: none;
+            border-right: none;
+            height: 6px;
+            width: 10px;
+            -moz-transform: rotate(-45deg);
+            -ms-transform: rotate(-45deg);
+            -webkit-transform: rotate(-45deg);
+            transform: rotate(-45deg);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+        <!--head start-->
+        <div class="col-md-12">
+            <ol class="breadcrumb">
+                <li><i class="fa fa-home"></i><a href="/toHome/">主页</a></li>
+                <li><i class="fa fa-link" aria-hidden="true"></i>文本标注</li>
+            </ol>
+        </div>
+        <div class="col-md-12">
+            <div class="panel panel-default">
+                <header class="panel-heading">
+                    待标注文档上传：
+                </header>
+                <div class="panel-body">
+                    <form name="upload" enctype="multipart/form-data" method="post" action="/upload/">
+                        {% csrf_token %}
+                        <input name="file" id="file" type="file" style="display: none"/>
+                        <div class="input-append">
+                            <input id="photoCover" type="text" class="form-control"
+                                   style="float: left; width: 350px">
+                            <a class="btn btn-default" style="border-radius: 0px; width: 50px"
+                               onclick="$('input[id=file]').click();">
+                                浏览
+                            </a>
+                            <button type="submit"
+                                    style="background-color:#8fd19e; width: 116px;height: 36px; margin-left: 100px" name="upload">上传文档
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-12">
+            <div class="panel panel-default">
+                <header class="panel-heading">
+                    待标注文本：
+                </header>
+                <div class="panel-body">
+                    <div align="center">
+                        <h3>当前用户还剩<span style="color: #00cc00">{{ count }}</span>条数据未标注！</h3>
+                            <textarea rows="5" cols="120" placeholder="" style="font-size: 15px">{{ current_text }}</textarea>
+                    </div>
+                    <form name="text" method="post" action="/display_text/">
+                        {% csrf_token %}
+                        <br/>
+                        <div align="center">
+                            <button type="submit" class="btn-warning" name="next" style="font-size:18px;">下一条
+                            </button>
+                            <br/>
+                        </div>
+                     </form>
+                </div>
+            </div>
+        </div>
+
+        {% if ctx %}
+        <div class="col-md-12">
+            <div class="panel panel-default">
+                <header class="panel-heading">
+                    查询结果：
+                </header>
+                <div class="panel-body">
+                    <div style="padding: 2%">
+                        <h2>暂未找到相应的匹配</h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+        {% endif %}
+
+        {% if entityList %}
+        <div class="col-md-12">
+            <div class="panel panel-default ">
+                <header class="panel-heading">
+                    实体表:
+                </header>
+                <div class="panel-body">
+                    <input type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal3"
+                           value="Add entity information" style="margin-left: 170px; font-size: 16px"/>
+                    <br>
+                    <br>
+                    <div class="show-list">
+                        <table style="width: 800px" class="table table-bordered table-hover" align="center" border="solid 3px">
+                            <thead>
+                            <tr align="center" class="text-danger">
+                                <th align="center" width="200px" class="text-center" style="font-size: 16px">实体</th>
+                                <th align="center" width="200px" class="text-center" style="font-size: 16px">实体类型
+                                <th align="center" width="250" class="text-center" style="font-size: 16px">用户操作</th>
+                            </tr>
+                            </thead>
+                            <tbody id="tb">
+                            {% for key, value in entityList.items %}
+                                <tr>
+                                    <td align="center" style="display:table-cell; vertical-align:middle; font-size: 15px">{{ key }}</td>
+                                    <td align="center" style="display:table-cell; vertical-align:middle; font-size: 15px">{{ value }}</td>
+                                    <td class="text-center">
+                                    <a href="{% url 'deleteDictionary' %}?entity={{ key }}">
+                                        <button class="btn btn-danger" type="button" onclick="return confirm('是否确认删除？');">
+                                            <span class="glyphicon glyphicon-remove" aria-hidden="true"></span> Delete
+                                        </button>
+                                    </a>
+                                </td>
+                                </tr>
+                                </tbody>
+                            {% endfor %}
+                        </table>
+                    </div>
+                    <form name="data" method="post" action="/text_annotation/">
+                        {% csrf_token %}
+                        <div align="center">
+                            <button type="submit" class="btn-warning" name="next" style="font-size:18px;">开始标注</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+        {% endif %}
+
+        {% if resultList %}
+        <div class="col-md-12">
+            <div class="panel panel-default ">
+                <header class="panel-heading">
+                    标注后的数据 :
+                </header>
+                <div class="panel-body ">
+                    <input type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal2"
+                           value="Add annotation information" style="font-size: 16px; float: left">
+                    <div class="show-list" style="position: relative;top: 30px;">
+                        <table style="width: 1100px" class="table table-bordered table-hover" align="center" border="solid 3px">
+                            <thead>
+                            <tr align="center" class="text-danger">
+                                <th align="center" width="150" class="text-center" style="font-size: 16px">头实体</th>
+                                <th align="center" width="100" class="text-center" style="font-size: 16px">头实体类型</th>
+
+                                <th align="center" width="150" class="text-center" style="font-size: 16px">尾实体</th>
+                                <th align="center" width="100" class="text-center" style="font-size: 16px">尾实体类型</th>
+
+                                <th align="center" width="100" class="text-center" style="font-size: 16px">关系类别</th>
+                                <th align="center" width="250" class="text-center" style="font-size: 16px">用户操作</th>
+                            </tr>
+                            </thead>
+                            <tbody id="tb">
+                            {% for list in resultList %}
+                                <tr>
+                                    <td align="center" style="display:table-cell; vertical-align:middle; font-size: 15px">{{ list.headEntity }}</td>
+                                    <td align="center" style="display:table-cell; vertical-align:middle; font-size: 15px">{{ list.headEntityType }}</td>
+                                    <td align="center" style="display:table-cell; vertical-align:middle; font-size: 15px">{{ list.tailEntity }}</td>
+                                    <td align="center" style="display:table-cell; vertical-align:middle; font-size: 15px">{{ list.tailEntityType }}</td>
+                                    <td align="center" style="display:table-cell; vertical-align:middle; font-size: 15px">{{ list.relationshipCategory }}</td>
+                                    <td class="text-center">
+                                        <!-- 按钮触发模态框 -->
+                                        <input type="button" class="btn btn-warning btn-sm doProModify" style="font-size: 15px" data-toggle="modal"
+                                               data-target="#myModal" value="Modify"
+                                               onclick="
+                                                       document.getElementById('temp_id').value='{{ list.temp_id }}';
+                                                       document.getElementById('headEntity').value='{{ list.headEntity }}';
+                                                       document.getElementById('headEntityType').value='{{ list.headEntityType }}';
+                                                       document.getElementById('tailEntity').value='{{ list.tailEntity }}';
+                                                       document.getElementById('tailEntityType').value='{{ list.tailEntityType }}';
+                                                       document.getElementById('relationshipCategory').value='{{ list.relationshipCategory }}';">
+                                        <a href="{% url 'deleteTemp' %}?temp_id={{ list.temp_id }}">
+                                            <button class="btn btn-danger" type="button"
+                                                    onclick="return confirm('是否确认删除？');">
+                                                <span class="glyphicon glyphicon-remove" aria-hidden="true"></span> Delete
+                                            </button>
+                                        </a>
+                                    </td>
+                                </tr>
+                                </tbody>
+                            {% endfor %}
+                        </table>
+                    </div>
+                    <br>
+                </div>
+            </div>
+        </div>
+        {% endif %}
+        {%if resultList %}
+        <div class="footers">
+            <span style="color: white;">© 2020 东北大学-数字线技术项目团队 版权所有</span>
+        </div>
+        {% endif %}
+        </div>
+    </div>
+
+
+    {% if messages %}
+        <script>
+            {% for msg in messages %}
+                alert('{{ msg.message }}');
+            {% endfor %}
+        </script>
+    {% endif %}
+
+
+    <!-- 模态框（Modal） 修改-->
+    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal"
+                            aria-hidden="true">×
+                    </button>
+                    <h4 class="modal-title" id="myModalLabel" style="font-size:20px;">
+                        Modify Annotation Information
+                    </h4>
+                </div>
+                <div class="modal-body">
+                    <form id="modifyTemp" class="form-horizontal" action="/modifyTemp/" method="post">
+                        {% csrf_token %}
+                        <div class="form-group">
+                            <label for="temp_id" class="col-sm-2 control-label">编号：</label>
+                            <div class="col-sm-10">
+                                <input type="text" class="form-control" id="temp_id" placeholder="temp_id"
+                                       name="temp_id" required="required" readonly>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="headEntity" class="col-sm-2 control-label">头实体：</label>
+                            <div class="col-sm-10">
+                                <input type="text" class="form-control" id="headEntity" name="headEntity"
+                                       placeholder="headEntity" required="required">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="headEntityType" class="col-sm-2 control-label">头实体类型：</label>
+                            <div class="col-sm-10">
+                                <input type="text" class="form-control" id="headEntityType" name="headEntityType"
+                                       placeholder="headEntityType" required="required">
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="tailEntity" class="col-sm-2 control-label">尾实体：</label>
+                            <div class="col-sm-10">
+                                <input type="text" class="form-control" id="tailEntity" name="tailEntity"
+                                       placeholder="tailEntity" required="required">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="tailEntityType" class="col-sm-2 control-label">尾实体类型：</label>
+                            <div class="col-sm-10">
+                                <input type="text" class="form-control" id="tailEntityType" name="tailEntityType"
+                                       placeholder="tailEntityType" required="required">
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="relationshipCategory" class="col-sm-2 control-label">关系类别：</label>
+                            <div class="col-sm-10">
+                                <input type="text" class="form-control" id="relationshipCategory"
+                                       name="relationshipCategory" placeholder="relationshipCategory"
+                                       required="required">
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button class="btn btn-default" data-dismiss="modal">关闭</button>
+                            <button type="submit" class="btn btn-primary updatePro">提交更改</button>
+                        </div>
+                    </form>
+                </div>
+
+            </div><!-- /.modal-content -->
+        </div><!-- /.modal-dialog -->
+    </div><!-- /.modal -->
+
+
+    <!-- 模态框（Modal） 标注信息添加-->
+    <div class="modal fade" id="myModal2" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal"
+                            aria-hidden="true">×
+                    </button>
+                    <h4 class="modal-title" id="myModalLabel" style="font-size:20px;">
+                        Add Annotation Information
+                    </h4>
+                </div>
+                <div class="modal-body">
+                    <form id="addTemp" class="form-horizontal" action="/addTemp/" method="post">
+                        {% csrf_token %}
+                        <div class="form-group">
+                            <label for="headEntity" class="col-sm-2 control-label">头实体：</label>
+                            <div class="col-sm-10">
+                                <input type="text" class="form-control" id="headEntity" name="headEntity"
+                                       placeholder="headEntity" required="required">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="headEntityType" class="col-sm-2 control-label">头实体类型：</label>
+                            <div class="col-sm-10">
+                                <input type="text" class="form-control" id="headEntityType" name="headEntityType"
+                                       placeholder="headEntityType" required="required">
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="tailEntity" class="col-sm-2 control-label">尾实体：</label>
+                            <div class="col-sm-10">
+                                <input type="text" class="form-control" id="tailEntity" name="tailEntity"
+                                       placeholder="tailEntity" required="required">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="tailEntityType" class="col-sm-2 control-label">尾实体类型：</label>
+                            <div class="col-sm-10">
+                                <input type="text" class="form-control" id="tailEntityType" name="tailEntityType"
+                                       placeholder="tailEntityType" required="required">
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="relationshipCategory" class="col-sm-2 control-label">关系类别：</label>
+                            <div class="col-sm-10">
+                                <input type="text" class="form-control" id="relationshipCategory"
+                                       name="relationshipCategory" placeholder="relationshipCategory"
+                                       required="required">
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button class="btn btn-default" data-dismiss="modal">关闭</button>
+                            <button type="submit" class="btn btn-primary updatePro">提交添加</button>
+                        </div>
+                    </form>
+                </div>
+
+            </div><!-- /.modal-content -->
+        </div><!-- /.modal-dialog -->
+    </div><!-- /.modal -->
+
+    <!-- 模态框（Modal） 实体信息（字典）添加-->
+    <div class="modal fade" id="myModal3" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal"
+                            aria-hidden="true">×
+                    </button>
+                    <h4 class="modal-title" id="myModalLabel" style="font-size:20px;">
+                        Add Entity Information
+                    </h4>
+                </div>
+
+                <div class="modal-body">
+                    <form id="addDictionary" class="form-horizontal" action="/addDictionary/" method="post">
+                        {% csrf_token %}
+                        <div class="form-group">
+                            <label for="entity" class="col-sm-2 control-label">实体：</label>
+                            <div class="col-sm-10">
+                                <input type="text" class="form-control" id="entity" name="entity" placeholder="entity"
+                                       required="required">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="entity_type" class="col-sm-2 control-label">实体类型：</label>
+                            <div class="col-sm-10">
+                                <input type="text" class="form-control" id="entity_type" name="entity_type"
+                                       placeholder="entity_type" required="required">
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button class="btn btn-default" data-dismiss="modal">关闭</button>
+                            <button type="submit" class="btn btn-primary updatePro">提交添加</button>
+                        </div>
+                    </form>
+                </div>
+            </div><!-- /.modal-content -->
+        </div><!-- /.modal-dialog -->
+    </div><!-- /.modal -->
+
+
+    <script type="text/javascript" src="/static/js/jquery.min.js"></script>
+    <script type="text/javascript" src="/static/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="/static/js/moment.js"></script>
+    <script type="text/javascript">
+    $('input[id=file]').change(function () {
+        $('#photoCover').val($(this).val());
+    });
+    </script>
+</body>
+</html>
+
+{% endblock en %}

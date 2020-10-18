@@ -1,0 +1,299 @@
+{% extends 'index.html' %}
+{% block en %}
+{% load pagination_tags %}
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+        <title></title>
+        <meta charset="utf-8"/>
+        <link rel="stylesheet" href="/static/css/bootstrap.min.css"/>
+        <link rel="stylesheet" href="http://cdn.static.runoob.com/libs/bootstrap/3.3.7/css/bootstrap.min.css">
+        <link href="/static/css/font-awesome.min.css" rel="stylesheet"/>
+        <link rel="stylesheet" href="/static/css/bootstrap.css"/>
+        <link rel="stylesheet" href="/static/css/style2.css"/>
+        <link rel="stylesheet" href="/static/css/ner.css"/>
+
+        <script type="text/javascript" src="/static/js/jquery.min.js"></script>
+        <script type="text/javascript" src="/static/js/bootstrap.min.js"></script>
+        <script type="text/javascript" src="/static/js/ner.js"></script>
+
+        <script src="http://cdn.static.runoob.com/libs/jquery/2.1.1/jquery.min.js"></script>
+        <script src="http://cdn.static.runoob.com/libs/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        <style>
+            .file input {
+                position: absolute;
+                font-size: 100px;
+                right: 0;
+                top: 0;
+                opacity: 0;
+            }
+
+            input[type="checkbox"] {
+                -webkit-appearance: none;
+                vertical-align: middle;
+                margin-top: 0;
+                background: #fff;
+                border: #999 solid 1px;
+                border-radius: 3px;
+                min-height: 12px;
+                min-width: 12px;
+            }
+
+            input[type="checkbox"]:checked {
+                background: #3190e8;
+            }
+
+            input[type="checkbox"]:checked::after {
+                content: '';
+                top: 3px;
+                left: 3px;
+                position: absolute;
+                background: transparent;
+                border: #fff solid 2px;
+                border-top: none;
+                border-right: none;
+                height: 6px;
+                width: 10px;
+                -moz-transform: rotate(-45deg);
+                -ms-transform: rotate(-45deg);
+                -webkit-transform: rotate(-45deg);
+                transform: rotate(-45deg);
+            }
+        </style>
+    <body>
+    <div class="container">
+        <div class="row">
+            <!--head start-->
+            <div class="col-md-12">
+                <ol class="breadcrumb">
+                    <li><i class="fa fa-home"></i><a href="/toHome/">主页</a></li>
+                    <li><i class="fa fa-link" aria-hidden="true"></i>关系抽取</li>
+                </ol>
+            </div>
+            <div class="col-md-12">
+                <div class="panel panel-default">
+                    <header class="panel-heading">
+                        待抽取文档上传：
+                    </header>
+                    <div class="panel-body">
+                        <form name="upload" enctype="multipart/form-data" method="post" action="/upload3/">
+                            {% csrf_token %}
+                            <input name="file" id="file" type="file" style="display: none"/>
+                            <div class="input-append">
+                                <input id="photoCover" type="text" class="form-control"
+                                       style="float: left; width: 350px">
+                                <a class="btn btn-default" style="border-radius: 0px; width: 50px"
+                                   onclick="$('input[id=file]').click();">
+                                    浏览
+                                </a>
+                                <button type="submit"
+                                        style="background-color:#8fd19e; width: 140px;height: 36px; margin-left: 100px"
+                                        name="upload">上传关系抽取文档
+                                </button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-12">
+                <div class="panel panel-default">
+                    <header class="panel-heading">
+                        输入待抽取文本：
+                    </header>
+                    <div class="panel-body">
+                        <form name="text" method="post" action="/re_text/">
+                            {% csrf_token %}
+                            <br>
+                            <div align="center">
+                                <textarea name="user_text" rows="10" cols="150"
+                                      placeholder="请输入：">{{ str }}</textarea>
+                            </div>
+                            <br>
+
+                            <div align="center">
+                                <button type="submit" class="btn-primary" name="extraction" style="font-size:20px;">开始抽取
+                                </button>
+
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            {% if  resultList %}
+                <div class="col-md-12">
+                    <div class="panel panel-default">
+                        <header class="panel-heading">
+                            结果显示：
+                        </header>
+                        <div class="panel-body">
+                            <div class="show-list" style="position: relative;top: 30px; text-align: center">
+                                <table  class="table table-bordered table-hover" align="center"
+                                       border="solid 3px">
+                                    <thead>
+                                    <tr align="center" class="text-danger">
+                                        <th align="center" width="100" class="text-center">头实体</th>
+                                        <th align="center" width="150" class="text-center">头实体类型</th>
+
+                                        <th align="center" width="100" class="text-center">尾实体</th>
+                                        <th align="center" width="150" class="text-center">尾实体类型</th>
+
+                                        <th align="center" width="100" class="text-center">关系类别</th>
+
+                                        <th align="center" width="100" class="text-center">用户操作</th>
+                                    </tr>
+                                    </thead>
+                                    <tbody id="tb">
+                                    {% autopaginate resultList 4 %}
+                                    {% for list in resultList %}
+                                        <tr>
+
+                                            <td align="center">{{ list.1 }}</td>
+                                            <td align="center">{{ list.2 }}</td>
+                                            <td align="center">{{ list.3 }}</td>
+                                            <td align="center">{{ list.4 }}</td>
+                                            <td align="center">{{ list.5 }}</td>
+
+                                            <td class="text-center">
+                                                <!-- 按钮触发模态框 -->
+                                                <input type="button" class="btn btn-warning btn-sm doProModify"
+                                                       data-toggle="modal"
+                                                       data-target="#myModal" value="修改"
+                                                       onclick="
+                                                               document.getElementById('rel_id').value='{{ list.8 }}';
+                                                               document.getElementById('headEntity').value='{{ list.1 }}';
+                                                               document.getElementById('headEntityType').value='{{ list.2 }}';
+                                                               document.getElementById('tailEntity').value='{{ list.3 }}';
+                                                               document.getElementById('tailEntityType').value='{{ list.4 }}';
+                                                               document.getElementById('relationshipCategory').value='{{ list.5 }}';
+                                                               ">
+                                                <a href="{% url 'deleteRel' %}?rel_id={{ list.8 }}">
+                                                    <button class="btn btn-danger" type="button"
+                                                            onclick="return confirm('是否确认删除？');">
+                                                        <span class="glyphicon glyphicon-remove"
+                                                              aria-hidden="true"></span>
+                                                        删除
+                                                    </button>
+                                                </a>
+                                            </td>
+                                        </tr>
+                                        </tbody>
+                                    {% endfor %}
+                                </table>
+                            {% paginate %}
+                            </div>
+                            <br>
+                            <form name="text" method="post" action="/saveRel/">
+                                {% csrf_token %}
+                                <div align="center">
+                                    <button type="submit" class="btn-success" name="save" style="font-size:20px;"
+                                            onclick="return alert('保存成功!');">保存结果
+                                    </button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            {% endif %}
+            <br>
+            <div class="footers">
+                <span style="color: white;">© 2020 东北大学-数字线技术项目团队 版权所有</span>
+            </div>
+        </div>
+    </div>
+
+
+    {% if messages %}
+        <script>
+            {% for msg in messages %}
+                alert('{{ msg.message }}');
+            {% endfor %}
+        </script>
+    {% endif %}
+
+    <!-- 模态框（Modal） 修改-->
+    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+         aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal"
+                            aria-hidden="true">×
+                    </button>
+                    <h4 class="modal-title" id="myModalLabel" style="font-size:20px;">
+                        Modify Annotation Information
+                    </h4>
+                </div>
+                <div class="modal-body">
+                    <form id="modifyRel" class="form-horizontal" action="/modifyRel/" method="post">
+                        {% csrf_token %}
+                        <div class="form-group">
+                            <label for="rel_id" class="col-sm-2 control-label">编号：</label>
+                            <div class="col-sm-10">
+                                <input type="text" class="form-control" id="rel_id" placeholder="rel_id"
+                                       name="rel_id"
+                                       required="required" readonly>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="headEntity" class="col-sm-2 control-label">头实体：</label>
+                            <div class="col-sm-10">
+                                <input type="text" class="form-control" id="headEntity" name="headEntity"
+                                       placeholder="headEntity" required="required">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="headEntityType" class="col-sm-2 control-label">头实体类型：</label>
+                            <div class="col-sm-10">
+                                <input type="text" class="form-control" id="headEntityType" name="headEntityType"
+                                       placeholder="headEntityType" required="required">
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="tailEntity" class="col-sm-2 control-label">尾实体：</label>
+                            <div class="col-sm-10">
+                                <input type="text" class="form-control" id="tailEntity" name="tailEntity"
+                                       placeholder="tailEntity" required="required">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="tailEntityType" class="col-sm-2 control-label">尾实体类型：</label>
+                            <div class="col-sm-10">
+                                <input type="text" class="form-control" id="tailEntityType" name="tailEntityType"
+                                       placeholder="tailEntityType" required="required">
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="relationshipCategory" class="col-sm-2 control-label">关系类别：</label>
+                            <div class="col-sm-10">
+                                <input type="text" class="form-control" id="relationshipCategory"
+                                       name="relationshipCategory" placeholder="relationshipCategory"
+                                       required="required">
+                            </div>
+                        </div>
+
+                        <div class="modal-footer">
+                            <button class="btn btn-default" data-dismiss="modal">关闭</button>
+                            <button type="submit" class="btn btn-primary updatePro">提交更改</button>
+                        </div>
+                    </form>
+                </div>
+
+            </div><!-- /.modal-content -->
+        </div><!-- /.modal-dialog -->
+    </div><!-- /.modal -->
+
+    <script type="text/javascript" src="/static/js/jquery.min.js"></script>
+    <script type="text/javascript" src="/static/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="/static/js/moment.js"></script>
+
+    <script type="text/javascript">
+        $('input[id=file]').change(function () {
+            $('#photoCover').val($(this).val());
+        });
+    </script>
+    </body>
+    </html>
+{% endblock en %}

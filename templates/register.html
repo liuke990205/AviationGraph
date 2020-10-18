@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>注册页面</title>
+    <link rel="stylesheet" href="/static/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="/static/css/mycss.css"/>
+    <link rel="stylesheet" href="/static/css/style2.css"/>
+    <link rel="stylesheet" href="http://cdn.static.runoob.com/libs/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script type="text/javascript" src="/static/js/jquery.min.js"></script>
+    <script type="text/javascript" src="/static/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="/static/js/moment.js"></script>
+
+    <script src="http://cdn.static.runoob.com/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script src="http://cdn.static.runoob.com/libs/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+<body>
+
+<div class="container div-signin">
+    <div class="panel panel-primary div-shadow">
+        <div class="panel-heading">
+            <h3>用户注册</h3>
+        </div>
+        <div class="panel-body">
+            <!-- 用户注册form表单设计   当点击提交按钮的时候触发user/regist控制器      在UserAction中 -->
+            <form action="/register/" class="form-horizontal" method="post">
+                {% csrf_token %}
+                <div class="modal-body">
+                    <div class="form-group">
+                        <label class="col-sm-3 control-label">用户账号:</label>
+                        <div class="col-sm-6">
+                            <input class="form-control" type="text" name="username" value="{{ username }}">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-sm-3 control-label">用户密码:</label>
+                        <div class="col-sm-6">
+                            <input class="form-control" type="password" name="password" value="{{ password }}">
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer" style="text-align: center">
+                    <button type="submit" class="btn btn-warning">注&nbsp;&nbsp;册</button>
+                    <button type="reset" class="btn btn-warning">重&nbsp;&nbsp;置</button>
+                    <a class="btn btn-warning" href="/login/">登&nbsp;&nbsp;录</a>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+{% if messages %}
+    <script>
+        {% for msg in messages %}
+            alert('{{ msg.message }}');
+        {% endfor %}
+    </script>
+{% endif %}
+
+</body>
+</html>
