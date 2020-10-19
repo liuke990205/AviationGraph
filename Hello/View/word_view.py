@@ -81,7 +81,7 @@ def made_of_2(string: str, line: str) -> list:
                     end_index = data2.find('）')
                     tailEntity = data2[0:beg_index] #大型客车
                     in_entity = data2[beg_index + 1:end_index]
-                    temp_list =[tailEntity, "有", in_entity]
+                    temp_list =[tailEntity, "数量关系", in_entity]
                     result_list.append(temp_list)
 
                     temp_list1 = [headEntity, "组成关系", tailEntity]  #, line.replace("\n", "")
@@ -241,4 +241,5 @@ def upload_word(request):
 
 def display_word_result(request):
     resultList = request.session.get('word_list')
+    print(resultList)
     return render(request, 'word.html', {'resultList': resultList})

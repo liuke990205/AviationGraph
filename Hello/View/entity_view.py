@@ -1,11 +1,10 @@
-import csv
-
+import docx
 from django.contrib import messages
 from django.shortcuts import render, redirect
 
+from Hello.models import Dictionary
 # Create your views here.
 from Hello.ner_ch.src.lstm_crf.main import NER
-from Hello.models import Log, Annotation, User, Dictionary, Temp, Relation
 
 
 def toEntityRecognition(request):
@@ -13,6 +12,8 @@ def toEntityRecognition(request):
 
 
 index = 0
+
+
 def convert(dict, sentence):
     lables = {'AIR': '航空器', 'WEA': '武器', 'MATH': '数学模型', 'SYS': '系统', 'TAR': '性能指标', 'DOC': '参考文档'}
     list = []
@@ -21,8 +22,9 @@ def convert(dict, sentence):
 
     def function(date):
         return date['start']
+
     dict.sort(key=function)
-    #声明全局变量
+    # 声明全局变量
     global index
     for t in dict:
         start = t['start']
@@ -35,9 +37,9 @@ def convert(dict, sentence):
         list.append(data)
         s = stop
         end = stop
-        index = index +1
+        index = index + 1
     if len(sentence) > end:
-        data = {'index': index+1, 'str': sentence[end:len(sentence)], 'type': 'none'}
+        data = {'index': index + 1, 'str': sentence[end:len(sentence)], 'type': 'none'}
         list.append(data)
     return list
 
@@ -51,7 +53,7 @@ def ner(request):
             cn = NER("predict")
             temp = cn.predict(sentence)
             list = convert(temp, sentence)
-            #save(temp)
+            # save(temp)
     request.session['doc'] = list
     return redirect('/display_result/')
 
@@ -62,14 +64,14 @@ def upload2(request):
         file = request.FILES.get('file')
         if file:
             new_data = []
-            with open('upload_file/entoty_extraction_txt.txt', 'wb+') as destination:
+            with open('upload_file/entoty_extraction_word.docx', 'wb+') as destination:
                 for chunk in file.chunks():
                     destination.write(chunk)
-            with open('upload_file/entoty_extraction_txt.txt', "r", encoding="utf-8") as lines:
-                dataList = lines.readlines()
-                for data in dataList:
-                    data = data.strip('\n')
-                    new_data.append(data)
+            file = docx.Document("upload_file/entoty_extraction_word.docx")
+            for p in file.paragraphs:
+                print(p.text)
+                data = p.text.strip('\n')
+                new_data.append(data)
             list = []
             cn = NER("predict")
             for sentence in new_data:
@@ -77,7 +79,7 @@ def upload2(request):
                 temp = cn.predict(sentence)
                 list.extend(convert(temp, sentence))
                 list.append({'index': '', 'str': '', 'type': 'enter'})
-                #save(temp)
+                # save(temp)
             request.session['doc'] = list
             return redirect('/display_result/')
         else:
@@ -100,7 +102,6 @@ def save_entity(request):
     return render(request, 'entity_recognition.html')
 
 
-
 def display_result(request):
     doc = request.session.get('doc')
     resultList = []
@@ -112,11 +113,12 @@ def display_result(request):
 
     return render(request, 'entity_recognition.html', {'doc': doc, 'resultList': resultList})
 
+
 def modifyEntity(request):
     entity = request.POST.get('Entity')
     entityType = request.POST.get('EntityType')
     index = request.POST.get('index')
-    #print(index, entity, entityType)
+    # print(index, entity, entityType)
     resultList = request.session.get('result_List')
 
     for data in resultList:
@@ -136,7 +138,7 @@ def modifyEntity(request):
 def deleteEntity(request):
     index = request.GET.get('index')
     print(index)
-    #print(index, entity, entityType)
+    # print(index, entity, entityType)
     resultList = request.session.get('result_List')
 
     for data in resultList:
