@@ -16,7 +16,7 @@
 
         <script type="text/javascript" src="/static/js/jquery.min.js"></script>
         <script type="text/javascript" src="/static/js/bootstrap.min.js"></script>
-
+        <script src="https://cdn.bootcdn.net/ajax/libs/layer/2.3/layer.js"></script>
         <script src="http://cdn.static.runoob.com/libs/jquery/2.1.1/jquery.min.js"></script>
         <script src="http://cdn.static.runoob.com/libs/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
@@ -42,6 +42,13 @@
                     $('#photoCover').val($(this).val());
                 });
             });
+            function loading() {
+            layer.msg("加载中", {
+                icon: 16,
+                shade: [0.6, '#000005'],//遮罩的颜色与透明度
+                time: false  //取消自动关闭
+            })
+        };
 
         </script>
     </head>
@@ -93,7 +100,7 @@
                                    onclick="$('input[id=file]').click();">
                                     浏览
                                 </a>
-                                <button type="submit" style="margin-left: 100px" name="upload" class="btn btn-primary">
+                                <button type="submit" style="margin-left: 100px" name="upload" class="btn btn-primary" onclick="loading()">
                                     上传实体识别文档
                                 </button>
                             </div>

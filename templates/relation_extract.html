@@ -17,6 +17,7 @@
         <script type="text/javascript" src="/static/js/jquery.min.js"></script>
         <script type="text/javascript" src="/static/js/bootstrap.min.js"></script>
         <script type="text/javascript" src="/static/js/ner.js"></script>
+        <script src="https://cdn.bootcdn.net/ajax/libs/layer/2.3/layer.js"></script>
 
         <script src="http://cdn.static.runoob.com/libs/jquery/2.1.1/jquery.min.js"></script>
         <script src="http://cdn.static.runoob.com/libs/bootstrap/3.3.7/js/bootstrap.min.js"></script>
@@ -61,6 +62,7 @@
                 transform: rotate(-45deg);
             }
         </style>
+
     <body>
     <div class="container">
         <div class="row">
@@ -112,7 +114,7 @@
                             <br>
 
                             <div align="center">
-                                <button type="submit" class="btn-primary" name="extraction" style="font-size:20px;">开始抽取
+                                <button type="submit" class="btn-primary" name="extraction" style="font-size:20px;" onclick="loading()">开始抽取
                                 </button>
 
                             </div>
@@ -293,6 +295,13 @@
         $('input[id=file]').change(function () {
             $('#photoCover').val($(this).val());
         });
+        function loading() {
+            layer.msg("加载中", {
+                icon: 16,
+                shade: [0.6, '#000005'],//遮罩的颜色与透明度
+                time: false  //取消自动关闭
+            })
+        };
     </script>
     </body>
     </html>
