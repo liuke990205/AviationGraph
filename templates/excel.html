@@ -142,7 +142,7 @@
                         实体和属性选择：
                     </header>
                     <div class="panel-body" style="text-align: center">
-                        <form action="/excel_extract/" name="select_name" method="post">
+                        <form action="/commit_properties/" name="select_name" method="post">
                             {% csrf_token %}
                             <div class="selectbox">
                                 <div class="select-bar">
@@ -210,7 +210,7 @@
                                     <select multiple="multiple" id="select33" name="select33"></select>
                                 </div>
                             </div>
-                                <button type="submit" style="background-color: #01a7b3; width: 140px;height: 36px; margin-left: 100px" name="upload">提交</button>
+                                <button type="submit" style="background-color: #01a7b3; width: 140px;height: 36px; margin-left: 100px" name="upload">提交规则</button>
 
                         </form>
 
@@ -223,7 +223,7 @@
                         关系确定：
                     </header>
                     <div class="panel-body">
-                        <form name="upload" enctype="multipart/form-data" method="post" action="//">
+                        <form name="upload" enctype="multipart/form-data" method="post" action="/excel_extract/">
                             {% csrf_token %}
                             <table class="table table-bordered table-hover" align="center" border="solid 3px">
                                 <thead>
@@ -236,7 +236,6 @@
                                     </th>
                                     <th align="center" width="150" class="text-center" style="font-size:16px; ">尾实体属性名
                                     </th>
-                                    <th align="center" width="100" class="text-center" style="font-size:16px; ">关系名</th>
                                     <th align="center" width="100" class="text-center" style="font-size:16px; ">操作</th>
                                 </tr>
                                 </thead>
@@ -244,15 +243,13 @@
                                 {% for list in tableData %}
                                     <tr>
                                         <td align="center"
-                                            style="font-size:15px; display:table-cell; vertical-align:middle"></td>
+                                            style="font-size:15px; display:table-cell; vertical-align:middle">{{ list.0 }}</td>
                                         <td align="center"
-                                            style="font-size:15px; display:table-cell; vertical-align:middle"></td>
+                                            style="font-size:15px; display:table-cell; vertical-align:middle">{{ list.1 }}</td>
                                         <td align="center"
-                                            style="font-size:15px; display:table-cell; vertical-align:middle"></td>
+                                            style="font-size:15px; display:table-cell; vertical-align:middle">{{ list.2 }}</td>
                                         <td align="center"
-                                            style="font-size:15px; display:table-cell; vertical-align:middle"></td>
-                                        <td align="center"
-                                            style="font-size:15px; display:table-cell; vertical-align:middle"></td>
+                                            style="font-size:15px; display:table-cell; vertical-align:middle">{{ list.3 }}</td>
 
                                         <td class="text-center">
                                             <a href="{% url 'relation_delete' %}?temp_id={{ list.3 }}">
@@ -269,6 +266,7 @@
                                 {% endfor %}
                                 </tbody>
                             </table>
+                            <button type="submit" style="background-color: #00aced; width: 140px;height: 36px; margin-left: 100px" name="upload">开始抽取</button>
 
                         </form>
                     </div>
@@ -407,6 +405,13 @@
 
         });
     </script>
+    {% if messages %}
+    <script>
+        {% for msg in messages %}
+            alert('{{ msg.message }}');
+        {% endfor %}
+    </script>
+{% endif %}
     </body>
     </html>
 {% endblock en %}

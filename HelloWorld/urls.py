@@ -104,6 +104,9 @@ urlpatterns = [
 
     path('upload_excel/', excel_view.upload_excel),
 
+
+    path('commit_properties/', excel_view.commit_properties),
+
     path('excel_extract/', excel_view.excel_extract),
 
     #跳转到关系查询界面

@@ -39,8 +39,6 @@ def made_of_1(string: str,line: str) -> list:
             result_list.append(temp_list)
     return result_list
 
-
-
 '''
 关系：【组成关系】
 string = 主要包括|分为
@@ -59,8 +57,6 @@ def made_of_2(string: str, line: str) -> list:
             else:
                 temp_list = [line[0:start1], "组成关系", data, line.replace("\n", "")]
                 result_list.append(temp_list)
-
-
 
     start = line.find(string)
     end = line.find("等")
@@ -155,13 +151,42 @@ def main(infile) -> list:
                     temp_list = made_of_1(r, line)
                     for data in temp_list:
                         result_list.append(data)
-    infopen.close()
-    with open("C:/Users/刘珂/Desktop/txt_analysis/word_export.csv", "w+", newline="") as csvfile:
-        for data in result_list:
-            write = csv.writer(csvfile)
-            write.writerow(data)
+    resultList = []
+    for data in result_list:
+        temp = ["", "", "", "", ""]
+        temp[0] = data[0]
+        temp[2] = data[1]
+        temp[3] = data[2]
+        if data[0].find("飞机") != -1:
+            temp[1] = "飞机"
+        if data[0].find("系统") != -1:
+            temp[1] = "系统"
+        if data[0].find("框") != -1:
+            temp[1] = "框"
 
-    return result_list
+        if data[2].find("飞机") != -1:
+            temp[4] = "飞机"
+        if data[2].find("系统") != -1:
+            temp[4] = "系统"
+        if data[2].find("框") != -1:
+            temp[4] = "框"
+
+        if data[1] == "使用关系":
+            temp[4] = "结构"
+        if data[1] == "组成关系" and data[0].find("系统") != -1 and data[2].find("系统") == -1:
+            temp[4] = "部附件"
+        if data[1] == "组成关系" and data[0].find("飞机") != -1 and data[2].find("系统") == -1:
+            temp[4] = "结构"
+        if data[1] == "数量关系":
+            temp[1] = "数量"
+            temp[4] = "数量"
+        resultList.append(temp)
+
+    infopen.close()
+
+
+
+    return resultList
 
 
 '''
