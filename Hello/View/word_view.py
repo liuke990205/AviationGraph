@@ -172,14 +172,20 @@ def main(infile) -> list:
             temp[4] = "框"
 
         if data[1] == "使用关系":
+            temp[1] = "部附件"
             temp[4] = "结构"
         if data[1] == "组成关系" and data[0].find("系统") != -1 and data[2].find("系统") == -1:
             temp[4] = "部附件"
         if data[1] == "组成关系" and data[0].find("飞机") != -1 and data[2].find("系统") == -1:
             temp[4] = "结构"
         if data[1] == "数量关系":
-            temp[1] = "数量"
+            temp[1] = "部附件"
             temp[4] = "数量"
+
+        if data[1] == "位置关系":
+            temp[1] = "结构"
+            if temp[4] != "框":
+                temp[4] = "位置"
         resultList.append(temp)
 
     infopen.close()
