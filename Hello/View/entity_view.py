@@ -3,11 +3,15 @@ from django.contrib import messages
 from django.shortcuts import render, redirect
 
 from Hello.models import Dictionary
-# Create your views here.
-from Hello.ner_ch.src.lstm_crf.main import NER
+# 深处NER后需要注释
+#from Hello.ner_ch.src.lstm_crf.main import NER
 
 
 def toEntityRecognition(request):
+    user = request.session.get("username")
+    print(user)
+    if user is None:
+        return render(request, 'login.html')
     return render(request, 'entity_recognition.html')
 
 

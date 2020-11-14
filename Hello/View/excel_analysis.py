@@ -5,7 +5,7 @@ import csv
 from Hello.toolkit.pre_load import neo4jconn
 
 def excel_one_line_to_list():
-    file_name = "C:/Users/刘珂/Desktop/excel_analysis/import.xlsx"
+    file_name = "C:/Users/刘珂/Desktop/excel_import.xlsx"
     excel = xlrd.open_workbook(file_name)
     sheet = excel.sheet_by_index(0)
     row_number = sheet.nrows
@@ -115,8 +115,9 @@ def excel_one_line_to_list():
 
     print(result_list)
     #将列表信息存储到Excel中
-    for data in result_list:
-        with open("C:/Users/刘珂/Desktop/excel_analysis/export.csv", "w", newline="") as csvfile:
+    with open("C:/Users/刘珂/Desktop//export.csv", "w", newline="") as csvfile:
+        for data in result_list:
+
             write = csv.writer(csvfile)
             write.writerow(data)
 

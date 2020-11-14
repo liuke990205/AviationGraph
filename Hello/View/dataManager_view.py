@@ -12,6 +12,8 @@ from Hello.toolkit.pre_load import neo4jconn
 def toDataManager(request):
     # 获取当前用户的ID
     username = request.session.get('username')
+    if username is None:
+        return render(request, 'login.html')
     user = User.objects.get(username=username)
     user_id = user.user_id
 
@@ -19,6 +21,7 @@ def toDataManager(request):
     tempList = Temp.objects.filter(user_id=user_id)
 
     # print(tableList)
+
     return render(request, 'data_manager.html', {'tempList': tempList})
 
 

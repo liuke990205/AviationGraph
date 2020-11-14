@@ -10,6 +10,9 @@ from Hello.models import Log, Annotation, User, Dictionary, Temp, Relation
 # 跳转到文本标注页面
 def toAnnotation(request):
     username = request.session.get('username')
+
+    if username is None:
+        return render(request, 'login.html')
     user = User.objects.get(username=username)
     user_id = user.user_id
     # 获取未标注数据的数量

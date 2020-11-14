@@ -7,10 +7,13 @@ from Hello.toolkit.pre_load import neo4jconn
 
 # 跳转到主页面
 def toHome(request):
+    username = request.session.get('username')
+    if username is None:
+        return render(request, 'login.html')
     db = neo4jconn
     searchResult = {}
     searchResult = db.findAll()
-    print(searchResult)
+   # print(searchResult)
     searchEntity = db.findAllEntity()
     print(len(searchEntity))
     print(len(searchResult))

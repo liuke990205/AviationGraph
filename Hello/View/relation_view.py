@@ -7,6 +7,9 @@ from Hello.toolkit.pre_load import neo4jconn
 
 # 跳转到关系抽取页面
 def toRelationeExtract(request):
+    username = request.session.get('username')
+    if username is None:
+        return render(request, 'login.html')
     return render(request, 'relation_extract.html')
 
 

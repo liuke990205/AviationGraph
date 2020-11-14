@@ -4,10 +4,14 @@ from django.contrib import messages
 from django.shortcuts import render, redirect
 import docx
 import csv
+import json
 '''
 跳转到基于规则的word知识提取
 '''
 def toWord(request):
+    username = request.session.get('username')
+    if username is None:
+        return render(request, 'login.html')
     return render(request, "word.html")
 
 '''
@@ -117,40 +121,54 @@ def use(string: str, line: str) -> list:
 
 def main(infile) -> list:
     infopen = open(infile, 'r', encoding="utf-8")
+    #加载json格式的配置文件 => 字典
+    with open("configurateFile/rules.json", 'r', encoding='UTF-8') as f:
+        load_dict = json.load(f)
+
     #后期读取配置文件或者前端列表
-    relation = ["位于", "使用", "采用", "主要包括", "分为", "\t", "组成", "构成"]
+    ###relation = ["位于", "使用", "采用", "主要包括", "分为", "\t", "组成", "构成"]
+    relation = ["\t"]
+    for k, v in load_dict.items():
+        for listData in v:
+            relation.append(listData)
     result_list = []
+
     #读取格式化之后的文件
     lines1 = infopen.readlines()
     for line in lines1:
         print(line)
         for r in relation:
             if line.find(r) != -1:
-                if r == "采用" or r == "使用":
-                    temp_list = use(r, line)
-                    #for data in temp_list:
-                    result_list.append(temp_list)
-                    #print(use(r, line))
-                if r == "位于":
-                    #print(local(r, line))
-                    temp_list = local(r, line)
-                    #for data in temp_list:
-                    result_list.append(temp_list)
-                if r == "主要包括" or r == "分为":
-                    #print(made_of_2(r, line))
-                    temp_list = made_of_2(r, line)
-                    for data in temp_list:
-                        result_list.append(data)
                 if r == "\t":
-                    #print(table(line))
+                    # print(table(line))
                     temp_list = table(line)
                     for data in temp_list:
                         result_list.append(data)
-                if line.find("由") != -1:
-                    #print(made_of_1(r, line))
-                    temp_list = made_of_1(r, line)
-                    for data in temp_list:
-                        result_list.append(data)
+
+                for k, v in load_dict.items():
+                    for listData in v:
+                        if r == listData:
+                            if k == "使用关系":
+                                temp_list = use(r, line)
+                                #for data in temp_list:
+                                result_list.append(temp_list)
+                                #print(use(r, line))
+                            if k == "位置关系":
+                                #print(local(r, line))
+                                temp_list = local(r, line)
+                                #for data in temp_list:
+                                result_list.append(temp_list)
+                            if k == "组成关系1":
+                                #print(made_of_2(r, line))
+                                temp_list = made_of_2(r, line)
+                                for data in temp_list:
+                                    result_list.append(data)
+                            if k == "组成关系2":
+                                if line.find("由") != -1:
+                                    # print(made_of_1(r, line))
+                                    temp_list = made_of_1(r, line)
+                                    for data in temp_list:
+                                        result_list.append(data)
     resultList = []
     for data in result_list:
         temp = ["", "", "", "", ""]

@@ -9,7 +9,9 @@ from Hello.models import Dictionary
 
 # 跳转到excel界面
 def toExcel(request):
-
+    username = request.session.get('username')
+    if username is None:
+        return render(request, 'login.html')
     return render(request, 'excel.html')
 
 def upload_excel(request):

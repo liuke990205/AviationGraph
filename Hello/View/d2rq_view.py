@@ -35,6 +35,10 @@ def toD2rq(request):
         result = cursor.fetchone()
         tableList.append(result[0])
     '''
+    username = request.session.get('username')
+
+    if username is None:
+        return render(request, 'login.html')
     return render(request, 'd2rq.html')
 
 

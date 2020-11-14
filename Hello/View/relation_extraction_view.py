@@ -12,6 +12,9 @@ from Hello.models import Relation, Temp, User, Annotation
 
 # 跳转到关系抽取页面
 def toRelation(request):
+    username = request.session.get('username')
+    if username is None:
+        return render(request, 'login.html')
     return render(request, 'relation_extract.html')
 
 
