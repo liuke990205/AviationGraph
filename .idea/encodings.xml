@@ -3,8 +3,8 @@
   <component name="Encoding">
     <file url="file://$PROJECT_DIR$/Hello/View" charset="GBK" />
     <file url="file://$PROJECT_DIR$/Hello/neo4j_models.py" charset="GBK" />
-    <file url="file://$PROJECT_DIR$/Hello/ner_ch" charset="GBK" />
-    <file url="file://$PROJECT_DIR$/Hello/ner_ch/data/uploadfile.txt" charset="ISO-8859-1" />
+    <file url="file://$PROJECT_DIR$/Hello/ner_ch" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Hello/ner_ch/data/uploadfile.txt" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/Hello/toolkit" charset="GBK" />
     <file url="file://$PROJECT_DIR$/data" charset="GBK" />
     <file url="file://$PROJECT_DIR$/data.docx" charset="GBK" />
@@ -32,7 +32,10 @@
     <file url="file://$PROJECT_DIR$/templates/relation_search.html" charset="GBK" />
     <file url="file://$PROJECT_DIR$/templates/text_annotation.html" charset="GBK" />
     <file url="file://$PROJECT_DIR$/templates/word.html" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/upload_file/checkpoints" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/upload_file/dic.txt" charset="GBK" />
     <file url="file://$PROJECT_DIR$/upload_file/entoty_extraction_word.docx" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/upload_file/rel_data.csv" charset="GBK" />
     <file url="file://$PROJECT_DIR$/word_import.docx" charset="GBK" />
   </component>
 </project>

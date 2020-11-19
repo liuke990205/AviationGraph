@@ -8,8 +8,8 @@ class Neo4j_Handle():
     matcher = None
 
     def __init__(self):
-        print("Neo4j Init ...")
-
+        #print("Neo4j Init ...")
+        pass
     def connectDB(self):
         self.graph = Graph("bolt: // localhost:7687", username="neo4j", password="root")
         self.matcher = NodeMatcher(self.graph)

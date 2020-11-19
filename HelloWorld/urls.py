@@ -108,6 +108,8 @@ urlpatterns = [
 
     path('excel_extract/', excel_view.excel_extract),
 
+    path('excel_delete/', excel_view.excel_delete, name='excel_delete'),
+
     #跳转到关系查询界面
     path('toRelationSearch/', relation_view.toRelationSearch),
     #进行关系查询操作

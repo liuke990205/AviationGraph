@@ -228,6 +228,8 @@
                             <table class="table table-bordered table-hover" align="center" border="solid 3px">
                                 <thead>
                                 <tr align="center" class="text-danger">
+                                    <th align="center" width="100" class="text-center" style="font-size:16px; ">编号
+                                    </th>
                                     <th align="center" width="100" class="text-center" style="font-size:16px; ">头实体名
                                     </th>
                                     <th align="center" width="150" class="text-center" style="font-size:16px; ">头实体属性名
@@ -243,6 +245,8 @@
                                 {% for list in tableData %}
                                     <tr>
                                         <td align="center"
+                                            style="font-size:15px; display:table-cell; vertical-align:middle">{{ list.4 }}</td>
+                                        <td align="center"
                                             style="font-size:15px; display:table-cell; vertical-align:middle">{{ list.0 }}</td>
                                         <td align="center"
                                             style="font-size:15px; display:table-cell; vertical-align:middle">{{ list.1 }}</td>
@@ -252,16 +256,14 @@
                                             style="font-size:15px; display:table-cell; vertical-align:middle">{{ list.3 }}</td>
 
                                         <td class="text-center">
-                                            <a href="{% url 'relation_delete' %}?temp_id={{ list.3 }}">
-                                                <button class="btn btn-danger" type="button"
+                                            <a href="{% url 'excel_delete' %}?id={{ list.4 }}">
+                                                <button id="delete" name="delete" class="btn btn-danger" type="button"
                                                         onclick="return confirm('是否确认删除？');">
                                                     <span class="glyphicon glyphicon-remove"
                                                           aria-hidden="true"></span> Delete
                                                 </button>
                                             </a>
                                         </td>
-
-
                                     </tr>
                                 {% endfor %}
                                 </tbody>
@@ -281,6 +283,8 @@
     </div>
 
     <script>
+
+
         $('input[id=file]').change(function () {
             $('#photoCover').val($(this).val());
         });

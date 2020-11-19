@@ -1,5 +1,6 @@
 # -*- coding: utf-8 -*-
-import MySQLdb
+import random
+
 import pymysql
 from django.contrib import messages
 from django.shortcuts import render, redirect
@@ -29,7 +30,7 @@ def upload_excel(request):
             for i in range(1, row_number):
                 data_list.append(sheet.row_values(i))
             # 下面代码作用：根据字段创建表，根据数据执行插入语句
-            conn = pymysql.connect(host='127.0.0.1', port=3306, user='root', password='root',
+            conn = pymysql.connect(host='123.56.52.53', port=3306, user='root', password='root',
                                    database='source')
             cursor = conn.cursor()
             drop_sql = "drop table if exists {}".format('name')
@@ -59,7 +60,7 @@ def upload_excel(request):
             '''
             将上传的表中的字段名和  数据库中的规则进行匹配   tableData存储匹配之后的list
             '''
-            conn = pymysql.connect(host='127.0.0.1', port=3306, user='root', password='root',
+            conn = pymysql.connect(host='123.56.52.53', port=3306, user='root', password='root',
                                    database='source')
             cursor = conn.cursor()
 
@@ -100,31 +101,35 @@ def commit_properties(request):
         tail_entity_list = request.POST.getlist('select22')
         tail_property_list = request.POST.getlist('select33')
 
+        print(head_entity_list)
+        print(head_property_list)
+
         tableData = request.session.get('tableData')
         name_list = request.session.get('name_list')
 
         if len(head_entity_list) > 1 or len(tail_entity_list) > 1:
             messages.success(request, '选择的头实体个数或者尾实体个数大于1！')
             return render(request, 'excel.html', {'name_list': name_list, 'tableData': tableData})
-
-        if len(head_entity_list) == 0 or len(head_property_list) == 0 or len(tail_entity_list) or len(
-                tail_property_list) == 0:
+        '''
+        if len(head_entity_list) == 0 or len(head_property_list) == 0 or len(tail_entity_list) or len(tail_property_list) == 0:      
             messages.success(request, "亲，您现在啥也没选择呢！")
-            return render(request, "excel.html", {'name_list': name_list, 'tableData': tableData})
+            return render(request, "excel.html", {'name_list': name_list, 'tableData': tableData})     
+        '''
 
         head_property_list = ','.join(head_property_list)
         tail_property_list = ','.join(tail_property_list)
+        id =random.randint(20, 200000)
 
-        temp = [head_entity_list[0], head_property_list, tail_entity_list[0], tail_property_list, tail_entity_list[0]]
+        temp = [head_entity_list[0], head_property_list, tail_entity_list[0], tail_property_list, id]
 
         '''
         将新的规则插入到规则表中  将属性列表转换成  A,B,C 格式进行存储
         '''
         #连接数据库
-        conn = pymysql.connect(host='127.0.0.1', port=3306, user='root', password='root',
+        conn = pymysql.connect(host='123.56.52.53', port=3306, user='root', password='root',
                                database='source')
         cursor = conn.cursor()
-        sql = "INSERT INTO excel_relation VALUES('%s','%s','%s','%s')" % (head_entity_list[0], head_property_list, tail_entity_list[0], tail_property_list)
+        sql = "INSERT INTO excel_relation VALUES('%s','%s','%s','%s','%s')" % (head_entity_list[0], head_property_list, tail_entity_list[0], tail_property_list, id)
         cursor.execute(sql)
         conn.commit()
 
@@ -132,6 +137,20 @@ def commit_properties(request):
         request.session['tableData'] = tableData
 
         return render(request, 'excel.html', {'name_list': name_list, 'tableData': tableData})
+
+def excel_delete(request):
+    id = request.GET.get('id')
+    print(type(id))
+    print(id)
+    tableData = request.session.get('tableData')
+    name_list = request.session.get('name_list')
+    for data in tableData:
+        if data[4] == int(id):
+            tableData.remove(data)
+    request.session['tableData'] = tableData
+
+    return render(request, 'excel.html', {'name_list': name_list, 'tableData': tableData})
+
 
 
 def excel_extract(request):
@@ -162,7 +181,7 @@ def excel_extract(request):
 
 def create_relation(head_entity, head_property_list, tail_entity, tail_property_list):
 
-    conn = pymysql.connect(host='127.0.0.1', port=3306, user='root', password='root',
+    conn = pymysql.connect(host='123.56.52.53', port=3306, user='root', password='root',
                            database='source')
     cursor = conn.cursor()
 
