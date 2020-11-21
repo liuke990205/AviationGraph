@@ -122,7 +122,6 @@ def getTable(request):
     for data in range(sum_1):
         result_1 = cursor.fetchone()
         table1_result.append(result_1)
-    print(table1_result)
 
     sql = "select TABLE_NAME,COLUMN_NAME,CONSTRAINT_NAME from INFORMATION_SCHEMA.KEY_COLUMN_USAGE where CONSTRAINT_SCHEMA ='source' AND REFERENCED_TABLE_NAME = '%s';" % (
         table)
@@ -131,12 +130,10 @@ def getTable(request):
     primary2 = []
 
     table2_result = []
-    print(count)
     if count > 0:
         re = cursor.fetchone()
 
         request.session['table2'] = re[0]
-        print(re[0])
         request.session['re_name'] = re[1]
         table2 = re[0]
 
@@ -216,7 +213,6 @@ def insertNode(table, entity_name, entity_property, database, host, username, pa
     # 循环来遍历游标指针
     for i in range(count):
         result = cursor.fetchone()
-        print(result)
         # 将查询结果转换成列表存储
         result = list(result)
         # 查询到的第一个值是实体名

@@ -51,7 +51,6 @@ def made_of_2(string: str, line: str) -> list:
     start1 = line.find(string)
     end1 = line.find("。")
     list1 = line[start1 + len(string):end1]
-    print(line[start1 + len(string):end1], 222)
     result_list = []
     if list1.find("、") != -1:
         for data in list1.split("、"):
@@ -65,16 +64,13 @@ def made_of_2(string: str, line: str) -> list:
     start = line.find(string)
     end = line.find("等")
     headEntity = line[0:start]
-    print(headEntity) #客车
 
     list = line[start + len(string) + 1:end]
-    print(list)#a） 小型客车（1辆）；b） 中型客车（1辆）；c） 大型客车（3辆），分为铰接式客车，双层客车和多层客车
 
     for data in list.split("；"):
         index = data.find('）')
         if index != -1:
             data2 = data[index+1:] #大型客车（3辆），分为铰接式客车，双层客车和多层客车
-            print(data2, 222)
             for i in range(1, 1000):
                 if data2.find(chr(i)) != -1:
                     beg_index = data2.find('（')
@@ -136,7 +132,6 @@ def main(infile) -> list:
     #读取格式化之后的文件
     lines1 = infopen.readlines()
     for line in lines1:
-        print(line)
         for r in relation:
             if line.find(r) != -1:
                 if r == "\t":
@@ -150,16 +145,11 @@ def main(infile) -> list:
                         if r == listData:
                             if k == "使用关系":
                                 temp_list = use(r, line)
-                                #for data in temp_list:
                                 result_list.append(temp_list)
-                                #print(use(r, line))
                             if k == "位置关系":
-                                #print(local(r, line))
                                 temp_list = local(r, line)
-                                #for data in temp_list:
                                 result_list.append(temp_list)
                             if k == "组成关系1":
-                                #print(made_of_2(r, line))
                                 temp_list = made_of_2(r, line)
                                 for data in temp_list:
                                     result_list.append(data)
@@ -274,7 +264,6 @@ def upload_word(request):
             with open(infile, 'w+', encoding="utf-8") as outfopen:
                 for p in file.paragraphs:
                     data = p.text.strip('\n')
-                    print(data)
                     outfopen.writelines(data+"\n")
             resultList = format_file(infile)
             messages.success(request, "上传成功！")
@@ -290,5 +279,4 @@ def upload_word(request):
 
 def display_word_result(request):
     resultList = request.session.get('word_list')
-    print(resultList)
     return render(request, 'word.html', {'resultList': resultList})

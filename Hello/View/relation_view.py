@@ -27,7 +27,6 @@ def Screen(searchResult):
         relationData.append(searchResult[i]['n2']['name'])
         relationData.append((searchResult[i]['rel']['id']))
         tableData.append(relationData)
-    print(tableData)
     return tableData
 
 
@@ -92,7 +91,6 @@ def relation_modify(request):
         entity2 = request.POST['tailEntity']
         relation = request.POST['relationshipCategory']
         temp_id = request.POST['temp_id']
-        print(temp_id, entity1, entity2, relation)
         # 连接neo4j数据库
         db = neo4jconn
         db.modifyRelation(entity1, entity2, relation, temp_id)
@@ -104,7 +102,6 @@ def relation_modify(request):
         # 若只输入entity1,则输出与entity1有直接关系的实体和关系
         if (len(entity1) != 0 and len(relation) == 0 and len(entity2) == 0):
             searchResult = db.findRelationByEntity1(entity1)
-            print(searchResult)
             tableData = Screen(searchResult)  # 对结果集进行格式化
 
             if (len(tableData) > 0):
@@ -171,7 +168,6 @@ def relation_modify(request):
 
 def relation_delete(request):
     temp_id = request.GET.get('temp_id')
-    print(temp_id)
     db = neo4jconn
     db.deleteRelation(temp_id)
 
@@ -182,7 +178,6 @@ def relation_delete(request):
     # 若只输入entity1,则输出与entity1有直接关系的实体和关系
     if (len(entity1) != 0 and len(relation) == 0 and len(entity2) == 0):
         searchResult = db.findRelationByEntity1(entity1)
-        print(searchResult)
         tableData = Screen(searchResult)  # 对结果集进行格式化
 
         if (len(tableData) > 0):

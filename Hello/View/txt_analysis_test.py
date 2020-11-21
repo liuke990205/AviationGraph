@@ -58,7 +58,6 @@ def made_of_2(string: str, line: str) -> list:
     elif list.find("；") != -1:
         list = list[1:]
         #list =  a) 小型客车（1辆）；b) 中型客车（1辆）；c) 大型客车（3辆），分为铰接式客车，双层客车和多层客车等
-        print(list)
     return result_list
 '''
 关系：【位置关系】
@@ -70,7 +69,6 @@ def local(string :str, line: str) -> list:
     #获取结束位置
     end = line.find("。")
     temp_list = [line[0:start], "位置关系", line[start + len(string):end], line.replace("\n", "")] #注意删除换行符
-    #print(temp_list)
     return temp_list
 
 '''
@@ -127,7 +125,6 @@ def main(infile):
                     for data in temp_list:
                         result_list.append(data)
     for data in result_list:
-        #print(data)
         with open("C:/Users/26407/Desktop/txt_analysis/txt_export.csv", "a+", newline="") as csvfile:
             write = csv.writer(csvfile)
             write.writerow(data)
@@ -160,7 +157,6 @@ def format_file(infile, outfile):
                                     t_list.append(lines[k].replace("\n", ""))
             list_str = ''.join(t_list)
             if list_str:
-                #print(list_str)
                 outfopen.writelines(list_str+"\n")
             t_list = []
             for i in range(9):

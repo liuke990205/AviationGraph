@@ -9,7 +9,6 @@ from Hello.models import Dictionary
 
 def toEntityRecognition(request):
     user = request.session.get("username")
-    print(user)
     if user is None:
         return render(request, 'login.html')
     return render(request, 'entity_recognition.html')
@@ -73,7 +72,6 @@ def upload2(request):
                     destination.write(chunk)
             file = docx.Document("upload_file/entoty_extraction_word.docx")
             for p in file.paragraphs:
-                print(p.text)
                 data = p.text.strip('\n')
                 new_data.append(data)
             list = []
@@ -93,7 +91,6 @@ def upload2(request):
 
 def save_entity(request):
     resultList = request.session.get('result_List')
-    print(resultList)
     for data in resultList:
         # 注意get和filter的区别
         d = Dictionary.objects.filter(entity=data['str'])
@@ -112,7 +109,6 @@ def display_result(request):
     for li in doc:
         if (li['type'] != 'none') & (li['type'] != 'enter'):
             resultList.append(li)
-    print(resultList)
     request.session['result_List'] = resultList
 
     return render(request, 'entity_recognition.html', {'doc': doc, 'resultList': resultList})
@@ -127,11 +123,9 @@ def modifyEntity(request):
 
     for data in resultList:
         if data['index'] == int(index):
-            print(index)
             data['str'] = entity
             data['type'] = entityType
 
-    print(resultList)
     doc = request.session.get('doc')
 
     request.session['result_List'] = resultList
@@ -141,15 +135,11 @@ def modifyEntity(request):
 
 def deleteEntity(request):
     index = request.GET.get('index')
-    print(index)
-    # print(index, entity, entityType)
     resultList = request.session.get('result_List')
 
     for data in resultList:
         if data['index'] == int(index):
-            print(data)
             resultList.remove(data)
-        print(resultList)
 
     request.session['result_List'] = resultList
     doc = request.session.get('doc')

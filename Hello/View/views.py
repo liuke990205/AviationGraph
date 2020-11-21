@@ -14,7 +14,6 @@ def login(request):
         for user in result:
             if user.password == password:
                 request.session['username'] = username
-                # messages.success(request, '登录成功！')
                 return redirect("/toHome/")
         messages.success(request, '不存在该用户，登录失败！')
         return render(request, 'login.html')

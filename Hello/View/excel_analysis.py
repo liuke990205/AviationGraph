@@ -11,7 +11,6 @@ def excel_one_line_to_list():
     row_number = sheet.nrows
     column_number = sheet.ncols
     field_list = sheet.row_values(1)
-    print(field_list)
 
     for data in field_list:
         if data == "故障件":
@@ -42,7 +41,6 @@ def excel_one_line_to_list():
     data_list = []
     for i in range(2, row_number):
         data_list.append(sheet.row_values(i))
-    print(data_list)
     db = neo4jconn
 
     # 存最终结果
@@ -113,13 +111,15 @@ def excel_one_line_to_list():
         temp_list = ["飞机", "飞机", data[faulty_component], "故障件", "包括"]
         result_list.append(temp_list)
 
-    print(result_list)
     #将列表信息存储到Excel中
+    '''
     with open("C:/Users/刘珂/Desktop//export.csv", "w", newline="") as csvfile:
-        for data in result_list:
+    for data in result_list:
 
-            write = csv.writer(csvfile)
-            write.writerow(data)
+        write = csv.writer(csvfile)
+        write.writerow(data)
+    '''
+
 
 if __name__ == '__main__':
     excel_one_line_to_list()

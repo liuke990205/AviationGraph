@@ -27,7 +27,6 @@ def upload(request):
     if request.method == 'POST':
         # 获取文件名
         path = request.FILES.get('file')
-        print(type(path))
         if path:
             try:
                 with open('upload_file/annotation_word.docx', 'wb+') as destination:
@@ -40,7 +39,6 @@ def upload(request):
                 # 读取文件内容，并且插入到数据库中
                 file = docx.Document("upload_file/annotation_word.docx")
                 for p in file.paragraphs:
-                    print(p.text)
                     i = p.text.strip('\n')
                     q = Annotation(content=i, file_name=file, flag=False, user_id_id=user_id)  # 将数据插入到数据库中
                     q.save()
@@ -178,10 +176,7 @@ def text_annotation(request):
 
         # 根据annotation_id查询自动识别的数据集合
         resultList = Temp.objects.filter(annotation_id_id=text_current.annotation_id)
-        print(resultList)
-        return render(request, 'text_annotation.html',
-                      {'resultList': resultList, 'current_text': text_current.content, 'entityList': entityList,
-                       'count': count})
+        return render(request, 'text_annotation.html', {'resultList': resultList, 'current_text': text_current.content, 'entityList': entityList, 'count': count})
 
 
 # 增加一条标注信息
@@ -357,10 +352,8 @@ def addDictionary(request):
 
 def deleteDictionary(request):
     entity = request.GET.get('entity')
-    print(entity)
 
     dictionary = Dictionary.objects.get(entity=entity)
-    print(dictionary.entity_type)
     dictionary.delete()
 
     # 获取当前用户的ID
@@ -396,7 +389,6 @@ def modifyDictionary(request):
     entity_type = request.POST.get('entity_type1')
 
     dictionary = Dictionary.objects.get(entity=entity)
-    print(dictionary.entity_type)
     dictionary.delete()
 
     # 获取当前用户的ID

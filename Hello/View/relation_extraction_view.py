@@ -36,7 +36,6 @@ def upload3(request):
             # for data in dataList:
             file = docx.Document("upload_file/relation_extraction_word.docx")
             for p in file.paragraphs:
-                print(p.text)
                 data = p.text.strip('\n')
                 new_data.append(data)
             messages.success(request, "上传成功！")
@@ -143,14 +142,12 @@ def re_text(request):
                     f2.write(s)
                     relation_list.append([str(sentence), str(sen_entity[0]), str(entity_type[0]), str(sen_entity[1]),
                                           str(entity_type[1])])
-                    print(relation_list)
 
                 if (flag == 2):
                     sentence = sen_list[i].replace("\n", "")
                     entity_type[0], entity_type[1] = entity_type[1], entity_type[0]
                     relation_list.append([str(sentence), str(sen_entity[0]), str(entity_type[1]), str(sen_entity[1]),
                                           str(entity_type[0])])
-                    print(relation_list)
                     s = str(sentence) + "," + str(sen_entity[0]) + "," + str(entity_type[1]) + "," + str(
                         sen_entity[1]) + "," + str(entity_type[0]) + "\n"  #
                     f2.write(s)
@@ -166,7 +163,6 @@ def re_text(request):
                                 relation_list.append(
                                     [str(sentence), str(sen_entity[j]), str(entity_type[j]), str(sen_entity[j + k + 1]),
                                      str(entity_type[j + k + 1])])
-                                print(relation_list)
                                 s = str(sentence) + "," + str(sen_entity[j]) + "," + str(entity_type[j]) + "," + str(
                                     sen_entity[j + k + 1]) + "," + str(entity_type[j + k + 1]) + "\n"  #
                                 f2.write(s)
@@ -176,7 +172,6 @@ def re_text(request):
                                     [str(sentence), str(sen_entity[j + k + 1]), str(entity_type[k + j + 1]),
                                      str(sen_entity[j]),
                                      str(entity_type[j])])
-                                print(relation_list)
                                 s = str(sentence) + "," + str(sen_entity[j + k + 1]) + "," + str(
                                     entity_type[k + j + 1]) + "," + str(
                                     sen_entity[j]) + "," + str(entity_type[j]) + "\n"  # 调换一下
@@ -212,8 +207,6 @@ def re_text(request):
                 '''
                 ann = Annotation(content=text, flag=1, file_name="", user_id_id=user_id)
                 ann.save()
-
-                print(ann.annotation_id)
 
                 random_num = random.randint(10000, 90000)
                 temp_list = [ann.annotation_id, headEntity, headEntityType, tailEntity, tailEntityType,
@@ -259,12 +252,10 @@ def deleteRel(request):
     resultList = Temp.objects.all()
     '''
     resultList = request.session.get('resultList')
-    print(resultList)
     for data in resultList:
         if data[8] == int(id): ##注意强制类型转换
             #删除列表元素
             resultList.remove(data)
-    print(resultList)
     #更新session域的内容
     request.session['resultList'] = resultList
     return render(request, 'relation_extract.html', {'resultList': resultList})
@@ -280,7 +271,6 @@ def modifyRel(request):
     new_relationshipCategory = request.POST.get('relationshipCategory')
 
     resultList = request.session.get('resultList')
-    print(resultList)
     for data in resultList:
         if data[8] == int(rel_id):
             data[1] = new_headEntity
@@ -289,7 +279,6 @@ def modifyRel(request):
             data[4] = new_tailEntityType
             data[5] = new_relationshipCategory
 
-    print(resultList)
     # 更新session域的内容
     request.session['resultList'] = resultList
 
@@ -304,7 +293,6 @@ def saveRel(request):
     ##print(relList)
 
     for list in resultList:
-        print(type(list[5]))
         rel = Temp(headEntity=list[1], headEntityType=list[2], tailEntity=list[3],
                    tailEntityType=list[4], relationshipCategory=list[5],
                    user_id=int(list[6]), filename="", annotation_id_id=list[0])

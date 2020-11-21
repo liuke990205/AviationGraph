@@ -39,7 +39,6 @@ urlpatterns = [
     path('deleteAllNeo4j/', dataManager_view.deleteAllNeo4j, name='deleteAllNeo4j'),
 
 
-
     #导出Neo4j数据库
     path('download/', dataManager_view.download),
 

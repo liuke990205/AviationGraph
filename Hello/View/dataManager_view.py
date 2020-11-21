@@ -84,13 +84,11 @@ def importNeo4j(request):
 # 批量导入Neo4j数据库
 def importNeo4jMuilt(request):
     boxList = request.POST.getlist('boxList')
-    print(boxList)
     # 连接数据库
     db = neo4jconn
     if boxList:
         for temp_id in boxList:
             relation = Temp.objects.get(temp_id=temp_id)
-            print(relation)
             # 查询出来头实体和尾实体是否已经存在
             result1 = db.findEntity(relation.headEntity)
             result2 = db.findEntity(relation.tailEntity)

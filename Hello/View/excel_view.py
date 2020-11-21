@@ -52,7 +52,6 @@ def upload_excel(request):
                 rr = cursor.fetchone()[0]
                 if rr not in name_list:
                     name_list.append(rr)
-            print(name_list)
             conn.commit()
 
             request.session['name_list'] = name_list
@@ -71,7 +70,6 @@ def upload_excel(request):
             for i in range(cnt):
                 result = cursor.fetchone()
                 temp_list = []
-                print(type(result))
                 for a in result:
                     temp_list.append(a)
                 #for data in temp_list:
@@ -100,9 +98,6 @@ def commit_properties(request):
         head_property_list = request.POST.getlist('select3')
         tail_entity_list = request.POST.getlist('select22')
         tail_property_list = request.POST.getlist('select33')
-
-        print(head_entity_list)
-        print(head_property_list)
 
         tableData = request.session.get('tableData')
         name_list = request.session.get('name_list')
@@ -140,8 +135,6 @@ def commit_properties(request):
 
 def excel_delete(request):
     id = request.GET.get('id')
-    print(type(id))
-    print(id)
     tableData = request.session.get('tableData')
     name_list = request.session.get('name_list')
     for data in tableData:
