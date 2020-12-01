@@ -21,20 +21,17 @@
     </head>
     <title>主页面</title>
     <div class="container">
-        {% if ctx %}
+
             <div class="col-md-12">
                 <div class="panel panel-default">
-                    <header class="panel-heading">
-                        查询结果：
-                    </header>
+
                     <div class="panel-body">
                         <div style="padding: 2%">
-                            <h2>暂未找到相应的匹配</h2>
+                            <h2 style="align-content: center">网站历史访问人数：{{ number }}</h2>
                         </div>
                     </div>
                 </div>
             </div>
-        {% endif %}
 
         {% if searchResult %}
             <!-- 为ECharts准备一个具备大小（宽高）的Dom -->
@@ -91,7 +88,7 @@
         //构造展示的数据
         var maxDisPlayNode = 100;
         var id = 0;
-        for (var i = 0; id <= Math.min(maxDisPlayNode, searchResult.length) && i <= searchResult.length; i++) {
+        for (var i = 0; id < maxDisPlayNode && i < searchResult.length; i++) {
             //获取node1
             node1 = {};
             node1['name'] = searchResult[i]['n1']['name'];

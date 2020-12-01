@@ -271,8 +271,6 @@ def upload_word(request):
             request.session['word_list'] = resultList
 
             return redirect('/display_word_result/')
-
-            #return render(request, 'word.html', {'resultList': resultList})
         else:
             messages.success(request, "文件为空！")
             return redirect('/toWord/')

@@ -20,8 +20,6 @@ def toDataManager(request):
     # 根据当前用户 查询所有的关系数据
     tempList = Temp.objects.filter(user_id=user_id)
 
-    # print(tableList)
-
     return render(request, 'data_manager.html', {'tempList': tempList})
 
 
@@ -77,7 +75,6 @@ def importNeo4j(request):
         temp = Temp.objects.get(temp_id=id)
         temp.delete()
         tempList = Temp.objects.filter(user_id=user_id)
-        # return render(request, 'data_manager.html', {'tempList': list})
         return redirect("/toDataManager/")
 
 

@@ -14,7 +14,7 @@ def test(string: str, line: str) -> list:
         index = data.find('）')
         if index != -1:
             data2 = data[index+1:] #大型客车（3辆），分为铰接式客车，双层客车和多层客车
-            print(data2, 222)
+            #print(data2, 222)
             for i in range(1, 1000):
                 if data2.find(chr(i)) != -1:
                     beg_index = data2.find('（')

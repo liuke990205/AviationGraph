@@ -1,8 +1,9 @@
+import pymysql
 from django.contrib import messages
 from django.shortcuts import render, redirect
 
 from Hello.models import User, Log
-
+import datetime
 
 # 用户登录
 def login(request):
@@ -11,9 +12,26 @@ def login(request):
         password = request.POST['password']
         result = User.objects.filter(username=username)
 
+        # 连接关系数据库
+        conn1 = pymysql.connect(host='123.56.52.53', port=3306, user='root', password='root', database='source')
+        cursor = conn1.cursor()
+
         for user in result:
             if user.password == password:
                 request.session['username'] = username
+                sql = "INSERT INTO login_log(username, login_time) VALUES ('%s','%s')" % (username, datetime.datetime.now())
+                cnt = cursor.execute(sql)
+                conn1.commit()
+
+
+                sql_select = "SELECT * FROM login_log"
+                cursor.execute(sql_select)
+                conn1.commit()
+                number = len(cursor.fetchall())
+
+                request.session['number'] = number
+
+                conn1.close()
                 return redirect("/toHome/")
         messages.success(request, '不存在该用户，登录失败！')
         return render(request, 'login.html')

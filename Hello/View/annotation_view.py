@@ -233,6 +233,7 @@ def deleteTemp(request):
     temp = Temp.objects.get(temp_id=id)
     temp.delete()
 
+
     # 获取当前用户的ID
     username = request.session.get('username')
     user = User.objects.get(username=username)

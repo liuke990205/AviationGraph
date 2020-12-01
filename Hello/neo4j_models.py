@@ -64,18 +64,15 @@ class Neo4j_Handle():
         answer = self.graph.run("MATCH (n) RETURN n").data()
         return answer
 
-    def findEntity(self, entity):
+    def findEntity(self, entity) -> str:
         answer = self.graph.run("MATCH(x) WHERE x.name = \"" + entity + "\" return x").data()
-        print(answer)
         return answer
 
     def insertRelation(self, entity1, relation, entity2, id):
-        #print("MERGE (x{name:\"" + entity1 + "\"})-[jx:" + relation + "{type: \"" + relation + "\", id: \"" + id + "\"}]->(y{name:\"" + entity2 + "\"})")
         self.graph.run("MERGE (x{name:\"" + entity1 + "\"})-[jx:" + relation + "{type: \"" + relation + "\", id: \"" + id + "\"}]->(y{name:\"" + entity2 + "\"})")
     def insertExcelRelation(self, entity1, entity2, relation):
         self.graph.run(
             "MERGE (x{name:\"" + entity1 + "\"})-[jx:" + relation + "{type: \"" + relation + "\"}]->(y{name:\"" + entity2 + "\"})")
-        print("MATCH (x{name:\"" + entity1 + "\"}), (y{name:\"" + entity2 + "\"}) MERGE (x)-[jx:" + relation + "{type: \"" + relation + "\"}]->(y)")
     def createNode(self, entity, type, dict):
         string_list = []
         for key, value in dict.items():
@@ -90,7 +87,6 @@ class Neo4j_Handle():
 
     def createNode2(self, entity, type):
         str = "MERGE(x:" + type + "{" + " name:\"" + entity + " \" " + "})"
-        print(str)
         self.graph.run(str)
 
     def modifyRelation(self, entity1, entity2, relation, temp_id):

@@ -1,7 +1,7 @@
 from django.contrib import admin
 from django.urls import path
 
-from Hello.View import views, annotation_view, dataManager_view, entity_view, relation_view, home_view, d2rq_view, relation_extraction_view, excel_view, word_view
+from Hello.View import views, annotation_view, dataManager_view, entity_view, relation_view, home_view, d2rq_view, relation_extraction_view, excel_view, word_view, answer_view
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -131,5 +131,10 @@ urlpatterns = [
     path('upload_word/', word_view.upload_word),
 
     path('display_word_result/', word_view.display_word_result),
+
+
+
+    #跳转到问答系统
+    path('toAnswer/', answer_view.toAnswer),
 
 ]

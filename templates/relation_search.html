@@ -220,7 +220,7 @@
             //构造展示的数据
             var maxDisPlayNode = 100;
             var id = 0;
-            for (var i = 0; id <=Math.min(maxDisPlayNode, searchResult.length) && i <= searchResult.length; i++) {
+            for (var i = 0; id <maxDisPlayNode && i < searchResult.length; i++) {
                 //获取node1
                 node1 = {};
                 node1['name'] = searchResult[i]['n1']['name'];
