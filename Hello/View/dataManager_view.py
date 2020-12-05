@@ -41,37 +41,38 @@ def importNeo4j(request):
     if result1 and result2:
         # 判断是否存在关系
         if (db.findRelationByEntities(relation.headEntity, relation.tailEntity)):  # 如果存在关系，更新关系
-            db.modifyRelation(relation.headEntity, relation.tailEntity, relation.relationshipCategory, id)
+            db.modifyRelation(relation.headEntity, relation.tailEntity, relation.relationshipCategory)
         else:  # 如果两个实体不存在关系，则直接创建关系
-            db.insertRelation(relation.headEntity, relation.relationshipCategory, relation.tailEntity, id)
+            db.insertRelation(relation.headEntity, relation.relationshipCategory, relation.tailEntity)
         temp = Temp.objects.get(temp_id=id)
         temp.delete()
         return redirect('/toDataManager/')
     elif result1:
         # 创建尾实体
-        db.createNode(relation.tailEntity, relation.tailEntityType, {})
+        db.createNode2(relation.tailEntity, relation.tailEntityType)
         # 插入一条neo4j数据库信息
-        db.insertRelation(relation.headEntity, relation.relationshipCategory, relation.tailEntity, id)
+        db.insertRelation(relation.headEntity, relation.relationshipCategory, relation.tailEntity)
         temp = Temp.objects.get(temp_id=id)
         temp.delete()
         tempList = Temp.objects.filter(user_id=user_id)
         return redirect('/toDataManager/')
     elif result2:
         # 创建头实体
-        db.createNode(relation.headEntity, relation.headEntityType, {})
+        db.createNode2(relation.headEntity, relation.headEntityType)
         # 插入一条neo4j数据库信息
-        db.insertRelation(relation.headEntity, relation.relationshipCategory, relation.tailEntity, id)
+        db.insertRelation(relation.headEntity, relation.relationshipCategory, relation.tailEntity)
         temp = Temp.objects.get(temp_id=id)
         temp.delete()
         tempList = Temp.objects.filter(user_id=user_id)
         return redirect('/toDataManager/')
     else:
+        print(111111)
         # 创建头实体
-        db.createNode(relation.headEntity, relation.headEntityType, {})
+        db.createNode2(relation.headEntity, relation.headEntityType)
         # 创建尾实体
-        db.createNode(relation.tailEntity, relation.tailEntityType, {})
+        db.createNode2(relation.tailEntity, relation.tailEntityType)
         # 插入一条neo4j数据库信息
-        db.insertRelation(relation.headEntity, relation.relationshipCategory, relation.tailEntity, id)
+        db.insertRelation(relation.headEntity, relation.relationshipCategory, relation.tailEntity)
         temp = Temp.objects.get(temp_id=id)
         temp.delete()
         tempList = Temp.objects.filter(user_id=user_id)

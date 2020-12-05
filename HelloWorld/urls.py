@@ -1,7 +1,7 @@
 from django.contrib import admin
 from django.urls import path
 
-from Hello.View import views, annotation_view, dataManager_view, entity_view, relation_view, home_view, d2rq_view, relation_extraction_view, excel_view, word_view, answer_view
+from Hello.View import views, annotation_view, dataManager_view, entity_view, relation_view, home_view, d2rq_view, relation_extraction_view, excel_view, word_view, answer_view, classification_view
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -137,4 +137,12 @@ urlpatterns = [
     #跳转到问答系统
     path('toAnswer/', answer_view.toAnswer),
 
+    path('answer_question/', answer_view.answer_question),
+
+    #跳转到信息聚类模块
+    path('toClassification/', classification_view.toClassification),
+
+    #信息聚类模块上传excel文件
+    path('upload_classification_file/', classification_view.upload_classification_file),
+    path('display_classification/', classification_view.display_classification)
 ]

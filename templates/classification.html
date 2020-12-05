@@ -1,0 +1,386 @@
+{% extends 'index.html' %}
+{% block en %}
+{% load pagination_tags %}
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+        <title></title>
+        <meta charset="utf-8"/>
+        <link rel="stylesheet" href="/static/css/bootstrap.min.css"/>
+        <link rel="stylesheet" href="http://cdn.static.runoob.com/libs/bootstrap/3.3.7/css/bootstrap.min.css">
+        <link href="/static/css/font-awesome.min.css" rel="stylesheet"/>
+        <link rel="stylesheet" href="/static/css/bootstrap.css"/>
+        <link rel="stylesheet" href="/static/css/style2.css"/>
+        <link rel="stylesheet" href="/static/css/ner.css"/>
+
+        <script type="text/javascript" src="/static/js/jquery.min.js"></script>
+        <script type="text/javascript" src="/static/js/bootstrap.min.js"></script>
+        <script type="text/javascript" src="/static/js/ner.js"></script>
+        <script src="https://cdn.bootcdn.net/ajax/libs/layer/2.3/layer.js"></script>
+
+        <script src="http://cdn.static.runoob.com/libs/jquery/2.1.1/jquery.min.js"></script>
+        <script src="http://cdn.static.runoob.com/libs/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        <style>
+            .file input {
+                position: absolute;
+                font-size: 100px;
+                right: 0;
+                top: 0;
+                opacity: 0;
+            }
+
+            input[type="checkbox"] {
+                -webkit-appearance: none;
+                vertical-align: middle;
+                margin-top: 0;
+                background: #fff;
+                border: #999 solid 1px;
+                border-radius: 3px;
+                min-height: 12px;
+                min-width: 12px;
+            }
+
+            input[type="checkbox"]:checked {
+                background: #3190e8;
+            }
+
+            input[type="checkbox"]:checked::after {
+                content: '';
+                top: 3px;
+                left: 3px;
+                position: absolute;
+                background: transparent;
+                border: #fff solid 2px;
+                border-top: none;
+                border-right: none;
+                height: 6px;
+                width: 10px;
+                -moz-transform: rotate(-45deg);
+                -ms-transform: rotate(-45deg);
+                -webkit-transform: rotate(-45deg);
+                transform: rotate(-45deg);
+            }
+        </style>
+
+    <body>
+    <div class="container">
+        <div class="row">
+            <!--head start-->
+            <div class="col-md-12">
+                <ol class="breadcrumb">
+                    <li><i class="fa fa-home"></i><a href="/toHome/">主页</a></li>
+                    <li><i class="fa fa-link" aria-hidden="true"></i>信息聚类</li>
+                </ol>
+            </div>
+
+            <div class="col-md-12">
+                <div class="panel panel-default">
+                    <header class="panel-heading">
+                        待聚类文档上传：
+                    </header>
+                    <div class="panel-body">
+                        <form name="upload" enctype="multipart/form-data" method="post" action="/upload_classification_file/">
+                            {% csrf_token %}
+                            <input name="file" id="file" type="file" style="display: none"/>
+                            <div class="input-append">
+                                <input id="photoCover" type="text" class="form-control"
+                                       style="float: left; width: 350px">
+                                <a class="btn btn-default" style="border-radius: 0px; width: 50px"
+                                   onclick="$('input[id=file]').click();">
+                                    浏览
+                                </a>
+                                <button type="submit"
+                                        style="background-color:#8fd19e; width: 116px;height: 36px; margin-left: 100px" name="upload">上传文档
+                                </button>
+
+                            </div>
+                        </form>
+                        <form name="upload" enctype="multipart/form-data" method="post" action="/display_classification/">
+                            {% csrf_token %}
+                            <div class="input-append">
+                                <button type="submit"
+                                        style="background-color:#00aced; width: 116px;height: 36px; margin-left: 505px" name="upload">开始聚类
+                                </button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+            {% if  resultList_classification %}
+                <div class="col-md-12">
+                    <div class="panel panel-default">
+                        <header class="panel-heading">
+                            结果显示：
+                        </header>
+                        <div class="panel-body">
+                            <div class="show-list" style="position: relative;top: 30px; text-align: center">
+                                <table  class="table table-bordered table-hover" align="center"
+                                       border="solid 3px">
+                                    <thead>
+                                    <tr align="center" class="text-danger">
+                                        <th align="center" width="100" class="text-center">分类序号</th>
+                                        <th align="center" width="150" class="text-center">文本</th>
+                                    </tr>
+                                    </thead>
+                                    <tbody id="tb">
+                                    {% autopaginate resultList_classification 10 %}
+                                    {% for list in resultList_classification %}
+                                        <tr>
+                                            <td align="center">{{ list.1 }}</td>
+                                            <td align="center">{{ list.0 }}</td>
+                                        </tr>
+                                        </tbody>
+                                    {% endfor %}
+                                </table>
+                            {% paginate %}
+                            </div>
+                            <br>
+
+                        </div>
+                    </div>
+                </div>
+            {% endif %}
+
+            {% if searchResult %}
+            <!-- 为ECharts准备一个具备大小（宽高）的Dom -->
+            <div class="col-md-12">
+                <div class="panel panel-default ">
+                    <header class="panel-heading">
+                        关系图 :
+                    </header>
+                    <div class="panel-body ">
+                        <div id="graph" style="width: 100%;height:600px;"></div>
+                    </div>
+                </div>
+            </div>
+            {% endif %}
+
+            <div class="footers">
+                <span style="color: white;">© 2020 东北大学-数字线技术项目团队 版权所有</span>
+            </div>
+        </div>
+    </div>
+
+
+    {% if messages %}
+        <script>
+            {% for msg in messages %}
+                alert('{{ msg.message }}');
+            {% endfor %}
+        </script>
+    {% endif %}
+
+
+    <script type="text/javascript" src="/static/js/jquery.min.js"></script>
+    <script type="text/javascript" src="/static/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="/static/js/moment.js"></script>
+
+    <script type="text/javascript">
+        $('input[id=file]').change(function () {
+            $('#photoCover').val($(this).val());
+        });
+        function loading() {
+            layer.msg("加载中", {
+                icon: 16,
+                shade: [0.6, '#000005'],//遮罩的颜色与透明度
+                time: false  //取消自动关闭
+            })
+        };
+    </script>
+
+    <script src="/static/js/echarts.js"></script>
+    <script src="/static/js/jquery-1.8.3.min.js"></script>
+    {% if searchResult %}
+        <script type="text/javascript">
+            var searchResult ={{searchResult|safe}}
+            //echarts 数据
+            var data = [];
+            var links = [];
+
+            //构造展示的数据
+            var maxDisPlayNode = 100;
+            var id = 0;
+            for (var i = 0; id <maxDisPlayNode && i < searchResult.length; i++) {
+                //获取node1
+                node1 = {};
+                node1['name'] = searchResult[i]['n1']['name'];
+                node1['draggable'] = true;
+                if ('url' in searchResult[i]['n1']) {
+                    node1['category'] = 1;
+                } else {
+                    node1['category'] = 2;
+                }
+                var flag = 1;
+
+                relationTarget = id.toString();
+                for (var j = 0; j < data.length; j++) {
+                    if (data[j]['name'] === node1['name']) {
+                        flag = 0;
+                        relationTarget = data[j]['id'];
+                        break;
+                    }
+                }
+
+                node1['id'] = relationTarget;
+                if (flag === 1) {
+                    id++;
+                    data.push(node1);
+                }
+
+                //获取node2
+                node2 = {};
+                node2['name'] = searchResult[i]['n2']['name'];
+                node2['draggable'] = true;
+                if ('url' in searchResult[i]['n2']) {
+                    node2['category'] = 1;
+                } else {
+                    node2['category'] = 2;
+                }
+                flag = 1;
+                relationTarget = id.toString();
+                for (var j = 0; j < data.length; j++) {
+                    if (data[j]['name'] === node2['name']) {
+                        flag = 0;
+                        relationTarget = data[j]['id'];
+                        break;
+                    }
+                }
+                node2['id'] = relationTarget;
+                if (flag === 1) {
+                    id++;
+                    data.push(node2);
+                }
+
+                //获取relation
+                relation = {};
+                relation['source'] = node1['id'];
+                relation['target'] = node2['id'];
+                relation['category'] = 0;
+                flag = 1;
+                for (var j = 0; j < links.length; j++) {
+                    if (links[j]['source'] == relation['source'] && links[j]['target'] == relation['target']) {
+                        links[j]['value'] = links[j]['value'] + searchResult[i]['rel']['type'];
+                        flag = 0;
+                        break;
+                    }
+                }
+                if (flag === 1) {
+                    relation['value'] = searchResult[i]['rel']['type'];
+                    relation['symbolSize'] = 10;
+                    links.push(relation);
+                }
+
+            }
+            // Echarts初始化设置
+            var myChart = echarts.init(document.getElementById('graph'));
+
+            option = {
+                title: {
+                    text: ''
+                },
+                tooltip: {},
+                animationDurationUpdate: 1500,
+                animationEasingUpdate: 'quinticInOut',
+                label: {
+                    normal: {
+                        show: true,
+                        textStyle: {
+                            fontSize: 12
+                        },
+                    }
+                },
+                legend: {
+                    x: "center",
+                    show: false
+                },
+                series: [
+
+                    {
+                        type: 'graph',
+                        layout: 'force',
+                        symbolSize: 45,
+                        focusNodeAdjacency: true,
+                        roam: true,
+                        edgeSymbol: ['none', 'arrow'],
+                        categories: [{
+                            name: '查询实体',
+                            itemStyle: {
+                                normal: {
+                                    color: "#009800",
+                                }
+                            }
+                        }, {
+                            name: 'Bank',
+                            itemStyle: {
+                                normal: {
+                                    color: "#4592FF",
+                                }
+                            }
+                        }, {
+                            name: 'Serise',
+                            itemStyle: {
+                                normal: {
+                                    color: "#C71585",
+                                }
+                            }
+                        }],
+                        label: {
+                            normal: {
+                                show: true,
+                                textStyle: {
+                                    fontSize: 12,
+                                },
+                            }
+                        },
+                        force: {
+                            repulsion: 1000
+                        },
+                        edgeSymbolSize: [4, 50],
+                        edgeLabel: {
+                            normal: {
+                                show: true,
+                                textStyle: {
+                                    fontSize: 10
+                                },
+                                formatter: "{c}"
+                            }
+                        },
+                        data: data,
+                        links: links,
+                        lineStyle: {
+                            normal: {
+                                opacity: 0.9,
+                                width: 1.3,
+                                curveness: 0,
+                                color: "#262626",
+                            }
+                        }
+                    }
+                ]
+            };
+            // 使用刚指定的配置项和数据显示图表。
+            myChart.setOption(option);
+        </script>
+    {% endif %}
+    <script>
+	$(".dropdown-menu li a").click(function(){
+	   var selText = $(this).text();
+	   $(this).parents('.btn-group').find('.dropdown-toggle').html(selText+' <span class="caret"></span>');
+	   if(selText.trim()!="Other"){
+	   	$("#relationshipCategory").val(selText.trim()) ;
+	   }
+	   //combobox behavior
+	   if (selText.trim()==="Other") {
+	       $("#relation_name").removeClass("hide");
+	   }
+	   else{
+	   	   $("#relation_name").addClass("hide");
+	   }
+
+	});
+</script>
+    </body>
+    </html>
+{% endblock en %}

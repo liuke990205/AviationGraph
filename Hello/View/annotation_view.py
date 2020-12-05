@@ -7,18 +7,15 @@ from django.shortcuts import render, redirect
 from Hello.models import Log, Annotation, User, Dictionary, Temp, Relation
 
 
-
 # 跳转到文本标注页面
 def toAnnotation(request):
     username = request.session.get('username')
-
     if username is None:
         return render(request, 'login.html')
     user = User.objects.get(username=username)
     user_id = user.user_id
     # 获取未标注数据的数量
     count = len(Annotation.objects.filter(user_id=user_id, flag=0))
-
     return render(request, 'text_annotation.html', {'username': username, 'count': count})
 
 
@@ -28,25 +25,21 @@ def upload(request):
         # 获取文件名
         path = request.FILES.get('file')
         if path:
-            try:
-                with open('upload_file/annotation_word.docx', 'wb+') as destination:
-                    for chunk in path.chunks():
-                        destination.write(chunk)
-                # 获取当前用户的id
-                username = request.session.get('username')
-                user = User.objects.get(username=username)
-                user_id = user.user_id
-                # 读取文件内容，并且插入到数据库中
-                file = docx.Document("upload_file/annotation_word.docx")
-                for p in file.paragraphs:
-                    i = p.text.strip('\n')
-                    q = Annotation(content=i, file_name=file, flag=False, user_id_id=user_id)  # 将数据插入到数据库中
-                    q.save()
-                messages.success(request, "上传成功！")
-                return redirect('/toAnnotation/')
-            except Exception as e:
-                print(e)
-
+            with open('upload_file/annotation_word.docx', 'wb+') as destination:
+                for chunk in path.chunks():
+                    destination.write(chunk)
+            # 获取当前用户的id
+            username = request.session.get('username')
+            user = User.objects.get(username=username)
+            user_id = user.user_id
+            # 读取文件内容，并且插入到数据库中
+            file = docx.Document("upload_file/annotation_word.docx")
+            for p in file.paragraphs:
+                i = p.text.strip('\n')
+                q = Annotation(content=i, file_name=file, flag=False, user_id_id=user_id)  # 将数据插入到数据库中
+                q.save()
+            messages.success(request, "上传成功！")
+            return redirect('/toAnnotation/')
         else:
             messages.success(request, "文件为空！")
             return redirect('/toAnnotation/')
