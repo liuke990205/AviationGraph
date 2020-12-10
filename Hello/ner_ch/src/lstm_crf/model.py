@@ -5,9 +5,9 @@ import torch
 from sklearn.metrics import f1_score, classification_report
 from torch import nn
 
-from configs.base import config
-from lstm_crf.crf import CRF
-from model.modeling_albert import BertConfig, BertModel
+from Hello.ner_ch.src.albert.configs.base import config
+from Hello.ner_ch.src.lstm_crf.crf import CRF
+from Hello.ner_ch.src.albert.model.modeling_albert import BertConfig, BertModel
 
 DEVICE = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
 

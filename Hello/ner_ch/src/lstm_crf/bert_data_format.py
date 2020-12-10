@@ -2,9 +2,9 @@
 import torch
 from torch.utils.data import TensorDataset, DataLoader, RandomSampler
 
-from configs.base import config
-from model.modeling_albert import BertConfig, BertModel
-from model.tokenization_bert import BertTokenizer
+from Hello.ner_ch.src.albert.configs.base import config
+from Hello.ner_ch.src.albert.model.modeling_albert import BertConfig, BertModel
+from Hello.ner_ch.src.albert.model.tokenization_bert import BertTokenizer
 
 
 class InputFeatures(object):

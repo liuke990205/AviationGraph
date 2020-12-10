@@ -6,16 +6,15 @@ import yaml
 import sys
 import os
 
+#export PYTHONPATH="${PYTHONPATH}:/usr/project/test/HelloWorld0/Hello/ner_ch/src"
+#export PYTHONPATH="${PYTHONPATH}:/usr/project/test/HelloWorld0/Hello/ner_ch/src/albert"
 
-#sys.path.append(os.path.abspath(os.path.join(os.getcwd(),"../../..")))
-#sys.path.append(os.path.abspath(os.path.join(os.getcwd(),"../..")))
-#sys.path.append(os.path.abspath(os.path.join(os.getcwd(),"../../albert")))
-#from configs.base import config
+
 from Hello.ner_ch.src.albert.configs.base import config
 from Hello.ner_ch.src.lstm_crf.data_format import DataFormat
 from Hello.ner_ch.src.lstm_crf.model import BiLSTMCRF
 from Hello.ner_ch.src.lstm_crf.utils import f1_score, get_tags, format_result
-from model.tokenization_bert import BertTokenizer
+from Hello.ner_ch.src.albert.model.tokenization_bert import BertTokenizer
 
 DEVICE = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
 

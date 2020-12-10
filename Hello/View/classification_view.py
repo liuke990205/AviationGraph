@@ -6,10 +6,8 @@ import jieba
 from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.cluster import KMeans
 
-
 def jieba_tokenize(text):
     return jieba.lcut(text)
-
 
 # 跳转到分类界面
 def toClassification(request):
@@ -41,10 +39,9 @@ def display_classification(request):
         i = p.text.strip('\n')
         text_list.append(i)
     '''
-        tokenizer: 指定分词函数
-        lowercase: 在分词之前将所有的文本转换成小写，因为涉及到中文文本处理，
-        所以最好是False
-        '''
+    tokenizer: 指定分词函数
+    lowercase: 在分词之前将所有的文本转换成小写，因为涉及到中文文本处理，所以最好是False
+    '''
     tfidf_vectorizer = TfidfVectorizer(tokenizer=jieba_tokenize, lowercase=False)
 
     # 需要进行聚类的文本集

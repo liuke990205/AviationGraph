@@ -3,8 +3,8 @@
 import torch
 from torch.utils.data import TensorDataset, DataLoader
 
-from configs.base import config
-from model.tokenization_bert import BertTokenizer
+from Hello.ner_ch.src.albert.configs.base import config
+from Hello.ner_ch.src.albert.model.tokenization_bert import BertTokenizer
 
 
 class InputFeatures(object):

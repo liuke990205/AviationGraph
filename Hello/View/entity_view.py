@@ -4,7 +4,7 @@ from django.shortcuts import render, redirect
 
 from Hello.models import Dictionary
 # 深处NER后需要注释
-#from Hello.ner_ch.src.lstm_crf.main import NER
+from Hello.ner_ch.src.lstm_crf.main import NER
 
 
 def toEntityRecognition(request):
@@ -52,6 +52,7 @@ def ner(request):
     if request.POST:
         sentence = request.POST.get('sentence', None)
         if sentence:
+            print(sentence)
             sentence = sentence.replace(" ", "")
             cn = NER("predict")
             temp = cn.predict(sentence)
