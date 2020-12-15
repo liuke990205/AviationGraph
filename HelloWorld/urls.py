@@ -1,7 +1,7 @@
 from django.contrib import admin
 from django.urls import path
 
-from Hello.View import views, annotation_view, dataManager_view, entity_view, relation_view, home_view, d2rq_view, relation_extraction_view, excel_view, word_view, answer_view, classification_view
+from Hello.View import views, annotation_view, dataManager_view, entity_view, relation_view, home_view, d2rq_view, relation_extraction_view, excel_view, word_view, answer_view, classification_view, searchAllPdf_view
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -144,5 +144,10 @@ urlpatterns = [
 
     #信息聚类模块上传excel文件
     path('upload_classification_file/', classification_view.upload_classification_file),
-    path('display_classification/', classification_view.display_classification)
+    path('display_classification/', classification_view.display_classification),
+
+
+
+    path('toSearchAllPdf/', searchAllPdf_view.toSearchAllPdf),
+    path('searchAllPdf/', searchAllPdf_view.searchAllPdf)
 ]
