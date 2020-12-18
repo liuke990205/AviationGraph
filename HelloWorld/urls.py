@@ -149,5 +149,6 @@ urlpatterns = [
 
 
     path('toSearchAllPdf/', searchAllPdf_view.toSearchAllPdf),
+    path('upload_pdf/', searchAllPdf_view.upload_pdf),
     path('searchAllPdf/', searchAllPdf_view.searchAllPdf)
 ]

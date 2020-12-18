@@ -14,10 +14,84 @@
         <script type="text/javascript" src="/static/js/bootstrap.min.js"></script>
         <script src="/static/js/echarts.common.min.js"></script>
 
-        <script src="http://cdn.static.runoob.com/libs/jquery/2.1.1/jquery.min.js"></script>
-        <script src="http://cdn.static.runoob.com/libs/bootstrap/3.3.7/js/bootstrap.min.js"></script>
         <script type="text/javascript" src="http://echarts.baidu.com/gallery/vendors/echarts/echarts-all-3.js"></script>
 
+        <script type="text/javascript" src="/static/js/jquery.min.js"></script>
+        <script type="text/javascript" src="/static/js/bootstrap.min.js"></script>
+        <script src="https://cdn.bootcdn.net/ajax/libs/layer/2.3/layer.js"></script>
+        <script src="http://cdn.static.runoob.com/libs/jquery/2.1.1/jquery.min.js"></script>
+        <script src="http://cdn.static.runoob.com/libs/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        <style>
+        .file input {
+            position: absolute;
+            font-size: 100px;
+            right: 0;
+            top: 0;
+            opacity: 0;
+        }
+
+        input[type="checkbox"] {
+            -webkit-appearance: none;
+            vertical-align: middle;
+            margin-top: 0;
+            background: #fff;
+            border: #999 solid 1px;
+            border-radius: 3px;
+            min-height: 12px;
+            min-width: 12px;
+        }
+
+        input[type="checkbox"]:checked {
+            background: #3190e8;
+        }
+
+        input[type="checkbox"]:checked::after {
+            content: '';
+            top: 3px;
+            left: 3px;
+            position: absolute;
+            background: transparent;
+            border: #fff solid 2px;
+            border-top: none;
+            border-right: none;
+            height: 6px;
+            width: 10px;
+            -moz-transform: rotate(-45deg);
+            -ms-transform: rotate(-45deg);
+            -webkit-transform: rotate(-45deg);
+            transform: rotate(-45deg);
+        }
+    </style>
+        <script>
+            $(document).ready(function () {
+                $("#show span[class!='none'][class!='enter']").mouseover(function () {
+                    var position = this.getBoundingClientRect()
+                    var Mylabel = $(this).attr('label');
+                    $("body").append("<div id='div_toop'>" + Mylabel + "</div>");
+                    var left = (position.left + position.right) / 2 - 50;
+                    if (position.bottom - position.top > 25) { //说明分成了两行
+                        left = position.right - 50;
+                    }
+                    $("#div_toop")
+                        .css({
+                            "top": (position.top - 50) + "px",
+                            "left": left + "px"
+                        }).show("slow");
+                }).mouseout(function () {
+                    $("#div_toop").remove();
+                });
+                $('input[id=file]').change(function () {
+                    $('#photoCover').val($(this).val());
+                });
+            });
+            function loading() {
+                layer.msg("正在上传文件！", {
+                    icon: 16,
+                    shade: [0.6, '#000005'],//遮罩的颜色与透明度
+                    time: false  //取消自动关闭
+                })
+            };
+        </script>
     </head>
     <title>全文搜索</title>
     <div class="container">
@@ -31,6 +105,31 @@
                     <li><i class="fa fa-link" aria-hidden="true"></i>全文搜索</li>
                 </ol>
             </div>
+
+            <div class="col-md-12">
+            <div class="panel panel-default">
+                <header class="panel-heading">
+                    待全文搜索的文档上传：
+                </header>
+                <div class="panel-body">
+                    <form name="upload" enctype="multipart/form-data" method="post" action="/upload_pdf/">
+                        {% csrf_token %}
+                        <input name="file" id="file" type="file" style="display: none"/>
+                        <div class="input-append">
+                            <input id="photoCover" type="text" class="form-control"
+                                   style="float: left; width: 350px">
+                            <a class="btn btn-default" style="border-radius: 0px; width: 50px"
+                               onclick="$('input[id=file]').click();">
+                                浏览
+                            </a>
+                            <button type="submit"
+                                    style="background-color:#8fd19e; width: 116px;height: 36px; margin-left: 100px" name="upload" onclick="loading()">上传文档
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
 
             <div class="col-md-12">
                 <div class="panel panel-default">

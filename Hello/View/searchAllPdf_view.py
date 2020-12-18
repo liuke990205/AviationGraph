@@ -1,11 +1,9 @@
 # -*- coding: utf-8 -*-
-
 from django.contrib import messages
 from django.shortcuts import render, redirect
 import pdfplumber
 from Hello.Entity.WORD.word import Word
 import jieba
-import pandas as pd
 
 '''
 跳转到全文搜索界面
@@ -14,9 +12,22 @@ def toSearchAllPdf(request):
     username = request.session.get('username')
     if username is None:
         return render(request, 'login.html')
-
     return render(request, "searchAllPdf.html")
 
+
+def upload_pdf(request):
+    if request.method == 'POST':
+        # 获取文件名
+        path = request.FILES.get('file')
+        if path:
+            with open('upload_file/pdf_test.pdf', 'wb+') as destination:
+                for chunk in path.chunks():
+                    destination.write(chunk)
+            messages.success(request, "上传成功！")
+            return redirect('/toSearchAllPdf/')
+        else:
+            messages.success(request, "文件为空！")
+            return redirect('/toSearchAllPdf/')
 
 
 def PDFreader(filename):
@@ -52,19 +63,10 @@ def PDFsearch(key, words):
     return PageNo
 
 def searchAllPdf(request):
-    # filename = "D:/desk/开题相关论文\开题报告.pdf"
-
-    '''
-    dlg = win32ui.CreateFileDialog(1)  # 1表示打开文件对话框
-    dlg.SetOFNInitialDir('D:')  # 设置打开文件对话框中的初始显示目录
-    dlg.DoModal()
-    filename = dlg.GetPathName()  # 获取选择的文件名称
-    '''
-
 
     key = request.POST.get("keywords")
-
     filename = "upload_file/pdf_test.pdf"
+    print(filename)
     words = PDFreader(filename)
 
     for i in range(len(words)):
@@ -72,25 +74,17 @@ def searchAllPdf(request):
 
     pages = PDFsearch(key, words)
 
-
     if pages.__len__() == 0:
         print(pages)
         messages.success(request, "抱歉！在文件中没有找到该关键字！")
         return redirect("/toSearchAllPdf")
     else:
-
         page_content = []
-
         for i in range(pages.__len__()):
             print(key + "在" + filename + "中出现的页码为" + str(pages[i]))
             pdfReader = pdfplumber.open(filename)
             page_text = pdfReader.pages[i]
-
             page_content.append(page_text.extract_text())
 
         content_dict = dict(zip(pages, page_content))
-        print(content_dict)
         return render(request, 'searchAllPdf.html',{'content_dict': content_dict})
-
-
-
