@@ -74,40 +74,40 @@ def excel_one_line_to_list():
         if db.findEntity("飞机") is None:
             db.createNode2("飞机", "飞机")
 
-        db.insertExcelRelation(data[faulty_component], data[professional], "所属专业")
+        db.insertExcelRelation(data[faulty_component], "故障件", data[professional], "专业", "所属专业")
         temp_list = [data[faulty_component], "故障件", data[department], "部门", "所属部门"]
         result_list.append(temp_list)
 
         #db.createNode(data[faulty_component], "故障件", {})
-        db.insertExcelRelation(data[faulty_component], data[department], "所属部门")
+        db.insertExcelRelation(data[faulty_component], "故障件", data[department], "部门", "所属部门")
         temp_list = [data[faulty_component], "故障件", data[local], "所在位置", "所在位置"]
         result_list.append(temp_list)
 
         #db.createNode(data[faulty_component], "故障件", {})
-        db.insertExcelRelation(data[faulty_component], data[local], "所在位置")
+        db.insertExcelRelation(data[faulty_component], "故障件", data[local], "所在位置", "所在位置")
         temp_list = [data[faulty_component], "故障件", data[failure_phenomenon], "故障现象", "故障现象"]
         result_list.append(temp_list)
 
 
         #db.createNode(data[faulty_component], "故障件", {})
-        db.insertExcelRelation(data[faulty_component], data[failure_phenomenon], "故障现象")
+        db.insertExcelRelation(data[faulty_component], "故障件", data[failure_phenomenon], "故障现象", "故障现象")
         temp_list = [data[failure_phenomenon], "故障现象", data[find_the_opportunity], "发现时机", "发现时机"]
         result_list.append(temp_list)
 
         #db.createNode(data[failure_phenomenon], "故障现象", {})
-        db.insertExcelRelation(data[failure_phenomenon], data[find_the_opportunity], "发现时机")
+        db.insertExcelRelation(data[failure_phenomenon], "故障现象", data[find_the_opportunity], "发现时机", "发现时机")
         temp_list = [data[failure_phenomenon], "故障现象", data[cause_of_failure], "故障原因", "故障原因"]
         result_list.append(temp_list)
 
         #db.createNode(data[failure_phenomenon], "故障现象", {})
-        db.insertExcelRelation(data[failure_phenomenon], data[cause_of_failure], "故障原因")
+        db.insertExcelRelation(data[failure_phenomenon], "故障现象", data[cause_of_failure], "故障原因", "故障原因")
         temp_list = [data[cause_of_failure], "故障原因", data[ruled_out], "排除经过", "排除经过"]
         result_list.append(temp_list)
 
-        db.insertExcelRelation("飞机", data[faulty_component], "包括")
+        db.insertExcelRelation("飞机", "飞机", data[faulty_component], "故障件", "包括")
 
         #db.createNode(data[cause_of_failure], "故障原因", {})
-        db.insertExcelRelation(data[cause_of_failure], data[ruled_out], "排除经过")
+        db.insertExcelRelation(data[cause_of_failure], "故障原因", data[ruled_out], "排除经过", "排除经过")
         temp_list = ["飞机", "飞机", data[faulty_component], "故障件", "包括"]
         result_list.append(temp_list)
 

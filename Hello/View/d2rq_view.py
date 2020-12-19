@@ -263,8 +263,21 @@ def insertKnow(table2, entity_name2, re_name, database, host, username, password
         tailEntityType = Dictionary.objects.get(entity=result[1]).entity_type
         # 根据头实体和尾实体来查询之间的关系
         relation = Relation.objects.get(head_entity=headEntityType, tail_entity=tailEntityType)
+        # 获取字典的全部信息
+        dictionary_entity = Dictionary.objects.all()
+        # 实体类型
+        type0 = ""
+        for entity in dictionary_entity:
+            if entity.entity == result[0]:
+                type0 = entity.entity_type
+                break
+        type1 = ""
+        for entity in dictionary_entity:
+            if entity.entity == result[1]:
+                type1 = entity.entity_type
+                break
         db = neo4jconn
         sum += 1
-        db.insertRelation(result[0], relation.relation, result[1], str(sum))
+        db.insertRelation(result[0], type0, relation.relation, result[1], type1, str(sum))
     cursor.close()  # 关闭游标
     conn.close()  # 关闭连接

@@ -235,16 +235,16 @@ def create_relation(head_entity, head_property_list, tail_entity, tail_property_
         if len(select_head_entity) == 0 and len(select_tail_entity) == 0:
             db.createNode(head_entity_value, head_entity_typename, head_property_dict)
             db.createNode(tail_entity_value, tail_entity_typename, tail_property_dict)
-            db.insertExcelRelation(head_entity_value, tail_entity_value, tail_entity_typename)
+            db.insertExcelRelation(head_entity_value, head_entity_typename, tail_entity_value, tail_entity_typename, tail_entity_typename)
 
         #头实体已经存在，只需要创建尾实体和关系即可
         elif len(select_head_entity) != 0:
             db.createNode(tail_entity_value, tail_entity_typename, tail_property_dict)
-            db.insertExcelRelation(head_entity_value, tail_entity_value, tail_entity_typename)
+            db.insertExcelRelation(head_entity_value, head_entity_typename, tail_entity_value, tail_entity_typename, tail_entity_typename)
         #尾实体已经存在，只需要创建头实体和关系即可
         elif len(select_tail_entity) != 0:
             db.createNode(head_entity_value, head_entity_typename, head_property_dict)
-            db.insertExcelRelation(head_entity_value, tail_entity_value, tail_entity_typename)
+            db.insertExcelRelation(head_entity_value, head_entity_typename, tail_entity_value, tail_entity_typename, tail_entity_typename)
 
     cursor.close()  # 关闭游标
     conn.close()  # 关闭连接
