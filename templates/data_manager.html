@@ -13,7 +13,6 @@
         <link href="/static/css/font-awesome.min.css" rel="stylesheet"/>
         <link rel="stylesheet" href="/static/css/bootstrap.css"/>
         <link rel="stylesheet" href="/static/css/style2.css"/>
-
         <script type="text/javascript" src="/static/js/jquery.min.js"></script>
         <script type="text/javascript" src="/static/js/bootstrap.min.js"></script>
         <script src="/static/js/echarts.common.min.js"></script>
@@ -124,31 +123,11 @@
                 </div>
             </div>
             {% endif %}
-
-            <div class="col-md-12">
-                <div class="panel panel-default">
-                    <header class="panel-heading">
-                        Neo4j数据库下载：
-                    </header>
-                    <div class="panel-body" style="text-align: center">
-                        <form name="download" enctype="multipart/form-data" method="post" action="/download/">
-                            {% csrf_token %}
-                            <button type="submit"
-                                    style="background-color:#8fd19e; width: 200px;height: 36px; text-align: center"
-                                    name="download">
-                                下载neo4j数据库到本地
-                            </button>
-                        </form>
-                    </div>
-                </div>
-            </div>
-
             <div class="footers">
                 <span style="color: white;">© 2020 东北大学-数字线技术项目团队 版权所有</span>
             </div>
         </div>
     </div>
-
     {% if messages %}
         <script>
             {% for msg in messages %}

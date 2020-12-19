@@ -206,7 +206,8 @@ def create_relation(head_entity, head_property_list, tail_entity, tail_property_
         head_entity_value = result[0]
         # 查询出来的尾实体名的value
         tail_entity_value = result[1]
-
+        print(head_entity_value)
+        print(tail_entity_value)
         # 查询出来的头实体的属性列表的value
         head_property_list_value = result[2:head_property_num + 2]
         # 查询出来的尾实体的属性列表的value
@@ -232,17 +233,18 @@ def create_relation(head_entity, head_property_list, tail_entity, tail_property_
             创建节点和关系【判断之前判断一下节点是否已经存在】
         '''
         #两个实体都不存在
+        print(len(select_head_entity))
         if len(select_head_entity) == 0 and len(select_tail_entity) == 0:
             db.createNode(head_entity_value, head_entity_typename, head_property_dict)
             db.createNode(tail_entity_value, tail_entity_typename, tail_property_dict)
             db.insertExcelRelation(head_entity_value, head_entity_typename, tail_entity_value, tail_entity_typename, tail_entity_typename)
 
         #头实体已经存在，只需要创建尾实体和关系即可
-        elif len(select_head_entity) != 0:
+        elif len(select_head_entity) != 0 and len(select_tail_entity) == 0:
             db.createNode(tail_entity_value, tail_entity_typename, tail_property_dict)
             db.insertExcelRelation(head_entity_value, head_entity_typename, tail_entity_value, tail_entity_typename, tail_entity_typename)
         #尾实体已经存在，只需要创建头实体和关系即可
-        elif len(select_tail_entity) != 0:
+        elif len(select_head_entity) == 0 and len(select_tail_entity) != 0:
             db.createNode(head_entity_value, head_entity_typename, head_property_dict)
             db.insertExcelRelation(head_entity_value, head_entity_typename, tail_entity_value, tail_entity_typename, tail_entity_typename)
 
