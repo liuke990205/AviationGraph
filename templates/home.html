@@ -81,6 +81,7 @@
     {% if searchResult %}
     <script type="text/javascript">
         var searchResult ={{searchResult|safe}}
+        var searchEntity ={{searchEntity|safe}}
         //echarts 数据
         var data = [];
         var links = [];
@@ -160,6 +161,24 @@
 
         }
 
+        for (var i = 0; i < searchEntity.length; i++) {
+            node = {};
+            node['name'] = searchEntity[i]['n']['name'];
+            var flag = 1;
+
+            for (var j = 0; j < data.length; j++) {
+                if (data[j]['name'] === node['name']) {
+                    flag = 0;
+                    break;
+                }
+            }
+
+            if (flag === 1) {
+                node['id'] = id.toString();
+                id++;
+                data.push(node);
+            }
+        }
 
         // Echarts初始化设置
         var myChart = echarts.init(document.getElementById('graph'));
@@ -171,6 +190,7 @@
             tooltip: {},
             animationDurationUpdate: 1500,
             animationEasingUpdate: 'quinticInOut',
+            backgroundColor: '#01DFD7',
             label: {
                 normal: {
                     show: true,

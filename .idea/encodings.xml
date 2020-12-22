@@ -2,10 +2,12 @@
 <project version="4">
   <component name="Encoding">
     <file url="file://$PROJECT_DIR$/Hello/View" charset="GBK" />
-    <file url="file://$PROJECT_DIR$/Hello/View/d2rq_view.py" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Hello/View/d2rq_view.py" charset="GBK" />
     <file url="file://$PROJECT_DIR$/Hello/View/dataManager_view.py" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/Hello/View/excel_analysis.py" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/Hello/View/excel_view.py" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Hello/View/excel_view.py" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Hello/View/home_view.py" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/Hello/View/k-means.py" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/Hello/neo4j_models.py" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/Hello/ner_ch" charset="UTF-8" />
@@ -30,7 +32,7 @@
     <file url="file://$PROJECT_DIR$/templates/entity_recognition.html" charset="GBK" />
     <file url="file://$PROJECT_DIR$/templates/excel.html" charset="GBK" />
     <file url="file://$PROJECT_DIR$/templates/help.html" charset="GBK" />
-    <file url="file://$PROJECT_DIR$/templates/home.html" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/templates/home.html" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/templates/index.html" charset="GBK" />
     <file url="file://$PROJECT_DIR$/templates/login.html" charset="GBK" />
     <file url="file://$PROJECT_DIR$/templates/register.html" charset="GBK" />

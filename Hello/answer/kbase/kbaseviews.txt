@@ -1,0 +1,103 @@
+from django.shortcuts import render
+
+# Create your views here.
+from django.http import HttpResponse
+
+from django.shortcuts import HttpResponse #导入HttpResponse模块
+import pymysql
+import pandas as pd
+import os
+os.environ['TF_CPP_MIN_LOG_LEVEL'] = '2'
+import tensorflow as tf
+tf.compat.v1.logging.set_verbosity(tf.compat.v1.logging.ERROR)
+#from global_config import Logger
+from app.kbase import global_config
+import numpy as np
+import codecs
+import pickle
+from datetime import time, timedelta, datetime
+# import terminal_predict
+from app.kbase import terminal_predict
+
+# from Data.load_dbdata import upload_data
+from app.kbase.Data import load_dbdata
+import pdb
+# from run_similarity import BertSim
+from app.kbase import run_similarity
+from app.bm25data import similarity
+from app.models import Fault
+# 模块导入 https://blog.csdn.net/xiongchengluo1129/article/details/80453599
+
+# loginfo = Logger("recommend_articles.log", "info")
+#loginfo = global_config.Logger("recommend_articles.log", "info")
+
+# bs = BertSim()
+bs = run_similarity.BertSim()
+bs.set_mode(tf.estimator.ModeKeys.PREDICT)
+def simqa(question):
+    arr = []
+    list = similarity.initbm(question)
+    l = list[0].strip()
+    sql = 'select * from fault where phenomenon= %s'
+    result = Fault.objects.raw(sql, [l])
+    for i in result:
+        arr.append(i.reason)
+    arr = set(arr)
+    return list,arr
+def dpqa(question):
+    arr = []
+    result = ""
+    ner = terminal_predict.predict_online(question)
+    sql_e0_a1 = "select * from nlpccQA where entity like '%" + ner + "%' order by length(entity) asc limit 20"
+    result_e0_a1 = list(load_dbdata.upload_data(sql_e0_a1))
+    if len(result_e0_a1) > 0:
+        flag_fuzzy = True
+        # 非语义匹配，加快速度
+        # l1[0]: entity
+        # l1[1]: attribute
+        # l1[2]: answer
+        flag_ambiguity = True
+        for l in result_e0_a1:
+            if l[1] in question or l[1].lower() in question or l[1].upper() in question:
+                flag_fuzzy = False
+                # print(l[2])
+                arr.append(l[2])
+                # return render(request,'answer.html',{'form':l[2]})
+                flag_ambiguity = False
+
+        # 非语义匹配成功，继续下一次
+
+        # 语义匹配
+
+        if flag_ambiguity == True:
+            result_df = pd.DataFrame(result_e0_a1, columns=['entity', 'attribute', 'value'])
+            # loginfo.logger.info(result_df.head(100))
+
+            attribute_candicate_sim = [(k, bs.predict(question, k)[0][1]) for k in result_df['attribute'].tolist()]
+            attribute_candicate_sort = sorted(attribute_candicate_sim, key=lambda candicate: candicate[1], reverse=True)
+            # loginfo.logger.info("\n".join([str(k)+" "+str(v) for (k, v) in attribute_candicate_sort]))
+
+            answer_candicate_df = result_df[result_df["attribute"] == attribute_candicate_sort[0][0]]
+            # answer_candicate_df 答案三元组
+            for row in answer_candicate_df.index:
+                # print(answer_candicate_df.loc[row, "value"])
+                arr.append(answer_candicate_df.loc[row, "value"])
+                # return render(request, 'answer.html', {'form': answer_candicate_df.loc[row, "value"]})
+    if len(arr) > 0:
+        result = arr[0]
+    return result
+
+def answer_question(request):
+    arr = []
+    qlist = []
+    if request.POST:
+        question = request.POST.get('question', None)
+        if question:
+            dp = dpqa(question)
+            qlist,bm25 = simqa(question)
+            if dp!="":
+                arr.append(dp)
+            else:
+                arr = bm25
+    return render(request, 'answer.html', {'answer':arr,'qlist': qlist})
+

@@ -8,7 +8,6 @@ class Neo4j_Handle():
     matcher = None
 
     def __init__(self):
-        #print("Neo4j Init ...")
         pass
 
     def connectDB(self):
@@ -100,3 +99,20 @@ class Neo4j_Handle():
 
     def deleteRelation(self, temp_id):
         self.graph.run("MATCH ()-[rel{id:'" + temp_id + "'}]->() DELETE rel")
+
+    def updateNode(self, entity, dict):
+        string_list = []
+        i = 0
+        for key, value in dict.items():
+            # 利用格式化函数
+            if i == 0:
+                st = "{0}{1}{2}{3}{4}{3}".format("x.", key, "=", "'", value)
+            else:
+                st = "{0}{1}{2}{3}{4}{3}".format(", x.", key, "=", "'", value)
+            # 将字符串添加到列表中  便于后续字符串拼接
+            string_list.append(st)
+            i = i+1
+        # 进行字符串拼接
+        st_list = "".join(string_list)
+        str = "MATCH(x) WHERE x.name='" + entity + "' SET " + st_list
+        self.graph.run(str)

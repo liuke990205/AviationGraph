@@ -11,13 +11,12 @@ def toHome(request):
     if username is None:
         return render(request, 'login.html')
     db = neo4jconn
-    searchResult = {}
     searchResult = db.findAll()
     searchEntity = db.findAllEntity()
 
     number = request.session.get('number')
 
-
     return render(request, 'home.html',
                   {'searchResult': json.dumps(searchResult, ensure_ascii=False), 'relation_amount': len(searchResult),
-                   'entity_amount': len(searchEntity), 'number': number})
+                   'searchEntity': json.dumps(searchEntity, ensure_ascii=False),'entity_amount': len(searchEntity),
+                   'number': number})

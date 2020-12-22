@@ -70,3 +70,17 @@ class Rel(models.Model):
     relationshipCategory = models.CharField(max_length=100)
     text = models.CharField(max_length=255)
     re_flag = models.IntegerField()
+
+class Fault(models.Model):
+    """
+    创建如下几个表的字段
+    """
+    id = models.IntegerField(primary_key=True)
+
+    phenomenon = models.CharField('phenomenon', max_length=100)
+
+    reason = models.CharField('reason', max_length=100)
+
+    # 指定表名 不指定默认APP名字——类名(app_demo_Student)
+    class Meta:
+        db_table = 'fault'

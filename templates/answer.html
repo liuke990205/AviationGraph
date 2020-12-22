@@ -1,4 +1,5 @@
-{% extends "index.html" %}
+{% extends 'index.html' %}
+<!DOCTYPE html>
 {% block en %}
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
@@ -62,7 +63,14 @@
                     </header>
                     <div class="panel-body">
                         <div style="padding: 2%">
-                            <h2>暂未找到相应的匹配</h2>
+                             {%for a in answer%}
+                                <div>{{a}}</div>
+                            {% endfor %}
+                        </div>
+                        <div style="padding: 2%">
+                             {%for q in qlist%}
+                                <div>{{q}}</div>
+                            {% endfor %}
                         </div>
                         <div class="btn-group" style="padding: 2%">
                             <button type="button" id="btnSearch" class="btn btn-primary">错误</button>
@@ -78,5 +86,5 @@
 
     <script src="/static/js/jquery-1.8.3.min.js"></script>
     <script src="/static/js/echarts.js"></script>
-
+    </div>
 {% endblock en %}

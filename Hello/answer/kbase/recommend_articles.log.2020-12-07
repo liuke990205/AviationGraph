@@ -1,0 +1,1919 @@
+2020-12-07 19:18:20,686|kbqa_test.py[line:155]|kb_fuzzy_classify_test|INFO|total: 1, recall: 1, correct:1, accuracy: 100.0%, ambiguity：0
+2020-12-07 19:18:21,702|kbqa_test.py[line:155]|kb_fuzzy_classify_test|INFO|total: 2, recall: 2, correct:2, accuracy: 100.0%, ambiguity：0
+2020-12-07 19:18:22,719|kbqa_test.py[line:155]|kb_fuzzy_classify_test|INFO|total: 3, recall: 3, correct:3, accuracy: 100.0%, ambiguity：0
+2020-12-07 19:18:30,013|kbqa_test.py[line:164]|kb_fuzzy_classify_test|INFO|国籍 0.9964579
+运动项目 0.8912587
+吉祥物 0.01504335
+事迹 0.0021721178
+2020-12-07 19:18:31,019|kbqa_test.py[line:173]|kb_fuzzy_classify_test|INFO|total: 4, recall: 4, correct:4, accuracy: 100.0%, ambiguity：0
+2020-12-07 19:18:32,049|kbqa_test.py[line:155]|kb_fuzzy_classify_test|INFO|total: 5, recall: 5, correct:5, accuracy: 100.0%, ambiguity：0
+2020-12-07 19:18:32,102|kbqa_test.py[line:164]|kb_fuzzy_classify_test|INFO|书名 0.23398316
+2020-12-07 19:18:33,103|kbqa_test.py[line:173]|kb_fuzzy_classify_test|INFO|total: 6, recall: 6, correct:6, accuracy: 100.0%, ambiguity：0
+2020-12-07 19:18:34,117|kbqa_test.py[line:155]|kb_fuzzy_classify_test|INFO|total: 7, recall: 7, correct:7, accuracy: 100.0%, ambiguity：0
+2020-12-07 19:18:35,157|kbqa_test.py[line:155]|kb_fuzzy_classify_test|INFO|total: 8, recall: 8, correct:8, accuracy: 100.0%, ambiguity：0
+2020-12-07 19:18:36,170|kbqa_test.py[line:155]|kb_fuzzy_classify_test|INFO|total: 9, recall: 9, correct:9, accuracy: 100.0%, ambiguity：0
+2020-12-07 19:18:37,216|kbqa_test.py[line:155]|kb_fuzzy_classify_test|INFO|total: 10, recall: 10, correct:10, accuracy: 100.0%, ambiguity：0
+2020-12-07 19:18:38,242|kbqa_test.py[line:155]|kb_fuzzy_classify_test|INFO|total: 11, recall: 11, correct:11, accuracy: 100.0%, ambiguity：0
+2020-12-07 19:18:39,265|kbqa_test.py[line:155]|kb_fuzzy_classify_test|INFO|total: 12, recall: 12, correct:12, accuracy: 100.0%, ambiguity：0
+2020-12-07 19:18:40,290|kbqa_test.py[line:155]|kb_fuzzy_classify_test|INFO|total: 13, recall: 13, correct:13, accuracy: 100.0%, ambiguity：0
+2020-12-07 19:18:41,301|kbqa_test.py[line:155]|kb_fuzzy_classify_test|INFO|total: 14, recall: 14, correct:14, accuracy: 100.0%, ambiguity：0
+2020-12-07 19:18:42,322|kbqa_test.py[line:155]|kb_fuzzy_classify_test|INFO|total: 15, recall: 15, correct:15, accuracy: 100.0%, ambiguity：0
+2020-12-07 19:18:42,335|kbqa_test.py[line:146]|kb_fuzzy_classify_test|INFO|城关镇	中文名	城关镇[临澧县]
+2020-12-07 19:18:43,335|kbqa_test.py[line:155]|kb_fuzzy_classify_test|INFO|total: 16, recall: 16, correct:15, accuracy: 93.75%, ambiguity：1
+2020-12-07 19:18:44,357|kbqa_test.py[line:155]|kb_fuzzy_classify_test|INFO|total: 17, recall: 17, correct:16, accuracy: 94.11764705882354%, ambiguity：1
+2020-12-07 19:18:45,377|kbqa_test.py[line:155]|kb_fuzzy_classify_test|INFO|total: 18, recall: 18, correct:17, accuracy: 94.44444444444444%, ambiguity：1
+2020-12-07 19:18:46,399|kbqa_test.py[line:155]|kb_fuzzy_classify_test|INFO|total: 19, recall: 19, correct:18, accuracy: 94.73684210526316%, ambiguity：1
+2020-12-07 19:18:46,448|kbqa_test.py[line:164]|kb_fuzzy_classify_test|INFO|性别 0.99011606
+2020-12-07 19:18:47,449|kbqa_test.py[line:173]|kb_fuzzy_classify_test|INFO|total: 20, recall: 20, correct:19, accuracy: 95.0%, ambiguity：1
+2020-12-07 19:18:47,510|kbqa_test.py[line:164]|kb_fuzzy_classify_test|INFO|开本 0.9964072
+书名 0.99452645
+出版社 0.97666353
+isbn 0.91869986
+出版时间 0.87425977
+定价 0.0042876317
+2020-12-07 19:18:47,511|kbqa_test.py[line:171]|kb_fuzzy_classify_test|INFO|高等数学	开本	787x9601/16
+2020-12-07 19:18:48,512|kbqa_test.py[line:173]|kb_fuzzy_classify_test|INFO|total: 21, recall: 21, correct:19, accuracy: 90.47619047619048%, ambiguity：1
+2020-12-07 19:18:48,531|kbqa_test.py[line:164]|kb_fuzzy_classify_test|INFO|公司名称 0.99561346
+2020-12-07 19:18:49,532|kbqa_test.py[line:173]|kb_fuzzy_classify_test|INFO|total: 22, recall: 22, correct:20, accuracy: 90.9090909090909%, ambiguity：1
+2020-12-07 19:18:49,553|kbqa_test.py[line:146]|kb_fuzzy_classify_test|INFO|红	类别	恋爱少年
+2020-12-07 19:18:50,553|kbqa_test.py[line:155]|kb_fuzzy_classify_test|INFO|total: 23, recall: 23, correct:20, accuracy: 86.95652173913044%, ambiguity：2
+2020-12-07 19:18:50,617|kbqa_test.py[line:164]|kb_fuzzy_classify_test|INFO|毕业院校 0.9971206
+毕业院校 0.9971206
+职业 0.0035902266
+主要成就 0.0006973878
+出生日期 0.00060734875
+其他作品 0.0006019283
+2020-12-07 19:18:50,617|kbqa_test.py[line:171]|kb_fuzzy_classify_test|INFO|王强	毕业院校	湖北音乐学院
+2020-12-07 19:18:51,618|kbqa_test.py[line:173]|kb_fuzzy_classify_test|INFO|total: 24, recall: 24, correct:21, accuracy: 87.5%, ambiguity：2
+2020-12-07 19:18:52,640|kbqa_test.py[line:155]|kb_fuzzy_classify_test|INFO|total: 25, recall: 25, correct:22, accuracy: 88.0%, ambiguity：2
+2020-12-07 19:18:53,675|kbqa_test.py[line:155]|kb_fuzzy_classify_test|INFO|total: 26, recall: 26, correct:23, accuracy: 88.46153846153847%, ambiguity：2
+2020-12-07 19:18:53,699|kbqa_test.py[line:164]|kb_fuzzy_classify_test|INFO|性别 0.9912764
+血型 0.0008158867
+2020-12-07 19:18:54,700|kbqa_test.py[line:173]|kb_fuzzy_classify_test|INFO|total: 27, recall: 27, correct:24, accuracy: 88.88888888888889%, ambiguity：2
+2020-12-07 19:18:55,714|kbqa_test.py[line:155]|kb_fuzzy_classify_test|INFO|total: 28, recall: 28, correct:25, accuracy: 89.28571428571429%, ambiguity：2
+2020-12-07 19:18:56,735|kbqa_test.py[line:155]|kb_fuzzy_classify_test|INFO|total: 29, recall: 29, correct:26, accuracy: 89.65517241379311%, ambiguity：2
+2020-12-07 19:18:57,752|kbqa_test.py[line:155]|kb_fuzzy_classify_test|INFO|total: 30, recall: 30, correct:27, accuracy: 90.0%, ambiguity：2
+2020-12-07 19:18:57,769|kbqa_test.py[line:164]|kb_fuzzy_classify_test|INFO|成立时间 0.9966149
+2020-12-07 19:18:58,770|kbqa_test.py[line:173]|kb_fuzzy_classify_test|INFO|total: 31, recall: 31, correct:28, accuracy: 90.3225806451613%, ambiguity：2
+2020-12-07 19:18:59,817|kbqa_test.py[line:155]|kb_fuzzy_classify_test|INFO|total: 32, recall: 32, correct:29, accuracy: 90.625%, ambiguity：2
+2020-12-07 19:19:00,845|kbqa_test.py[line:155]|kb_fuzzy_classify_test|INFO|total: 33, recall: 33, correct:30, accuracy: 90.9090909090909%, ambiguity：2
+2020-12-07 19:19:01,859|kbqa_test.py[line:155]|kb_fuzzy_classify_test|INFO|total: 34, recall: 34, correct:31, accuracy: 91.17647058823529%, ambiguity：2
+2020-12-07 19:19:01,920|kbqa_test.py[line:164]|kb_fuzzy_classify_test|INFO|出生年月 0.9963238
+生于 0.9876951
+籍贯 0.0053274403
+职业 0.0011837691
+身高 0.0009984791
+星座 0.00057534553
+职称 0.00056353974
+2020-12-07 19:19:02,921|kbqa_test.py[line:173]|kb_fuzzy_classify_test|INFO|total: 35, recall: 35, correct:32, accuracy: 91.42857142857143%, ambiguity：2
+2020-12-07 19:19:03,943|kbqa_test.py[line:155]|kb_fuzzy_classify_test|INFO|total: 36, recall: 36, correct:33, accuracy: 91.66666666666667%, ambiguity：2
+2020-12-07 19:19:03,978|kbqa_test.py[line:164]|kb_fuzzy_classify_test|INFO|别名 0.9938306
+2020-12-07 19:19:04,979|kbqa_test.py[line:173]|kb_fuzzy_classify_test|INFO|total: 37, recall: 37, correct:34, accuracy: 91.89189189189189%, ambiguity：2
+2020-12-07 19:19:05,032|kbqa_test.py[line:164]|kb_fuzzy_classify_test|INFO|主要成就 0.99614245
+出生日期 0.020793604
+学历 0.017457627
+出生地 0.007966048
+女 0.0034384744
+2020-12-07 19:19:06,034|kbqa_test.py[line:173]|kb_fuzzy_classify_test|INFO|total: 38, recall: 38, correct:35, accuracy: 92.10526315789474%, ambiguity：2
+2020-12-07 19:19:07,058|kbqa_test.py[line:155]|kb_fuzzy_classify_test|INFO|total: 39, recall: 39, correct:36, accuracy: 92.3076923076923%, ambiguity：2
+2020-12-07 19:19:07,107|kbqa_test.py[line:164]|kb_fuzzy_classify_test|INFO|人口 0.9951466
+耕地 0.0032804532
+地理位置 0.0025947934
+2020-12-07 19:19:08,107|kbqa_test.py[line:173]|kb_fuzzy_classify_test|INFO|total: 40, recall: 40, correct:37, accuracy: 92.5%, ambiguity：2
+2020-12-07 19:19:09,128|kbqa_test.py[line:155]|kb_fuzzy_classify_test|INFO|total: 41, recall: 41, correct:38, accuracy: 92.6829268292683%, ambiguity：2
+2020-12-07 19:19:10,153|kbqa_test.py[line:155]|kb_fuzzy_classify_test|INFO|total: 42, recall: 42, correct:39, accuracy: 92.85714285714286%, ambiguity：2
+2020-12-07 19:19:10,202|kbqa_test.py[line:164]|kb_fuzzy_classify_test|INFO|制片人 0.96803576
+每集长度 0.750743
+其他 0.04453098
+类别 0.015776452
+2020-12-07 19:19:10,203|kbqa_test.py[line:171]|kb_fuzzy_classify_test|INFO|《神雕侠侣》	制片人	张纪中
+2020-12-07 19:19:11,203|kbqa_test.py[line:173]|kb_fuzzy_classify_test|INFO|total: 43, recall: 43, correct:39, accuracy: 90.69767441860465%, ambiguity：2
+2020-12-07 19:19:12,224|kbqa_test.py[line:155]|kb_fuzzy_classify_test|INFO|total: 44, recall: 44, correct:40, accuracy: 90.9090909090909%, ambiguity：2
+2020-12-07 19:19:13,246|kbqa_test.py[line:155]|kb_fuzzy_classify_test|INFO|total: 45, recall: 45, correct:41, accuracy: 91.11111111111111%, ambiguity：2
+2020-12-07 19:19:14,257|kbqa_test.py[line:155]|kb_fuzzy_classify_test|INFO|total: 46, recall: 46, correct:42, accuracy: 91.30434782608695%, ambiguity：2
+2020-12-07 19:19:14,319|kbqa_test.py[line:164]|kb_fuzzy_classify_test|INFO|籍贯 0.9911947
+出生地 0.92370594
+参加工作 0.01895393
+2020-12-07 19:19:15,319|kbqa_test.py[line:173]|kb_fuzzy_classify_test|INFO|total: 47, recall: 47, correct:43, accuracy: 91.48936170212765%, ambiguity：2
+2020-12-07 19:19:15,348|kbqa_test.py[line:164]|kb_fuzzy_classify_test|INFO|游戏类型 0.054107282
+2020-12-07 19:19:16,349|kbqa_test.py[line:173]|kb_fuzzy_classify_test|INFO|total: 48, recall: 48, correct:44, accuracy: 91.66666666666667%, ambiguity：2
+2020-12-07 19:19:17,369|kbqa_test.py[line:155]|kb_fuzzy_classify_test|INFO|total: 49, recall: 49, correct:45, accuracy: 91.83673469387755%, ambiguity：2
+2020-12-07 19:19:17,411|kbqa_test.py[line:164]|kb_fuzzy_classify_test|INFO|地点 0.9942543
+主峰海拔 0.9927382
+2020-12-07 19:19:18,413|kbqa_test.py[line:173]|kb_fuzzy_classify_test|INFO|total: 50, recall: 50, correct:46, accuracy: 92.0%, ambiguity：2
+2020-12-07 19:19:19,423|kbqa_test.py[line:155]|kb_fuzzy_classify_test|INFO|total: 51, recall: 51, correct:47, accuracy: 92.15686274509804%, ambiguity：2
+2020-12-07 19:19:19,464|kbqa_test.py[line:164]|kb_fuzzy_classify_test|INFO|过世 0.9920604
+逝世日期 0.98546845
+家族 0.031261332
+2020-12-07 19:19:19,464|kbqa_test.py[line:171]|kb_fuzzy_classify_test|INFO|斐迪南一世	过世	1927年7月20日（61岁）锡纳亚,罗马尼亚王国
+2020-12-07 19:19:20,465|kbqa_test.py[line:173]|kb_fuzzy_classify_test|INFO|total: 52, recall: 52, correct:47, accuracy: 90.38461538461539%, ambiguity：2
+2020-12-07 19:19:21,476|kbqa_test.py[line:155]|kb_fuzzy_classify_test|INFO|total: 53, recall: 53, correct:48, accuracy: 90.56603773584905%, ambiguity：2
+2020-12-07 19:19:22,497|kbqa_test.py[line:155]|kb_fuzzy_classify_test|INFO|total: 54, recall: 54, correct:49, accuracy: 90.74074074074075%, ambiguity：2
+2020-12-07 19:19:22,560|kbqa_test.py[line:164]|kb_fuzzy_classify_test|INFO|外文名 0.9931211
+外文名称 0.0012676175
+机场 0.00079044164
+别称 0.0007041851
+市镇 0.0006824635
+建立时间 0.00065614324
+地域名人 0.00062089815
+场上位置 0.0005614033
+2020-12-07 19:19:22,561|kbqa_test.py[line:171]|kb_fuzzy_classify_test|INFO|圣地亚哥	外文名	saintjakob
+2020-12-07 19:19:23,561|kbqa_test.py[line:173]|kb_fuzzy_classify_test|INFO|total: 55, recall: 55, correct:49, accuracy: 89.0909090909091%, ambiguity：2
+2020-12-07 19:19:23,588|kbqa_test.py[line:146]|kb_fuzzy_classify_test|INFO|苹果	拉丁学名	maluspumilamill.
+2020-12-07 19:19:24,588|kbqa_test.py[line:155]|kb_fuzzy_classify_test|INFO|total: 56, recall: 56, correct:49, accuracy: 87.5%, ambiguity：3
+2020-12-07 19:19:24,605|kbqa_test.py[line:164]|kb_fuzzy_classify_test|INFO|行政区类别 0.99653983
+2020-12-07 19:19:25,606|kbqa_test.py[line:173]|kb_fuzzy_classify_test|INFO|total: 57, recall: 57, correct:50, accuracy: 87.71929824561404%, ambiguity：3
+2020-12-07 19:19:25,634|kbqa_test.py[line:164]|kb_fuzzy_classify_test|INFO|分类 0.0027865795
+2020-12-07 19:19:26,635|kbqa_test.py[line:173]|kb_fuzzy_classify_test|INFO|total: 58, recall: 58, correct:51, accuracy: 87.93103448275862%, ambiguity：3
+2020-12-07 19:19:27,656|kbqa_test.py[line:155]|kb_fuzzy_classify_test|INFO|total: 59, recall: 59, correct:52, accuracy: 88.13559322033899%, ambiguity：3
+2020-12-07 19:19:27,673|kbqa_test.py[line:164]|kb_fuzzy_classify_test|INFO|身高 0.9958008
+2020-12-07 19:19:28,674|kbqa_test.py[line:173]|kb_fuzzy_classify_test|INFO|total: 60, recall: 60, correct:53, accuracy: 88.33333333333333%, ambiguity：3
+2020-12-07 19:19:29,695|kbqa_test.py[line:155]|kb_fuzzy_classify_test|INFO|total: 61, recall: 61, correct:54, accuracy: 88.52459016393442%, ambiguity：3
+2020-12-07 19:19:30,715|kbqa_test.py[line:155]|kb_fuzzy_classify_test|INFO|total: 62, recall: 62, correct:55, accuracy: 88.70967741935483%, ambiguity：3
+2020-12-07 19:19:31,761|kbqa_test.py[line:155]|kb_fuzzy_classify_test|INFO|total: 63, recall: 63, correct:56, accuracy: 88.88888888888889%, ambiguity：3
+2020-12-07 19:19:31,771|kbqa_test.py[line:146]|kb_fuzzy_classify_test|INFO|《红楼梦》	导演	胡雪扬
+2020-12-07 19:19:32,772|kbqa_test.py[line:155]|kb_fuzzy_classify_test|INFO|total: 64, recall: 64, correct:57, accuracy: 89.0625%, ambiguity：3
+2020-12-07 19:19:32,811|kbqa_test.py[line:164]|kb_fuzzy_classify_test|INFO|特点 0.002235596
+2020-12-07 19:19:33,812|kbqa_test.py[line:173]|kb_fuzzy_classify_test|INFO|total: 65, recall: 65, correct:58, accuracy: 89.23076923076923%, ambiguity：3
+2020-12-07 19:19:33,865|kbqa_test.py[line:164]|kb_fuzzy_classify_test|INFO|参战方 0.61742157
+时间 0.51450354
+结果 0.08170686
+结果 0.08170686
+地点 0.0025010733
+2020-12-07 19:19:33,866|kbqa_test.py[line:171]|kb_fuzzy_classify_test|INFO|平壤之战	参战方	中国；日本
+2020-12-07 19:19:34,867|kbqa_test.py[line:173]|kb_fuzzy_classify_test|INFO|total: 66, recall: 66, correct:58, accuracy: 87.87878787878788%, ambiguity：3
+2020-12-07 19:19:35,907|kbqa_test.py[line:155]|kb_fuzzy_classify_test|INFO|total: 67, recall: 67, correct:59, accuracy: 88.05970149253731%, ambiguity：3
+2020-12-07 19:19:36,947|kbqa_test.py[line:155]|kb_fuzzy_classify_test|INFO|total: 68, recall: 68, correct:60, accuracy: 88.23529411764706%, ambiguity：3
+2020-12-07 19:19:36,980|kbqa_test.py[line:164]|kb_fuzzy_classify_test|INFO|别称 0.9953719
+2020-12-07 19:19:37,980|kbqa_test.py[line:173]|kb_fuzzy_classify_test|INFO|total: 69, recall: 69, correct:61, accuracy: 88.40579710144928%, ambiguity：3
+2020-12-07 19:19:38,036|kbqa_test.py[line:164]|kb_fuzzy_classify_test|INFO|出生地 0.99654216
+出生日期 0.97806054
+女 0.0015672903
+学历 0.0008725899
+主要成就 0.0005611757
+2020-12-07 19:19:39,038|kbqa_test.py[line:173]|kb_fuzzy_classify_test|INFO|total: 70, recall: 70, correct:62, accuracy: 88.57142857142857%, ambiguity：3
+2020-12-07 19:19:40,050|kbqa_test.py[line:155]|kb_fuzzy_classify_test|INFO|total: 71, recall: 71, correct:63, accuracy: 88.73239436619718%, ambiguity：3
+2020-12-07 19:19:41,072|kbqa_test.py[line:155]|kb_fuzzy_classify_test|INFO|total: 72, recall: 72, correct:64, accuracy: 88.88888888888889%, ambiguity：3
+2020-12-07 19:19:41,083|kbqa_test.py[line:146]|kb_fuzzy_classify_test|INFO|倭叉角羚	纲	哺乳纲mammalia
+2020-12-07 19:19:42,083|kbqa_test.py[line:155]|kb_fuzzy_classify_test|INFO|total: 73, recall: 73, correct:64, accuracy: 87.67123287671232%, ambiguity：4
+2020-12-07 19:19:42,104|kbqa_test.py[line:146]|kb_fuzzy_classify_test|INFO|极乐吻鰕虎	门	脊索动物门chordata
+2020-12-07 19:19:43,106|kbqa_test.py[line:155]|kb_fuzzy_classify_test|INFO|total: 74, recall: 74, correct:64, accuracy: 86.48648648648648%, ambiguity：5
+2020-12-07 19:19:44,149|kbqa_test.py[line:155]|kb_fuzzy_classify_test|INFO|total: 75, recall: 75, correct:65, accuracy: 86.66666666666667%, ambiguity：5
+2020-12-07 19:19:44,224|kbqa_test.py[line:164]|kb_fuzzy_classify_test|INFO|制片地区 0.9956644
+摄制格式 0.9006636
+级别 0.0009380651
+幅面 0.0007299288
+摄影 0.0006685947
+其它译名 0.00065548014
+2020-12-07 19:19:45,225|kbqa_test.py[line:173]|kb_fuzzy_classify_test|INFO|total: 76, recall: 76, correct:66, accuracy: 86.84210526315789%, ambiguity：5
+2020-12-07 19:19:46,250|kbqa_test.py[line:155]|kb_fuzzy_classify_test|INFO|total: 77, recall: 77, correct:67, accuracy: 87.01298701298701%, ambiguity：5
+2020-12-07 19:19:46,292|kbqa_test.py[line:164]|kb_fuzzy_classify_test|INFO|译者 0.9911305
+语言 0.029617537
+2020-12-07 19:19:46,293|kbqa_test.py[line:171]|kb_fuzzy_classify_test|INFO|真相	译者	陈睿杨通
+2020-12-07 19:19:47,294|kbqa_test.py[line:173]|kb_fuzzy_classify_test|INFO|total: 78, recall: 78, correct:67, accuracy: 85.8974358974359%, ambiguity：5
+2020-12-07 19:19:48,320|kbqa_test.py[line:155]|kb_fuzzy_classify_test|INFO|total: 79, recall: 79, correct:68, accuracy: 86.07594936708861%, ambiguity：5
+2020-12-07 19:19:49,341|kbqa_test.py[line:173]|kb_fuzzy_classify_test|INFO|total: 80, recall: 79, correct:68, accuracy: 86.07594936708861%, ambiguity：5
+2020-12-07 19:19:49,465|kbqa_test.py[line:164]|kb_fuzzy_classify_test|INFO|作者 0.9911822
+isbn 0.9907285
+影片片长 0.9833066
+上映地区 0.9659941
+开本 0.9444533
+出版时间 0.9253491
+上映时间 0.8508903
+语言版本 0.70475435
+主要奖项 0.06447329
+语种 0.05585597
+编剧 0.041391775
+类别 0.019380696
+导演 0.019370694
+简介 0.005595892
+主演 0.0019829131
+2020-12-07 19:19:49,466|kbqa_test.py[line:171]|kb_fuzzy_classify_test|INFO|《兄弟》	作者	余华著
+2020-12-07 19:19:50,466|kbqa_test.py[line:173]|kb_fuzzy_classify_test|INFO|total: 81, recall: 80, correct:68, accuracy: 85.0%, ambiguity：5
+2020-12-07 19:19:51,487|kbqa_test.py[line:155]|kb_fuzzy_classify_test|INFO|total: 82, recall: 81, correct:69, accuracy: 85.18518518518519%, ambiguity：5
+2020-12-07 19:19:52,510|kbqa_test.py[line:155]|kb_fuzzy_classify_test|INFO|total: 83, recall: 82, correct:70, accuracy: 85.36585365853658%, ambiguity：5
+2020-12-07 19:19:52,576|kbqa_test.py[line:164]|kb_fuzzy_classify_test|INFO|出生日期 0.98060703
+毕业院校 0.043729905
+毕业院校 0.043729905
+主要成就 0.035220873
+其他作品 0.016273445
+职业 0.00079489674
+2020-12-07 19:19:52,577|kbqa_test.py[line:171]|kb_fuzzy_classify_test|INFO|王强	出生日期	1911年
+2020-12-07 19:19:53,578|kbqa_test.py[line:173]|kb_fuzzy_classify_test|INFO|total: 84, recall: 83, correct:70, accuracy: 84.33734939759036%, ambiguity：5
+2020-12-07 19:19:53,675|kbqa_test.py[line:164]|kb_fuzzy_classify_test|INFO|出处 0.9966659
+竣工时间 0.0027972802
+著名人物 0.0011566068
+所属市 0.00084566994
+方言 0.00072864385
+水库位置 0.00068385195
+面积 0.00066705985
+坝顶长度 0.0006364675
+灌溉面积 0.00062948134
+重修时间 0.00057361467
+人口 0.0005690739
+总库容 0.00055236154
+2020-12-07 19:19:54,677|kbqa_test.py[line:173]|kb_fuzzy_classify_test|INFO|total: 85, recall: 84, correct:71, accuracy: 84.52380952380952%, ambiguity：5
+2020-12-07 19:19:54,705|kbqa_test.py[line:164]|kb_fuzzy_classify_test|INFO|主要食材 0.9943737
+2020-12-07 19:19:54,706|kbqa_test.py[line:171]|kb_fuzzy_classify_test|INFO|焖子	主要食材	地瓜淀粉精瘦肉
+2020-12-07 19:19:55,706|kbqa_test.py[line:173]|kb_fuzzy_classify_test|INFO|total: 86, recall: 85, correct:71, accuracy: 83.52941176470588%, ambiguity：5
+2020-12-07 19:19:56,732|kbqa_test.py[line:155]|kb_fuzzy_classify_test|INFO|total: 87, recall: 86, correct:72, accuracy: 83.72093023255815%, ambiguity：5
+2020-12-07 19:19:56,798|kbqa_test.py[line:164]|kb_fuzzy_classify_test|INFO|语种 0.99279845
+创刊时间 0.6930235
+主办单位 0.00069995626
+2020-12-07 19:19:57,798|kbqa_test.py[line:173]|kb_fuzzy_classify_test|INFO|total: 88, recall: 87, correct:73, accuracy: 83.9080459770115%, ambiguity：5
+2020-12-07 19:19:58,825|kbqa_test.py[line:155]|kb_fuzzy_classify_test|INFO|total: 89, recall: 88, correct:74, accuracy: 84.0909090909091%, ambiguity：5
+2020-12-07 19:19:59,853|kbqa_test.py[line:155]|kb_fuzzy_classify_test|INFO|total: 90, recall: 89, correct:75, accuracy: 84.26966292134831%, ambiguity：5
+2020-12-07 19:19:59,910|kbqa_test.py[line:164]|kb_fuzzy_classify_test|INFO|游戏大小 0.9954072
+操作指南 0.0027415177
+发明 0.000719344
+带宽 0.0006449832
+显卡 0.0005967803
+2020-12-07 19:19:59,910|kbqa_test.py[line:171]|kb_fuzzy_classify_test|INFO|雷电	游戏大小	7.87mb
+2020-12-07 19:20:00,910|kbqa_test.py[line:173]|kb_fuzzy_classify_test|INFO|total: 91, recall: 90, correct:75, accuracy: 83.33333333333333%, ambiguity：5
+2020-12-07 19:20:01,930|kbqa_test.py[line:155]|kb_fuzzy_classify_test|INFO|total: 92, recall: 91, correct:76, accuracy: 83.51648351648352%, ambiguity：5
+2020-12-07 19:20:02,083|kbqa_test.py[line:164]|kb_fuzzy_classify_test|INFO|地点 0.9875787
+建筑面积 0.9827278
+城市 0.9815391
+地址 0.98031485
+楼盘地址 0.9761839
+总建筑面积 0.97432864
+位置 0.96444184
+占地面积 0.9638936
+物业类别 0.9587869
+总用地面积 0.9587638
+开业时间 0.95831835
+用地面积 0.95430094
+楼盘名 0.94291127
+占地 0.13966785
+绿化率 0.025763202
+总投资 0.022166394
+所在城市 0.0043523945
+所在地区 0.0027540107
+外文名 0.0008352605
+性质 0.0007976214
+2020-12-07 19:20:02,084|kbqa_test.py[line:171]|kb_fuzzy_classify_test|INFO|万达广场	地点	福州
+2020-12-07 19:20:03,084|kbqa_test.py[line:173]|kb_fuzzy_classify_test|INFO|total: 93, recall: 92, correct:76, accuracy: 82.6086956521739%, ambiguity：5
+2020-12-07 19:20:03,232|kbqa_test.py[line:164]|kb_fuzzy_classify_test|INFO|播映 0.99301803
+出品公司 0.9488224
+制作统筹 0.94271624
+制作国家／地区 0.923894
+无线电视翡翠台首播 0.04307243
+片头曲 0.009325682
+片尾曲 0.0055445745
+主题曲 0.0055144965
+出品人 0.004959745
+导演 0.0049399137
+集数 0.004200518
+故事 0.003102974
+主演 0.0029846118
+编剧 0.0012753024
+作词 0.0011921687
+作曲 0.00094696245
+类型 0.00078992394
+语言 0.0007534128
+外景 0.0006274535
+编审 0.0006171736
+2020-12-07 19:20:03,232|kbqa_test.py[line:171]|kb_fuzzy_classify_test|INFO|神雕侠侣	播映	台视
+2020-12-07 19:20:04,232|kbqa_test.py[line:173]|kb_fuzzy_classify_test|INFO|total: 94, recall: 93, correct:76, accuracy: 81.72043010752688%, ambiguity：5
+2020-12-07 19:20:04,277|kbqa_test.py[line:164]|kb_fuzzy_classify_test|INFO|属性 0.025638899
+2020-12-07 19:20:04,277|kbqa_test.py[line:171]|kb_fuzzy_classify_test|INFO|西藏大学	属性	211工程中西部高校基础能力建设工程西藏自治区人民政府与教育部共建高校
+2020-12-07 19:20:05,278|kbqa_test.py[line:173]|kb_fuzzy_classify_test|INFO|total: 95, recall: 94, correct:76, accuracy: 80.85106382978724%, ambiguity：5
+2020-12-07 19:20:05,306|kbqa_test.py[line:164]|kb_fuzzy_classify_test|INFO|出版时间 0.9236552
+2020-12-07 19:20:06,308|kbqa_test.py[line:173]|kb_fuzzy_classify_test|INFO|total: 96, recall: 95, correct:77, accuracy: 81.05263157894737%, ambiguity：5
+2020-12-07 19:20:07,320|kbqa_test.py[line:155]|kb_fuzzy_classify_test|INFO|total: 97, recall: 96, correct:78, accuracy: 81.25%, ambiguity：5
+2020-12-07 19:20:08,341|kbqa_test.py[line:155]|kb_fuzzy_classify_test|INFO|total: 98, recall: 97, correct:79, accuracy: 81.44329896907216%, ambiguity：5
+2020-12-07 19:20:08,430|kbqa_test.py[line:164]|kb_fuzzy_classify_test|INFO|所属地区 0.99104226
+地方特产 0.9851757
+建立时间 0.5120093
+机场 0.057658136
+邮编区码 0.04158255
+著名景点 0.02014148
+友好城市 0.019518998
+中文名 0.015201299
+知名产业 0.0134509895
+电话区码 0.004570548
+面积 0.003933581
+别称 0.0014770171
+2020-12-07 19:20:08,431|kbqa_test.py[line:171]|kb_fuzzy_classify_test|INFO|龙泉镇	所属地区	中国四川
+2020-12-07 19:20:09,431|kbqa_test.py[line:173]|kb_fuzzy_classify_test|INFO|total: 99, recall: 98, correct:79, accuracy: 80.61224489795919%, ambiguity：5
+2020-12-07 19:20:09,449|kbqa_test.py[line:164]|kb_fuzzy_classify_test|INFO|分布 0.956837
+2020-12-07 19:20:10,450|kbqa_test.py[line:173]|kb_fuzzy_classify_test|INFO|total: 100, recall: 99, correct:80, accuracy: 80.8080808080808%, ambiguity：5
+2020-12-07 19:20:11,472|kbqa_test.py[line:155]|kb_fuzzy_classify_test|INFO|total: 101, recall: 100, correct:81, accuracy: 81.0%, ambiguity：5
+2020-12-07 19:20:11,513|kbqa_test.py[line:164]|kb_fuzzy_classify_test|INFO|分布区域 0.9962613
+采收时间 0.004091861
+用量 0.00055984216
+2020-12-07 19:20:12,514|kbqa_test.py[line:173]|kb_fuzzy_classify_test|INFO|total: 102, recall: 101, correct:82, accuracy: 81.18811881188118%, ambiguity：5
+2020-12-07 19:20:12,583|kbqa_test.py[line:164]|kb_fuzzy_classify_test|INFO|歌曲原唱 0.9880825
+所属专辑 0.9128004
+发行时间 0.8819444
+填词 0.54800195
+谱曲 0.4339016
+2020-12-07 19:20:12,584|kbqa_test.py[line:171]|kb_fuzzy_classify_test|INFO|因为有你	歌曲原唱	j.p.m组合
+2020-12-07 19:20:13,584|kbqa_test.py[line:173]|kb_fuzzy_classify_test|INFO|total: 103, recall: 102, correct:82, accuracy: 80.3921568627451%, ambiguity：5
+2020-12-07 19:20:13,605|kbqa_test.py[line:146]|kb_fuzzy_classify_test|INFO|安娜·卡列尼娜	编剧	winstonbeard
+2020-12-07 19:20:14,606|kbqa_test.py[line:155]|kb_fuzzy_classify_test|INFO|total: 104, recall: 103, correct:82, accuracy: 79.6116504854369%, ambiguity：6
+2020-12-07 19:20:15,628|kbqa_test.py[line:155]|kb_fuzzy_classify_test|INFO|total: 105, recall: 104, correct:83, accuracy: 79.8076923076923%, ambiguity：6
+2020-12-07 19:20:15,658|kbqa_test.py[line:164]|kb_fuzzy_classify_test|INFO|口味 0.960506
+2020-12-07 19:20:16,659|kbqa_test.py[line:173]|kb_fuzzy_classify_test|INFO|total: 106, recall: 105, correct:84, accuracy: 80.0%, ambiguity：6
+2020-12-07 19:20:16,733|kbqa_test.py[line:164]|kb_fuzzy_classify_test|INFO|地址 0.9841474
+始建时间 0.9497554
+建立时间 0.94437
+位置 0.9365772
+始建 0.8052093
+高 0.0061260955
+塔高 0.0054515726
+层数 0.00382187
+2020-12-07 19:20:16,734|kbqa_test.py[line:171]|kb_fuzzy_classify_test|INFO|文峰塔	地址	天马镇南部的文笔峰（塔山）之巅
+2020-12-07 19:20:17,734|kbqa_test.py[line:173]|kb_fuzzy_classify_test|INFO|total: 107, recall: 106, correct:84, accuracy: 79.24528301886792%, ambiguity：6
+2020-12-07 19:20:18,754|kbqa_test.py[line:155]|kb_fuzzy_classify_test|INFO|total: 108, recall: 107, correct:85, accuracy: 79.4392523364486%, ambiguity：6
+2020-12-07 19:20:18,764|kbqa_test.py[line:146]|kb_fuzzy_classify_test|INFO|罂粟	种	罂粟p.somniferum
+2020-12-07 19:20:19,765|kbqa_test.py[line:155]|kb_fuzzy_classify_test|INFO|total: 109, recall: 108, correct:85, accuracy: 78.70370370370371%, ambiguity：7
+2020-12-07 19:20:20,775|kbqa_test.py[line:173]|kb_fuzzy_classify_test|INFO|total: 110, recall: 108, correct:85, accuracy: 78.70370370370371%, ambiguity：7
+2020-12-07 19:20:21,785|kbqa_test.py[line:155]|kb_fuzzy_classify_test|INFO|total: 111, recall: 109, correct:86, accuracy: 78.89908256880734%, ambiguity：7
+2020-12-07 19:20:22,810|kbqa_test.py[line:155]|kb_fuzzy_classify_test|INFO|total: 112, recall: 110, correct:87, accuracy: 79.0909090909091%, ambiguity：7
+2020-12-07 19:20:22,841|kbqa_test.py[line:164]|kb_fuzzy_classify_test|INFO|释义 0.83116037
+2020-12-07 19:20:23,842|kbqa_test.py[line:173]|kb_fuzzy_classify_test|INFO|total: 113, recall: 111, correct:88, accuracy: 79.27927927927928%, ambiguity：7
+2020-12-07 19:20:23,894|kbqa_test.py[line:164]|kb_fuzzy_classify_test|INFO|价格 0.9963877
+页数 0.045677774
+2020-12-07 19:20:24,896|kbqa_test.py[line:173]|kb_fuzzy_classify_test|INFO|total: 114, recall: 112, correct:89, accuracy: 79.46428571428571%, ambiguity：7
+2020-12-07 19:20:24,931|kbqa_test.py[line:164]|kb_fuzzy_classify_test|INFO|代表作品 0.99706984
+字号 0.0006182074
+2020-12-07 19:20:25,931|kbqa_test.py[line:173]|kb_fuzzy_classify_test|INFO|total: 115, recall: 113, correct:90, accuracy: 79.64601769911505%, ambiguity：7
+2020-12-07 19:20:26,053|kbqa_test.py[line:164]|kb_fuzzy_classify_test|INFO|isbn 0.9899395
+作者 0.9894387
+语言版本 0.9666169
+开本 0.95316786
+出版时间 0.9297963
+影片片长 0.35072115
+上映地区 0.06082126
+语种 0.05234796
+上映时间 0.040177546
+编剧 0.03395352
+类别 0.021708744
+主要奖项 0.018422188
+导演 0.01819427
+简介 0.0057090134
+主演 0.001502425
+2020-12-07 19:20:26,053|kbqa_test.py[line:171]|kb_fuzzy_classify_test|INFO|《兄弟》	isbn	9787506343053
+2020-12-07 19:20:27,054|kbqa_test.py[line:173]|kb_fuzzy_classify_test|INFO|total: 116, recall: 114, correct:90, accuracy: 78.94736842105263%, ambiguity：7
+2020-12-07 19:20:27,088|kbqa_test.py[line:164]|kb_fuzzy_classify_test|INFO|名称 0.9907522
+2020-12-07 19:20:28,089|kbqa_test.py[line:173]|kb_fuzzy_classify_test|INFO|total: 117, recall: 115, correct:91, accuracy: 79.1304347826087%, ambiguity：7
+2020-12-07 19:20:29,113|kbqa_test.py[line:173]|kb_fuzzy_classify_test|INFO|total: 118, recall: 115, correct:91, accuracy: 79.1304347826087%, ambiguity：7
+2020-12-07 19:20:29,162|kbqa_test.py[line:164]|kb_fuzzy_classify_test|INFO|是否含防腐剂 0.086317465
+2020-12-07 19:20:30,164|kbqa_test.py[line:173]|kb_fuzzy_classify_test|INFO|total: 119, recall: 116, correct:92, accuracy: 79.3103448275862%, ambiguity：7
+2020-12-07 19:20:31,185|kbqa_test.py[line:155]|kb_fuzzy_classify_test|INFO|total: 120, recall: 117, correct:93, accuracy: 79.48717948717949%, ambiguity：7
+2020-12-07 19:20:31,229|kbqa_test.py[line:164]|kb_fuzzy_classify_test|INFO|注音 0.8562433
+出版社 0.0037888973
+新房类型 0.00071614905
+2020-12-07 19:20:31,229|kbqa_test.py[line:171]|kb_fuzzy_classify_test|INFO|伟大	注音	ㄓㄨˋㄧㄣ
+2020-12-07 19:20:32,230|kbqa_test.py[line:173]|kb_fuzzy_classify_test|INFO|total: 121, recall: 118, correct:93, accuracy: 78.8135593220339%, ambiguity：7
+2020-12-07 19:20:32,286|kbqa_test.py[line:164]|kb_fuzzy_classify_test|INFO|歌曲原唱 0.989141
+所属专辑 0.97116256
+发行时间 0.053494323
+作曲 0.004749783
+编曲 0.0024117865
+作词 0.0009851251
+2020-12-07 19:20:33,288|kbqa_test.py[line:173]|kb_fuzzy_classify_test|INFO|total: 122, recall: 119, correct:94, accuracy: 78.99159663865547%, ambiguity：7
+2020-12-07 19:20:33,319|kbqa_test.py[line:164]|kb_fuzzy_classify_test|INFO|开发商 0.010898569
+发行商 0.0010121916
+主要奖项 0.00057107833
+2020-12-07 19:20:34,321|kbqa_test.py[line:173]|kb_fuzzy_classify_test|INFO|total: 123, recall: 120, correct:95, accuracy: 79.16666666666667%, ambiguity：7
+2020-12-07 19:20:35,339|kbqa_test.py[line:155]|kb_fuzzy_classify_test|INFO|total: 124, recall: 121, correct:96, accuracy: 79.33884297520662%, ambiguity：7
+2020-12-07 19:20:35,368|kbqa_test.py[line:164]|kb_fuzzy_classify_test|INFO|产品类型 0.99635255
+2020-12-07 19:20:36,368|kbqa_test.py[line:173]|kb_fuzzy_classify_test|INFO|total: 125, recall: 122, correct:97, accuracy: 79.50819672131148%, ambiguity：7
+2020-12-07 19:20:37,404|kbqa_test.py[line:155]|kb_fuzzy_classify_test|INFO|total: 126, recall: 123, correct:98, accuracy: 79.67479674796748%, ambiguity：7
+2020-12-07 19:20:37,464|kbqa_test.py[line:164]|kb_fuzzy_classify_test|INFO|页数 0.9966202
+isbn 0.30389017
+价格 0.00083210436
+2020-12-07 19:20:38,465|kbqa_test.py[line:173]|kb_fuzzy_classify_test|INFO|total: 127, recall: 124, correct:99, accuracy: 79.83870967741936%, ambiguity：7
+2020-12-07 19:20:39,486|kbqa_test.py[line:155]|kb_fuzzy_classify_test|INFO|total: 128, recall: 125, correct:100, accuracy: 80.0%, ambiguity：7
+2020-12-07 19:20:40,508|kbqa_test.py[line:155]|kb_fuzzy_classify_test|INFO|total: 129, recall: 126, correct:101, accuracy: 80.15873015873017%, ambiguity：7
+2020-12-07 19:20:40,599|kbqa_test.py[line:164]|kb_fuzzy_classify_test|INFO|片长 0.98806936
+片长 0.98806936
+主演 0.04427776
+原创音乐 0.0036358347
+对白语言 0.0033118716
+摄影 0.0023701668
+剪辑 0.0023406928
+出品时间 0.001088739
+分级 0.00082071964
+2020-12-07 19:20:40,600|kbqa_test.py[line:171]|kb_fuzzy_classify_test|INFO|第十二夜	片长	12min
+2020-12-07 19:20:40,600|kbqa_test.py[line:171]|kb_fuzzy_classify_test|INFO|第十二夜	片长	155min
+2020-12-07 19:20:41,600|kbqa_test.py[line:173]|kb_fuzzy_classify_test|INFO|total: 130, recall: 127, correct:101, accuracy: 79.5275590551181%, ambiguity：7
+2020-12-07 19:20:41,648|kbqa_test.py[line:164]|kb_fuzzy_classify_test|INFO|解释 0.99668807
+语言 0.0010804922
+2020-12-07 19:20:42,650|kbqa_test.py[line:173]|kb_fuzzy_classify_test|INFO|total: 131, recall: 128, correct:102, accuracy: 79.6875%, ambiguity：7
+2020-12-07 19:20:43,670|kbqa_test.py[line:155]|kb_fuzzy_classify_test|INFO|total: 132, recall: 129, correct:103, accuracy: 79.84496124031008%, ambiguity：7
+2020-12-07 19:20:44,684|kbqa_test.py[line:155]|kb_fuzzy_classify_test|INFO|total: 133, recall: 130, correct:104, accuracy: 80.0%, ambiguity：7
+2020-12-07 19:20:44,794|kbqa_test.py[line:164]|kb_fuzzy_classify_test|INFO|• 密度 0.9971198
+人口（2006年） 0.98122954
+行政区管辖 0.96179724
+• 下辖行政区 0.9295774
+区域板块 0.01105434
+区划 0.008184519
+邻近行政区 0.0059775356
+都道府县 0.0017000587
+• 马科恩-赖肖尔表记法 0.0015611553
+市 0.0008398327
+政府编号 0.00066078553
+邮递区号 0.000566276
+毗邻 0.0004978767
+2020-12-07 19:20:45,795|kbqa_test.py[line:173]|kb_fuzzy_classify_test|INFO|total: 134, recall: 131, correct:105, accuracy: 80.1526717557252%, ambiguity：7
+2020-12-07 19:20:46,837|kbqa_test.py[line:155]|kb_fuzzy_classify_test|INFO|total: 135, recall: 132, correct:106, accuracy: 80.3030303030303%, ambiguity：7
+2020-12-07 19:20:46,859|kbqa_test.py[line:146]|kb_fuzzy_classify_test|INFO|缘鳍海猪鱼	英文名	two-eyedwrasse
+2020-12-07 19:20:47,860|kbqa_test.py[line:155]|kb_fuzzy_classify_test|INFO|total: 136, recall: 133, correct:106, accuracy: 79.69924812030075%, ambiguity：8
+2020-12-07 19:20:47,889|kbqa_test.py[line:164]|kb_fuzzy_classify_test|INFO|字 0.0005535954
+2020-12-07 19:20:47,890|kbqa_test.py[line:171]|kb_fuzzy_classify_test|INFO|陈俊	字	恒佳
+2020-12-07 19:20:48,891|kbqa_test.py[line:173]|kb_fuzzy_classify_test|INFO|total: 137, recall: 134, correct:106, accuracy: 79.1044776119403%, ambiguity：8
+2020-12-07 19:20:49,040|kbqa_test.py[line:164]|kb_fuzzy_classify_test|INFO|外文名 0.0024327347
+又称 0.0014958625
+日文 0.0013657269
+解释 0.001332499
+系统支持 0.0012585375
+全称 0.0010609102
+全称 0.0010609102
+英文名称 0.0009229598
+意义 0.00089638744
+曲长 0.0007983054
+出现 0.00079773425
+所属类别 0.00078881334
+授权方式 0.0007436752
+注册用户 0.0006865904
+稳定版本 0.0006681226
+第二条 0.000664663
+第一条 0.00065613893
+第三条 0.0006478083
+上市时间 0.00058938266
+距地距离 0.0005597603
+2020-12-07 19:20:49,041|kbqa_test.py[line:171]|kb_fuzzy_classify_test|INFO|pe	外文名	powereasy
+2020-12-07 19:20:50,042|kbqa_test.py[line:173]|kb_fuzzy_classify_test|INFO|total: 138, recall: 135, correct:106, accuracy: 78.51851851851852%, ambiguity：8
+2020-12-07 19:20:50,075|kbqa_test.py[line:164]|kb_fuzzy_classify_test|INFO|籍贯 0.9362809
+研究方向 0.0016681332
+2020-12-07 19:20:51,077|kbqa_test.py[line:173]|kb_fuzzy_classify_test|INFO|total: 139, recall: 136, correct:107, accuracy: 78.67647058823529%, ambiguity：8
+2020-12-07 19:20:51,087|kbqa_test.py[line:146]|kb_fuzzy_classify_test|INFO|多花组	二名法	sect.decalobadc.
+2020-12-07 19:20:52,087|kbqa_test.py[line:155]|kb_fuzzy_classify_test|INFO|total: 140, recall: 137, correct:107, accuracy: 78.10218978102189%, ambiguity：9
+2020-12-07 19:20:53,114|kbqa_test.py[line:155]|kb_fuzzy_classify_test|INFO|total: 141, recall: 138, correct:108, accuracy: 78.26086956521739%, ambiguity：9
+2020-12-07 19:20:54,156|kbqa_test.py[line:155]|kb_fuzzy_classify_test|INFO|total: 142, recall: 139, correct:109, accuracy: 78.41726618705036%, ambiguity：9
+2020-12-07 19:20:55,179|kbqa_test.py[line:155]|kb_fuzzy_classify_test|INFO|total: 143, recall: 140, correct:110, accuracy: 78.57142857142857%, ambiguity：9
+2020-12-07 19:20:55,219|kbqa_test.py[line:164]|kb_fuzzy_classify_test|INFO|去世时间 0.9781262
+所处时代 0.97204113
+本名 0.006465851
+2020-12-07 19:20:55,220|kbqa_test.py[line:171]|kb_fuzzy_classify_test|INFO|杨皇后	去世时间	508年
+2020-12-07 19:20:56,220|kbqa_test.py[line:173]|kb_fuzzy_classify_test|INFO|total: 144, recall: 141, correct:110, accuracy: 78.01418439716312%, ambiguity：9
+2020-12-07 19:20:56,252|kbqa_test.py[line:164]|kb_fuzzy_classify_test|INFO|释义 0.996482
+2020-12-07 19:20:57,253|kbqa_test.py[line:173]|kb_fuzzy_classify_test|INFO|total: 145, recall: 142, correct:111, accuracy: 78.16901408450704%, ambiguity：9
+2020-12-07 19:20:57,298|kbqa_test.py[line:164]|kb_fuzzy_classify_test|INFO|谱曲 0.118010096
+填词 0.11748748
+发行时间 0.017788537
+所属专辑 0.0111543285
+歌曲原唱 0.008523927
+2020-12-07 19:20:57,299|kbqa_test.py[line:171]|kb_fuzzy_classify_test|INFO|因为有你	谱曲	潘玮柏
+2020-12-07 19:20:58,299|kbqa_test.py[line:173]|kb_fuzzy_classify_test|INFO|total: 146, recall: 143, correct:111, accuracy: 77.62237762237763%, ambiguity：9
+2020-12-07 19:20:58,320|kbqa_test.py[line:146]|kb_fuzzy_classify_test|INFO|哈姆雷特	导演	米歇尔·阿米瑞亚德
+2020-12-07 19:20:59,321|kbqa_test.py[line:155]|kb_fuzzy_classify_test|INFO|total: 147, recall: 144, correct:111, accuracy: 77.08333333333333%, ambiguity：10
+2020-12-07 19:20:59,389|kbqa_test.py[line:164]|kb_fuzzy_classify_test|INFO|楼盘名 0.9967956
+建筑面积 0.9887776
+建筑形式 0.98710644
+总规划面积 0.952575
+物业类别 0.9378219
+绿化率 0.018473173
+城区 0.006599618
+2020-12-07 19:21:00,389|kbqa_test.py[line:173]|kb_fuzzy_classify_test|INFO|total: 148, recall: 145, correct:112, accuracy: 77.24137931034483%, ambiguity：10
+2020-12-07 19:21:01,412|kbqa_test.py[line:155]|kb_fuzzy_classify_test|INFO|total: 149, recall: 146, correct:113, accuracy: 77.3972602739726%, ambiguity：10
+2020-12-07 19:21:01,462|kbqa_test.py[line:164]|kb_fuzzy_classify_test|INFO|隶属 0.011387179
+2020-12-07 19:21:02,464|kbqa_test.py[line:173]|kb_fuzzy_classify_test|INFO|total: 150, recall: 147, correct:114, accuracy: 77.55102040816327%, ambiguity：10
+2020-12-07 19:21:02,492|kbqa_test.py[line:164]|kb_fuzzy_classify_test|INFO|行政区类型 0.9931151
+2020-12-07 19:21:03,494|kbqa_test.py[line:173]|kb_fuzzy_classify_test|INFO|total: 151, recall: 148, correct:115, accuracy: 77.70270270270271%, ambiguity：10
+2020-12-07 19:21:03,554|kbqa_test.py[line:164]|kb_fuzzy_classify_test|INFO|影片片长 0.9864668
+电影公司 0.98320746
+上映地区 0.95567137
+画面颜色 0.9489947
+编剧 0.870881
+主演 0.08185183
+2020-12-07 19:21:03,555|kbqa_test.py[line:171]|kb_fuzzy_classify_test|INFO|《哈姆雷特》	影片片长	130分钟
+2020-12-07 19:21:04,556|kbqa_test.py[line:173]|kb_fuzzy_classify_test|INFO|total: 152, recall: 149, correct:115, accuracy: 77.18120805369128%, ambiguity：10
+2020-12-07 19:21:04,601|kbqa_test.py[line:164]|kb_fuzzy_classify_test|INFO|歌曲原唱 0.9745209
+所属专辑 0.96106285
+谱曲 0.93973094
+填词 0.8927852
+发行时间 0.011210268
+2020-12-07 19:21:04,602|kbqa_test.py[line:171]|kb_fuzzy_classify_test|INFO|因为有你	歌曲原唱	j.p.m组合
+2020-12-07 19:21:05,602|kbqa_test.py[line:173]|kb_fuzzy_classify_test|INFO|total: 153, recall: 150, correct:115, accuracy: 76.66666666666667%, ambiguity：10
+2020-12-07 19:21:06,625|kbqa_test.py[line:155]|kb_fuzzy_classify_test|INFO|total: 154, recall: 151, correct:116, accuracy: 76.82119205298014%, ambiguity：10
+2020-12-07 19:21:07,648|kbqa_test.py[line:155]|kb_fuzzy_classify_test|INFO|total: 155, recall: 152, correct:117, accuracy: 76.97368421052632%, ambiguity：10
+2020-12-07 19:21:08,671|kbqa_test.py[line:155]|kb_fuzzy_classify_test|INFO|total: 156, recall: 153, correct:118, accuracy: 77.12418300653594%, ambiguity：10
+2020-12-07 19:21:09,691|kbqa_test.py[line:155]|kb_fuzzy_classify_test|INFO|total: 157, recall: 154, correct:119, accuracy: 77.27272727272727%, ambiguity：10
+2020-12-07 19:21:09,736|kbqa_test.py[line:164]|kb_fuzzy_classify_test|INFO|谱曲 0.6713382
+歌曲原唱 0.24901077
+所属专辑 0.057722174
+发行时间 0.01669573
+填词 0.010778078
+2020-12-07 19:21:10,737|kbqa_test.py[line:173]|kb_fuzzy_classify_test|INFO|total: 158, recall: 155, correct:120, accuracy: 77.41935483870968%, ambiguity：10
+2020-12-07 19:21:10,787|kbqa_test.py[line:164]|kb_fuzzy_classify_test|INFO|大小 0.01767699
+2020-12-07 19:21:11,788|kbqa_test.py[line:173]|kb_fuzzy_classify_test|INFO|total: 159, recall: 156, correct:121, accuracy: 77.56410256410257%, ambiguity：10
+2020-12-07 19:21:11,843|kbqa_test.py[line:164]|kb_fuzzy_classify_test|INFO|日期 0.21585155
+电影等级 0.0040695695
+导演 0.00381596
+上映地区 0.0031026704
+2020-12-07 19:21:11,844|kbqa_test.py[line:171]|kb_fuzzy_classify_test|INFO|父亲节	日期	台湾每年的8月8日
+2020-12-07 19:21:12,845|kbqa_test.py[line:173]|kb_fuzzy_classify_test|INFO|total: 160, recall: 157, correct:121, accuracy: 77.07006369426752%, ambiguity：10
+2020-12-07 19:21:13,886|kbqa_test.py[line:155]|kb_fuzzy_classify_test|INFO|total: 161, recall: 158, correct:122, accuracy: 77.21518987341773%, ambiguity：10
+2020-12-07 19:21:14,909|kbqa_test.py[line:155]|kb_fuzzy_classify_test|INFO|total: 162, recall: 159, correct:123, accuracy: 77.35849056603773%, ambiguity：10
+2020-12-07 19:21:14,957|kbqa_test.py[line:164]|kb_fuzzy_classify_test|INFO|上映时间 0.96781296
+imdb编码 0.11689758
+影片片长 0.028722903
+编剧 0.019541122
+2020-12-07 19:21:15,958|kbqa_test.py[line:173]|kb_fuzzy_classify_test|INFO|total: 163, recall: 160, correct:124, accuracy: 77.5%, ambiguity：10
+2020-12-07 19:21:16,972|kbqa_test.py[line:155]|kb_fuzzy_classify_test|INFO|total: 164, recall: 161, correct:125, accuracy: 77.63975155279503%, ambiguity：10
+2020-12-07 19:21:17,120|kbqa_test.py[line:164]|kb_fuzzy_classify_test|INFO|-行政村数 0.98784155
+地方特产 0.97935915
+知名产业 0.9780964
+地理、人口、经济 0.9734883
+村级区划单位数 0.9698831
+地理位置 0.95270395
+邮政区码 0.93217695
+行政区划代码 0.9105517
+-社区数 0.8911653
+下辖地区 0.85629237
+上级行政区 0.81987494
+所属地区 0.8038736
+所属地区 0.8038736
+气候条件 0.03221904
+电话区号 0.013074199
+人口 0.0018307457
+人口 0.0018307457
+面积 0.0012154046
+面积 0.0012154046
+中文名 0.0007451167
+2020-12-07 19:21:17,121|kbqa_test.py[line:171]|kb_fuzzy_classify_test|INFO|城关镇	-行政村数	21
+2020-12-07 19:21:18,122|kbqa_test.py[line:173]|kb_fuzzy_classify_test|INFO|total: 165, recall: 162, correct:125, accuracy: 77.1604938271605%, ambiguity：10
+2020-12-07 19:21:18,154|kbqa_test.py[line:164]|kb_fuzzy_classify_test|INFO|所属运动队 0.99115247
+执教球队 0.03897509
+惯用脚 0.018395158
+2020-12-07 19:21:18,155|kbqa_test.py[line:171]|kb_fuzzy_classify_test|INFO|克里斯蒂安	所属运动队	重量 摔跤
+2020-12-07 19:21:19,156|kbqa_test.py[line:173]|kb_fuzzy_classify_test|INFO|total: 166, recall: 163, correct:125, accuracy: 76.68711656441718%, ambiguity：10
+2020-12-07 19:21:19,197|kbqa_test.py[line:164]|kb_fuzzy_classify_test|INFO|原版名称 0.9967434
+首播电视台 0.00057378755
+制片 0.00053234474
+2020-12-07 19:21:20,197|kbqa_test.py[line:173]|kb_fuzzy_classify_test|INFO|total: 167, recall: 164, correct:126, accuracy: 76.82926829268293%, ambiguity：10
+2020-12-07 19:21:20,234|kbqa_test.py[line:164]|kb_fuzzy_classify_test|INFO|• 夏令时 0.9970366
+人口（2000年） 0.0005607532
+2020-12-07 19:21:21,234|kbqa_test.py[line:173]|kb_fuzzy_classify_test|INFO|total: 168, recall: 165, correct:127, accuracy: 76.96969696969697%, ambiguity：10
+2020-12-07 19:21:22,245|kbqa_test.py[line:155]|kb_fuzzy_classify_test|INFO|total: 169, recall: 166, correct:128, accuracy: 77.10843373493977%, ambiguity：10
+2020-12-07 19:21:22,326|kbqa_test.py[line:164]|kb_fuzzy_classify_test|INFO|行政区划代码 0.9964133
+邮政区码 0.010305235
+上级行政区 0.008888449
+地理、人口、经济 0.0007369281
+幅员面积 0.00054715975
+方言 0.0005330853
+2020-12-07 19:21:23,328|kbqa_test.py[line:173]|kb_fuzzy_classify_test|INFO|total: 170, recall: 167, correct:129, accuracy: 77.24550898203593%, ambiguity：10
+2020-12-07 19:21:23,354|kbqa_test.py[line:164]|kb_fuzzy_classify_test|INFO|气候条件 0.05235712
+2020-12-07 19:21:24,355|kbqa_test.py[line:173]|kb_fuzzy_classify_test|INFO|total: 171, recall: 168, correct:130, accuracy: 77.38095238095238%, ambiguity：10
+2020-12-07 19:21:24,377|kbqa_test.py[line:146]|kb_fuzzy_classify_test|INFO|何家驹	出生	1951年3月14日英属香港九龙城
+2020-12-07 19:21:25,378|kbqa_test.py[line:155]|kb_fuzzy_classify_test|INFO|total: 172, recall: 169, correct:130, accuracy: 76.92307692307692%, ambiguity：11
+2020-12-07 19:21:25,410|kbqa_test.py[line:164]|kb_fuzzy_classify_test|INFO|去世年月 0.9962882
+2020-12-07 19:21:26,411|kbqa_test.py[line:173]|kb_fuzzy_classify_test|INFO|total: 173, recall: 170, correct:131, accuracy: 77.05882352941177%, ambiguity：11
+2020-12-07 19:21:26,444|kbqa_test.py[line:164]|kb_fuzzy_classify_test|INFO|丛书 0.99149597
+册数 0.66534066
+播放时间 0.04130465
+2020-12-07 19:21:26,445|kbqa_test.py[line:171]|kb_fuzzy_classify_test|INFO|进击的巨人	丛书	讲谈社comicsmagazine、premiumkc（限定版）tonglicomics
+2020-12-07 19:21:27,446|kbqa_test.py[line:173]|kb_fuzzy_classify_test|INFO|total: 174, recall: 171, correct:131, accuracy: 76.60818713450293%, ambiguity：11
+2020-12-07 19:21:27,512|kbqa_test.py[line:164]|kb_fuzzy_classify_test|INFO|电影公司 0.9900962
+影片片长 0.9872895
+编剧 0.9471891
+上映地区 0.058207665
+画面颜色 0.0053656367
+主演 0.0014653939
+2020-12-07 19:21:27,513|kbqa_test.py[line:171]|kb_fuzzy_classify_test|INFO|《哈姆雷特》	电影公司	美国哥伦比亚电影公司
+2020-12-07 19:21:28,514|kbqa_test.py[line:173]|kb_fuzzy_classify_test|INFO|total: 175, recall: 172, correct:131, accuracy: 76.16279069767442%, ambiguity：11
+2020-12-07 19:21:28,532|kbqa_test.py[line:164]|kb_fuzzy_classify_test|INFO|英文名称 0.0054053566
+2020-12-07 19:21:28,533|kbqa_test.py[line:171]|kb_fuzzy_classify_test|INFO|异叶黄钟木	英文名称	pinkmanjack,
+2020-12-07 19:21:29,533|kbqa_test.py[line:173]|kb_fuzzy_classify_test|INFO|total: 176, recall: 173, correct:131, accuracy: 75.72254335260115%, ambiguity：11
+2020-12-07 19:21:29,577|kbqa_test.py[line:164]|kb_fuzzy_classify_test|INFO|村级区划单位数 0.911424
+行政区划代码 0.38062578
+上级行政区 0.17433934
+-社区数 0.017978868
+设立时间 0.0006136643
+2020-12-07 19:21:30,578|kbqa_test.py[line:173]|kb_fuzzy_classify_test|INFO|total: 177, recall: 174, correct:132, accuracy: 75.86206896551724%, ambiguity：11
+2020-12-07 19:21:31,600|kbqa_test.py[line:173]|kb_fuzzy_classify_test|INFO|total: 178, recall: 174, correct:132, accuracy: 75.86206896551724%, ambiguity：11
+2020-12-07 19:21:32,620|kbqa_test.py[line:155]|kb_fuzzy_classify_test|INFO|total: 179, recall: 175, correct:133, accuracy: 76.0%, ambiguity：11
+2020-12-07 19:21:33,641|kbqa_test.py[line:155]|kb_fuzzy_classify_test|INFO|total: 180, recall: 176, correct:134, accuracy: 76.13636363636364%, ambiguity：11
+2020-12-07 19:21:34,651|kbqa_test.py[line:155]|kb_fuzzy_classify_test|INFO|total: 181, recall: 177, correct:135, accuracy: 76.27118644067797%, ambiguity：11
+2020-12-07 19:21:34,705|kbqa_test.py[line:164]|kb_fuzzy_classify_test|INFO|-社区数 0.9926958
+村级区划单位数 0.95637065
+行政区划代码 0.948037
+上级行政区 0.13988848
+设立时间 0.0014087355
+2020-12-07 19:21:35,706|kbqa_test.py[line:173]|kb_fuzzy_classify_test|INFO|total: 182, recall: 178, correct:136, accuracy: 76.40449438202248%, ambiguity：11
+2020-12-07 19:21:35,807|kbqa_test.py[line:164]|kb_fuzzy_classify_test|INFO|-行政村数 0.9920169
+地理、人口、经济 0.9683707
+下辖地区 0.92465204
+知名产业 0.89125323
+地理位置 0.7898595
+所属地区 0.26641756
+面积 0.004278826
+气候条件 0.0035465858
+人口 0.0028966458
+建立时间 0.0026999419
+方言 0.0006008865
+gdp 0.00052782596
+2020-12-07 19:21:36,807|kbqa_test.py[line:173]|kb_fuzzy_classify_test|INFO|total: 183, recall: 179, correct:137, accuracy: 76.53631284916202%, ambiguity：11
+2020-12-07 19:21:36,866|kbqa_test.py[line:164]|kb_fuzzy_classify_test|INFO|邮政区码 0.9652132
+地理、人口、经济 0.92532766
+行政区划代码 0.9209179
+上级行政区 0.10047357
+幅员面积 0.004812643
+方言 0.0024165062
+2020-12-07 19:21:36,866|kbqa_test.py[line:171]|kb_fuzzy_classify_test|INFO|兴隆镇	邮政区码	723601
+2020-12-07 19:21:37,867|kbqa_test.py[line:173]|kb_fuzzy_classify_test|INFO|total: 184, recall: 180, correct:137, accuracy: 76.11111111111111%, ambiguity：11
+2020-12-07 19:21:37,895|kbqa_test.py[line:164]|kb_fuzzy_classify_test|INFO|公司口号 0.9965659
+2020-12-07 19:21:38,895|kbqa_test.py[line:173]|kb_fuzzy_classify_test|INFO|total: 185, recall: 181, correct:138, accuracy: 76.24309392265194%, ambiguity：11
+2020-12-07 19:21:39,906|kbqa_test.py[line:173]|kb_fuzzy_classify_test|INFO|total: 186, recall: 181, correct:138, accuracy: 76.24309392265194%, ambiguity：11
+2020-12-07 19:21:39,943|kbqa_test.py[line:164]|kb_fuzzy_classify_test|INFO|歌曲语言 0.99624014
+音乐风格 0.021564307
+2020-12-07 19:21:40,944|kbqa_test.py[line:173]|kb_fuzzy_classify_test|INFO|total: 187, recall: 182, correct:139, accuracy: 76.37362637362638%, ambiguity：11
+2020-12-07 19:21:40,968|kbqa_test.py[line:164]|kb_fuzzy_classify_test|INFO|员工数 0.9969116
+2020-12-07 19:21:41,970|kbqa_test.py[line:173]|kb_fuzzy_classify_test|INFO|total: 188, recall: 183, correct:140, accuracy: 76.50273224043715%, ambiguity：11
+2020-12-07 19:21:42,992|kbqa_test.py[line:155]|kb_fuzzy_classify_test|INFO|total: 189, recall: 184, correct:141, accuracy: 76.6304347826087%, ambiguity：11
+2020-12-07 19:21:43,030|kbqa_test.py[line:164]|kb_fuzzy_classify_test|INFO|集数 0.9930454
+演出 0.9292945
+香港首播 0.2580293
+制片人 0.058805976
+2020-12-07 19:21:44,030|kbqa_test.py[line:173]|kb_fuzzy_classify_test|INFO|total: 190, recall: 185, correct:142, accuracy: 76.75675675675676%, ambiguity：11
+2020-12-07 19:21:45,059|kbqa_test.py[line:155]|kb_fuzzy_classify_test|INFO|total: 191, recall: 186, correct:143, accuracy: 76.88172043010752%, ambiguity：11
+2020-12-07 19:21:46,082|kbqa_test.py[line:155]|kb_fuzzy_classify_test|INFO|total: 192, recall: 187, correct:144, accuracy: 77.00534759358288%, ambiguity：11
+2020-12-07 19:21:46,111|kbqa_test.py[line:164]|kb_fuzzy_classify_test|INFO|药品名称 0.9968658
+2020-12-07 19:21:47,112|kbqa_test.py[line:173]|kb_fuzzy_classify_test|INFO|total: 193, recall: 188, correct:145, accuracy: 77.12765957446808%, ambiguity：11
+2020-12-07 19:21:47,195|kbqa_test.py[line:164]|kb_fuzzy_classify_test|INFO|建筑形式 0.98303425
+物业类别 0.9828773
+建筑面积 0.9552891
+总规划面积 0.91031003
+楼盘名 0.7491401
+绿化率 0.10750261
+城区 0.010462547
+2020-12-07 19:21:47,196|kbqa_test.py[line:171]|kb_fuzzy_classify_test|INFO|恒大金碧天下	建筑形式	联排独栋双拼
+2020-12-07 19:21:48,196|kbqa_test.py[line:173]|kb_fuzzy_classify_test|INFO|total: 194, recall: 189, correct:145, accuracy: 76.71957671957672%, ambiguity：11
+2020-12-07 19:21:48,249|kbqa_test.py[line:164]|kb_fuzzy_classify_test|INFO|主要奖项 0.060665432
+2020-12-07 19:21:48,250|kbqa_test.py[line:171]|kb_fuzzy_classify_test|INFO|蒂埃里·亨利	主要奖项	代表摩纳哥队获得法甲联赛冠军代表法国队夺得98年世界杯冠军
+2020-12-07 19:21:49,250|kbqa_test.py[line:173]|kb_fuzzy_classify_test|INFO|total: 195, recall: 190, correct:145, accuracy: 76.3157894736842%, ambiguity：11
+2020-12-07 19:21:50,300|kbqa_test.py[line:173]|kb_fuzzy_classify_test|INFO|total: 196, recall: 190, correct:145, accuracy: 76.3157894736842%, ambiguity：11
+2020-12-07 19:21:50,359|kbqa_test.py[line:164]|kb_fuzzy_classify_test|INFO|登场作品 0.99248475
+生日 0.0020570378
+2020-12-07 19:21:51,361|kbqa_test.py[line:173]|kb_fuzzy_classify_test|INFO|total: 197, recall: 191, correct:146, accuracy: 76.43979057591623%, ambiguity：11
+2020-12-07 19:21:51,446|kbqa_test.py[line:164]|kb_fuzzy_classify_test|INFO|级别 0.0013689101
+制片地区 0.0007241146
+其它译名 0.0006848012
+摄制格式 0.00063773076
+摄影 0.00056351715
+幅面 0.0005499854
+2020-12-07 19:21:51,447|kbqa_test.py[line:171]|kb_fuzzy_classify_test|INFO|呼啸山庄	级别	usa:pg-13
+2020-12-07 19:21:52,448|kbqa_test.py[line:173]|kb_fuzzy_classify_test|INFO|total: 198, recall: 192, correct:146, accuracy: 76.04166666666667%, ambiguity：11
+2020-12-07 19:21:53,470|kbqa_test.py[line:155]|kb_fuzzy_classify_test|INFO|total: 199, recall: 193, correct:147, accuracy: 76.16580310880829%, ambiguity：11
+2020-12-07 19:21:53,514|kbqa_test.py[line:164]|kb_fuzzy_classify_test|INFO|其他名称 0.9964367
+司掌 0.0007848702
+父母 0.0006704942
+居所 0.00063836895
+2020-12-07 19:21:54,514|kbqa_test.py[line:173]|kb_fuzzy_classify_test|INFO|total: 200, recall: 194, correct:148, accuracy: 76.28865979381443%, ambiguity：11
+2020-12-07 19:21:54,583|kbqa_test.py[line:164]|kb_fuzzy_classify_test|INFO|地址 0.9034416
+建成时间 0.9024653
+始建时间 0.18671699
+始建 0.011957205
+定义 0.00067624357
+2020-12-07 19:21:54,584|kbqa_test.py[line:171]|kb_fuzzy_classify_test|INFO|关帝庙	地址	山东省汶上县
+2020-12-07 19:21:55,584|kbqa_test.py[line:173]|kb_fuzzy_classify_test|INFO|total: 201, recall: 195, correct:148, accuracy: 75.8974358974359%, ambiguity：11
+2020-12-07 19:21:55,621|kbqa_test.py[line:164]|kb_fuzzy_classify_test|INFO|国籍 0.0012123315
+民族 0.00093042065
+2020-12-07 19:21:56,621|kbqa_test.py[line:173]|kb_fuzzy_classify_test|INFO|total: 202, recall: 196, correct:149, accuracy: 76.0204081632653%, ambiguity：11
+2020-12-07 19:21:57,642|kbqa_test.py[line:155]|kb_fuzzy_classify_test|INFO|total: 203, recall: 197, correct:150, accuracy: 76.14213197969544%, ambiguity：11
+2020-12-07 19:21:58,667|kbqa_test.py[line:155]|kb_fuzzy_classify_test|INFO|total: 204, recall: 198, correct:151, accuracy: 76.26262626262626%, ambiguity：11
+2020-12-07 19:21:58,710|kbqa_test.py[line:164]|kb_fuzzy_classify_test|INFO|又名 0.99561214
+剪辑 0.00077702943
+2020-12-07 19:21:59,711|kbqa_test.py[line:173]|kb_fuzzy_classify_test|INFO|total: 205, recall: 199, correct:152, accuracy: 76.38190954773869%, ambiguity：11
+2020-12-07 19:21:59,763|kbqa_test.py[line:164]|kb_fuzzy_classify_test|INFO|适宜人群 0.9969784
+主要食用功效 0.06993278
+主要原料 0.0064648646
+2020-12-07 19:22:00,764|kbqa_test.py[line:173]|kb_fuzzy_classify_test|INFO|total: 206, recall: 200, correct:153, accuracy: 76.5%, ambiguity：11
+2020-12-07 19:22:00,791|kbqa_test.py[line:164]|kb_fuzzy_classify_test|INFO|简介 0.019763561
+2020-12-07 19:22:01,793|kbqa_test.py[line:173]|kb_fuzzy_classify_test|INFO|total: 207, recall: 201, correct:154, accuracy: 76.61691542288557%, ambiguity：11
+2020-12-07 19:22:02,813|kbqa_test.py[line:155]|kb_fuzzy_classify_test|INFO|total: 208, recall: 202, correct:155, accuracy: 76.73267326732673%, ambiguity：11
+2020-12-07 19:22:02,840|kbqa_test.py[line:164]|kb_fuzzy_classify_test|INFO|酒店星级 0.0018449207
+2020-12-07 19:22:03,841|kbqa_test.py[line:173]|kb_fuzzy_classify_test|INFO|total: 209, recall: 203, correct:156, accuracy: 76.84729064039409%, ambiguity：11
+2020-12-07 19:22:04,868|kbqa_test.py[line:155]|kb_fuzzy_classify_test|INFO|total: 210, recall: 204, correct:157, accuracy: 76.96078431372548%, ambiguity：11
+2020-12-07 19:22:04,886|kbqa_test.py[line:164]|kb_fuzzy_classify_test|INFO|出生时间 0.9939277
+2020-12-07 19:22:05,887|kbqa_test.py[line:173]|kb_fuzzy_classify_test|INFO|total: 211, recall: 205, correct:158, accuracy: 77.07317073170732%, ambiguity：11
+2020-12-07 19:22:06,907|kbqa_test.py[line:155]|kb_fuzzy_classify_test|INFO|total: 212, recall: 206, correct:159, accuracy: 77.18446601941747%, ambiguity：11
+2020-12-07 19:22:06,934|kbqa_test.py[line:164]|kb_fuzzy_classify_test|INFO|用法 0.0028959487
+2020-12-07 19:22:07,935|kbqa_test.py[line:173]|kb_fuzzy_classify_test|INFO|total: 213, recall: 207, correct:160, accuracy: 77.29468599033817%, ambiguity：11
+2020-12-07 19:22:07,967|kbqa_test.py[line:164]|kb_fuzzy_classify_test|INFO|开发商 0.011291874
+主要奖项 0.006411566
+发行商 0.0018235858
+2020-12-07 19:22:07,968|kbqa_test.py[line:171]|kb_fuzzy_classify_test|INFO|大闹天宫	开发商	璇玑网络
+2020-12-07 19:22:08,969|kbqa_test.py[line:173]|kb_fuzzy_classify_test|INFO|total: 214, recall: 208, correct:160, accuracy: 76.92307692307692%, ambiguity：11
+2020-12-07 19:22:09,989|kbqa_test.py[line:155]|kb_fuzzy_classify_test|INFO|total: 215, recall: 209, correct:161, accuracy: 77.03349282296651%, ambiguity：11
+2020-12-07 19:22:10,020|kbqa_test.py[line:164]|kb_fuzzy_classify_test|INFO|去世时间 0.9793314
+所处时代 0.97206205
+本名 0.0012452768
+2020-12-07 19:22:11,021|kbqa_test.py[line:173]|kb_fuzzy_classify_test|INFO|total: 216, recall: 210, correct:162, accuracy: 77.14285714285714%, ambiguity：11
+2020-12-07 19:22:12,041|kbqa_test.py[line:155]|kb_fuzzy_classify_test|INFO|total: 217, recall: 211, correct:163, accuracy: 77.25118483412322%, ambiguity：11
+2020-12-07 19:22:13,065|kbqa_test.py[line:155]|kb_fuzzy_classify_test|INFO|total: 218, recall: 212, correct:164, accuracy: 77.35849056603773%, ambiguity：11
+2020-12-07 19:22:13,098|kbqa_test.py[line:164]|kb_fuzzy_classify_test|INFO|属于 0.0009768212
+2020-12-07 19:22:14,100|kbqa_test.py[line:173]|kb_fuzzy_classify_test|INFO|total: 219, recall: 213, correct:165, accuracy: 77.46478873239437%, ambiguity：11
+2020-12-07 19:22:14,152|kbqa_test.py[line:164]|kb_fuzzy_classify_test|INFO|邮政区码 0.996959
+下辖地区 0.00075163966
+机场 0.00052575214
+2020-12-07 19:22:15,152|kbqa_test.py[line:173]|kb_fuzzy_classify_test|INFO|total: 220, recall: 214, correct:166, accuracy: 77.57009345794393%, ambiguity：11
+2020-12-07 19:22:16,175|kbqa_test.py[line:155]|kb_fuzzy_classify_test|INFO|total: 221, recall: 215, correct:167, accuracy: 77.67441860465117%, ambiguity：11
+2020-12-07 19:22:16,203|kbqa_test.py[line:164]|kb_fuzzy_classify_test|INFO|影片片长 0.99547064
+2020-12-07 19:22:17,204|kbqa_test.py[line:173]|kb_fuzzy_classify_test|INFO|total: 222, recall: 216, correct:168, accuracy: 77.77777777777777%, ambiguity：11
+2020-12-07 19:22:18,225|kbqa_test.py[line:155]|kb_fuzzy_classify_test|INFO|total: 223, recall: 217, correct:169, accuracy: 77.88018433179724%, ambiguity：11
+2020-12-07 19:22:18,285|kbqa_test.py[line:164]|kb_fuzzy_classify_test|INFO|职业 0.9944436
+信仰 0.0005237225
+2020-12-07 19:22:19,285|kbqa_test.py[line:173]|kb_fuzzy_classify_test|INFO|total: 224, recall: 218, correct:170, accuracy: 77.98165137614679%, ambiguity：11
+2020-12-07 19:22:19,321|kbqa_test.py[line:164]|kb_fuzzy_classify_test|INFO|作者 0.051137127
+作品出处 0.02568717
+2020-12-07 19:22:20,321|kbqa_test.py[line:173]|kb_fuzzy_classify_test|INFO|total: 225, recall: 219, correct:171, accuracy: 78.08219178082192%, ambiguity：11
+2020-12-07 19:22:21,343|kbqa_test.py[line:173]|kb_fuzzy_classify_test|INFO|total: 226, recall: 219, correct:171, accuracy: 78.08219178082192%, ambiguity：11
+2020-12-07 19:22:21,482|kbqa_test.py[line:164]|kb_fuzzy_classify_test|INFO|-行政村数 0.9913555
+地理、人口、经济 0.98039126
+知名产业 0.9764089
+村级区划单位数 0.97096777
+地方特产 0.9704223
+著名景点 0.96531373
+著名景点 0.96531373
+地理位置 0.94323885
+行政代码 0.92672926
+知名企业 0.86757916
+上级行政区 0.47970754
+所属地区 0.09728991
+政府驻地 0.009252221
+车牌号码 0.0019909437
+面积 0.0016099956
+人口 0.000915797
+人数 0.0005687279
+2020-12-07 19:22:21,483|kbqa_test.py[line:171]|kb_fuzzy_classify_test|INFO|太平镇	-行政村数	33
+2020-12-07 19:22:22,483|kbqa_test.py[line:173]|kb_fuzzy_classify_test|INFO|total: 227, recall: 220, correct:171, accuracy: 77.72727272727273%, ambiguity：11
+2020-12-07 19:22:22,517|kbqa_test.py[line:164]|kb_fuzzy_classify_test|INFO|用途 0.8209238
+2020-12-07 19:22:23,519|kbqa_test.py[line:173]|kb_fuzzy_classify_test|INFO|total: 228, recall: 221, correct:172, accuracy: 77.82805429864253%, ambiguity：11
+2020-12-07 19:22:24,542|kbqa_test.py[line:155]|kb_fuzzy_classify_test|INFO|total: 229, recall: 222, correct:173, accuracy: 77.92792792792793%, ambiguity：11
+2020-12-07 19:22:25,563|kbqa_test.py[line:155]|kb_fuzzy_classify_test|INFO|total: 230, recall: 223, correct:175, accuracy: 78.47533632286995%, ambiguity：11
+2020-12-07 19:22:26,584|kbqa_test.py[line:155]|kb_fuzzy_classify_test|INFO|total: 231, recall: 224, correct:176, accuracy: 78.57142857142857%, ambiguity：11
+2020-12-07 19:22:26,604|kbqa_test.py[line:146]|kb_fuzzy_classify_test|INFO|弹片	含义	[shellfragment;shrapnel;
+2020-12-07 19:22:27,605|kbqa_test.py[line:155]|kb_fuzzy_classify_test|INFO|total: 232, recall: 225, correct:176, accuracy: 78.22222222222223%, ambiguity：12
+2020-12-07 19:22:28,629|kbqa_test.py[line:155]|kb_fuzzy_classify_test|INFO|total: 233, recall: 226, correct:177, accuracy: 78.31858407079646%, ambiguity：12
+2020-12-07 19:22:29,656|kbqa_test.py[line:155]|kb_fuzzy_classify_test|INFO|total: 234, recall: 227, correct:178, accuracy: 78.41409691629956%, ambiguity：12
+2020-12-07 19:22:30,677|kbqa_test.py[line:155]|kb_fuzzy_classify_test|INFO|total: 235, recall: 228, correct:179, accuracy: 78.50877192982456%, ambiguity：12
+2020-12-07 19:22:30,701|kbqa_test.py[line:164]|kb_fuzzy_classify_test|INFO|耕地面积 0.996971
+总耕地面积 0.9967282
+2020-12-07 19:22:31,702|kbqa_test.py[line:173]|kb_fuzzy_classify_test|INFO|total: 236, recall: 229, correct:180, accuracy: 78.60262008733625%, ambiguity：12
+2020-12-07 19:22:32,723|kbqa_test.py[line:155]|kb_fuzzy_classify_test|INFO|total: 237, recall: 230, correct:181, accuracy: 78.69565217391305%, ambiguity：12
+2020-12-07 19:22:33,746|kbqa_test.py[line:155]|kb_fuzzy_classify_test|INFO|total: 238, recall: 231, correct:182, accuracy: 78.78787878787878%, ambiguity：12
+2020-12-07 19:22:34,775|kbqa_test.py[line:155]|kb_fuzzy_classify_test|INFO|total: 239, recall: 232, correct:183, accuracy: 78.87931034482759%, ambiguity：12
+2020-12-07 19:22:35,796|kbqa_test.py[line:155]|kb_fuzzy_classify_test|INFO|total: 240, recall: 233, correct:184, accuracy: 78.96995708154506%, ambiguity：12
+2020-12-07 19:22:36,820|kbqa_test.py[line:155]|kb_fuzzy_classify_test|INFO|total: 241, recall: 234, correct:185, accuracy: 79.05982905982906%, ambiguity：12
+2020-12-07 19:22:36,838|kbqa_test.py[line:164]|kb_fuzzy_classify_test|INFO|药品类型 0.9845642
+2020-12-07 19:22:37,838|kbqa_test.py[line:173]|kb_fuzzy_classify_test|INFO|total: 242, recall: 235, correct:186, accuracy: 79.14893617021276%, ambiguity：12
+2020-12-07 19:22:37,868|kbqa_test.py[line:164]|kb_fuzzy_classify_test|INFO|配料 0.99107176
+2020-12-07 19:22:38,869|kbqa_test.py[line:173]|kb_fuzzy_classify_test|INFO|total: 243, recall: 236, correct:187, accuracy: 79.23728813559322%, ambiguity：12
+2020-12-07 19:22:38,904|kbqa_test.py[line:164]|kb_fuzzy_classify_test|INFO|餐馆名称 0.9971269
+人均价格 0.0005027923
+2020-12-07 19:22:39,906|kbqa_test.py[line:173]|kb_fuzzy_classify_test|INFO|total: 244, recall: 237, correct:188, accuracy: 79.32489451476793%, ambiguity：12
+2020-12-07 19:22:40,930|kbqa_test.py[line:155]|kb_fuzzy_classify_test|INFO|total: 245, recall: 238, correct:189, accuracy: 79.41176470588235%, ambiguity：12
+2020-12-07 19:22:40,950|kbqa_test.py[line:146]|kb_fuzzy_classify_test|INFO|帝国理工学院	校训	scientiaimperiidecusettutamen(知识是帝国永续的支柱）
+2020-12-07 19:22:41,950|kbqa_test.py[line:155]|kb_fuzzy_classify_test|INFO|total: 246, recall: 239, correct:189, accuracy: 79.07949790794979%, ambiguity：13
+2020-12-07 19:22:42,961|kbqa_test.py[line:155]|kb_fuzzy_classify_test|INFO|total: 247, recall: 240, correct:190, accuracy: 79.16666666666667%, ambiguity：13
+2020-12-07 19:22:43,973|kbqa_test.py[line:155]|kb_fuzzy_classify_test|INFO|total: 248, recall: 241, correct:191, accuracy: 79.25311203319502%, ambiguity：13
+2020-12-07 19:22:43,995|kbqa_test.py[line:146]|kb_fuzzy_classify_test|INFO|澳门广播电视股份有限公司	成立	（启播）1984年5月13日（30岁209天）
+2020-12-07 19:22:44,996|kbqa_test.py[line:155]|kb_fuzzy_classify_test|INFO|total: 249, recall: 242, correct:191, accuracy: 78.92561983471074%, ambiguity：14
+2020-12-07 19:22:46,034|kbqa_test.py[line:155]|kb_fuzzy_classify_test|INFO|total: 250, recall: 243, correct:192, accuracy: 79.01234567901234%, ambiguity：14
+2020-12-07 19:22:46,093|kbqa_test.py[line:164]|kb_fuzzy_classify_test|INFO|编曲 0.9903656
+印刷时间 0.016053751
+播出国家／地区 0.0035329654
+字数 0.0032999604
+版次 0.0010310664
+开本 0.0008373372
+2020-12-07 19:22:47,095|kbqa_test.py[line:173]|kb_fuzzy_classify_test|INFO|total: 251, recall: 244, correct:193, accuracy: 79.09836065573771%, ambiguity：14
+2020-12-07 19:22:48,115|kbqa_test.py[line:155]|kb_fuzzy_classify_test|INFO|total: 252, recall: 245, correct:194, accuracy: 79.18367346938776%, ambiguity：14
+2020-12-07 19:22:49,156|kbqa_test.py[line:155]|kb_fuzzy_classify_test|INFO|total: 253, recall: 246, correct:195, accuracy: 79.26829268292683%, ambiguity：14
+2020-12-07 19:22:49,219|kbqa_test.py[line:164]|kb_fuzzy_classify_test|INFO|游戏类别 0.99621093
+运行系统 0.01409976
+代理商 0.001034249
+标志 0.00097353634
+资费提示 0.000836166
+2020-12-07 19:22:50,220|kbqa_test.py[line:173]|kb_fuzzy_classify_test|INFO|total: 254, recall: 247, correct:196, accuracy: 79.35222672064778%, ambiguity：14
+2020-12-07 19:22:50,254|kbqa_test.py[line:164]|kb_fuzzy_classify_test|INFO|上线时间 0.8630809
+2020-12-07 19:22:51,254|kbqa_test.py[line:173]|kb_fuzzy_classify_test|INFO|total: 255, recall: 248, correct:197, accuracy: 79.43548387096774%, ambiguity：14
+2020-12-07 19:22:51,308|kbqa_test.py[line:164]|kb_fuzzy_classify_test|INFO|现任校长 0.9956585
+校训 0.9758562
+主要院系 0.9512304
+2020-12-07 19:22:51,309|kbqa_test.py[line:171]|kb_fuzzy_classify_test|INFO|华盛顿大学	现任校长	michaelk.young
+2020-12-07 19:22:52,310|kbqa_test.py[line:173]|kb_fuzzy_classify_test|INFO|total: 256, recall: 249, correct:197, accuracy: 79.11646586345381%, ambiguity：14
+2020-12-07 19:22:52,338|kbqa_test.py[line:164]|kb_fuzzy_classify_test|INFO|酒店地址 0.995284
+商业区 0.9909932
+2020-12-07 19:22:53,339|kbqa_test.py[line:173]|kb_fuzzy_classify_test|INFO|total: 257, recall: 250, correct:198, accuracy: 79.2%, ambiguity：14
+2020-12-07 19:22:53,359|kbqa_test.py[line:146]|kb_fuzzy_classify_test|INFO|flower	唱片公司	sonymusicassociatedrecords
+2020-12-07 19:22:54,359|kbqa_test.py[line:155]|kb_fuzzy_classify_test|INFO|total: 258, recall: 251, correct:198, accuracy: 78.88446215139442%, ambiguity：15
+2020-12-07 19:22:55,379|kbqa_test.py[line:155]|kb_fuzzy_classify_test|INFO|total: 259, recall: 252, correct:199, accuracy: 78.96825396825396%, ambiguity：15
+2020-12-07 19:22:55,473|kbqa_test.py[line:164]|kb_fuzzy_classify_test|INFO|姓名 0.9927375
+出生日期 0.21173128
+出生日期 0.21173128
+出生地 0.047443688
+出生地 0.047443688
+逝世日期 0.017666107
+性别 0.01689464
+工作时间 0.0031958732
+职称 0.0031120805
+擅长领域 0.0029675441
+民族 0.00276377
+2020-12-07 19:22:56,475|kbqa_test.py[line:173]|kb_fuzzy_classify_test|INFO|total: 260, recall: 253, correct:200, accuracy: 79.05138339920948%, ambiguity：15
+2020-12-07 19:22:57,504|kbqa_test.py[line:155]|kb_fuzzy_classify_test|INFO|total: 261, recall: 254, correct:201, accuracy: 79.13385826771653%, ambiguity：15
+2020-12-07 19:22:57,548|kbqa_test.py[line:164]|kb_fuzzy_classify_test|INFO|房间数量 0.96078783
+2020-12-07 19:22:58,549|kbqa_test.py[line:173]|kb_fuzzy_classify_test|INFO|total: 262, recall: 255, correct:202, accuracy: 79.2156862745098%, ambiguity：15
+2020-12-07 19:22:58,577|kbqa_test.py[line:164]|kb_fuzzy_classify_test|INFO|游戏语言 0.9930848
+2020-12-07 19:22:59,578|kbqa_test.py[line:173]|kb_fuzzy_classify_test|INFO|total: 263, recall: 256, correct:203, accuracy: 79.296875%, ambiguity：15
+2020-12-07 19:22:59,607|kbqa_test.py[line:164]|kb_fuzzy_classify_test|INFO|个人资料 0.95930487
+2020-12-07 19:23:00,609|kbqa_test.py[line:173]|kb_fuzzy_classify_test|INFO|total: 264, recall: 257, correct:204, accuracy: 79.37743190661479%, ambiguity：15
+2020-12-07 19:23:00,645|kbqa_test.py[line:164]|kb_fuzzy_classify_test|INFO|产地 0.9960756
+服用方法 0.0011231145
+2020-12-07 19:23:01,646|kbqa_test.py[line:173]|kb_fuzzy_classify_test|INFO|total: 265, recall: 258, correct:205, accuracy: 79.45736434108527%, ambiguity：15
+2020-12-07 19:23:02,677|kbqa_test.py[line:155]|kb_fuzzy_classify_test|INFO|total: 266, recall: 259, correct:206, accuracy: 79.53667953667954%, ambiguity：15
+2020-12-07 19:23:03,698|kbqa_test.py[line:155]|kb_fuzzy_classify_test|INFO|total: 267, recall: 260, correct:207, accuracy: 79.61538461538461%, ambiguity：15
+2020-12-07 19:23:03,723|kbqa_test.py[line:146]|kb_fuzzy_classify_test|INFO|《美女与野兽》	编剧	让·谷克多jeancocteau
+2020-12-07 19:23:04,723|kbqa_test.py[line:155]|kb_fuzzy_classify_test|INFO|total: 268, recall: 261, correct:207, accuracy: 79.3103448275862%, ambiguity：16
+2020-12-07 19:23:04,751|kbqa_test.py[line:164]|kb_fuzzy_classify_test|INFO|别称 0.0008078238
+2020-12-07 19:23:04,752|kbqa_test.py[line:171]|kb_fuzzy_classify_test|INFO|八哥	别称	寒皋、鸲鹆、花鹆、哵哵鸟
+2020-12-07 19:23:05,753|kbqa_test.py[line:173]|kb_fuzzy_classify_test|INFO|total: 269, recall: 262, correct:207, accuracy: 79.00763358778626%, ambiguity：16
+2020-12-07 19:23:06,763|kbqa_test.py[line:155]|kb_fuzzy_classify_test|INFO|total: 270, recall: 263, correct:208, accuracy: 79.08745247148289%, ambiguity：16
+2020-12-07 19:23:07,783|kbqa_test.py[line:155]|kb_fuzzy_classify_test|INFO|total: 271, recall: 264, correct:209, accuracy: 79.16666666666667%, ambiguity：16
+2020-12-07 19:23:08,805|kbqa_test.py[line:155]|kb_fuzzy_classify_test|INFO|total: 272, recall: 265, correct:210, accuracy: 79.24528301886792%, ambiguity：16
+2020-12-07 19:23:09,833|kbqa_test.py[line:155]|kb_fuzzy_classify_test|INFO|total: 273, recall: 266, correct:211, accuracy: 79.32330827067669%, ambiguity：16
+2020-12-07 19:23:10,856|kbqa_test.py[line:155]|kb_fuzzy_classify_test|INFO|total: 274, recall: 267, correct:212, accuracy: 79.40074906367042%, ambiguity：16
+2020-12-07 19:23:10,898|kbqa_test.py[line:164]|kb_fuzzy_classify_test|INFO|所在地 0.9915548
+例祭 0.01522098
+2020-12-07 19:23:11,899|kbqa_test.py[line:173]|kb_fuzzy_classify_test|INFO|total: 275, recall: 268, correct:213, accuracy: 79.4776119402985%, ambiguity：16
+2020-12-07 19:23:11,916|kbqa_test.py[line:164]|kb_fuzzy_classify_test|INFO|内容 0.06673954
+2020-12-07 19:23:12,917|kbqa_test.py[line:173]|kb_fuzzy_classify_test|INFO|total: 276, recall: 269, correct:214, accuracy: 79.5539033457249%, ambiguity：16
+2020-12-07 19:23:13,938|kbqa_test.py[line:173]|kb_fuzzy_classify_test|INFO|total: 277, recall: 269, correct:214, accuracy: 79.5539033457249%, ambiguity：16
+2020-12-07 19:23:14,088|kbqa_test.py[line:164]|kb_fuzzy_classify_test|INFO|博士点 0.88654214
+直属单位 0.1608531
+现任职务 0.027391817
+被誉为 0.016925517
+批准 0.011469337
+直属 0.005630898
+交通位置 0.0038558417
+运营时间 0.0028272818
+出版 0.002214544
+站名拼音 0.002166334
+站名拼音 0.002166334
+道路旧名 0.0018692699
+营运地区 0.0017990702
+线路总数 0.0013985657
+餐饮设施 0.001365982
+经度 0.0013002971
+全程 0.001119204
+全程 0.001119204
+产地 0.0007470378
+地区生产总值 0.0006469587
+2020-12-07 19:23:14,088|kbqa_test.py[line:171]|kb_fuzzy_classify_test|INFO|北京大学	博士点	263个
+2020-12-07 19:23:15,090|kbqa_test.py[line:173]|kb_fuzzy_classify_test|INFO|total: 278, recall: 270, correct:214, accuracy: 79.25925925925925%, ambiguity：16
+2020-12-07 19:23:16,113|kbqa_test.py[line:155]|kb_fuzzy_classify_test|INFO|total: 279, recall: 271, correct:215, accuracy: 79.33579335793358%, ambiguity：16
+2020-12-07 19:23:17,135|kbqa_test.py[line:155]|kb_fuzzy_classify_test|INFO|total: 280, recall: 272, correct:216, accuracy: 79.41176470588235%, ambiguity：16
+2020-12-07 19:23:18,164|kbqa_test.py[line:155]|kb_fuzzy_classify_test|INFO|total: 281, recall: 273, correct:217, accuracy: 79.48717948717949%, ambiguity：16
+2020-12-07 19:23:18,320|kbqa_test.py[line:164]|kb_fuzzy_classify_test|INFO|来源 0.008417008
+中文 0.0058916216
+意义 0.002213105
+应用类型 0.0008970025
+适用平台 0.0008760213
+主要应用 0.0007554928
+产品功能 0.00072998455
+适应人群 0.00072313467
+产品外形 0.00069811
+打印方式 0.0006847101
+信噪比 0.00068009004
+产品种类 0.00063537527
+产品种类 0.00063537527
+适应症 0.0006333539
+直径 0.0006079844
+额定功率 0.00060480705
+集成芯片 0.00059867563
+投影亮度 0.0005783547
+屏幕色彩 0.0005711654
+屏幕类型 0.0005666226
+2020-12-07 19:23:19,322|kbqa_test.py[line:173]|kb_fuzzy_classify_test|INFO|total: 282, recall: 274, correct:218, accuracy: 79.56204379562044%, ambiguity：16
+2020-12-07 19:23:19,344|kbqa_test.py[line:146]|kb_fuzzy_classify_test|INFO|styleiconawards	主办单位	cje&m
+2020-12-07 19:23:20,345|kbqa_test.py[line:155]|kb_fuzzy_classify_test|INFO|total: 283, recall: 275, correct:218, accuracy: 79.27272727272727%, ambiguity：17
+2020-12-07 19:23:21,366|kbqa_test.py[line:155]|kb_fuzzy_classify_test|INFO|total: 284, recall: 276, correct:219, accuracy: 79.34782608695652%, ambiguity：17
+2020-12-07 19:23:21,422|kbqa_test.py[line:164]|kb_fuzzy_classify_test|INFO|出生日期 0.98336214
+出生地 0.96636003
+学历 0.021874236
+主要成就 0.0120756375
+女 0.00560935
+2020-12-07 19:23:22,422|kbqa_test.py[line:173]|kb_fuzzy_classify_test|INFO|total: 285, recall: 277, correct:220, accuracy: 79.42238267148015%, ambiguity：17
+2020-12-07 19:23:22,464|kbqa_test.py[line:164]|kb_fuzzy_classify_test|INFO|歌曲时长 0.99042904
+作者简介 0.0015158528
+2020-12-07 19:23:23,466|kbqa_test.py[line:173]|kb_fuzzy_classify_test|INFO|total: 286, recall: 278, correct:221, accuracy: 79.49640287769785%, ambiguity：17
+2020-12-07 19:23:24,477|kbqa_test.py[line:155]|kb_fuzzy_classify_test|INFO|total: 287, recall: 279, correct:222, accuracy: 79.56989247311827%, ambiguity：17
+2020-12-07 19:23:25,499|kbqa_test.py[line:155]|kb_fuzzy_classify_test|INFO|total: 288, recall: 280, correct:224, accuracy: 80.0%, ambiguity：17
+2020-12-07 19:23:25,548|kbqa_test.py[line:164]|kb_fuzzy_classify_test|INFO|作品出处 0.9954176
+作者 0.0050808345
+2020-12-07 19:23:26,549|kbqa_test.py[line:173]|kb_fuzzy_classify_test|INFO|total: 289, recall: 281, correct:225, accuracy: 80.0711743772242%, ambiguity：17
+2020-12-07 19:23:27,571|kbqa_test.py[line:173]|kb_fuzzy_classify_test|INFO|total: 290, recall: 281, correct:225, accuracy: 80.0711743772242%, ambiguity：17
+2020-12-07 19:23:28,588|kbqa_test.py[line:155]|kb_fuzzy_classify_test|INFO|total: 291, recall: 282, correct:226, accuracy: 80.1418439716312%, ambiguity：17
+2020-12-07 19:23:29,609|kbqa_test.py[line:155]|kb_fuzzy_classify_test|INFO|total: 292, recall: 283, correct:227, accuracy: 80.21201413427562%, ambiguity：17
+2020-12-07 19:23:30,629|kbqa_test.py[line:155]|kb_fuzzy_classify_test|INFO|total: 293, recall: 284, correct:228, accuracy: 80.28169014084507%, ambiguity：17
+2020-12-07 19:23:30,647|kbqa_test.py[line:164]|kb_fuzzy_classify_test|INFO|逝世 0.9499416
+2020-12-07 19:23:30,647|kbqa_test.py[line:171]|kb_fuzzy_classify_test|INFO|列夫·达维多维奇·托洛茨基	逝世	1940年8月21日（60岁）（遇刺）df,mexico（英语：mexicanfederaldistrict）科约阿坎区
+2020-12-07 19:23:31,648|kbqa_test.py[line:173]|kb_fuzzy_classify_test|INFO|total: 294, recall: 285, correct:228, accuracy: 80.0%, ambiguity：17
+2020-12-07 19:23:31,676|kbqa_test.py[line:164]|kb_fuzzy_classify_test|INFO|营业时间 0.9054612
+2020-12-07 19:23:31,677|kbqa_test.py[line:171]|kb_fuzzy_classify_test|INFO|无锡侬侬婚纱摄影	营业时间	am8：00~pm21：00
+2020-12-07 19:23:32,678|kbqa_test.py[line:173]|kb_fuzzy_classify_test|INFO|total: 295, recall: 286, correct:228, accuracy: 79.72027972027972%, ambiguity：17
+2020-12-07 19:23:32,706|kbqa_test.py[line:164]|kb_fuzzy_classify_test|INFO|内存容量 0.9964408
+2020-12-07 19:23:33,707|kbqa_test.py[line:173]|kb_fuzzy_classify_test|INFO|total: 296, recall: 287, correct:229, accuracy: 79.79094076655052%, ambiguity：17
+2020-12-07 19:23:33,731|kbqa_test.py[line:164]|kb_fuzzy_classify_test|INFO|人均价格 0.0019389356
+2020-12-07 19:23:34,732|kbqa_test.py[line:173]|kb_fuzzy_classify_test|INFO|total: 297, recall: 288, correct:230, accuracy: 79.86111111111111%, ambiguity：17
+2020-12-07 19:23:35,755|kbqa_test.py[line:155]|kb_fuzzy_classify_test|INFO|total: 298, recall: 289, correct:231, accuracy: 79.93079584775087%, ambiguity：17
+2020-12-07 19:23:35,817|kbqa_test.py[line:164]|kb_fuzzy_classify_test|INFO|原名 0.99653
+建造时间 0.036428835
+所在城市 0.0017486744
+2020-12-07 19:23:36,819|kbqa_test.py[line:173]|kb_fuzzy_classify_test|INFO|total: 299, recall: 290, correct:232, accuracy: 80.0%, ambiguity：17
+2020-12-07 19:23:37,830|kbqa_test.py[line:155]|kb_fuzzy_classify_test|INFO|total: 300, recall: 291, correct:233, accuracy: 80.06872852233677%, ambiguity：17
+2020-12-07 19:23:37,981|kbqa_test.py[line:164]|kb_fuzzy_classify_test|INFO|全称 0.0008255579
+全称 0.0008255579
+英文名称 0.0007551961
+系统支持 0.000723083
+所属类别 0.00070918904
+曲长 0.0006564985
+日文 0.0006555623
+外文名 0.00063317816
+注册用户 0.0006258818
+稳定版本 0.0006208177
+第二条 0.00060345134
+又称 0.00060006947
+第一条 0.0005999291
+第三条 0.00059482397
+上市时间 0.00058982876
+出现 0.0005784547
+解释 0.0005782777
+授权方式 0.0005706004
+距地距离 0.0005609161
+意义 0.0005586937
+2020-12-07 19:23:37,982|kbqa_test.py[line:171]|kb_fuzzy_classify_test|INFO|tr	全称	terresreres
+2020-12-07 19:23:37,982|kbqa_test.py[line:171]|kb_fuzzy_classify_test|INFO|mf	全称	mf globalholdingsltd.
+2020-12-07 19:23:38,983|kbqa_test.py[line:173]|kb_fuzzy_classify_test|INFO|total: 301, recall: 292, correct:233, accuracy: 79.79452054794521%, ambiguity：17
+2020-12-07 19:23:40,004|kbqa_test.py[line:155]|kb_fuzzy_classify_test|INFO|total: 302, recall: 293, correct:234, accuracy: 79.86348122866895%, ambiguity：17
+2020-12-07 19:23:41,026|kbqa_test.py[line:173]|kb_fuzzy_classify_test|INFO|total: 303, recall: 293, correct:234, accuracy: 79.86348122866895%, ambiguity：17
+2020-12-07 19:23:42,054|kbqa_test.py[line:173]|kb_fuzzy_classify_test|INFO|total: 304, recall: 293, correct:234, accuracy: 79.86348122866895%, ambiguity：17
+2020-12-07 19:23:43,074|kbqa_test.py[line:155]|kb_fuzzy_classify_test|INFO|total: 305, recall: 294, correct:235, accuracy: 79.93197278911565%, ambiguity：17
+2020-12-07 19:23:43,110|kbqa_test.py[line:164]|kb_fuzzy_classify_test|INFO|发现日期 0.9850286
+小行星分类 0.95130247
+2020-12-07 19:23:43,111|kbqa_test.py[line:171]|kb_fuzzy_classify_test|INFO|太平洋星	发现日期	march30,1882
+2020-12-07 19:23:44,111|kbqa_test.py[line:173]|kb_fuzzy_classify_test|INFO|total: 306, recall: 295, correct:235, accuracy: 79.66101694915254%, ambiguity：17
+2020-12-07 19:23:45,152|kbqa_test.py[line:155]|kb_fuzzy_classify_test|INFO|total: 307, recall: 296, correct:236, accuracy: 79.72972972972973%, ambiguity：17
+2020-12-07 19:23:46,181|kbqa_test.py[line:155]|kb_fuzzy_classify_test|INFO|total: 308, recall: 297, correct:237, accuracy: 79.79797979797979%, ambiguity：17
+2020-12-07 19:23:47,201|kbqa_test.py[line:155]|kb_fuzzy_classify_test|INFO|total: 309, recall: 298, correct:238, accuracy: 79.86577181208054%, ambiguity：17
+2020-12-07 19:23:48,211|kbqa_test.py[line:155]|kb_fuzzy_classify_test|INFO|total: 310, recall: 299, correct:239, accuracy: 79.93311036789298%, ambiguity：17
+2020-12-07 19:23:48,247|kbqa_test.py[line:164]|kb_fuzzy_classify_test|INFO|县 0.00068356487
+2020-12-07 19:23:48,248|kbqa_test.py[line:171]|kb_fuzzy_classify_test|INFO|格林维尔	县	madisoncounty,florida
+2020-12-07 19:23:49,248|kbqa_test.py[line:173]|kb_fuzzy_classify_test|INFO|total: 311, recall: 300, correct:239, accuracy: 79.66666666666667%, ambiguity：17
+2020-12-07 19:23:49,300|kbqa_test.py[line:164]|kb_fuzzy_classify_test|INFO|游戏站点 0.9379219
+2020-12-07 19:23:50,302|kbqa_test.py[line:173]|kb_fuzzy_classify_test|INFO|total: 312, recall: 301, correct:240, accuracy: 79.734219269103%, ambiguity：17
+2020-12-07 19:23:50,331|kbqa_test.py[line:164]|kb_fuzzy_classify_test|INFO|存储容量 0.89794564
+2020-12-07 19:23:51,332|kbqa_test.py[line:173]|kb_fuzzy_classify_test|INFO|total: 313, recall: 302, correct:241, accuracy: 79.80132450331126%, ambiguity：17
+2020-12-07 19:23:52,358|kbqa_test.py[line:173]|kb_fuzzy_classify_test|INFO|total: 314, recall: 302, correct:241, accuracy: 79.80132450331126%, ambiguity：17
+2020-12-07 19:23:53,379|kbqa_test.py[line:155]|kb_fuzzy_classify_test|INFO|total: 315, recall: 303, correct:242, accuracy: 79.86798679867987%, ambiguity：17
+2020-12-07 19:23:54,400|kbqa_test.py[line:155]|kb_fuzzy_classify_test|INFO|total: 316, recall: 304, correct:243, accuracy: 79.9342105263158%, ambiguity：17
+2020-12-07 19:23:54,444|kbqa_test.py[line:164]|kb_fuzzy_classify_test|INFO|质量 0.018319482
+自转周期 0.017847268
+体积 0.0005675669
+vpn支持 0.00053174025
+旗下品牌 0.0004949579
+2020-12-07 19:23:54,445|kbqa_test.py[line:171]|kb_fuzzy_classify_test|INFO|水星	质量	3.3022×10^23kg
+2020-12-07 19:23:55,446|kbqa_test.py[line:173]|kb_fuzzy_classify_test|INFO|total: 317, recall: 305, correct:243, accuracy: 79.67213114754098%, ambiguity：17
+2020-12-07 19:23:56,488|kbqa_test.py[line:155]|kb_fuzzy_classify_test|INFO|total: 318, recall: 306, correct:244, accuracy: 79.73856209150327%, ambiguity：17
+2020-12-07 19:23:56,512|kbqa_test.py[line:164]|kb_fuzzy_classify_test|INFO|主料 0.99387085
+2020-12-07 19:23:57,513|kbqa_test.py[line:173]|kb_fuzzy_classify_test|INFO|total: 319, recall: 307, correct:245, accuracy: 79.80456026058631%, ambiguity：17
+2020-12-07 19:23:57,666|kbqa_test.py[line:164]|kb_fuzzy_classify_test|INFO|解释 0.26539987
+意义 0.17607698
+曲长 0.012310767
+出现 0.0053613177
+全称 0.004933528
+全称 0.004933528
+所属类别 0.0037925022
+又称 0.0034772025
+授权方式 0.0032433881
+日文 0.0030010894
+外文名 0.0028461409
+系统支持 0.0023372765
+第二条 0.0020729199
+第三条 0.0020287405
+第一条 0.001980036
+稳定版本 0.0016472231
+英文名称 0.001505458
+注册用户 0.0014766516
+上市时间 0.00084528245
+距地距离 0.0007173756
+2020-12-07 19:23:57,666|kbqa_test.py[line:171]|kb_fuzzy_classify_test|INFO|mt	解释	管理培训生
+2020-12-07 19:23:58,666|kbqa_test.py[line:173]|kb_fuzzy_classify_test|INFO|total: 320, recall: 308, correct:245, accuracy: 79.54545454545455%, ambiguity：17
+2020-12-07 19:23:59,686|kbqa_test.py[line:155]|kb_fuzzy_classify_test|INFO|total: 321, recall: 309, correct:246, accuracy: 79.6116504854369%, ambiguity：17
+2020-12-07 19:24:00,707|kbqa_test.py[line:155]|kb_fuzzy_classify_test|INFO|total: 322, recall: 310, correct:247, accuracy: 79.6774193548387%, ambiguity：17
+2020-12-07 19:24:01,727|kbqa_test.py[line:155]|kb_fuzzy_classify_test|INFO|total: 323, recall: 311, correct:248, accuracy: 79.7427652733119%, ambiguity：17
+2020-12-07 19:24:02,737|kbqa_test.py[line:155]|kb_fuzzy_classify_test|INFO|total: 324, recall: 312, correct:249, accuracy: 79.8076923076923%, ambiguity：17
+2020-12-07 19:24:03,758|kbqa_test.py[line:155]|kb_fuzzy_classify_test|INFO|total: 325, recall: 313, correct:250, accuracy: 79.87220447284345%, ambiguity：17
+2020-12-07 19:24:03,823|kbqa_test.py[line:164]|kb_fuzzy_classify_test|INFO|创建时间 0.93789226
+学校类型 0.7148491
+校长 0.009619826
+本科生 0.00938623
+研究生 0.008853211
+院长 0.0015656614
+英文名 0.0007753726
+2020-12-07 19:24:04,824|kbqa_test.py[line:173]|kb_fuzzy_classify_test|INFO|total: 326, recall: 314, correct:251, accuracy: 79.93630573248407%, ambiguity：17
+2020-12-07 19:24:04,852|kbqa_test.py[line:164]|kb_fuzzy_classify_test|INFO|公司类型 0.99660766
+2020-12-07 19:24:05,852|kbqa_test.py[line:173]|kb_fuzzy_classify_test|INFO|total: 327, recall: 315, correct:252, accuracy: 80.0%, ambiguity：17
+2020-12-07 19:24:05,869|kbqa_test.py[line:164]|kb_fuzzy_classify_test|INFO|软件大小 0.9963845
+2020-12-07 19:24:06,870|kbqa_test.py[line:173]|kb_fuzzy_classify_test|INFO|total: 328, recall: 316, correct:253, accuracy: 80.0632911392405%, ambiguity：17
+2020-12-07 19:24:06,898|kbqa_test.py[line:164]|kb_fuzzy_classify_test|INFO|成立于 0.9963404
+2020-12-07 19:24:07,899|kbqa_test.py[line:173]|kb_fuzzy_classify_test|INFO|total: 329, recall: 317, correct:254, accuracy: 80.12618296529969%, ambiguity：17
+2020-12-07 19:24:08,910|kbqa_test.py[line:155]|kb_fuzzy_classify_test|INFO|total: 330, recall: 318, correct:255, accuracy: 80.18867924528301%, ambiguity：17
+2020-12-07 19:24:08,944|kbqa_test.py[line:164]|kb_fuzzy_classify_test|INFO|学生人数 0.8721212
+教师人数 0.855431
+2020-12-07 19:24:09,944|kbqa_test.py[line:173]|kb_fuzzy_classify_test|INFO|total: 331, recall: 319, correct:256, accuracy: 80.25078369905957%, ambiguity：17
+2020-12-07 19:24:10,954|kbqa_test.py[line:155]|kb_fuzzy_classify_test|INFO|total: 332, recall: 320, correct:257, accuracy: 80.3125%, ambiguity：17
+2020-12-07 19:24:10,972|kbqa_test.py[line:164]|kb_fuzzy_classify_test|INFO|开业时间 0.9838035
+2020-12-07 19:24:11,974|kbqa_test.py[line:173]|kb_fuzzy_classify_test|INFO|total: 333, recall: 321, correct:258, accuracy: 80.37383177570094%, ambiguity：17
+2020-12-07 19:24:12,001|kbqa_test.py[line:164]|kb_fuzzy_classify_test|INFO|别名 0.07260296
+2020-12-07 19:24:13,003|kbqa_test.py[line:173]|kb_fuzzy_classify_test|INFO|total: 334, recall: 322, correct:259, accuracy: 80.43478260869566%, ambiguity：17
+2020-12-07 19:24:13,030|kbqa_test.py[line:164]|kb_fuzzy_classify_test|INFO|主要营养成分 0.0026831091
+2020-12-07 19:24:13,031|kbqa_test.py[line:171]|kb_fuzzy_classify_test|INFO|21cake	主要营养成分	奶油芝士
+2020-12-07 19:24:14,031|kbqa_test.py[line:173]|kb_fuzzy_classify_test|INFO|total: 335, recall: 323, correct:259, accuracy: 80.18575851393189%, ambiguity：17
+2020-12-07 19:24:14,065|kbqa_test.py[line:164]|kb_fuzzy_classify_test|INFO|拍摄地点 0.9609675
+语种 0.0015203427
+2020-12-07 19:24:15,066|kbqa_test.py[line:173]|kb_fuzzy_classify_test|INFO|total: 336, recall: 324, correct:260, accuracy: 80.24691358024691%, ambiguity：17
+2020-12-07 19:24:15,090|kbqa_test.py[line:164]|kb_fuzzy_classify_test|INFO|教师人数 0.9850096
+学生人数 0.9716176
+2020-12-07 19:24:16,092|kbqa_test.py[line:173]|kb_fuzzy_classify_test|INFO|total: 337, recall: 325, correct:261, accuracy: 80.3076923076923%, ambiguity：17
+2020-12-07 19:24:16,113|kbqa_test.py[line:146]|kb_fuzzy_classify_test|INFO|nexus7	操作系统	android4.1
+2020-12-07 19:24:17,113|kbqa_test.py[line:155]|kb_fuzzy_classify_test|INFO|total: 338, recall: 326, correct:261, accuracy: 80.06134969325153%, ambiguity：18
+2020-12-07 19:24:17,141|kbqa_test.py[line:164]|kb_fuzzy_classify_test|INFO|惯用脚 0.9970464
+2020-12-07 19:24:18,141|kbqa_test.py[line:173]|kb_fuzzy_classify_test|INFO|total: 339, recall: 327, correct:262, accuracy: 80.1223241590214%, ambiguity：18
+2020-12-07 19:24:18,161|kbqa_test.py[line:146]|kb_fuzzy_classify_test|INFO|nsknj238+hj238轴承	内径	190mm
+2020-12-07 19:24:19,161|kbqa_test.py[line:155]|kb_fuzzy_classify_test|INFO|total: 340, recall: 328, correct:262, accuracy: 79.8780487804878%, ambiguity：19
+2020-12-07 19:24:20,172|kbqa_test.py[line:155]|kb_fuzzy_classify_test|INFO|total: 341, recall: 329, correct:263, accuracy: 79.93920972644376%, ambiguity：19
+2020-12-07 19:24:21,182|kbqa_test.py[line:155]|kb_fuzzy_classify_test|INFO|total: 342, recall: 330, correct:264, accuracy: 80.0%, ambiguity：19
+2020-12-07 19:24:21,210|kbqa_test.py[line:164]|kb_fuzzy_classify_test|INFO|所属 0.09867095
+2020-12-07 19:24:22,211|kbqa_test.py[line:173]|kb_fuzzy_classify_test|INFO|total: 343, recall: 331, correct:265, accuracy: 80.06042296072508%, ambiguity：19
+2020-12-07 19:24:23,221|kbqa_test.py[line:173]|kb_fuzzy_classify_test|INFO|total: 344, recall: 331, correct:265, accuracy: 80.06042296072508%, ambiguity：19
+2020-12-07 19:24:24,242|kbqa_test.py[line:155]|kb_fuzzy_classify_test|INFO|total: 345, recall: 332, correct:266, accuracy: 80.12048192771084%, ambiguity：19
+2020-12-07 19:24:25,262|kbqa_test.py[line:173]|kb_fuzzy_classify_test|INFO|total: 346, recall: 332, correct:266, accuracy: 80.12048192771084%, ambiguity：19
+2020-12-07 19:24:26,272|kbqa_test.py[line:155]|kb_fuzzy_classify_test|INFO|total: 347, recall: 333, correct:267, accuracy: 80.18018018018019%, ambiguity：19
+2020-12-07 19:24:27,293|kbqa_test.py[line:173]|kb_fuzzy_classify_test|INFO|total: 348, recall: 333, correct:267, accuracy: 80.18018018018019%, ambiguity：19
+2020-12-07 19:24:27,313|kbqa_test.py[line:146]|kb_fuzzy_classify_test|INFO|杨洋	血型	o型
+2020-12-07 19:24:28,313|kbqa_test.py[line:155]|kb_fuzzy_classify_test|INFO|total: 349, recall: 334, correct:268, accuracy: 80.23952095808383%, ambiguity：19
+2020-12-07 19:24:29,333|kbqa_test.py[line:155]|kb_fuzzy_classify_test|INFO|total: 350, recall: 335, correct:269, accuracy: 80.29850746268657%, ambiguity：19
+2020-12-07 19:24:30,343|kbqa_test.py[line:155]|kb_fuzzy_classify_test|INFO|total: 351, recall: 336, correct:270, accuracy: 80.35714285714286%, ambiguity：19
+2020-12-07 19:24:30,361|kbqa_test.py[line:164]|kb_fuzzy_classify_test|INFO|玩家人数 0.96176
+2020-12-07 19:24:31,362|kbqa_test.py[line:173]|kb_fuzzy_classify_test|INFO|total: 352, recall: 337, correct:271, accuracy: 80.41543026706232%, ambiguity：19
+2020-12-07 19:24:32,382|kbqa_test.py[line:155]|kb_fuzzy_classify_test|INFO|total: 353, recall: 338, correct:272, accuracy: 80.4733727810651%, ambiguity：19
+2020-12-07 19:24:32,392|kbqa_test.py[line:146]|kb_fuzzy_classify_test|INFO|织女一	赤经	18h36m56.3s
+2020-12-07 19:24:33,392|kbqa_test.py[line:155]|kb_fuzzy_classify_test|INFO|total: 354, recall: 339, correct:272, accuracy: 80.23598820058997%, ambiguity：20
+2020-12-07 19:24:34,413|kbqa_test.py[line:155]|kb_fuzzy_classify_test|INFO|total: 355, recall: 340, correct:273, accuracy: 80.29411764705883%, ambiguity：20
+2020-12-07 19:24:35,423|kbqa_test.py[line:155]|kb_fuzzy_classify_test|INFO|total: 356, recall: 341, correct:274, accuracy: 80.35190615835778%, ambiguity：20
+2020-12-07 19:24:36,443|kbqa_test.py[line:173]|kb_fuzzy_classify_test|INFO|total: 357, recall: 341, correct:274, accuracy: 80.35190615835778%, ambiguity：20
+2020-12-07 19:24:37,462|kbqa_test.py[line:155]|kb_fuzzy_classify_test|INFO|total: 358, recall: 342, correct:275, accuracy: 80.4093567251462%, ambiguity：20
+2020-12-07 19:24:38,483|kbqa_test.py[line:155]|kb_fuzzy_classify_test|INFO|total: 359, recall: 343, correct:276, accuracy: 80.466472303207%, ambiguity：20
+2020-12-07 19:24:38,501|kbqa_test.py[line:164]|kb_fuzzy_classify_test|INFO|软件语言 0.99682343
+2020-12-07 19:24:39,501|kbqa_test.py[line:173]|kb_fuzzy_classify_test|INFO|total: 360, recall: 344, correct:277, accuracy: 80.52325581395348%, ambiguity：20
+2020-12-07 19:24:40,521|kbqa_test.py[line:155]|kb_fuzzy_classify_test|INFO|total: 361, recall: 345, correct:278, accuracy: 80.57971014492753%, ambiguity：20
+2020-12-07 19:24:41,541|kbqa_test.py[line:173]|kb_fuzzy_classify_test|INFO|total: 362, recall: 345, correct:278, accuracy: 80.57971014492753%, ambiguity：20
+2020-12-07 19:24:41,561|kbqa_test.py[line:146]|kb_fuzzy_classify_test|INFO|柱七	赤纬	+32°11′31.278″
+2020-12-07 19:24:42,562|kbqa_test.py[line:155]|kb_fuzzy_classify_test|INFO|total: 363, recall: 346, correct:278, accuracy: 80.34682080924856%, ambiguity：21
+2020-12-07 19:24:43,582|kbqa_test.py[line:173]|kb_fuzzy_classify_test|INFO|total: 364, recall: 346, correct:278, accuracy: 80.34682080924856%, ambiguity：21
+2020-12-07 19:24:44,593|kbqa_test.py[line:155]|kb_fuzzy_classify_test|INFO|total: 365, recall: 347, correct:279, accuracy: 80.40345821325649%, ambiguity：21
+2020-12-07 19:24:45,604|kbqa_test.py[line:155]|kb_fuzzy_classify_test|INFO|total: 366, recall: 348, correct:280, accuracy: 80.45977011494253%, ambiguity：21
+2020-12-07 19:24:46,623|kbqa_test.py[line:155]|kb_fuzzy_classify_test|INFO|total: 367, recall: 349, correct:281, accuracy: 80.51575931232092%, ambiguity：21
+2020-12-07 19:24:46,650|kbqa_test.py[line:164]|kb_fuzzy_classify_test|INFO|民族族群 0.993432
+2020-12-07 19:24:47,651|kbqa_test.py[line:173]|kb_fuzzy_classify_test|INFO|total: 368, recall: 350, correct:282, accuracy: 80.57142857142857%, ambiguity：21
+2020-12-07 19:24:48,661|kbqa_test.py[line:155]|kb_fuzzy_classify_test|INFO|total: 369, recall: 351, correct:283, accuracy: 80.62678062678063%, ambiguity：21
+2020-12-07 19:24:49,682|kbqa_test.py[line:155]|kb_fuzzy_classify_test|INFO|total: 370, recall: 352, correct:284, accuracy: 80.68181818181819%, ambiguity：21
+2020-12-07 19:24:49,692|kbqa_test.py[line:146]|kb_fuzzy_classify_test|INFO|acer4735z-422g25mn	cpu型号	intel奔腾双核t4200
+2020-12-07 19:24:50,692|kbqa_test.py[line:155]|kb_fuzzy_classify_test|INFO|total: 371, recall: 353, correct:284, accuracy: 80.45325779036827%, ambiguity：22
+2020-12-07 19:24:50,726|kbqa_test.py[line:164]|kb_fuzzy_classify_test|INFO|所属市 0.9962082
+所属乡镇 0.9833106
+2020-12-07 19:24:51,727|kbqa_test.py[line:173]|kb_fuzzy_classify_test|INFO|total: 372, recall: 354, correct:285, accuracy: 80.50847457627118%, ambiguity：22
+2020-12-07 19:24:51,755|kbqa_test.py[line:164]|kb_fuzzy_classify_test|INFO|人口（2011） 0.9965203
+2020-12-07 19:24:52,755|kbqa_test.py[line:173]|kb_fuzzy_classify_test|INFO|total: 373, recall: 355, correct:286, accuracy: 80.56338028169014%, ambiguity：22
+2020-12-07 19:24:52,766|kbqa_test.py[line:146]|kb_fuzzy_classify_test|INFO|乾陵	建成时间	唐光宅元年公元683年
+2020-12-07 19:24:53,767|kbqa_test.py[line:155]|kb_fuzzy_classify_test|INFO|total: 374, recall: 356, correct:286, accuracy: 80.33707865168539%, ambiguity：23
+2020-12-07 19:24:54,787|kbqa_test.py[line:155]|kb_fuzzy_classify_test|INFO|total: 375, recall: 357, correct:287, accuracy: 80.3921568627451%, ambiguity：23
+2020-12-07 19:24:55,807|kbqa_test.py[line:155]|kb_fuzzy_classify_test|INFO|total: 376, recall: 358, correct:288, accuracy: 80.44692737430168%, ambiguity：23
+2020-12-07 19:24:56,828|kbqa_test.py[line:155]|kb_fuzzy_classify_test|INFO|total: 377, recall: 359, correct:289, accuracy: 80.50139275766017%, ambiguity：23
+2020-12-07 19:24:57,848|kbqa_test.py[line:155]|kb_fuzzy_classify_test|INFO|total: 378, recall: 360, correct:290, accuracy: 80.55555555555556%, ambiguity：23
+2020-12-07 19:24:58,858|kbqa_test.py[line:155]|kb_fuzzy_classify_test|INFO|total: 379, recall: 361, correct:291, accuracy: 80.60941828254848%, ambiguity：23
+2020-12-07 19:24:59,868|kbqa_test.py[line:155]|kb_fuzzy_classify_test|INFO|total: 380, recall: 362, correct:292, accuracy: 80.66298342541437%, ambiguity：23
+2020-12-07 19:25:00,889|kbqa_test.py[line:155]|kb_fuzzy_classify_test|INFO|total: 381, recall: 363, correct:293, accuracy: 80.71625344352617%, ambiguity：23
+2020-12-07 19:25:00,982|kbqa_test.py[line:164]|kb_fuzzy_classify_test|INFO|院长 0.99643904
+教职工 0.9915038
+知名校友 0.9908303
+学校地址 0.9904207
+在校学生 0.98773926
+现任校长 0.9847232
+主要课程 0.97535396
+主要院系 0.97373873
+房间数量 0.002132217
+吉祥物 0.0017582697
+简称 0.00094347005
+2020-12-07 19:25:00,982|kbqa_test.py[line:171]|kb_fuzzy_classify_test|INFO|中山大学政治与公共事务管理学院	院长	肖滨
+2020-12-07 19:25:01,984|kbqa_test.py[line:173]|kb_fuzzy_classify_test|INFO|total: 382, recall: 364, correct:293, accuracy: 80.49450549450549%, ambiguity：23
+2020-12-07 19:25:01,994|kbqa_test.py[line:146]|kb_fuzzy_classify_test|INFO|白凤凰	配音	邹亮（动画第1部）谢添天（动画第2、4、5部；姐妹篇；动画衍生游戏等）[3] 蒋可（动画第3部）
+2020-12-07 19:25:02,994|kbqa_test.py[line:155]|kb_fuzzy_classify_test|INFO|total: 383, recall: 365, correct:293, accuracy: 80.27397260273973%, ambiguity：24
+2020-12-07 19:25:04,013|kbqa_test.py[line:155]|kb_fuzzy_classify_test|INFO|total: 384, recall: 366, correct:294, accuracy: 80.32786885245902%, ambiguity：24
+2020-12-07 19:25:05,035|kbqa_test.py[line:155]|kb_fuzzy_classify_test|INFO|total: 385, recall: 367, correct:295, accuracy: 80.38147138964578%, ambiguity：24
+2020-12-07 19:25:05,084|kbqa_test.py[line:164]|kb_fuzzy_classify_test|INFO|所在地区 0.994975
+山脉 0.994245
+开放时间 0.08242055
+气候类型 0.009006777
+荣誉 0.003229031
+门票价格 0.0008175136
+2020-12-07 19:25:06,084|kbqa_test.py[line:173]|kb_fuzzy_classify_test|INFO|total: 386, recall: 368, correct:296, accuracy: 80.43478260869566%, ambiguity：24
+2020-12-07 19:25:06,234|kbqa_test.py[line:164]|kb_fuzzy_classify_test|INFO|集数 0.9904143
+播映 0.91310334
+制作国家／地区 0.686546
+编剧 0.39747524
+制作统筹 0.15283431
+无线电视翡翠台首播 0.12065823
+导演 0.08527692
+片尾曲 0.06524272
+出品公司 0.05712831
+片头曲 0.044830423
+出品人 0.03811434
+主演 0.036366854
+主题曲 0.026257312
+故事 0.016753616
+编审 0.010946188
+类型 0.007089336
+作词 0.0066683437
+作曲 0.006314377
+语言 0.003325331
+外景 0.0013784044
+2020-12-07 19:25:06,235|kbqa_test.py[line:171]|kb_fuzzy_classify_test|INFO|神雕侠侣	集数	40集
+2020-12-07 19:25:07,236|kbqa_test.py[line:173]|kb_fuzzy_classify_test|INFO|total: 387, recall: 369, correct:296, accuracy: 80.21680216802169%, ambiguity：24
+2020-12-07 19:25:08,246|kbqa_test.py[line:155]|kb_fuzzy_classify_test|INFO|total: 388, recall: 370, correct:297, accuracy: 80.27027027027027%, ambiguity：24
+2020-12-07 19:25:09,256|kbqa_test.py[line:155]|kb_fuzzy_classify_test|INFO|total: 389, recall: 371, correct:298, accuracy: 80.3234501347709%, ambiguity：24
+2020-12-07 19:25:09,283|kbqa_test.py[line:164]|kb_fuzzy_classify_test|INFO|产品定位 0.8004908
+2020-12-07 19:25:10,284|kbqa_test.py[line:173]|kb_fuzzy_classify_test|INFO|total: 390, recall: 372, correct:299, accuracy: 80.3763440860215%, ambiguity：24
+2020-12-07 19:25:11,304|kbqa_test.py[line:173]|kb_fuzzy_classify_test|INFO|total: 391, recall: 372, correct:299, accuracy: 80.3763440860215%, ambiguity：24
+2020-12-07 19:25:11,454|kbqa_test.py[line:164]|kb_fuzzy_classify_test|INFO|总部所在地 0.9963169
+上市日期 0.0040165414
+手机制式 0.003850305
+发布日期 0.00058164523
+输入设备 0.00057362043
+生产商 0.0005548908
+创建时间 0.0005323473
+连接能力 0.00053001754
+连接能力 0.00053001754
+主屏幕 0.00052316167
+内存 0.0005032128
+重量 0.0004997743
+cpu 0.0004941582
+组织形式 0.00048836705
+尺寸 0.00048772228
+电池 0.0004877007
+电池 0.0004877007
+相机 0.00047854742
+相机 0.00047854742
+相机 0.00047854742
+2020-12-07 19:25:12,456|kbqa_test.py[line:173]|kb_fuzzy_classify_test|INFO|total: 392, recall: 373, correct:300, accuracy: 80.42895442359249%, ambiguity：24
+2020-12-07 19:25:12,484|kbqa_test.py[line:164]|kb_fuzzy_classify_test|INFO|其他 0.0025003585
+2020-12-07 19:25:13,484|kbqa_test.py[line:173]|kb_fuzzy_classify_test|INFO|total: 393, recall: 374, correct:301, accuracy: 80.4812834224599%, ambiguity：24
+2020-12-07 19:25:13,551|kbqa_test.py[line:164]|kb_fuzzy_classify_test|INFO|城区 0.9726448
+建筑形式 0.925255
+总规划面积 0.87746155
+建筑面积 0.82593393
+楼盘名 0.75479245
+物业类别 0.07248368
+绿化率 0.01793692
+2020-12-07 19:25:14,552|kbqa_test.py[line:173]|kb_fuzzy_classify_test|INFO|total: 394, recall: 375, correct:302, accuracy: 80.53333333333333%, ambiguity：24
+2020-12-07 19:25:15,562|kbqa_test.py[line:155]|kb_fuzzy_classify_test|INFO|total: 395, recall: 376, correct:303, accuracy: 80.58510638297872%, ambiguity：24
+2020-12-07 19:25:15,629|kbqa_test.py[line:164]|kb_fuzzy_classify_test|INFO|简介 0.9968798
+页数 0.8907502
+出版社 0.16494301
+作者 0.039057225
+isbn 0.034817223
+开本 0.012091486
+价格 0.0021023913
+2020-12-07 19:25:16,631|kbqa_test.py[line:173]|kb_fuzzy_classify_test|INFO|total: 396, recall: 377, correct:304, accuracy: 80.63660477453581%, ambiguity：24
+2020-12-07 19:25:17,651|kbqa_test.py[line:155]|kb_fuzzy_classify_test|INFO|total: 397, recall: 378, correct:305, accuracy: 80.68783068783068%, ambiguity：24
+2020-12-07 19:25:18,671|kbqa_test.py[line:155]|kb_fuzzy_classify_test|INFO|total: 398, recall: 379, correct:306, accuracy: 80.73878627968338%, ambiguity：24
+2020-12-07 19:25:18,698|kbqa_test.py[line:164]|kb_fuzzy_classify_test|INFO|字数 0.9952911
+2020-12-07 19:25:18,699|kbqa_test.py[line:171]|kb_fuzzy_classify_test|INFO|《无人生还》	字数	130000万字
+2020-12-07 19:25:19,699|kbqa_test.py[line:173]|kb_fuzzy_classify_test|INFO|total: 399, recall: 380, correct:306, accuracy: 80.52631578947368%, ambiguity：24
+2020-12-07 19:25:19,716|kbqa_test.py[line:164]|kb_fuzzy_classify_test|INFO|原料 0.99605227
+2020-12-07 19:25:20,718|kbqa_test.py[line:173]|kb_fuzzy_classify_test|INFO|total: 400, recall: 381, correct:307, accuracy: 80.5774278215223%, ambiguity：24
+2020-12-07 19:25:20,742|kbqa_test.py[line:164]|kb_fuzzy_classify_test|INFO|名称 0.9753886
+设计者 0.0008856496
+2020-12-07 19:25:21,743|kbqa_test.py[line:173]|kb_fuzzy_classify_test|INFO|total: 401, recall: 382, correct:308, accuracy: 80.6282722513089%, ambiguity：24
+2020-12-07 19:25:22,753|kbqa_test.py[line:155]|kb_fuzzy_classify_test|INFO|total: 402, recall: 383, correct:309, accuracy: 80.67885117493472%, ambiguity：24
+2020-12-07 19:25:22,780|kbqa_test.py[line:164]|kb_fuzzy_classify_test|INFO|用途分类 0.9850367
+2020-12-07 19:25:23,782|kbqa_test.py[line:173]|kb_fuzzy_classify_test|INFO|total: 403, recall: 384, correct:310, accuracy: 80.72916666666667%, ambiguity：24
+2020-12-07 19:25:23,809|kbqa_test.py[line:164]|kb_fuzzy_classify_test|INFO|是否处方药 0.9536355
+2020-12-07 19:25:24,811|kbqa_test.py[line:173]|kb_fuzzy_classify_test|INFO|total: 404, recall: 385, correct:311, accuracy: 80.77922077922078%, ambiguity：24
+2020-12-07 19:25:25,831|kbqa_test.py[line:155]|kb_fuzzy_classify_test|INFO|total: 405, recall: 386, correct:312, accuracy: 80.82901554404145%, ambiguity：24
+2020-12-07 19:25:25,851|kbqa_test.py[line:146]|kb_fuzzy_classify_test|INFO|天气预报员	级别	uk:15brazil:14usa:rsweden:7
+2020-12-07 19:25:26,851|kbqa_test.py[line:155]|kb_fuzzy_classify_test|INFO|total: 406, recall: 387, correct:312, accuracy: 80.62015503875969%, ambiguity：25
+2020-12-07 19:25:26,870|kbqa_test.py[line:146]|kb_fuzzy_classify_test|INFO|惠普compaq6520s(gx547pa)	cpu主频	intel酷睿2双核t7250
+2020-12-07 19:25:27,871|kbqa_test.py[line:155]|kb_fuzzy_classify_test|INFO|total: 407, recall: 388, correct:312, accuracy: 80.41237113402062%, ambiguity：26
+2020-12-07 19:25:28,891|kbqa_test.py[line:173]|kb_fuzzy_classify_test|INFO|total: 408, recall: 388, correct:312, accuracy: 80.41237113402062%, ambiguity：26
+2020-12-07 19:25:28,919|kbqa_test.py[line:164]|kb_fuzzy_classify_test|INFO|平装 0.9247776
+2020-12-07 19:25:29,920|kbqa_test.py[line:173]|kb_fuzzy_classify_test|INFO|total: 409, recall: 389, correct:313, accuracy: 80.46272493573265%, ambiguity：26
+2020-12-07 19:25:30,940|kbqa_test.py[line:155]|kb_fuzzy_classify_test|INFO|total: 410, recall: 390, correct:314, accuracy: 80.51282051282051%, ambiguity：26
+2020-12-07 19:25:30,969|kbqa_test.py[line:164]|kb_fuzzy_classify_test|INFO|原作名 0.0008358012
+2020-12-07 19:25:30,969|kbqa_test.py[line:171]|kb_fuzzy_classify_test|INFO|qtp自动化测试权威指南	原作名	quicktestprofessionalunplugged,2ndedition
+2020-12-07 19:25:31,971|kbqa_test.py[line:173]|kb_fuzzy_classify_test|INFO|total: 411, recall: 391, correct:314, accuracy: 80.30690537084399%, ambiguity：26
+2020-12-07 19:25:32,991|kbqa_test.py[line:173]|kb_fuzzy_classify_test|INFO|total: 412, recall: 391, correct:314, accuracy: 80.30690537084399%, ambiguity：26
+2020-12-07 19:25:34,012|kbqa_test.py[line:155]|kb_fuzzy_classify_test|INFO|total: 413, recall: 392, correct:315, accuracy: 80.35714285714286%, ambiguity：26
+2020-12-07 19:25:34,040|kbqa_test.py[line:164]|kb_fuzzy_classify_test|INFO|人口（2001） 0.9969903
+2020-12-07 19:25:35,040|kbqa_test.py[line:173]|kb_fuzzy_classify_test|INFO|total: 414, recall: 393, correct:316, accuracy: 80.40712468193384%, ambiguity：26
+2020-12-07 19:25:36,051|kbqa_test.py[line:155]|kb_fuzzy_classify_test|INFO|total: 415, recall: 394, correct:317, accuracy: 80.45685279187818%, ambiguity：26
+2020-12-07 19:25:36,079|kbqa_test.py[line:164]|kb_fuzzy_classify_test|INFO|光谱分类 0.036306195
+2020-12-07 19:25:37,080|kbqa_test.py[line:173]|kb_fuzzy_classify_test|INFO|total: 416, recall: 395, correct:318, accuracy: 80.50632911392405%, ambiguity：26
+2020-12-07 19:25:38,100|kbqa_test.py[line:155]|kb_fuzzy_classify_test|INFO|total: 417, recall: 396, correct:319, accuracy: 80.55555555555556%, ambiguity：26
+2020-12-07 19:25:39,111|kbqa_test.py[line:155]|kb_fuzzy_classify_test|INFO|total: 418, recall: 397, correct:320, accuracy: 80.60453400503778%, ambiguity：26
+2020-12-07 19:25:40,121|kbqa_test.py[line:173]|kb_fuzzy_classify_test|INFO|total: 419, recall: 397, correct:320, accuracy: 80.60453400503778%, ambiguity：26
+2020-12-07 19:25:41,141|kbqa_test.py[line:155]|kb_fuzzy_classify_test|INFO|total: 420, recall: 398, correct:321, accuracy: 80.65326633165829%, ambiguity：26
+2020-12-07 19:25:42,151|kbqa_test.py[line:155]|kb_fuzzy_classify_test|INFO|total: 421, recall: 399, correct:322, accuracy: 80.70175438596492%, ambiguity：26
+2020-12-07 19:25:42,161|kbqa_test.py[line:146]|kb_fuzzy_classify_test|INFO|asl	全称	averagesearchlength
+2020-12-07 19:25:43,162|kbqa_test.py[line:155]|kb_fuzzy_classify_test|INFO|total: 422, recall: 400, correct:322, accuracy: 80.5%, ambiguity：27
+2020-12-07 19:25:44,182|kbqa_test.py[line:155]|kb_fuzzy_classify_test|INFO|total: 423, recall: 401, correct:323, accuracy: 80.54862842892769%, ambiguity：27
+2020-12-07 19:25:44,192|kbqa_test.py[line:146]|kb_fuzzy_classify_test|INFO|金琥	二名法	goldenbarrel,goldenballcactus
+2020-12-07 19:25:45,192|kbqa_test.py[line:155]|kb_fuzzy_classify_test|INFO|total: 424, recall: 402, correct:323, accuracy: 80.34825870646766%, ambiguity：28
+2020-12-07 19:25:45,209|kbqa_test.py[line:164]|kb_fuzzy_classify_test|INFO|全长 0.9956037
+2020-12-07 19:25:46,211|kbqa_test.py[line:173]|kb_fuzzy_classify_test|INFO|total: 425, recall: 403, correct:324, accuracy: 80.3970223325062%, ambiguity：28
+2020-12-07 19:25:47,221|kbqa_test.py[line:155]|kb_fuzzy_classify_test|INFO|total: 426, recall: 404, correct:325, accuracy: 80.44554455445545%, ambiguity：28
+2020-12-07 19:25:48,241|kbqa_test.py[line:155]|kb_fuzzy_classify_test|INFO|total: 427, recall: 405, correct:326, accuracy: 80.49382716049382%, ambiguity：28
+2020-12-07 19:25:48,269|kbqa_test.py[line:164]|kb_fuzzy_classify_test|INFO|芯片厂商 0.88329107
+2020-12-07 19:25:49,269|kbqa_test.py[line:173]|kb_fuzzy_classify_test|INFO|total: 428, recall: 406, correct:327, accuracy: 80.54187192118226%, ambiguity：28
+2020-12-07 19:25:49,303|kbqa_test.py[line:164]|kb_fuzzy_classify_test|INFO|出生地点 0.99649125
+代表作品 0.0016735737
+2020-12-07 19:25:50,305|kbqa_test.py[line:173]|kb_fuzzy_classify_test|INFO|total: 429, recall: 407, correct:328, accuracy: 80.58968058968058%, ambiguity：28
+2020-12-07 19:25:51,325|kbqa_test.py[line:155]|kb_fuzzy_classify_test|INFO|total: 430, recall: 408, correct:329, accuracy: 80.63725490196079%, ambiguity：28
+2020-12-07 19:25:52,345|kbqa_test.py[line:155]|kb_fuzzy_classify_test|INFO|total: 431, recall: 409, correct:330, accuracy: 80.68459657701712%, ambiguity：28
+2020-12-07 19:25:52,373|kbqa_test.py[line:164]|kb_fuzzy_classify_test|INFO|首播时间 0.12676276
+2020-12-07 19:25:53,374|kbqa_test.py[line:173]|kb_fuzzy_classify_test|INFO|total: 432, recall: 410, correct:331, accuracy: 80.73170731707317%, ambiguity：28
+2020-12-07 19:25:53,422|kbqa_test.py[line:164]|kb_fuzzy_classify_test|INFO|自行(μ) 0.020765746
+b−v色指数 0.0048270407
+径向速度(rv) 0.0043756342
+u−b色指数 0.0041382266
+视差(π) 0.0017743397
+2020-12-07 19:25:53,423|kbqa_test.py[line:171]|kb_fuzzy_classify_test|INFO|上卫	自行(μ)	赤经：9mas/yr赤纬：-mas/yr
+2020-12-07 19:25:54,424|kbqa_test.py[line:173]|kb_fuzzy_classify_test|INFO|total: 433, recall: 411, correct:331, accuracy: 80.5352798053528%, ambiguity：28
+2020-12-07 19:25:54,453|kbqa_test.py[line:164]|kb_fuzzy_classify_test|INFO|周围景观 0.9959758
+2020-12-07 19:25:55,454|kbqa_test.py[line:173]|kb_fuzzy_classify_test|INFO|total: 434, recall: 412, correct:332, accuracy: 80.58252427184466%, ambiguity：28
+2020-12-07 19:25:56,474|kbqa_test.py[line:155]|kb_fuzzy_classify_test|INFO|total: 435, recall: 413, correct:333, accuracy: 80.62953995157385%, ambiguity：28
+2020-12-07 19:25:57,494|kbqa_test.py[line:155]|kb_fuzzy_classify_test|INFO|total: 436, recall: 414, correct:334, accuracy: 80.67632850241546%, ambiguity：28
+2020-12-07 19:25:58,514|kbqa_test.py[line:155]|kb_fuzzy_classify_test|INFO|total: 437, recall: 415, correct:335, accuracy: 80.72289156626506%, ambiguity：28
+2020-12-07 19:25:59,524|kbqa_test.py[line:155]|kb_fuzzy_classify_test|INFO|total: 438, recall: 416, correct:336, accuracy: 80.76923076923077%, ambiguity：28
+2020-12-07 19:26:00,534|kbqa_test.py[line:173]|kb_fuzzy_classify_test|INFO|total: 439, recall: 416, correct:336, accuracy: 80.76923076923077%, ambiguity：28
+2020-12-07 19:26:01,545|kbqa_test.py[line:173]|kb_fuzzy_classify_test|INFO|total: 440, recall: 416, correct:336, accuracy: 80.76923076923077%, ambiguity：28
+2020-12-07 19:26:01,563|kbqa_test.py[line:146]|kb_fuzzy_classify_test|INFO|丫丫	读音	yāyā
+2020-12-07 19:26:02,564|kbqa_test.py[line:155]|kb_fuzzy_classify_test|INFO|total: 441, recall: 417, correct:336, accuracy: 80.57553956834532%, ambiguity：29
+2020-12-07 19:26:03,574|kbqa_test.py[line:155]|kb_fuzzy_classify_test|INFO|total: 442, recall: 418, correct:337, accuracy: 80.622009569378%, ambiguity：29
+2020-12-07 19:26:04,585|kbqa_test.py[line:155]|kb_fuzzy_classify_test|INFO|total: 443, recall: 419, correct:338, accuracy: 80.66825775656325%, ambiguity：29
+2020-12-07 19:26:05,596|kbqa_test.py[line:155]|kb_fuzzy_classify_test|INFO|total: 444, recall: 420, correct:339, accuracy: 80.71428571428571%, ambiguity：29
+2020-12-07 19:26:05,686|kbqa_test.py[line:164]|kb_fuzzy_classify_test|INFO|建立时间 0.99424404
+邮编区码 0.0016001946
+面积 0.0012062386
+知名企业 0.0009592084
+所属地区 0.0008606324
+著名景点 0.00074373436
+友好城市 0.0006089926
+中文名 0.0006071152
+地方特产 0.00060035096
+火车站 0.0005875097
+电话区码 0.0005553786
+2020-12-07 19:26:06,688|kbqa_test.py[line:173]|kb_fuzzy_classify_test|INFO|total: 445, recall: 421, correct:340, accuracy: 80.76009501187649%, ambiguity：29
+2020-12-07 19:26:06,735|kbqa_test.py[line:164]|kb_fuzzy_classify_test|INFO|主要食用功效 0.9894561
+储藏方法 0.9750602
+是否含防腐剂 0.94461805
+适宜人群 0.7913045
+2020-12-07 19:26:07,736|kbqa_test.py[line:173]|kb_fuzzy_classify_test|INFO|total: 446, recall: 422, correct:341, accuracy: 80.80568720379146%, ambiguity：29
+2020-12-07 19:26:07,874|kbqa_test.py[line:164]|kb_fuzzy_classify_test|INFO|制作统筹 0.6878724
+片尾曲 0.6844933
+无线电视翡翠台首播 0.26639423
+片头曲 0.10028992
+出品公司 0.08545131
+制作国家／地区 0.076245256
+出品人 0.04921515
+主题曲 0.038556956
+编剧 0.023307627
+导演 0.01769839
+播映 0.012653328
+集数 0.0009992708
+编审 0.0008686657
+故事 0.00083447696
+主演 0.0008049192
+作词 0.00076014345
+作曲 0.000651745
+类型 0.0006496155
+语言 0.0005704499
+外景 0.0005351257
+2020-12-07 19:26:07,875|kbqa_test.py[line:171]|kb_fuzzy_classify_test|INFO|神雕侠侣	制作统筹	吴煜瞳
+2020-12-07 19:26:08,875|kbqa_test.py[line:173]|kb_fuzzy_classify_test|INFO|total: 447, recall: 423, correct:341, accuracy: 80.61465721040189%, ambiguity：29
+2020-12-07 19:26:09,895|kbqa_test.py[line:155]|kb_fuzzy_classify_test|INFO|total: 448, recall: 424, correct:342, accuracy: 80.66037735849056%, ambiguity：29
+2020-12-07 19:26:09,915|kbqa_test.py[line:146]|kb_fuzzy_classify_test|INFO|昔神星	近日点	2.7571486au
+2020-12-07 19:26:10,916|kbqa_test.py[line:155]|kb_fuzzy_classify_test|INFO|total: 449, recall: 425, correct:342, accuracy: 80.47058823529412%, ambiguity：30
+2020-12-07 19:26:10,970|kbqa_test.py[line:164]|kb_fuzzy_classify_test|INFO|专辑语言 0.9968246
+专辑歌手 0.9927819
+唱片公司 0.0022253967
+曲目数量 0.00088630937
+获奖 0.00059417286
+2020-12-07 19:26:11,971|kbqa_test.py[line:173]|kb_fuzzy_classify_test|INFO|total: 450, recall: 426, correct:343, accuracy: 80.51643192488262%, ambiguity：30
+2020-12-07 19:26:12,981|kbqa_test.py[line:155]|kb_fuzzy_classify_test|INFO|total: 451, recall: 427, correct:344, accuracy: 80.56206088992974%, ambiguity：30
+2020-12-07 19:26:13,991|kbqa_test.py[line:173]|kb_fuzzy_classify_test|INFO|total: 452, recall: 427, correct:344, accuracy: 80.56206088992974%, ambiguity：30
+2020-12-07 19:26:15,003|kbqa_test.py[line:155]|kb_fuzzy_classify_test|INFO|total: 453, recall: 428, correct:345, accuracy: 80.60747663551402%, ambiguity：30
+2020-12-07 19:26:15,013|kbqa_test.py[line:146]|kb_fuzzy_classify_test|INFO|技嘉ga-990xa-ud3	主芯片组	amd990
+2020-12-07 19:26:16,013|kbqa_test.py[line:155]|kb_fuzzy_classify_test|INFO|total: 454, recall: 429, correct:345, accuracy: 80.41958041958041%, ambiguity：31
+2020-12-07 19:26:17,033|kbqa_test.py[line:155]|kb_fuzzy_classify_test|INFO|total: 455, recall: 430, correct:346, accuracy: 80.46511627906976%, ambiguity：31
+2020-12-07 19:26:18,043|kbqa_test.py[line:155]|kb_fuzzy_classify_test|INFO|total: 456, recall: 431, correct:347, accuracy: 80.51044083526682%, ambiguity：31
+2020-12-07 19:26:19,064|kbqa_test.py[line:155]|kb_fuzzy_classify_test|INFO|total: 457, recall: 432, correct:348, accuracy: 80.55555555555556%, ambiguity：31
+2020-12-07 19:26:19,082|kbqa_test.py[line:164]|kb_fuzzy_classify_test|INFO|特征 0.9967044
+2020-12-07 19:26:20,083|kbqa_test.py[line:173]|kb_fuzzy_classify_test|INFO|total: 458, recall: 433, correct:349, accuracy: 80.60046189376443%, ambiguity：31
+2020-12-07 19:26:20,100|kbqa_test.py[line:164]|kb_fuzzy_classify_test|INFO|发现地 0.9916437
+2020-12-07 19:26:21,101|kbqa_test.py[line:173]|kb_fuzzy_classify_test|INFO|total: 459, recall: 434, correct:350, accuracy: 80.64516129032258%, ambiguity：31
+2020-12-07 19:26:22,112|kbqa_test.py[line:173]|kb_fuzzy_classify_test|INFO|total: 460, recall: 434, correct:350, accuracy: 80.64516129032258%, ambiguity：31
+2020-12-07 19:26:22,146|kbqa_test.py[line:164]|kb_fuzzy_classify_test|INFO|用法用量 0.9455262
+是否处方药 0.9220413
+2020-12-07 19:26:23,148|kbqa_test.py[line:173]|kb_fuzzy_classify_test|INFO|total: 461, recall: 435, correct:351, accuracy: 80.6896551724138%, ambiguity：31
+2020-12-07 19:26:23,165|kbqa_test.py[line:164]|kb_fuzzy_classify_test|INFO|出生年月 0.9963347
+2020-12-07 19:26:24,166|kbqa_test.py[line:173]|kb_fuzzy_classify_test|INFO|total: 462, recall: 436, correct:352, accuracy: 80.73394495412845%, ambiguity：31
+2020-12-07 19:26:24,194|kbqa_test.py[line:164]|kb_fuzzy_classify_test|INFO|建筑形式 0.9962049
+2020-12-07 19:26:25,194|kbqa_test.py[line:173]|kb_fuzzy_classify_test|INFO|total: 463, recall: 437, correct:353, accuracy: 80.77803203661327%, ambiguity：31
+2020-12-07 19:26:26,216|kbqa_test.py[line:155]|kb_fuzzy_classify_test|INFO|total: 464, recall: 438, correct:354, accuracy: 80.82191780821918%, ambiguity：31
+2020-12-07 19:26:27,236|kbqa_test.py[line:155]|kb_fuzzy_classify_test|INFO|total: 465, recall: 439, correct:355, accuracy: 80.86560364464692%, ambiguity：31
+2020-12-07 19:26:28,256|kbqa_test.py[line:155]|kb_fuzzy_classify_test|INFO|total: 466, recall: 440, correct:356, accuracy: 80.9090909090909%, ambiguity：31
+2020-12-07 19:26:28,266|kbqa_test.py[line:146]|kb_fuzzy_classify_test|INFO|龙山站	距离	53.9km（起点站：逍遥山）3.2km（起点站：首尔）
+2020-12-07 19:26:29,266|kbqa_test.py[line:155]|kb_fuzzy_classify_test|INFO|total: 467, recall: 441, correct:356, accuracy: 80.72562358276645%, ambiguity：32
+2020-12-07 19:26:30,277|kbqa_test.py[line:155]|kb_fuzzy_classify_test|INFO|total: 468, recall: 442, correct:357, accuracy: 80.76923076923077%, ambiguity：32
+2020-12-07 19:26:31,298|kbqa_test.py[line:155]|kb_fuzzy_classify_test|INFO|total: 469, recall: 443, correct:358, accuracy: 80.81264108352144%, ambiguity：32
+2020-12-07 19:26:31,326|kbqa_test.py[line:164]|kb_fuzzy_classify_test|INFO|人口（2009） 0.9897237
+2020-12-07 19:26:32,327|kbqa_test.py[line:173]|kb_fuzzy_classify_test|INFO|total: 470, recall: 444, correct:359, accuracy: 80.85585585585585%, ambiguity：32
+2020-12-07 19:26:33,339|kbqa_test.py[line:155]|kb_fuzzy_classify_test|INFO|total: 471, recall: 445, correct:360, accuracy: 80.89887640449439%, ambiguity：32
+2020-12-07 19:26:34,359|kbqa_test.py[line:155]|kb_fuzzy_classify_test|INFO|total: 472, recall: 446, correct:361, accuracy: 80.94170403587444%, ambiguity：32
+2020-12-07 19:26:34,369|kbqa_test.py[line:146]|kb_fuzzy_classify_test|INFO|七彩虹镭风x800256m	显卡芯片	radeonx800
+2020-12-07 19:26:35,369|kbqa_test.py[line:155]|kb_fuzzy_classify_test|INFO|total: 473, recall: 447, correct:361, accuracy: 80.76062639821029%, ambiguity：33
+2020-12-07 19:26:35,386|kbqa_test.py[line:164]|kb_fuzzy_classify_test|INFO|医院等级 0.99352586
+2020-12-07 19:26:36,387|kbqa_test.py[line:173]|kb_fuzzy_classify_test|INFO|total: 474, recall: 448, correct:362, accuracy: 80.80357142857143%, ambiguity：33
+2020-12-07 19:26:36,414|kbqa_test.py[line:164]|kb_fuzzy_classify_test|INFO|创立时间 0.9959734
+2020-12-07 19:26:37,416|kbqa_test.py[line:173]|kb_fuzzy_classify_test|INFO|total: 475, recall: 449, correct:363, accuracy: 80.84632516703786%, ambiguity：33
+2020-12-07 19:26:37,437|kbqa_test.py[line:146]|kb_fuzzy_classify_test|INFO|太平镇	著名景点	成子湖
+2020-12-07 19:26:38,437|kbqa_test.py[line:155]|kb_fuzzy_classify_test|INFO|total: 476, recall: 450, correct:364, accuracy: 80.88888888888889%, ambiguity：33
+2020-12-07 19:26:39,447|kbqa_test.py[line:155]|kb_fuzzy_classify_test|INFO|total: 477, recall: 451, correct:365, accuracy: 80.93126385809313%, ambiguity：33
+2020-12-07 19:26:40,457|kbqa_test.py[line:173]|kb_fuzzy_classify_test|INFO|total: 478, recall: 451, correct:365, accuracy: 80.93126385809313%, ambiguity：33
+2020-12-07 19:26:41,468|kbqa_test.py[line:173]|kb_fuzzy_classify_test|INFO|total: 479, recall: 451, correct:365, accuracy: 80.93126385809313%, ambiguity：33
+2020-12-07 19:26:42,488|kbqa_test.py[line:155]|kb_fuzzy_classify_test|INFO|total: 480, recall: 452, correct:366, accuracy: 80.97345132743362%, ambiguity：33
+2020-12-07 19:26:43,498|kbqa_test.py[line:155]|kb_fuzzy_classify_test|INFO|total: 481, recall: 453, correct:367, accuracy: 81.01545253863135%, ambiguity：33
+2020-12-07 19:26:44,510|kbqa_test.py[line:155]|kb_fuzzy_classify_test|INFO|total: 482, recall: 454, correct:368, accuracy: 81.05726872246696%, ambiguity：33
+2020-12-07 19:26:45,530|kbqa_test.py[line:173]|kb_fuzzy_classify_test|INFO|total: 483, recall: 454, correct:368, accuracy: 81.05726872246696%, ambiguity：33
+2020-12-07 19:26:46,540|kbqa_test.py[line:155]|kb_fuzzy_classify_test|INFO|total: 484, recall: 455, correct:369, accuracy: 81.0989010989011%, ambiguity：33
+2020-12-07 19:26:47,551|kbqa_test.py[line:155]|kb_fuzzy_classify_test|INFO|total: 485, recall: 456, correct:370, accuracy: 81.14035087719299%, ambiguity：33
+2020-12-07 19:26:48,571|kbqa_test.py[line:155]|kb_fuzzy_classify_test|INFO|total: 486, recall: 457, correct:371, accuracy: 81.18161925601751%, ambiguity：33
+2020-12-07 19:26:49,591|kbqa_test.py[line:155]|kb_fuzzy_classify_test|INFO|total: 487, recall: 458, correct:372, accuracy: 81.22270742358079%, ambiguity：33
+2020-12-07 19:26:50,601|kbqa_test.py[line:155]|kb_fuzzy_classify_test|INFO|total: 488, recall: 459, correct:373, accuracy: 81.26361655773421%, ambiguity：33
+2020-12-07 19:26:51,622|kbqa_test.py[line:155]|kb_fuzzy_classify_test|INFO|total: 489, recall: 460, correct:374, accuracy: 81.30434782608695%, ambiguity：33
+2020-12-07 19:26:52,632|kbqa_test.py[line:155]|kb_fuzzy_classify_test|INFO|total: 490, recall: 461, correct:375, accuracy: 81.34490238611714%, ambiguity：33
+2020-12-07 19:26:52,652|kbqa_test.py[line:146]|kb_fuzzy_classify_test|INFO|中国青年党	基本资料	1923年12月2日（91年53天）于法国巴黎
+2020-12-07 19:26:53,652|kbqa_test.py[line:155]|kb_fuzzy_classify_test|INFO|total: 491, recall: 462, correct:375, accuracy: 81.16883116883118%, ambiguity：34
+2020-12-07 19:26:53,674|kbqa_test.py[line:146]|kb_fuzzy_classify_test|INFO|brocade425（双端口）	接口	pciexpressgen2.0可兼容
+2020-12-07 19:26:54,674|kbqa_test.py[line:155]|kb_fuzzy_classify_test|INFO|total: 492, recall: 463, correct:376, accuracy: 81.20950323974083%, ambiguity：34
+2020-12-07 19:26:55,695|kbqa_test.py[line:155]|kb_fuzzy_classify_test|INFO|total: 493, recall: 464, correct:377, accuracy: 81.25%, ambiguity：34
+2020-12-07 19:26:55,725|kbqa_test.py[line:164]|kb_fuzzy_classify_test|INFO|外径 0.99473935
+2020-12-07 19:26:55,726|kbqa_test.py[line:171]|kb_fuzzy_classify_test|INFO|32217轴承	外径	150.000mm
+2020-12-07 19:26:56,726|kbqa_test.py[line:173]|kb_fuzzy_classify_test|INFO|total: 494, recall: 465, correct:377, accuracy: 81.0752688172043%, ambiguity：34
+2020-12-07 19:26:57,736|kbqa_test.py[line:155]|kb_fuzzy_classify_test|INFO|total: 495, recall: 466, correct:378, accuracy: 81.11587982832619%, ambiguity：34
+2020-12-07 19:26:58,747|kbqa_test.py[line:155]|kb_fuzzy_classify_test|INFO|total: 496, recall: 467, correct:379, accuracy: 81.15631691648822%, ambiguity：34
+2020-12-07 19:26:59,757|kbqa_test.py[line:155]|kb_fuzzy_classify_test|INFO|total: 497, recall: 468, correct:380, accuracy: 81.19658119658119%, ambiguity：34
+2020-12-07 19:26:59,811|kbqa_test.py[line:164]|kb_fuzzy_classify_test|INFO|区 0.9923179
+省 0.94864523
+人口（2009）[1] 0.8850935
+insee/邮政编码 0.8625194
+??人口2人口密度 0.42973468
+2020-12-07 19:26:59,811|kbqa_test.py[line:171]|kb_fuzzy_classify_test|INFO|埃斯特雷	区	杜埃区
+2020-12-07 19:27:00,812|kbqa_test.py[line:173]|kb_fuzzy_classify_test|INFO|total: 498, recall: 469, correct:380, accuracy: 81.02345415778251%, ambiguity：34
+2020-12-07 19:27:00,857|kbqa_test.py[line:164]|kb_fuzzy_classify_test|INFO|区 0.8444168
+人口（2009）[1] 0.016026966
+insee/邮政编码 0.0089185545
+??人口2人口密度 0.005473935
+省 0.0011589725
+2020-12-07 19:27:00,857|kbqa_test.py[line:171]|kb_fuzzy_classify_test|INFO|埃斯特雷	区	杜埃区
+2020-12-07 19:27:01,857|kbqa_test.py[line:173]|kb_fuzzy_classify_test|INFO|total: 499, recall: 470, correct:380, accuracy: 80.85106382978724%, ambiguity：34
+2020-12-07 19:27:02,878|kbqa_test.py[line:155]|kb_fuzzy_classify_test|INFO|total: 500, recall: 471, correct:381, accuracy: 80.89171974522293%, ambiguity：34
+2020-12-07 19:27:03,888|kbqa_test.py[line:155]|kb_fuzzy_classify_test|INFO|total: 501, recall: 472, correct:382, accuracy: 80.9322033898305%, ambiguity：34
+2020-12-07 19:27:04,909|kbqa_test.py[line:155]|kb_fuzzy_classify_test|INFO|total: 502, recall: 473, correct:383, accuracy: 80.97251585623678%, ambiguity：34
+2020-12-07 19:27:05,919|kbqa_test.py[line:155]|kb_fuzzy_classify_test|INFO|total: 503, recall: 474, correct:384, accuracy: 81.0126582278481%, ambiguity：34
+2020-12-07 19:27:06,940|kbqa_test.py[line:155]|kb_fuzzy_classify_test|INFO|total: 504, recall: 475, correct:385, accuracy: 81.05263157894737%, ambiguity：34
+2020-12-07 19:27:07,950|kbqa_test.py[line:173]|kb_fuzzy_classify_test|INFO|total: 505, recall: 475, correct:385, accuracy: 81.05263157894737%, ambiguity：34
+2020-12-07 19:27:08,089|kbqa_test.py[line:164]|kb_fuzzy_classify_test|INFO|全称 0.00065389497
+全称 0.00065389497
+出现 0.0005967248
+曲长 0.0005915197
+日文 0.0005779609
+第一条 0.00057324825
+又称 0.0005662312
+所属类别 0.000565109
+第二条 0.0005619547
+解释 0.0005612883
+系统支持 0.000556651
+第三条 0.0005557196
+外文名 0.0005417665
+英文名称 0.0005366013
+注册用户 0.0005338444
+意义 0.00053370814
+稳定版本 0.0005317881
+授权方式 0.0005316817
+上市时间 0.0005165908
+距地距离 0.00050926814
+2020-12-07 19:27:08,090|kbqa_test.py[line:171]|kb_fuzzy_classify_test|INFO|tr	全称	terresreres
+2020-12-07 19:27:08,090|kbqa_test.py[line:171]|kb_fuzzy_classify_test|INFO|mf	全称	mf globalholdingsltd.
+2020-12-07 19:27:09,090|kbqa_test.py[line:173]|kb_fuzzy_classify_test|INFO|total: 506, recall: 476, correct:385, accuracy: 80.88235294117646%, ambiguity：34
+2020-12-07 19:27:10,109|kbqa_test.py[line:155]|kb_fuzzy_classify_test|INFO|total: 507, recall: 477, correct:386, accuracy: 80.92243186582809%, ambiguity：34
+2020-12-07 19:27:10,126|kbqa_test.py[line:164]|kb_fuzzy_classify_test|INFO|总建筑面积 0.86709595
+2020-12-07 19:27:11,127|kbqa_test.py[line:173]|kb_fuzzy_classify_test|INFO|total: 508, recall: 478, correct:387, accuracy: 80.9623430962343%, ambiguity：34
+2020-12-07 19:27:11,148|kbqa_test.py[line:146]|kb_fuzzy_classify_test|INFO|张国荣热·情演唱会	日期	2000.7.31-8.122001.4.11-4.16
+2020-12-07 19:27:12,149|kbqa_test.py[line:155]|kb_fuzzy_classify_test|INFO|total: 509, recall: 479, correct:387, accuracy: 80.79331941544885%, ambiguity：35
+2020-12-07 19:27:13,159|kbqa_test.py[line:155]|kb_fuzzy_classify_test|INFO|total: 510, recall: 480, correct:388, accuracy: 80.83333333333333%, ambiguity：35
+2020-12-07 19:27:14,180|kbqa_test.py[line:155]|kb_fuzzy_classify_test|INFO|total: 511, recall: 481, correct:389, accuracy: 80.87318087318087%, ambiguity：35
+2020-12-07 19:27:15,191|kbqa_test.py[line:155]|kb_fuzzy_classify_test|INFO|total: 512, recall: 482, correct:390, accuracy: 80.91286307053942%, ambiguity：35
+2020-12-07 19:27:15,201|kbqa_test.py[line:146]|kb_fuzzy_classify_test|INFO|了不起的盖茨比	分级	usa:pg-13/uk:12a
+2020-12-07 19:27:16,201|kbqa_test.py[line:155]|kb_fuzzy_classify_test|INFO|total: 513, recall: 483, correct:390, accuracy: 80.74534161490683%, ambiguity：36
+2020-12-07 19:27:17,221|kbqa_test.py[line:155]|kb_fuzzy_classify_test|INFO|total: 514, recall: 484, correct:391, accuracy: 80.78512396694215%, ambiguity：36
+2020-12-07 19:27:18,231|kbqa_test.py[line:173]|kb_fuzzy_classify_test|INFO|total: 515, recall: 484, correct:391, accuracy: 80.78512396694215%, ambiguity：36
+2020-12-07 19:27:18,241|kbqa_test.py[line:146]|kb_fuzzy_classify_test|INFO|华擎g41m-vs2	cpu插槽	lga775
+2020-12-07 19:27:19,242|kbqa_test.py[line:155]|kb_fuzzy_classify_test|INFO|total: 516, recall: 485, correct:391, accuracy: 80.61855670103093%, ambiguity：37
+2020-12-07 19:27:20,262|kbqa_test.py[line:155]|kb_fuzzy_classify_test|INFO|total: 517, recall: 486, correct:392, accuracy: 80.65843621399176%, ambiguity：37
+2020-12-07 19:27:20,282|kbqa_test.py[line:146]|kb_fuzzy_classify_test|INFO|保守党	总部	英国伦敦米尔班克30号，sw1p4dp
+2020-12-07 19:27:21,282|kbqa_test.py[line:155]|kb_fuzzy_classify_test|INFO|total: 518, recall: 487, correct:392, accuracy: 80.49281314168378%, ambiguity：38
+2020-12-07 19:27:22,303|kbqa_test.py[line:155]|kb_fuzzy_classify_test|INFO|total: 519, recall: 488, correct:393, accuracy: 80.5327868852459%, ambiguity：38
+2020-12-07 19:27:23,323|kbqa_test.py[line:155]|kb_fuzzy_classify_test|INFO|total: 520, recall: 489, correct:394, accuracy: 80.57259713701431%, ambiguity：38
+2020-12-07 19:27:24,333|kbqa_test.py[line:155]|kb_fuzzy_classify_test|INFO|total: 521, recall: 490, correct:395, accuracy: 80.61224489795919%, ambiguity：38
+2020-12-07 19:27:25,343|kbqa_test.py[line:155]|kb_fuzzy_classify_test|INFO|total: 522, recall: 491, correct:396, accuracy: 80.65173116089613%, ambiguity：38
+2020-12-07 19:27:26,354|kbqa_test.py[line:155]|kb_fuzzy_classify_test|INFO|total: 523, recall: 492, correct:397, accuracy: 80.6910569105691%, ambiguity：38
+2020-12-07 19:27:26,364|kbqa_test.py[line:146]|kb_fuzzy_classify_test|INFO|thinkpade4201141a64	处理器型号	intel酷睿i32330m
+2020-12-07 19:27:27,364|kbqa_test.py[line:155]|kb_fuzzy_classify_test|INFO|total: 524, recall: 493, correct:397, accuracy: 80.52738336713996%, ambiguity：39
+2020-12-07 19:27:28,384|kbqa_test.py[line:155]|kb_fuzzy_classify_test|INFO|total: 525, recall: 494, correct:398, accuracy: 80.56680161943319%, ambiguity：39
+2020-12-07 19:27:28,418|kbqa_test.py[line:164]|kb_fuzzy_classify_test|INFO|日语写法 0.0034430856
+2020-12-07 19:27:28,419|kbqa_test.py[line:171]|kb_fuzzy_classify_test|INFO|荣久庵宪司	日语写法	栄久庵憲司
+2020-12-07 19:27:29,420|kbqa_test.py[line:173]|kb_fuzzy_classify_test|INFO|total: 526, recall: 495, correct:398, accuracy: 80.4040404040404%, ambiguity：39
+2020-12-07 19:27:29,430|kbqa_test.py[line:146]|kb_fuzzy_classify_test|INFO|上卫	径向速度(rv)	0.11km/s
+2020-12-07 19:27:30,430|kbqa_test.py[line:155]|kb_fuzzy_classify_test|INFO|total: 527, recall: 496, correct:398, accuracy: 80.24193548387096%, ambiguity：40
+2020-12-07 19:27:31,440|kbqa_test.py[line:173]|kb_fuzzy_classify_test|INFO|total: 528, recall: 496, correct:398, accuracy: 80.24193548387096%, ambiguity：40
+2020-12-07 19:27:32,460|kbqa_test.py[line:155]|kb_fuzzy_classify_test|INFO|total: 529, recall: 497, correct:399, accuracy: 80.28169014084507%, ambiguity：40
+2020-12-07 19:27:33,471|kbqa_test.py[line:173]|kb_fuzzy_classify_test|INFO|total: 530, recall: 497, correct:399, accuracy: 80.28169014084507%, ambiguity：40
+2020-12-07 19:27:33,488|kbqa_test.py[line:164]|kb_fuzzy_classify_test|INFO|剂型 0.004954496
+2020-12-07 19:27:34,489|kbqa_test.py[line:173]|kb_fuzzy_classify_test|INFO|total: 531, recall: 498, correct:400, accuracy: 80.32128514056225%, ambiguity：40
+2020-12-07 19:27:34,513|kbqa_test.py[line:164]|kb_fuzzy_classify_test|INFO|主要适用症 0.9970118
+运动员慎用 0.0013083359
+2020-12-07 19:27:35,513|kbqa_test.py[line:173]|kb_fuzzy_classify_test|INFO|total: 532, recall: 499, correct:401, accuracy: 80.36072144288578%, ambiguity：40
+2020-12-07 19:27:35,531|kbqa_test.py[line:164]|kb_fuzzy_classify_test|INFO|历元2456400.5(2013年4月18日更新) 0.9733801
+2020-12-07 19:27:35,532|kbqa_test.py[line:171]|kb_fuzzy_classify_test|INFO|小行星2061	历元2456400.5(2013年4月18日更新)	历元2456400.5(2013年4月18日更新)
+2020-12-07 19:27:36,533|kbqa_test.py[line:173]|kb_fuzzy_classify_test|INFO|total: 533, recall: 500, correct:401, accuracy: 80.2%, ambiguity：40
+2020-12-07 19:27:37,543|kbqa_test.py[line:155]|kb_fuzzy_classify_test|INFO|total: 534, recall: 501, correct:402, accuracy: 80.23952095808383%, ambiguity：40
+2020-12-07 19:27:38,553|kbqa_test.py[line:155]|kb_fuzzy_classify_test|INFO|total: 535, recall: 502, correct:403, accuracy: 80.2788844621514%, ambiguity：40
+2020-12-07 19:27:39,574|kbqa_test.py[line:155]|kb_fuzzy_classify_test|INFO|total: 536, recall: 503, correct:404, accuracy: 80.31809145129225%, ambiguity：40
+2020-12-07 19:27:39,593|kbqa_test.py[line:164]|kb_fuzzy_classify_test|INFO|所属行业 0.15293942
+2020-12-07 19:27:40,594|kbqa_test.py[line:173]|kb_fuzzy_classify_test|INFO|total: 537, recall: 504, correct:405, accuracy: 80.35714285714286%, ambiguity：40
+2020-12-07 19:27:41,605|kbqa_test.py[line:155]|kb_fuzzy_classify_test|INFO|total: 538, recall: 505, correct:406, accuracy: 80.39603960396039%, ambiguity：40
+2020-12-07 19:27:42,616|kbqa_test.py[line:155]|kb_fuzzy_classify_test|INFO|total: 539, recall: 506, correct:407, accuracy: 80.43478260869566%, ambiguity：40
+2020-12-07 19:27:43,627|kbqa_test.py[line:155]|kb_fuzzy_classify_test|INFO|total: 540, recall: 507, correct:408, accuracy: 80.4733727810651%, ambiguity：40
+2020-12-07 19:27:44,637|kbqa_test.py[line:155]|kb_fuzzy_classify_test|INFO|total: 541, recall: 508, correct:409, accuracy: 80.51181102362204%, ambiguity：40
+2020-12-07 19:27:45,657|kbqa_test.py[line:155]|kb_fuzzy_classify_test|INFO|total: 542, recall: 509, correct:410, accuracy: 80.5500982318271%, ambiguity：40
+2020-12-07 19:27:46,677|kbqa_test.py[line:155]|kb_fuzzy_classify_test|INFO|total: 543, recall: 510, correct:411, accuracy: 80.58823529411765%, ambiguity：40
+2020-12-07 19:27:47,688|kbqa_test.py[line:155]|kb_fuzzy_classify_test|INFO|total: 544, recall: 511, correct:412, accuracy: 80.62622309197651%, ambiguity：40
+2020-12-07 19:27:47,715|kbqa_test.py[line:164]|kb_fuzzy_classify_test|INFO|人口（2009）[1] 0.99617106
+2020-12-07 19:27:48,715|kbqa_test.py[line:173]|kb_fuzzy_classify_test|INFO|total: 545, recall: 512, correct:413, accuracy: 80.6640625%, ambiguity：40
+2020-12-07 19:27:48,733|kbqa_test.py[line:164]|kb_fuzzy_classify_test|INFO|所属国家 0.08044729
+2020-12-07 19:27:49,734|kbqa_test.py[line:173]|kb_fuzzy_classify_test|INFO|total: 546, recall: 513, correct:414, accuracy: 80.70175438596492%, ambiguity：40
+2020-12-07 19:27:50,745|kbqa_test.py[line:155]|kb_fuzzy_classify_test|INFO|total: 547, recall: 514, correct:415, accuracy: 80.73929961089495%, ambiguity：40
+2020-12-07 19:27:50,771|kbqa_test.py[line:164]|kb_fuzzy_classify_test|INFO|概述 0.0015271577
+2020-12-07 19:27:51,773|kbqa_test.py[line:173]|kb_fuzzy_classify_test|INFO|total: 548, recall: 515, correct:416, accuracy: 80.77669902912622%, ambiguity：40
+2020-12-07 19:27:51,797|kbqa_test.py[line:164]|kb_fuzzy_classify_test|INFO|车站位置 0.9960758
+启用日期 0.9589567
+2020-12-07 19:27:52,798|kbqa_test.py[line:173]|kb_fuzzy_classify_test|INFO|total: 549, recall: 516, correct:417, accuracy: 80.81395348837209%, ambiguity：40
+2020-12-07 19:27:52,826|kbqa_test.py[line:164]|kb_fuzzy_classify_test|INFO|长度 0.008987162
+2020-12-07 19:27:53,826|kbqa_test.py[line:173]|kb_fuzzy_classify_test|INFO|total: 550, recall: 517, correct:418, accuracy: 80.85106382978724%, ambiguity：40
+2020-12-07 19:27:54,848|kbqa_test.py[line:155]|kb_fuzzy_classify_test|INFO|total: 551, recall: 518, correct:419, accuracy: 80.88803088803088%, ambiguity：40
+2020-12-07 19:27:55,858|kbqa_test.py[line:155]|kb_fuzzy_classify_test|INFO|total: 552, recall: 519, correct:420, accuracy: 80.92485549132948%, ambiguity：40
+2020-12-07 19:27:55,876|kbqa_test.py[line:164]|kb_fuzzy_classify_test|INFO|电影等级 0.9965373
+2020-12-07 19:27:56,876|kbqa_test.py[line:173]|kb_fuzzy_classify_test|INFO|total: 553, recall: 520, correct:421, accuracy: 80.96153846153847%, ambiguity：40
+2020-12-07 19:27:56,906|kbqa_test.py[line:164]|kb_fuzzy_classify_test|INFO|上映及发行 0.99543923
+剧本 0.0012579826
+制片商 0.0008015347
+2020-12-07 19:27:56,907|kbqa_test.py[line:171]|kb_fuzzy_classify_test|INFO|独行侠	上映及发行	美国2013年7月3日台湾2013年7月18日 香港 澳门2013年8月8日 中国2013年10月5日
+2020-12-07 19:27:57,907|kbqa_test.py[line:173]|kb_fuzzy_classify_test|INFO|total: 554, recall: 521, correct:421, accuracy: 80.80614203454894%, ambiguity：40
+2020-12-07 19:27:57,948|kbqa_test.py[line:164]|kb_fuzzy_classify_test|INFO|途经线路 0.9968299
+车站类型 0.013217646
+启用日期 0.0029078033
+2020-12-07 19:27:58,949|kbqa_test.py[line:173]|kb_fuzzy_classify_test|INFO|total: 555, recall: 522, correct:422, accuracy: 80.84291187739464%, ambiguity：40
+2020-12-07 19:27:59,970|kbqa_test.py[line:173]|kb_fuzzy_classify_test|INFO|total: 556, recall: 522, correct:422, accuracy: 80.84291187739464%, ambiguity：40
+2020-12-07 19:28:00,990|kbqa_test.py[line:155]|kb_fuzzy_classify_test|INFO|total: 557, recall: 523, correct:423, accuracy: 80.87954110898661%, ambiguity：40
+2020-12-07 19:28:02,000|kbqa_test.py[line:155]|kb_fuzzy_classify_test|INFO|total: 558, recall: 524, correct:424, accuracy: 80.91603053435115%, ambiguity：40
+2020-12-07 19:28:02,028|kbqa_test.py[line:164]|kb_fuzzy_classify_test|INFO|职业俱乐部* 0.9969965
+2020-12-07 19:28:03,029|kbqa_test.py[line:173]|kb_fuzzy_classify_test|INFO|total: 559, recall: 525, correct:425, accuracy: 80.95238095238095%, ambiguity：40
+2020-12-07 19:28:04,039|kbqa_test.py[line:155]|kb_fuzzy_classify_test|INFO|total: 560, recall: 526, correct:426, accuracy: 80.98859315589354%, ambiguity：40
+2020-12-07 19:28:05,059|kbqa_test.py[line:155]|kb_fuzzy_classify_test|INFO|total: 561, recall: 527, correct:427, accuracy: 81.02466793168881%, ambiguity：40
+2020-12-07 19:28:06,080|kbqa_test.py[line:155]|kb_fuzzy_classify_test|INFO|total: 562, recall: 528, correct:428, accuracy: 81.06060606060606%, ambiguity：40
+2020-12-07 19:28:07,100|kbqa_test.py[line:155]|kb_fuzzy_classify_test|INFO|total: 563, recall: 529, correct:429, accuracy: 81.09640831758034%, ambiguity：40
+2020-12-07 19:28:08,120|kbqa_test.py[line:155]|kb_fuzzy_classify_test|INFO|total: 564, recall: 530, correct:430, accuracy: 81.13207547169812%, ambiguity：40
+2020-12-07 19:28:09,139|kbqa_test.py[line:155]|kb_fuzzy_classify_test|INFO|total: 565, recall: 531, correct:431, accuracy: 81.16760828625236%, ambiguity：40
+2020-12-07 19:28:10,160|kbqa_test.py[line:155]|kb_fuzzy_classify_test|INFO|total: 566, recall: 532, correct:432, accuracy: 81.203007518797%, ambiguity：40
+2020-12-07 19:28:11,170|kbqa_test.py[line:155]|kb_fuzzy_classify_test|INFO|total: 567, recall: 533, correct:433, accuracy: 81.23827392120074%, ambiguity：40
+2020-12-07 19:28:12,190|kbqa_test.py[line:155]|kb_fuzzy_classify_test|INFO|total: 568, recall: 534, correct:434, accuracy: 81.27340823970037%, ambiguity：40
+2020-12-07 19:28:12,210|kbqa_test.py[line:146]|kb_fuzzy_classify_test|INFO|金孝珍	教育程度	首尔艺术大学演剧学学士同德女子大学放送演艺学学士中央大学大学院公演艺术学硕士
+2020-12-07 19:28:13,210|kbqa_test.py[line:155]|kb_fuzzy_classify_test|INFO|total: 569, recall: 535, correct:434, accuracy: 81.1214953271028%, ambiguity：41
+2020-12-07 19:28:14,221|kbqa_test.py[line:155]|kb_fuzzy_classify_test|INFO|total: 570, recall: 536, correct:435, accuracy: 81.15671641791045%, ambiguity：41
+2020-12-07 19:28:14,246|kbqa_test.py[line:164]|kb_fuzzy_classify_test|INFO|始建于 0.99154705
+坐落在 0.008351058
+2020-12-07 19:28:15,246|kbqa_test.py[line:173]|kb_fuzzy_classify_test|INFO|total: 571, recall: 537, correct:436, accuracy: 81.19180633147114%, ambiguity：41
+2020-12-07 19:28:15,274|kbqa_test.py[line:164]|kb_fuzzy_classify_test|INFO|人物 0.93090546
+2020-12-07 19:28:16,274|kbqa_test.py[line:173]|kb_fuzzy_classify_test|INFO|total: 572, recall: 538, correct:437, accuracy: 81.22676579925651%, ambiguity：41
+2020-12-07 19:28:17,295|kbqa_test.py[line:155]|kb_fuzzy_classify_test|INFO|total: 573, recall: 539, correct:438, accuracy: 81.26159554730984%, ambiguity：41
+2020-12-07 19:28:18,316|kbqa_test.py[line:155]|kb_fuzzy_classify_test|INFO|total: 574, recall: 540, correct:439, accuracy: 81.29629629629629%, ambiguity：41
+2020-12-07 19:28:19,326|kbqa_test.py[line:155]|kb_fuzzy_classify_test|INFO|total: 575, recall: 541, correct:440, accuracy: 81.33086876155268%, ambiguity：41
+2020-12-07 19:28:19,354|kbqa_test.py[line:164]|kb_fuzzy_classify_test|INFO|小说类别 0.98073053
+2020-12-07 19:28:20,354|kbqa_test.py[line:173]|kb_fuzzy_classify_test|INFO|total: 576, recall: 542, correct:441, accuracy: 81.36531365313652%, ambiguity：41
+2020-12-07 19:28:21,375|kbqa_test.py[line:155]|kb_fuzzy_classify_test|INFO|total: 577, recall: 543, correct:442, accuracy: 81.39963167587477%, ambiguity：41
+2020-12-07 19:28:22,385|kbqa_test.py[line:155]|kb_fuzzy_classify_test|INFO|total: 578, recall: 544, correct:443, accuracy: 81.43382352941177%, ambiguity：41
+2020-12-07 19:28:22,395|kbqa_test.py[line:146]|kb_fuzzy_classify_test|INFO|台北捷运公司	代表人物	董事长：罗孝贤(代理)总经理：郭财明(代理)
+2020-12-07 19:28:23,395|kbqa_test.py[line:155]|kb_fuzzy_classify_test|INFO|total: 579, recall: 545, correct:443, accuracy: 81.28440366972477%, ambiguity：42
+2020-12-07 19:28:24,406|kbqa_test.py[line:155]|kb_fuzzy_classify_test|INFO|total: 580, recall: 546, correct:444, accuracy: 81.31868131868131%, ambiguity：42
+2020-12-07 19:28:24,448|kbqa_test.py[line:164]|kb_fuzzy_classify_test|INFO|特色产业 0.38857663
+所属市 0.04092162
+主要民族 0.022010077
+2020-12-07 19:28:24,449|kbqa_test.py[line:171]|kb_fuzzy_classify_test|INFO|青山镇	特色产业	矿业
+2020-12-07 19:28:25,450|kbqa_test.py[line:173]|kb_fuzzy_classify_test|INFO|total: 581, recall: 547, correct:444, accuracy: 81.17001828153565%, ambiguity：42
+2020-12-07 19:28:26,460|kbqa_test.py[line:155]|kb_fuzzy_classify_test|INFO|total: 582, recall: 548, correct:445, accuracy: 81.2043795620438%, ambiguity：42
+2020-12-07 19:28:27,470|kbqa_test.py[line:155]|kb_fuzzy_classify_test|INFO|total: 583, recall: 549, correct:446, accuracy: 81.23861566484517%, ambiguity：42
+2020-12-07 19:28:28,491|kbqa_test.py[line:155]|kb_fuzzy_classify_test|INFO|total: 584, recall: 550, correct:447, accuracy: 81.27272727272727%, ambiguity：42
+2020-12-07 19:28:28,511|kbqa_test.py[line:146]|kb_fuzzy_classify_test|INFO|仲夏夜之梦	摄影	halmohr
+2020-12-07 19:28:29,511|kbqa_test.py[line:155]|kb_fuzzy_classify_test|INFO|total: 585, recall: 551, correct:447, accuracy: 81.12522686025409%, ambiguity：43
+2020-12-07 19:28:30,532|kbqa_test.py[line:155]|kb_fuzzy_classify_test|INFO|total: 586, recall: 552, correct:448, accuracy: 81.15942028985508%, ambiguity：43
+2020-12-07 19:28:30,588|kbqa_test.py[line:164]|kb_fuzzy_classify_test|INFO|户数 0.9967045
+村内企业 0.0038336073
+主要产业 0.0006899994
+所属地区 0.00063609605
+隶属于 0.0005312868
+2020-12-07 19:28:31,588|kbqa_test.py[line:173]|kb_fuzzy_classify_test|INFO|total: 587, recall: 553, correct:449, accuracy: 81.19349005424955%, ambiguity：43
+2020-12-07 19:28:32,599|kbqa_test.py[line:155]|kb_fuzzy_classify_test|INFO|total: 588, recall: 554, correct:450, accuracy: 81.2274368231047%, ambiguity：43
+2020-12-07 19:28:32,617|kbqa_test.py[line:164]|kb_fuzzy_classify_test|INFO|发布日期 0.8470888
+2020-12-07 19:28:33,618|kbqa_test.py[line:173]|kb_fuzzy_classify_test|INFO|total: 589, recall: 555, correct:451, accuracy: 81.26126126126127%, ambiguity：43
+2020-12-07 19:28:33,628|kbqa_test.py[line:146]|kb_fuzzy_classify_test|INFO|鸡血七（亚种）	亚属	大叶紫堇组sect.asterostigmata
+2020-12-07 19:28:34,628|kbqa_test.py[line:155]|kb_fuzzy_classify_test|INFO|total: 590, recall: 556, correct:451, accuracy: 81.11510791366906%, ambiguity：44
+2020-12-07 19:28:35,638|kbqa_test.py[line:155]|kb_fuzzy_classify_test|INFO|total: 591, recall: 557, correct:452, accuracy: 81.14901256732496%, ambiguity：44
+2020-12-07 19:28:36,658|kbqa_test.py[line:173]|kb_fuzzy_classify_test|INFO|total: 592, recall: 557, correct:452, accuracy: 81.14901256732496%, ambiguity：44
+2020-12-07 19:28:37,668|kbqa_test.py[line:155]|kb_fuzzy_classify_test|INFO|total: 593, recall: 558, correct:453, accuracy: 81.18279569892474%, ambiguity：44
+2020-12-07 19:28:38,678|kbqa_test.py[line:155]|kb_fuzzy_classify_test|INFO|total: 594, recall: 559, correct:454, accuracy: 81.21645796064401%, ambiguity：44
+2020-12-07 19:28:38,722|kbqa_test.py[line:164]|kb_fuzzy_classify_test|INFO|启用日期 0.98980147
+连接道路 0.97854996
+与起点之距离 0.011844059
+所在地 0.008475868
+记号 0.0032904344
+2020-12-07 19:28:39,723|kbqa_test.py[line:173]|kb_fuzzy_classify_test|INFO|total: 595, recall: 560, correct:455, accuracy: 81.25%, ambiguity：44
+2020-12-07 19:28:39,733|kbqa_test.py[line:146]|kb_fuzzy_classify_test|INFO|金鬃	相关	金jīn一种化学元素
+2020-12-07 19:28:40,733|kbqa_test.py[line:155]|kb_fuzzy_classify_test|INFO|total: 596, recall: 561, correct:455, accuracy: 81.10516934046346%, ambiguity：45
+2020-12-07 19:28:41,753|kbqa_test.py[line:155]|kb_fuzzy_classify_test|INFO|total: 597, recall: 562, correct:456, accuracy: 81.13879003558719%, ambiguity：45
+2020-12-07 19:28:42,773|kbqa_test.py[line:155]|kb_fuzzy_classify_test|INFO|total: 598, recall: 563, correct:457, accuracy: 81.17229129662522%, ambiguity：45
+2020-12-07 19:28:43,784|kbqa_test.py[line:155]|kb_fuzzy_classify_test|INFO|total: 599, recall: 564, correct:458, accuracy: 81.20567375886525%, ambiguity：45
+2020-12-07 19:28:44,794|kbqa_test.py[line:155]|kb_fuzzy_classify_test|INFO|total: 600, recall: 565, correct:459, accuracy: 81.23893805309734%, ambiguity：45
+2020-12-07 19:28:45,804|kbqa_test.py[line:155]|kb_fuzzy_classify_test|INFO|total: 601, recall: 566, correct:460, accuracy: 81.2720848056537%, ambiguity：45
+2020-12-07 19:28:46,825|kbqa_test.py[line:155]|kb_fuzzy_classify_test|INFO|total: 602, recall: 567, correct:461, accuracy: 81.30511463844798%, ambiguity：45
+2020-12-07 19:28:47,845|kbqa_test.py[line:155]|kb_fuzzy_classify_test|INFO|total: 603, recall: 568, correct:462, accuracy: 81.33802816901408%, ambiguity：45
+2020-12-07 19:28:47,872|kbqa_test.py[line:164]|kb_fuzzy_classify_test|INFO|其他信息 0.77016884
+2020-12-07 19:28:48,872|kbqa_test.py[line:173]|kb_fuzzy_classify_test|INFO|total: 604, recall: 569, correct:463, accuracy: 81.37082601054482%, ambiguity：45
+2020-12-07 19:28:49,892|kbqa_test.py[line:155]|kb_fuzzy_classify_test|INFO|total: 605, recall: 570, correct:464, accuracy: 81.40350877192982%, ambiguity：45
+2020-12-07 19:28:50,903|kbqa_test.py[line:155]|kb_fuzzy_classify_test|INFO|total: 606, recall: 571, correct:465, accuracy: 81.43607705779334%, ambiguity：45
+2020-12-07 19:28:51,913|kbqa_test.py[line:155]|kb_fuzzy_classify_test|INFO|total: 607, recall: 572, correct:466, accuracy: 81.46853146853147%, ambiguity：45
+2020-12-07 19:28:52,923|kbqa_test.py[line:155]|kb_fuzzy_classify_test|INFO|total: 608, recall: 573, correct:467, accuracy: 81.50087260034904%, ambiguity：45
+2020-12-07 19:28:52,953|kbqa_test.py[line:164]|kb_fuzzy_classify_test|INFO|小说类型 0.9646618
+小说书号 0.9586358
+小说作者 0.9374265
+2020-12-07 19:28:52,954|kbqa_test.py[line:171]|kb_fuzzy_classify_test|INFO|娇妻狠角色：总裁，要学乖	小说类型	豪门世家
+2020-12-07 19:28:53,954|kbqa_test.py[line:173]|kb_fuzzy_classify_test|INFO|total: 609, recall: 574, correct:467, accuracy: 81.3588850174216%, ambiguity：45
+2020-12-07 19:28:54,965|kbqa_test.py[line:155]|kb_fuzzy_classify_test|INFO|total: 610, recall: 575, correct:468, accuracy: 81.3913043478261%, ambiguity：45
+2020-12-07 19:28:54,985|kbqa_test.py[line:146]|kb_fuzzy_classify_test|INFO|节奏大师	最新版本	v2.5.1.2(android)v2.5.1(ios)
+2020-12-07 19:28:55,985|kbqa_test.py[line:155]|kb_fuzzy_classify_test|INFO|total: 611, recall: 576, correct:468, accuracy: 81.25%, ambiguity：46
+2020-12-07 19:28:56,995|kbqa_test.py[line:155]|kb_fuzzy_classify_test|INFO|total: 612, recall: 577, correct:469, accuracy: 81.28249566724436%, ambiguity：46
+2020-12-07 19:28:57,005|kbqa_test.py[line:146]|kb_fuzzy_classify_test|INFO|聊城大学学报（自然科学版）	国际刊号	issn1672-6634
+2020-12-07 19:28:58,006|kbqa_test.py[line:155]|kb_fuzzy_classify_test|INFO|total: 613, recall: 578, correct:469, accuracy: 81.14186851211073%, ambiguity：47
+2020-12-07 19:28:59,016|kbqa_test.py[line:173]|kb_fuzzy_classify_test|INFO|total: 614, recall: 578, correct:469, accuracy: 81.14186851211073%, ambiguity：47
+2020-12-07 19:29:00,026|kbqa_test.py[line:155]|kb_fuzzy_classify_test|INFO|total: 615, recall: 579, correct:470, accuracy: 81.17443868739205%, ambiguity：47
+2020-12-07 19:29:00,054|kbqa_test.py[line:164]|kb_fuzzy_classify_test|INFO|病毒类型 0.934878
+2020-12-07 19:29:01,056|kbqa_test.py[line:173]|kb_fuzzy_classify_test|INFO|total: 616, recall: 580, correct:471, accuracy: 81.20689655172414%, ambiguity：47
+2020-12-07 19:29:02,075|kbqa_test.py[line:173]|kb_fuzzy_classify_test|INFO|total: 617, recall: 580, correct:471, accuracy: 81.20689655172414%, ambiguity：47
+2020-12-07 19:29:03,095|kbqa_test.py[line:155]|kb_fuzzy_classify_test|INFO|total: 618, recall: 581, correct:472, accuracy: 81.23924268502581%, ambiguity：47
+2020-12-07 19:29:04,114|kbqa_test.py[line:155]|kb_fuzzy_classify_test|INFO|total: 619, recall: 582, correct:473, accuracy: 81.27147766323024%, ambiguity：47
+2020-12-07 19:29:05,125|kbqa_test.py[line:173]|kb_fuzzy_classify_test|INFO|total: 620, recall: 582, correct:473, accuracy: 81.27147766323024%, ambiguity：47
+2020-12-07 19:29:06,145|kbqa_test.py[line:155]|kb_fuzzy_classify_test|INFO|total: 621, recall: 583, correct:474, accuracy: 81.30360205831904%, ambiguity：47
+2020-12-07 19:29:07,155|kbqa_test.py[line:155]|kb_fuzzy_classify_test|INFO|total: 622, recall: 584, correct:475, accuracy: 81.33561643835617%, ambiguity：47
+2020-12-07 19:29:08,165|kbqa_test.py[line:155]|kb_fuzzy_classify_test|INFO|total: 623, recall: 585, correct:476, accuracy: 81.36752136752136%, ambiguity：47
+2020-12-07 19:29:09,186|kbqa_test.py[line:155]|kb_fuzzy_classify_test|INFO|total: 624, recall: 586, correct:477, accuracy: 81.39931740614334%, ambiguity：47
+2020-12-07 19:29:09,214|kbqa_test.py[line:164]|kb_fuzzy_classify_test|INFO|产品重量 0.9964294
+2020-12-07 19:29:10,214|kbqa_test.py[line:173]|kb_fuzzy_classify_test|INFO|total: 625, recall: 587, correct:478, accuracy: 81.43100511073254%, ambiguity：47
+2020-12-07 19:29:10,242|kbqa_test.py[line:164]|kb_fuzzy_classify_test|INFO|亚种 0.012730303
+2020-12-07 19:29:11,242|kbqa_test.py[line:173]|kb_fuzzy_classify_test|INFO|total: 626, recall: 588, correct:479, accuracy: 81.4625850340136%, ambiguity：47
+2020-12-07 19:29:12,253|kbqa_test.py[line:155]|kb_fuzzy_classify_test|INFO|total: 627, recall: 589, correct:480, accuracy: 81.49405772495756%, ambiguity：47
+2020-12-07 19:29:12,263|kbqa_test.py[line:146]|kb_fuzzy_classify_test|INFO|曙光天阔i640r-g	cpu类型	intel至强5600
+2020-12-07 19:29:13,263|kbqa_test.py[line:155]|kb_fuzzy_classify_test|INFO|total: 628, recall: 590, correct:480, accuracy: 81.35593220338983%, ambiguity：48
+2020-12-07 19:29:14,283|kbqa_test.py[line:155]|kb_fuzzy_classify_test|INFO|total: 629, recall: 591, correct:481, accuracy: 81.38747884940778%, ambiguity：48
+2020-12-07 19:29:15,303|kbqa_test.py[line:155]|kb_fuzzy_classify_test|INFO|total: 630, recall: 592, correct:482, accuracy: 81.41891891891892%, ambiguity：48
+2020-12-07 19:29:16,324|kbqa_test.py[line:155]|kb_fuzzy_classify_test|INFO|total: 631, recall: 593, correct:483, accuracy: 81.45025295109612%, ambiguity：48
+2020-12-07 19:29:17,334|kbqa_test.py[line:173]|kb_fuzzy_classify_test|INFO|total: 632, recall: 593, correct:483, accuracy: 81.45025295109612%, ambiguity：48
+2020-12-07 19:29:18,354|kbqa_test.py[line:155]|kb_fuzzy_classify_test|INFO|total: 633, recall: 594, correct:484, accuracy: 81.48148148148148%, ambiguity：48
+2020-12-07 19:29:19,375|kbqa_test.py[line:155]|kb_fuzzy_classify_test|INFO|total: 634, recall: 595, correct:485, accuracy: 81.5126050420168%, ambiguity：48
+2020-12-07 19:29:19,525|kbqa_test.py[line:164]|kb_fuzzy_classify_test|INFO|主峰海拔 0.99459225
+著名景点 0.99328995
+山脉 0.99264985
+别称 0.991137
+主峰 0.9879776
+气候类型 0.9057396
+交通信息 0.5097367
+景区相关名人 0.17697321
+其他信息 0.02590311
+走向 0.020775504
+所在地区 0.01683368
+所在地区 0.01683368
+海拔 0.011883939
+位于 0.006770742
+古称 0.0030384012
+地点 0.0014345993
+淡季门票 0.0012988668
+门票价格 0.0011675073
+旺季门票 0.0010963358
+分布于 0.0006661872
+2020-12-07 19:29:19,525|kbqa_test.py[line:171]|kb_fuzzy_classify_test|INFO|凤凰山	主峰海拔	2128米
+2020-12-07 19:29:20,525|kbqa_test.py[line:173]|kb_fuzzy_classify_test|INFO|total: 635, recall: 596, correct:485, accuracy: 81.3758389261745%, ambiguity：48
+2020-12-07 19:29:20,546|kbqa_test.py[line:146]|kb_fuzzy_classify_test|INFO|多伦多大学	现任校长	mericgertler
+2020-12-07 19:29:21,547|kbqa_test.py[line:155]|kb_fuzzy_classify_test|INFO|total: 636, recall: 597, correct:485, accuracy: 81.23953098827471%, ambiguity：49
+2020-12-07 19:29:21,557|kbqa_test.py[line:146]|kb_fuzzy_classify_test|INFO|虎皮鹦鹉	命名时间	shaw,1805
+2020-12-07 19:29:22,557|kbqa_test.py[line:155]|kb_fuzzy_classify_test|INFO|total: 637, recall: 598, correct:485, accuracy: 81.10367892976589%, ambiguity：50
+2020-12-07 19:29:23,578|kbqa_test.py[line:155]|kb_fuzzy_classify_test|INFO|total: 638, recall: 599, correct:486, accuracy: 81.13522537562605%, ambiguity：50
+2020-12-07 19:29:24,591|kbqa_test.py[line:155]|kb_fuzzy_classify_test|INFO|total: 639, recall: 600, correct:487, accuracy: 81.16666666666667%, ambiguity：50
+2020-12-07 19:29:25,601|kbqa_test.py[line:155]|kb_fuzzy_classify_test|INFO|total: 640, recall: 601, correct:488, accuracy: 81.19800332778702%, ambiguity：50
+2020-12-07 19:29:26,621|kbqa_test.py[line:155]|kb_fuzzy_classify_test|INFO|total: 641, recall: 602, correct:489, accuracy: 81.22923588039868%, ambiguity：50
+2020-12-07 19:29:26,631|kbqa_test.py[line:146]|kb_fuzzy_classify_test|INFO|流山市	罗马拼音	naganeyama-shi
+2020-12-07 19:29:27,631|kbqa_test.py[line:155]|kb_fuzzy_classify_test|INFO|total: 642, recall: 603, correct:489, accuracy: 81.09452736318408%, ambiguity：51
+2020-12-07 19:29:27,675|kbqa_test.py[line:164]|kb_fuzzy_classify_test|INFO|排水量 0.98985493
+动力 0.055273537
+舰长 0.008761184
+配乐作曲 0.002177105
+制片成本 0.0017139651
+2020-12-07 19:29:27,676|kbqa_test.py[line:171]|kb_fuzzy_classify_test|INFO|泰坦尼克号	排水量	52310英吨
+2020-12-07 19:29:28,677|kbqa_test.py[line:173]|kb_fuzzy_classify_test|INFO|total: 643, recall: 604, correct:489, accuracy: 80.96026490066225%, ambiguity：51
+2020-12-07 19:29:28,689|kbqa_test.py[line:146]|kb_fuzzy_classify_test|INFO|傲慢与偏见	剪辑	chriswimble
+2020-12-07 19:29:29,689|kbqa_test.py[line:155]|kb_fuzzy_classify_test|INFO|total: 644, recall: 605, correct:489, accuracy: 80.82644628099173%, ambiguity：52
+2020-12-07 19:29:30,709|kbqa_test.py[line:155]|kb_fuzzy_classify_test|INFO|total: 645, recall: 606, correct:490, accuracy: 80.85808580858085%, ambiguity：52
+2020-12-07 19:29:31,730|kbqa_test.py[line:155]|kb_fuzzy_classify_test|INFO|total: 646, recall: 607, correct:491, accuracy: 80.88962108731467%, ambiguity：52
+2020-12-07 19:29:31,739|kbqa_test.py[line:146]|kb_fuzzy_classify_test|INFO|小米手机4	处理器	高通骁龙801msm8x74ac
+2020-12-07 19:29:32,740|kbqa_test.py[line:155]|kb_fuzzy_classify_test|INFO|total: 647, recall: 608, correct:491, accuracy: 80.75657894736842%, ambiguity：53
+2020-12-07 19:29:32,878|kbqa_test.py[line:164]|kb_fuzzy_classify_test|INFO|出现 0.0016193166
+又称 0.000885418
+全称 0.0007933359
+全称 0.0007933359
+日文 0.0006702189
+所属类别 0.0006511155
+解释 0.00061484566
+英文名称 0.0005986553
+曲长 0.0005980346
+系统支持 0.00059377204
+外文名 0.00059362943
+意义 0.0005935333
+授权方式 0.0005837632
+第一条 0.000582085
+第二条 0.0005811612
+第三条 0.0005784293
+上市时间 0.00054740004
+注册用户 0.00054607034
+距地距离 0.00054207153
+稳定版本 0.0005355288
+2020-12-07 19:29:32,879|kbqa_test.py[line:171]|kb_fuzzy_classify_test|INFO|op	出现	竞技类游戏
+2020-12-07 19:29:33,880|kbqa_test.py[line:173]|kb_fuzzy_classify_test|INFO|total: 648, recall: 609, correct:491, accuracy: 80.623973727422%, ambiguity：53
+2020-12-07 19:29:33,890|kbqa_test.py[line:146]|kb_fuzzy_classify_test|INFO|河南理工大学	校训	明德任则好学力行
+2020-12-07 19:29:34,890|kbqa_test.py[line:155]|kb_fuzzy_classify_test|INFO|total: 649, recall: 610, correct:491, accuracy: 80.49180327868852%, ambiguity：54
+2020-12-07 19:29:34,919|kbqa_test.py[line:164]|kb_fuzzy_classify_test|INFO|书名 0.013533281
+2020-12-07 19:29:35,919|kbqa_test.py[line:173]|kb_fuzzy_classify_test|INFO|total: 650, recall: 611, correct:492, accuracy: 80.52373158756137%, ambiguity：54
+2020-12-07 19:29:36,940|kbqa_test.py[line:155]|kb_fuzzy_classify_test|INFO|total: 651, recall: 612, correct:493, accuracy: 80.55555555555556%, ambiguity：54
+2020-12-07 19:29:37,950|kbqa_test.py[line:155]|kb_fuzzy_classify_test|INFO|total: 652, recall: 613, correct:494, accuracy: 80.58727569331158%, ambiguity：54
+2020-12-07 19:29:38,960|kbqa_test.py[line:173]|kb_fuzzy_classify_test|INFO|total: 653, recall: 613, correct:494, accuracy: 80.58727569331158%, ambiguity：54
+2020-12-07 19:29:39,980|kbqa_test.py[line:155]|kb_fuzzy_classify_test|INFO|total: 654, recall: 614, correct:495, accuracy: 80.61889250814332%, ambiguity：54
+2020-12-07 19:29:40,991|kbqa_test.py[line:155]|kb_fuzzy_classify_test|INFO|total: 655, recall: 615, correct:496, accuracy: 80.65040650406505%, ambiguity：54
+2020-12-07 19:29:42,010|kbqa_test.py[line:155]|kb_fuzzy_classify_test|INFO|total: 656, recall: 616, correct:497, accuracy: 80.68181818181819%, ambiguity：54
+2020-12-07 19:29:42,034|kbqa_test.py[line:164]|kb_fuzzy_classify_test|INFO|特色产业 0.9969748
+所属市 0.0006350595
+2020-12-07 19:29:43,035|kbqa_test.py[line:173]|kb_fuzzy_classify_test|INFO|total: 657, recall: 617, correct:498, accuracy: 80.71312803889789%, ambiguity：54
+2020-12-07 19:29:43,052|kbqa_test.py[line:164]|kb_fuzzy_classify_test|INFO|校址 0.99165267
+2020-12-07 19:29:44,054|kbqa_test.py[line:173]|kb_fuzzy_classify_test|INFO|total: 658, recall: 618, correct:499, accuracy: 80.74433656957929%, ambiguity：54
+2020-12-07 19:29:44,084|kbqa_test.py[line:164]|kb_fuzzy_classify_test|INFO|应用学科 0.9953395
+表达式 0.8491346
+提出者 0.043039687
+2020-12-07 19:29:45,085|kbqa_test.py[line:173]|kb_fuzzy_classify_test|INFO|total: 659, recall: 619, correct:500, accuracy: 80.77544426494346%, ambiguity：54
+2020-12-07 19:29:45,102|kbqa_test.py[line:164]|kb_fuzzy_classify_test|INFO|说明 0.011328945
+2020-12-07 19:29:46,103|kbqa_test.py[line:173]|kb_fuzzy_classify_test|INFO|total: 660, recall: 620, correct:501, accuracy: 80.80645161290323%, ambiguity：54
+2020-12-07 19:29:46,113|kbqa_test.py[line:146]|kb_fuzzy_classify_test|INFO|greatesthits	歌手	shakira夏奇拉
+2020-12-07 19:29:47,113|kbqa_test.py[line:155]|kb_fuzzy_classify_test|INFO|total: 661, recall: 621, correct:501, accuracy: 80.67632850241546%, ambiguity：55
+2020-12-07 19:29:48,124|kbqa_test.py[line:155]|kb_fuzzy_classify_test|INFO|total: 662, recall: 622, correct:502, accuracy: 80.70739549839229%, ambiguity：55
+2020-12-07 19:29:48,134|kbqa_test.py[line:146]|kb_fuzzy_classify_test|INFO|湖南力信联合会计师事务所	经营理念	实力铸就价值诚信通达天下
+2020-12-07 19:29:49,134|kbqa_test.py[line:155]|kb_fuzzy_classify_test|INFO|total: 663, recall: 623, correct:502, accuracy: 80.57784911717496%, ambiguity：56
+2020-12-07 19:29:49,161|kbqa_test.py[line:164]|kb_fuzzy_classify_test|INFO|小区地址 0.99687284
+2020-12-07 19:29:50,162|kbqa_test.py[line:173]|kb_fuzzy_classify_test|INFO|total: 664, recall: 624, correct:503, accuracy: 80.60897435897436%, ambiguity：56
+2020-12-07 19:29:51,182|kbqa_test.py[line:173]|kb_fuzzy_classify_test|INFO|total: 665, recall: 624, correct:503, accuracy: 80.60897435897436%, ambiguity：56
+2020-12-07 19:29:52,193|kbqa_test.py[line:155]|kb_fuzzy_classify_test|INFO|total: 666, recall: 625, correct:504, accuracy: 80.64%, ambiguity：56
+2020-12-07 19:29:53,203|kbqa_test.py[line:155]|kb_fuzzy_classify_test|INFO|total: 667, recall: 626, correct:505, accuracy: 80.67092651757189%, ambiguity：56
+2020-12-07 19:29:53,220|kbqa_test.py[line:164]|kb_fuzzy_classify_test|INFO|投影技术 0.0034818787
+2020-12-07 19:29:54,221|kbqa_test.py[line:173]|kb_fuzzy_classify_test|INFO|total: 668, recall: 627, correct:506, accuracy: 80.70175438596492%, ambiguity：56
+2020-12-07 19:29:54,239|kbqa_test.py[line:164]|kb_fuzzy_classify_test|INFO|上映日期 0.9473824
+2020-12-07 19:29:55,240|kbqa_test.py[line:173]|kb_fuzzy_classify_test|INFO|total: 669, recall: 628, correct:507, accuracy: 80.73248407643312%, ambiguity：56
+2020-12-07 19:29:55,277|kbqa_test.py[line:164]|kb_fuzzy_classify_test|INFO|播出日期 0.9681386
+原创 0.0051244386
+标语 0.00067868637
+外景 0.0005769875
+2020-12-07 19:29:55,278|kbqa_test.py[line:171]|kb_fuzzy_classify_test|INFO|爸爸去哪儿	播出日期	第一季：2013年10月11日－2013年12月27日第二季：2014年06月20日－2014年10月03日－
+2020-12-07 19:29:56,278|kbqa_test.py[line:173]|kb_fuzzy_classify_test|INFO|total: 670, recall: 629, correct:507, accuracy: 80.60413354531002%, ambiguity：56
+2020-12-07 19:29:57,288|kbqa_test.py[line:155]|kb_fuzzy_classify_test|INFO|total: 671, recall: 630, correct:508, accuracy: 80.63492063492063%, ambiguity：56
+2020-12-07 19:29:58,298|kbqa_test.py[line:155]|kb_fuzzy_classify_test|INFO|total: 672, recall: 631, correct:509, accuracy: 80.66561014263074%, ambiguity：56
+2020-12-07 19:29:59,319|kbqa_test.py[line:155]|kb_fuzzy_classify_test|INFO|total: 673, recall: 632, correct:510, accuracy: 80.69620253164557%, ambiguity：56
+2020-12-07 19:29:59,348|kbqa_test.py[line:164]|kb_fuzzy_classify_test|INFO|分布 0.0007693633
+2020-12-07 19:30:00,348|kbqa_test.py[line:173]|kb_fuzzy_classify_test|INFO|total: 674, recall: 633, correct:511, accuracy: 80.72669826224329%, ambiguity：56
+2020-12-07 19:30:00,368|kbqa_test.py[line:146]|kb_fuzzy_classify_test|INFO|小行星12282	轨道参数	2.7189330ua
+2020-12-07 19:30:01,368|kbqa_test.py[line:155]|kb_fuzzy_classify_test|INFO|total: 675, recall: 634, correct:511, accuracy: 80.5993690851735%, ambiguity：57
+2020-12-07 19:30:01,385|kbqa_test.py[line:164]|kb_fuzzy_classify_test|INFO|医院类型 0.99622923
+2020-12-07 19:30:02,387|kbqa_test.py[line:173]|kb_fuzzy_classify_test|INFO|total: 676, recall: 635, correct:512, accuracy: 80.62992125984252%, ambiguity：57
+2020-12-07 19:30:02,403|kbqa_test.py[line:164]|kb_fuzzy_classify_test|INFO|操作指南 0.014817665
+2020-12-07 19:30:03,405|kbqa_test.py[line:173]|kb_fuzzy_classify_test|INFO|total: 677, recall: 636, correct:513, accuracy: 80.66037735849056%, ambiguity：57
+2020-12-07 19:30:04,425|kbqa_test.py[line:155]|kb_fuzzy_classify_test|INFO|total: 678, recall: 637, correct:514, accuracy: 80.69073783359498%, ambiguity：57
+2020-12-07 19:30:05,445|kbqa_test.py[line:155]|kb_fuzzy_classify_test|INFO|total: 679, recall: 638, correct:515, accuracy: 80.72100313479623%, ambiguity：57
+2020-12-07 19:30:06,466|kbqa_test.py[line:155]|kb_fuzzy_classify_test|INFO|total: 680, recall: 639, correct:516, accuracy: 80.75117370892019%, ambiguity：57
+2020-12-07 19:30:07,476|kbqa_test.py[line:155]|kb_fuzzy_classify_test|INFO|total: 681, recall: 640, correct:517, accuracy: 80.78125%, ambiguity：57
+2020-12-07 19:30:08,486|kbqa_test.py[line:155]|kb_fuzzy_classify_test|INFO|total: 682, recall: 641, correct:518, accuracy: 80.81123244929798%, ambiguity：57
+2020-12-07 19:30:08,517|kbqa_test.py[line:164]|kb_fuzzy_classify_test|INFO|更新时间 0.99302167
+软件版本 0.015519099
+软件大小 0.0070155743
+2020-12-07 19:30:08,518|kbqa_test.py[line:171]|kb_fuzzy_classify_test|INFO|root精灵	更新时间	pc版：2014-12-10android版：2014-12-05
+2020-12-07 19:30:09,518|kbqa_test.py[line:173]|kb_fuzzy_classify_test|INFO|total: 683, recall: 642, correct:518, accuracy: 80.68535825545172%, ambiguity：57
+2020-12-07 19:30:09,546|kbqa_test.py[line:164]|kb_fuzzy_classify_test|INFO|原因 0.99640274
+2020-12-07 19:30:10,547|kbqa_test.py[line:173]|kb_fuzzy_classify_test|INFO|total: 684, recall: 643, correct:519, accuracy: 80.7153965785381%, ambiguity：57
+2020-12-07 19:30:10,557|kbqa_test.py[line:146]|kb_fuzzy_classify_test|INFO|无事生非	编剧	martinhellberg
+2020-12-07 19:30:11,557|kbqa_test.py[line:155]|kb_fuzzy_classify_test|INFO|total: 685, recall: 644, correct:519, accuracy: 80.59006211180125%, ambiguity：58
+2020-12-07 19:30:11,611|kbqa_test.py[line:164]|kb_fuzzy_classify_test|INFO|音乐风格 0.9739134
+专辑歌手 0.9640506
+专辑语言 0.95885277
+曲目数量 0.9237812
+发行地区 0.15303335
+2020-12-07 19:30:11,612|kbqa_test.py[line:171]|kb_fuzzy_classify_test|INFO|overtherainbow	音乐风格	华语流行音乐
+2020-12-07 19:30:12,612|kbqa_test.py[line:173]|kb_fuzzy_classify_test|INFO|total: 686, recall: 645, correct:519, accuracy: 80.46511627906976%, ambiguity：58
+2020-12-07 19:30:12,642|kbqa_test.py[line:164]|kb_fuzzy_classify_test|INFO|所属路线 0.9965823
+车站编号 0.005348152
+距离 0.0009631325
+2020-12-07 19:30:13,643|kbqa_test.py[line:173]|kb_fuzzy_classify_test|INFO|total: 687, recall: 646, correct:520, accuracy: 80.49535603715171%, ambiguity：58
+2020-12-07 19:30:14,654|kbqa_test.py[line:173]|kb_fuzzy_classify_test|INFO|total: 688, recall: 646, correct:520, accuracy: 80.49535603715171%, ambiguity：58
+2020-12-07 19:30:14,678|kbqa_test.py[line:164]|kb_fuzzy_classify_test|INFO|邮编区码 0.92400426
+电话区码 0.010063174
+2020-12-07 19:30:14,679|kbqa_test.py[line:171]|kb_fuzzy_classify_test|INFO|安仁镇	邮编区码	611331
+2020-12-07 19:30:15,679|kbqa_test.py[line:173]|kb_fuzzy_classify_test|INFO|total: 689, recall: 647, correct:520, accuracy: 80.370942812983%, ambiguity：58
+2020-12-07 19:30:16,699|kbqa_test.py[line:155]|kb_fuzzy_classify_test|INFO|total: 690, recall: 648, correct:521, accuracy: 80.40123456790124%, ambiguity：58
+2020-12-07 19:30:16,717|kbqa_test.py[line:164]|kb_fuzzy_classify_test|INFO|饰演 0.9939977
+2020-12-07 19:30:16,718|kbqa_test.py[line:171]|kb_fuzzy_classify_test|INFO|高月	饰演	胡冰卿刘楚恬（3岁时）
+2020-12-07 19:30:17,719|kbqa_test.py[line:173]|kb_fuzzy_classify_test|INFO|total: 691, recall: 649, correct:521, accuracy: 80.2773497688752%, ambiguity：58
+2020-12-07 19:30:17,738|kbqa_test.py[line:146]|kb_fuzzy_classify_test|INFO|红警3修改器	软件类别	游戏视频/ 免费软件 /游戏工具
+2020-12-07 19:30:18,739|kbqa_test.py[line:155]|kb_fuzzy_classify_test|INFO|total: 692, recall: 650, correct:521, accuracy: 80.15384615384616%, ambiguity：59
+2020-12-07 19:30:19,749|kbqa_test.py[line:155]|kb_fuzzy_classify_test|INFO|total: 693, recall: 651, correct:522, accuracy: 80.18433179723502%, ambiguity：59
+2020-12-07 19:30:20,759|kbqa_test.py[line:155]|kb_fuzzy_classify_test|INFO|total: 694, recall: 652, correct:523, accuracy: 80.21472392638037%, ambiguity：59
+2020-12-07 19:30:20,787|kbqa_test.py[line:164]|kb_fuzzy_classify_test|INFO|球场位置 0.9965199
+2020-12-07 19:30:21,788|kbqa_test.py[line:173]|kb_fuzzy_classify_test|INFO|total: 695, recall: 653, correct:524, accuracy: 80.24502297090352%, ambiguity：59
+2020-12-07 19:30:21,806|kbqa_test.py[line:164]|kb_fuzzy_classify_test|INFO|性别 0.98793703
+2020-12-07 19:30:22,806|kbqa_test.py[line:173]|kb_fuzzy_classify_test|INFO|total: 696, recall: 654, correct:525, accuracy: 80.27522935779817%, ambiguity：59
+2020-12-07 19:30:23,826|kbqa_test.py[line:155]|kb_fuzzy_classify_test|INFO|total: 697, recall: 655, correct:526, accuracy: 80.30534351145039%, ambiguity：59
+2020-12-07 19:30:24,836|kbqa_test.py[line:155]|kb_fuzzy_classify_test|INFO|total: 698, recall: 656, correct:527, accuracy: 80.33536585365853%, ambiguity：59
+2020-12-07 19:30:24,869|kbqa_test.py[line:164]|kb_fuzzy_classify_test|INFO|演唱者 0.4131455
+曲长 0.3847871
+2020-12-07 19:30:25,871|kbqa_test.py[line:173]|kb_fuzzy_classify_test|INFO|total: 699, recall: 657, correct:528, accuracy: 80.36529680365297%, ambiguity：59
+2020-12-07 19:30:26,891|kbqa_test.py[line:155]|kb_fuzzy_classify_test|INFO|total: 700, recall: 658, correct:529, accuracy: 80.3951367781155%, ambiguity：59
+2020-12-07 19:30:27,911|kbqa_test.py[line:155]|kb_fuzzy_classify_test|INFO|total: 701, recall: 659, correct:530, accuracy: 80.42488619119878%, ambiguity：59
+2020-12-07 19:30:28,922|kbqa_test.py[line:173]|kb_fuzzy_classify_test|INFO|total: 702, recall: 659, correct:530, accuracy: 80.42488619119878%, ambiguity：59
+2020-12-07 19:30:28,957|kbqa_test.py[line:164]|kb_fuzzy_classify_test|INFO|所属作品 0.97875583
+初登场时间 0.5145339
+机箱类型 0.20742407
+别名（绰号） 0.0026321844
+2020-12-07 19:30:29,959|kbqa_test.py[line:173]|kb_fuzzy_classify_test|INFO|total: 703, recall: 660, correct:531, accuracy: 80.45454545454545%, ambiguity：59
+2020-12-07 19:30:29,977|kbqa_test.py[line:164]|kb_fuzzy_classify_test|INFO|就诊科室 0.7571649
+2020-12-07 19:30:30,978|kbqa_test.py[line:173]|kb_fuzzy_classify_test|INFO|total: 704, recall: 661, correct:532, accuracy: 80.48411497730712%, ambiguity：59
+2020-12-07 19:30:31,006|kbqa_test.py[line:164]|kb_fuzzy_classify_test|INFO|上市日期 0.9925041
+2020-12-07 19:30:32,006|kbqa_test.py[line:173]|kb_fuzzy_classify_test|INFO|total: 705, recall: 662, correct:533, accuracy: 80.51359516616314%, ambiguity：59
+2020-12-07 19:30:32,016|kbqa_test.py[line:146]|kb_fuzzy_classify_test|INFO|平壤之战	结果	日军损失惨重
+2020-12-07 19:30:33,017|kbqa_test.py[line:155]|kb_fuzzy_classify_test|INFO|total: 706, recall: 663, correct:534, accuracy: 80.54298642533936%, ambiguity：59
+2020-12-07 19:30:34,027|kbqa_test.py[line:155]|kb_fuzzy_classify_test|INFO|total: 707, recall: 664, correct:535, accuracy: 80.57228915662651%, ambiguity：59
+2020-12-07 19:30:35,047|kbqa_test.py[line:155]|kb_fuzzy_classify_test|INFO|total: 708, recall: 665, correct:536, accuracy: 80.6015037593985%, ambiguity：59
+2020-12-07 19:30:36,057|kbqa_test.py[line:155]|kb_fuzzy_classify_test|INFO|total: 709, recall: 666, correct:537, accuracy: 80.63063063063063%, ambiguity：59
+2020-12-07 19:30:37,068|kbqa_test.py[line:155]|kb_fuzzy_classify_test|INFO|total: 710, recall: 667, correct:538, accuracy: 80.65967016491754%, ambiguity：59
+2020-12-07 19:30:37,099|kbqa_test.py[line:164]|kb_fuzzy_classify_test|INFO|软件版本 0.021942422
+软件大小 0.012460275
+产品名称 0.0050859787
+2020-12-07 19:30:38,099|kbqa_test.py[line:173]|kb_fuzzy_classify_test|INFO|total: 711, recall: 668, correct:539, accuracy: 80.68862275449102%, ambiguity：59
+2020-12-07 19:30:38,123|kbqa_test.py[line:164]|kb_fuzzy_classify_test|INFO|教师人数 0.98235714
+学生人数 0.97028774
+2020-12-07 19:30:38,124|kbqa_test.py[line:171]|kb_fuzzy_classify_test|INFO|上海商学院	教师人数	500人
+2020-12-07 19:30:39,124|kbqa_test.py[line:173]|kb_fuzzy_classify_test|INFO|total: 712, recall: 669, correct:539, accuracy: 80.56801195814649%, ambiguity：59
+2020-12-07 19:30:40,163|kbqa_test.py[line:155]|kb_fuzzy_classify_test|INFO|total: 713, recall: 670, correct:540, accuracy: 80.59701492537313%, ambiguity：59
+2020-12-07 19:30:41,174|kbqa_test.py[line:155]|kb_fuzzy_classify_test|INFO|total: 714, recall: 671, correct:541, accuracy: 80.62593144560358%, ambiguity：59
+2020-12-07 19:30:41,194|kbqa_test.py[line:146]|kb_fuzzy_classify_test|INFO|多花秋海棠	组	室组sect.platycentrum
+2020-12-07 19:30:41,194|kbqa_test.py[line:146]|kb_fuzzy_classify_test|INFO|多花秋海棠	属	秋海棠属begonia二
+2020-12-07 19:30:42,195|kbqa_test.py[line:155]|kb_fuzzy_classify_test|INFO|total: 715, recall: 672, correct:541, accuracy: 80.50595238095238%, ambiguity：60
+2020-12-07 19:30:42,287|kbqa_test.py[line:164]|kb_fuzzy_classify_test|INFO|作词 0.9936441
+谱曲 0.99299943
+编曲 0.9922213
+填词 0.46696892
+歌曲时长 0.023043215
+mv导演 0.009574247
+演唱 0.0045408644
+赛道 0.00048686855
+2020-12-07 19:30:43,288|kbqa_test.py[line:173]|kb_fuzzy_classify_test|INFO|total: 716, recall: 673, correct:542, accuracy: 80.53491827637444%, ambiguity：60
+2020-12-07 19:30:43,320|kbqa_test.py[line:164]|kb_fuzzy_classify_test|INFO|始建时间 0.8969148
+2020-12-07 19:30:44,322|kbqa_test.py[line:173]|kb_fuzzy_classify_test|INFO|total: 717, recall: 674, correct:543, accuracy: 80.56379821958457%, ambiguity：60
+2020-12-07 19:30:44,350|kbqa_test.py[line:164]|kb_fuzzy_classify_test|INFO|地点 0.927371
+2020-12-07 19:30:45,351|kbqa_test.py[line:173]|kb_fuzzy_classify_test|INFO|total: 718, recall: 675, correct:544, accuracy: 80.5925925925926%, ambiguity：60
+2020-12-07 19:30:45,507|kbqa_test.py[line:164]|kb_fuzzy_classify_test|INFO|出品公司 0.9967487
+制作国家／地区 0.95262706
+无线电视翡翠台首播 0.5224169
+导演 0.0034474074
+出品人 0.00293026
+制作统筹 0.0028748112
+主题曲 0.0023134437
+片尾曲 0.0022066075
+故事 0.0018815125
+片头曲 0.0018273802
+编剧 0.0016690269
+播映 0.0016492036
+作曲 0.0012152935
+作词 0.000927879
+类型 0.0008329135
+主演 0.0007816189
+集数 0.0006768219
+语言 0.00060482376
+编审 0.00060277845
+外景 0.0005566125
+2020-12-07 19:30:45,507|kbqa_test.py[line:171]|kb_fuzzy_classify_test|INFO|神雕侠侣	出品公司	新加坡新传媒制作私人有限公司
+2020-12-07 19:30:46,508|kbqa_test.py[line:173]|kb_fuzzy_classify_test|INFO|total: 719, recall: 676, correct:544, accuracy: 80.4733727810651%, ambiguity：60
+2020-12-07 19:30:46,557|kbqa_test.py[line:164]|kb_fuzzy_classify_test|INFO|邮编区码 0.92400426
+电话区码 0.010063174
+2020-12-07 19:30:47,558|kbqa_test.py[line:173]|kb_fuzzy_classify_test|INFO|total: 720, recall: 677, correct:545, accuracy: 80.50221565731167%, ambiguity：60
+2020-12-07 19:30:48,585|kbqa_test.py[line:155]|kb_fuzzy_classify_test|INFO|total: 721, recall: 678, correct:546, accuracy: 80.53097345132744%, ambiguity：60
+2020-12-07 19:30:49,596|kbqa_test.py[line:155]|kb_fuzzy_classify_test|INFO|total: 722, recall: 679, correct:547, accuracy: 80.55964653902798%, ambiguity：60
+2020-12-07 19:30:49,683|kbqa_test.py[line:164]|kb_fuzzy_classify_test|INFO|营收 0.9612683
+总资产 0.9590564
+净利润 0.94531757
+员工人数 0.022136232
+创建地点 0.012023495
+组织形式 0.0035992926
+2020-12-07 19:30:49,684|kbqa_test.py[line:171]|kb_fuzzy_classify_test|INFO|雪丰钢铁	营收	46.77亿元
+2020-12-07 19:30:50,684|kbqa_test.py[line:173]|kb_fuzzy_classify_test|INFO|total: 723, recall: 680, correct:547, accuracy: 80.44117647058823%, ambiguity：60
+2020-12-07 19:30:51,702|kbqa_test.py[line:155]|kb_fuzzy_classify_test|INFO|total: 724, recall: 681, correct:548, accuracy: 80.46989720998532%, ambiguity：60
+2020-12-07 19:30:51,750|kbqa_test.py[line:164]|kb_fuzzy_classify_test|INFO|范围 0.024968999
+2020-12-07 19:30:52,751|kbqa_test.py[line:173]|kb_fuzzy_classify_test|INFO|total: 725, recall: 682, correct:549, accuracy: 80.49853372434018%, ambiguity：60
+2020-12-07 19:30:53,772|kbqa_test.py[line:155]|kb_fuzzy_classify_test|INFO|total: 726, recall: 683, correct:550, accuracy: 80.52708638360176%, ambiguity：60
+2020-12-07 19:30:53,816|kbqa_test.py[line:146]|kb_fuzzy_classify_test|INFO|哈利·波特与魔法石	书号	isbn978-7-02-003343-0
+2020-12-07 19:30:54,816|kbqa_test.py[line:155]|kb_fuzzy_classify_test|INFO|total: 727, recall: 684, correct:550, accuracy: 80.4093567251462%, ambiguity：61
+2020-12-07 19:30:55,827|kbqa_test.py[line:155]|kb_fuzzy_classify_test|INFO|total: 728, recall: 685, correct:551, accuracy: 80.43795620437956%, ambiguity：61
+2020-12-07 19:30:55,862|kbqa_test.py[line:164]|kb_fuzzy_classify_test|INFO|播出日期 0.90733826
+播映 0.020481149
+2020-12-07 19:30:55,863|kbqa_test.py[line:171]|kb_fuzzy_classify_test|INFO|全美超级模特儿新秀大赛	播出日期	2009年3月4日－2009年（美国）
+2020-12-07 19:30:56,863|kbqa_test.py[line:173]|kb_fuzzy_classify_test|INFO|total: 729, recall: 686, correct:551, accuracy: 80.32069970845481%, ambiguity：61
+2020-12-07 19:30:56,884|kbqa_test.py[line:146]|kb_fuzzy_classify_test|INFO|倩女幽魂	制片	温嘉文钟珍叶百全周国忠
+2020-12-07 19:30:57,885|kbqa_test.py[line:155]|kb_fuzzy_classify_test|INFO|total: 730, recall: 687, correct:551, accuracy: 80.2037845705968%, ambiguity：62
+2020-12-07 19:30:57,934|kbqa_test.py[line:164]|kb_fuzzy_classify_test|INFO|机场距离 0.96773314
+火车站距离 0.073719606
+2020-12-07 19:30:57,935|kbqa_test.py[line:171]|kb_fuzzy_classify_test|INFO|潍坊金茂国际大酒店	机场距离	距潍坊机场 11公里
+2020-12-07 19:30:58,935|kbqa_test.py[line:173]|kb_fuzzy_classify_test|INFO|total: 731, recall: 688, correct:551, accuracy: 80.08720930232558%, ambiguity：62
+2020-12-07 19:30:59,957|kbqa_test.py[line:155]|kb_fuzzy_classify_test|INFO|total: 732, recall: 689, correct:552, accuracy: 80.11611030478954%, ambiguity：62
+2020-12-07 19:31:00,977|kbqa_test.py[line:155]|kb_fuzzy_classify_test|INFO|total: 733, recall: 690, correct:553, accuracy: 80.14492753623189%, ambiguity：62
+2020-12-07 19:31:01,999|kbqa_test.py[line:155]|kb_fuzzy_classify_test|INFO|total: 734, recall: 691, correct:554, accuracy: 80.17366136034732%, ambiguity：62
+2020-12-07 19:31:02,027|kbqa_test.py[line:164]|kb_fuzzy_classify_test|INFO|开盘时间 0.99633455
+2020-12-07 19:31:02,027|kbqa_test.py[line:171]|kb_fuzzy_classify_test|INFO|白银t+d	开盘时间	冬时令20:00-凌晨02:30
+2020-12-07 19:31:03,027|kbqa_test.py[line:173]|kb_fuzzy_classify_test|INFO|total: 735, recall: 692, correct:554, accuracy: 80.05780346820809%, ambiguity：62
+2020-12-07 19:31:04,054|kbqa_test.py[line:155]|kb_fuzzy_classify_test|INFO|total: 736, recall: 693, correct:555, accuracy: 80.08658008658008%, ambiguity：62
+2020-12-07 19:31:04,105|kbqa_test.py[line:164]|kb_fuzzy_classify_test|INFO|所在地区 0.01166245
+2020-12-07 19:31:05,107|kbqa_test.py[line:173]|kb_fuzzy_classify_test|INFO|total: 737, recall: 694, correct:556, accuracy: 80.11527377521614%, ambiguity：62
+2020-12-07 19:31:05,205|kbqa_test.py[line:164]|kb_fuzzy_classify_test|INFO|国家／地区 0.9954745
+无线电视翡翠台首播 0.120001994
+演出 0.0162846
+监制 0.0046062125
+集数 0.0011607689
+主要人物 0.0009198118
+作曲 0.0007958099
+制片人 0.00076722325
+其它译名 0.0006476176
+主唱 0.0005785956
+每集长度 0.0005600554
+助理编导 0.0005560194
+票价 0.00052067876
+2020-12-07 19:31:06,206|kbqa_test.py[line:173]|kb_fuzzy_classify_test|INFO|total: 738, recall: 695, correct:557, accuracy: 80.14388489208633%, ambiguity：62
+2020-12-07 19:31:06,241|kbqa_test.py[line:164]|kb_fuzzy_classify_test|INFO|机场距离 0.9961867
+火车站距离 0.9954521
+2020-12-07 19:31:07,241|kbqa_test.py[line:173]|kb_fuzzy_classify_test|INFO|total: 739, recall: 696, correct:558, accuracy: 80.17241379310344%, ambiguity：62
+2020-12-07 19:31:07,272|kbqa_test.py[line:164]|kb_fuzzy_classify_test|INFO|亲属 0.9968971
+夫 0.022364859
+姓 0.0020720914
+2020-12-07 19:31:08,272|kbqa_test.py[line:173]|kb_fuzzy_classify_test|INFO|total: 740, recall: 697, correct:559, accuracy: 80.20086083213774%, ambiguity：62

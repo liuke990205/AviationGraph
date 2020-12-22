@@ -1,0 +1,1090 @@
+2020-12-10 15:33:05,281|kbqa_test.py[line:157]|kb_fuzzy_classify_test|INFO|total: 1, recall: 1, correct:1, accuracy: 100.0%, ambiguity：0
+2020-12-10 15:33:06,294|kbqa_test.py[line:157]|kb_fuzzy_classify_test|INFO|total: 2, recall: 2, correct:2, accuracy: 100.0%, ambiguity：0
+2020-12-10 15:33:07,332|kbqa_test.py[line:157]|kb_fuzzy_classify_test|INFO|total: 3, recall: 3, correct:3, accuracy: 100.0%, ambiguity：0
+2020-12-10 15:33:13,719|kbqa_test.py[line:166]|kb_fuzzy_classify_test|INFO|国籍 0.9964579
+运动项目 0.8912587
+吉祥物 0.01504335
+事迹 0.0021721178
+2020-12-10 20:28:43,228|kbqa.py[line:73]|<module>|INFO|书名 0.98068136
+isbn 0.9735252
+作者 0.96681666
+页数 0.96666193
+出版时间 0.95589656
+定价 0.053798284
+2020-12-10 20:31:33,049|kbqa.py[line:61]|<module>|INFO|书名 0.98068136
+isbn 0.9735252
+作者 0.96681666
+页数 0.96666193
+出版时间 0.95589656
+定价 0.053798284
+2020-12-10 20:32:33,462|kbqa.py[line:61]|<module>|INFO|丛书名 0.9785018
+isbn 0.9735252
+出版社 0.9712975
+作者 0.96681666
+页数 0.96666193
+出版时间 0.95589656
+字数 0.9414359
+开本 0.9318901
+定价 0.053798284
+2020-12-10 20:35:28,083|kbqa.py[line:62]|<module>|INFO|丛书名 0.9785018
+isbn 0.9735252
+出版社 0.9712975
+作者 0.96681666
+页数 0.96666193
+出版时间 0.95589656
+字数 0.9414359
+开本 0.9318901
+定价 0.053798284
+2020-12-10 20:38:45,689|kbqa.py[line:62]|<module>|INFO|丛书名 0.9785018
+isbn 0.9735252
+出版社 0.9712975
+作者 0.96681666
+页数 0.96666193
+出版时间 0.95589656
+字数 0.9414359
+开本 0.9318901
+定价 0.053798284
+2020-12-10 20:40:40,242|kbqa.py[line:62]|<module>|INFO|出版社 0.99655163
+出版时间 0.99505854
+书名 0.038295217
+isbn 0.010564829
+开本 0.004035395
+定价 0.0012397693
+2020-12-10 20:42:27,016|kbqa.py[line:62]|<module>|INFO|中文名 0.99687684
+邮编区码 0.0032801225
+别称 0.00080557686
+所属地区 0.00080218405
+电话区码 0.0006571051
+建立时间 0.000604459
+面积 0.0005991591
+机场 0.00059632346
+友好城市 0.00055873464
+著名景点 0.00055783434
+地方特产 0.0005316457
+知名产业 0.00052884896
+2020-12-10 20:43:43,330|kbqa_test.py[line:166]|kb_fuzzy_classify_test|INFO|丛书名 0.9785018
+isbn 0.9735252
+出版社 0.9712975
+作者 0.96681666
+页数 0.96666193
+出版时间 0.95589656
+字数 0.9414359
+开本 0.9318901
+定价 0.053798284
+2020-12-10 20:43:43,332|kbqa_test.py[line:175]|kb_fuzzy_classify_test|INFO|计算机应用基础	丛书名	中等职业教育课程改革规划新教材
+2020-12-10 20:43:44,333|kbqa_test.py[line:177]|kb_fuzzy_classify_test|INFO|total: 1, recall: 1, correct:0, accuracy: 0.0%, ambiguity：0
+2020-12-10 20:43:44,414|kbqa_test.py[line:166]|kb_fuzzy_classify_test|INFO|丛书名 0.993057
+出版社 0.985781
+页数 0.98561597
+作者 0.9795338
+开本 0.9701497
+字数 0.96848786
+出版时间 0.9323635
+isbn 0.8836545
+定价 0.05674148
+2020-12-10 20:43:44,415|kbqa_test.py[line:175]|kb_fuzzy_classify_test|INFO|计算机应用基础	丛书名	中等职业教育课程改革规划新教材
+2020-12-10 20:43:45,415|kbqa_test.py[line:177]|kb_fuzzy_classify_test|INFO|total: 2, recall: 2, correct:0, accuracy: 0.0%, ambiguity：0
+2020-12-10 20:43:45,476|kbqa_test.py[line:166]|kb_fuzzy_classify_test|INFO|出版社 0.99655163
+出版时间 0.99505854
+书名 0.038295217
+isbn 0.010564829
+开本 0.004035395
+定价 0.0012397693
+2020-12-10 20:43:45,476|kbqa_test.py[line:175]|kb_fuzzy_classify_test|INFO|高等数学	出版社	武汉大学出版社
+2020-12-10 20:43:46,476|kbqa_test.py[line:177]|kb_fuzzy_classify_test|INFO|total: 3, recall: 3, correct:0, accuracy: 0.0%, ambiguity：0
+2020-12-10 20:43:46,527|kbqa_test.py[line:166]|kb_fuzzy_classify_test|INFO|国籍 0.9964579
+运动项目 0.8912587
+吉祥物 0.01504335
+事迹 0.0021721178
+2020-12-10 20:43:47,527|kbqa_test.py[line:177]|kb_fuzzy_classify_test|INFO|total: 4, recall: 4, correct:1, accuracy: 25.0%, ambiguity：0
+2020-12-10 20:43:47,587|kbqa_test.py[line:166]|kb_fuzzy_classify_test|INFO|isbn 0.99642855
+出版社 0.02064116
+书名 0.012697432
+出版时间 0.0045123883
+开本 0.0037950126
+定价 0.0010511345
+2020-12-10 20:43:48,589|kbqa_test.py[line:177]|kb_fuzzy_classify_test|INFO|total: 5, recall: 5, correct:2, accuracy: 40.0%, ambiguity：0
+2020-12-10 20:43:48,618|kbqa_test.py[line:166]|kb_fuzzy_classify_test|INFO|书名 0.23398316
+2020-12-10 20:43:49,620|kbqa_test.py[line:177]|kb_fuzzy_classify_test|INFO|total: 6, recall: 6, correct:3, accuracy: 50.0%, ambiguity：0
+2020-12-10 20:43:49,737|kbqa_test.py[line:166]|kb_fuzzy_classify_test|INFO|外文名 0.9970187
+缩写 0.0012447046
+信噪比 0.0005706169
+数据传输率 0.00055944454
+发货重量 0.00055865647
+成像器件 0.0005502507
+网络接口 0.00054593553
+网络标准 0.0005384433
+网络类型 0.000530252
+摄像机类型 0.0005195332
+相机类型 0.00051748357
+生产公司 0.0005148317
+视频信号 0.00051427726
+举办城市 0.0005020155
+总像素 0.00049822143
+2020-12-10 20:43:50,740|kbqa_test.py[line:177]|kb_fuzzy_classify_test|INFO|total: 7, recall: 7, correct:4, accuracy: 57.142857142857146%, ambiguity：0
+2020-12-10 20:43:50,780|kbqa_test.py[line:166]|kb_fuzzy_classify_test|INFO|出生日期 0.9966635
+出生地 0.9954472
+别名 0.0005726121
+2020-12-10 20:43:51,780|kbqa_test.py[line:177]|kb_fuzzy_classify_test|INFO|total: 8, recall: 8, correct:5, accuracy: 62.5%, ambiguity：0
+2020-12-10 20:43:51,809|kbqa_test.py[line:166]|kb_fuzzy_classify_test|INFO|小说进度 0.99638844
+2020-12-10 20:43:52,810|kbqa_test.py[line:177]|kb_fuzzy_classify_test|INFO|total: 9, recall: 9, correct:6, accuracy: 66.66666666666667%, ambiguity：0
+2020-12-10 20:43:52,841|kbqa_test.py[line:166]|kb_fuzzy_classify_test|INFO|连载网站 0.99599826
+2020-12-10 20:43:53,842|kbqa_test.py[line:177]|kb_fuzzy_classify_test|INFO|total: 10, recall: 10, correct:7, accuracy: 70.0%, ambiguity：0
+2020-12-10 20:43:53,931|kbqa_test.py[line:166]|kb_fuzzy_classify_test|INFO|页数 0.9969505
+字数 0.02165117
+书号 0.0013797211
+出版社 0.0013532572
+isbn 0.0009928249
+作者 0.00093844946
+出版时间 0.00093369395
+定价 0.0008407944
+印次 0.00064436294
+作/译者 0.0006390614
+2020-12-10 20:43:54,932|kbqa_test.py[line:177]|kb_fuzzy_classify_test|INFO|total: 11, recall: 11, correct:8, accuracy: 72.72727272727273%, ambiguity：0
+2020-12-10 20:43:55,028|kbqa_test.py[line:166]|kb_fuzzy_classify_test|INFO|中文名 0.99687684
+邮编区码 0.0032801225
+别称 0.00080557686
+所属地区 0.00080218405
+电话区码 0.0006571051
+建立时间 0.000604459
+面积 0.0005991591
+机场 0.00059632346
+友好城市 0.00055873464
+著名景点 0.00055783434
+地方特产 0.0005316457
+知名产业 0.00052884896
+2020-12-10 20:43:56,029|kbqa_test.py[line:177]|kb_fuzzy_classify_test|INFO|total: 12, recall: 12, correct:9, accuracy: 75.0%, ambiguity：0
+2020-12-10 20:43:56,084|kbqa_test.py[line:166]|kb_fuzzy_classify_test|INFO|出生地 0.99672925
+代表作品 0.0024210198
+职业 0.0011631997
+毕业院校 0.0009741803
+毕业院校 0.0009741803
+2020-12-10 20:43:57,086|kbqa_test.py[line:177]|kb_fuzzy_classify_test|INFO|total: 13, recall: 13, correct:10, accuracy: 76.92307692307692%, ambiguity：0
+2020-12-10 20:43:57,151|kbqa_test.py[line:166]|kb_fuzzy_classify_test|INFO|定价 0.99690455
+书名 0.0076312455
+出版时间 0.004202182
+出版社 0.003307791
+开本 0.002343244
+isbn 0.0011613254
+2020-12-10 20:43:58,152|kbqa_test.py[line:177]|kb_fuzzy_classify_test|INFO|total: 14, recall: 14, correct:11, accuracy: 78.57142857142857%, ambiguity：0
+2020-12-10 20:43:58,200|kbqa_test.py[line:166]|kb_fuzzy_classify_test|INFO|职业 0.99710184
+籍贯 0.043541856
+去世年月 0.00063353736
+电视节目 0.0005329911
+2020-12-10 20:43:59,200|kbqa_test.py[line:177]|kb_fuzzy_classify_test|INFO|total: 15, recall: 15, correct:12, accuracy: 80.0%, ambiguity：0
+2020-12-10 20:43:59,358|kbqa_test.py[line:166]|kb_fuzzy_classify_test|INFO|中文名 0.9968541
+村级区划单位数 0.0014508484
+邮政区码 0.0012606377
+行政区划代码 0.001234949
+地理位置 0.0009612316
+地理、人口、经济 0.00072794146
+所属地区 0.0006476077
+所属地区 0.0006476077
+-行政村数 0.0006441803
+电话区号 0.00063101517
+下辖地区 0.00061638554
+上级行政区 0.000611326
+面积 0.00059103424
+面积 0.00059103424
+人口 0.00056655216
+人口 0.00056655216
+地方特产 0.0005421594
+知名产业 0.000541425
+-社区数 0.0005392233
+气候条件 0.00052273355
+2020-12-10 20:43:59,358|kbqa_test.py[line:175]|kb_fuzzy_classify_test|INFO|城关镇	中文名	城关镇[临澧县]
+2020-12-10 20:44:00,359|kbqa_test.py[line:177]|kb_fuzzy_classify_test|INFO|total: 16, recall: 16, correct:12, accuracy: 75.0%, ambiguity：0
+2020-12-10 20:44:00,430|kbqa_test.py[line:166]|kb_fuzzy_classify_test|INFO|民族 0.9965611
+参加工作 0.003336122
+主要成就 0.0012190731
+性别 0.00086259376
+职业 0.00082608365
+毕业院校 0.0007856787
+出生地 0.0007093377
+2020-12-10 20:44:01,431|kbqa_test.py[line:177]|kb_fuzzy_classify_test|INFO|total: 17, recall: 17, correct:13, accuracy: 76.47058823529412%, ambiguity：0
+2020-12-10 20:44:01,481|kbqa_test.py[line:166]|kb_fuzzy_classify_test|INFO|装帧 0.99697876
+2020-12-10 20:44:02,483|kbqa_test.py[line:177]|kb_fuzzy_classify_test|INFO|total: 18, recall: 18, correct:14, accuracy: 77.77777777777777%, ambiguity：0
+2020-12-10 20:44:02,629|kbqa_test.py[line:166]|kb_fuzzy_classify_test|INFO|播映 0.9717106
+片头曲 0.96550393
+出品公司 0.96186465
+片尾曲 0.94841945
+制作统筹 0.94601285
+出品人 0.94556105
+制作国家／地区 0.923894
+主题曲 0.8977218
+导演 0.19878405
+主演 0.15690346
+类型 0.14856341
+编剧 0.1333827
+故事 0.089225344
+集数 0.08542061
+作曲 0.05333538
+无线电视翡翠台首播 0.04307243
+作词 0.035272483
+语言 0.008785394
+外景 0.0073233084
+编审 0.0042927344
+2020-12-10 20:44:02,629|kbqa_test.py[line:175]|kb_fuzzy_classify_test|INFO|神雕侠侣	播映	台视
+2020-12-10 20:44:03,629|kbqa_test.py[line:177]|kb_fuzzy_classify_test|INFO|total: 19, recall: 19, correct:14, accuracy: 73.6842105263158%, ambiguity：0
+2020-12-10 20:44:03,659|kbqa_test.py[line:166]|kb_fuzzy_classify_test|INFO|性别 0.99011606
+2020-12-10 20:44:04,661|kbqa_test.py[line:177]|kb_fuzzy_classify_test|INFO|total: 20, recall: 20, correct:15, accuracy: 75.0%, ambiguity：0
+2020-12-10 20:44:04,737|kbqa_test.py[line:166]|kb_fuzzy_classify_test|INFO|开本 0.9964072
+书名 0.99452645
+出版社 0.97666353
+isbn 0.91869986
+出版时间 0.87425977
+定价 0.0042876317
+2020-12-10 20:44:04,738|kbqa_test.py[line:175]|kb_fuzzy_classify_test|INFO|高等数学	开本	787x9601/16
+2020-12-10 20:44:05,740|kbqa_test.py[line:177]|kb_fuzzy_classify_test|INFO|total: 21, recall: 21, correct:15, accuracy: 71.42857142857143%, ambiguity：0
+2020-12-10 20:44:05,769|kbqa_test.py[line:166]|kb_fuzzy_classify_test|INFO|公司名称 0.99561346
+2020-12-10 20:44:06,769|kbqa_test.py[line:177]|kb_fuzzy_classify_test|INFO|total: 22, recall: 22, correct:16, accuracy: 72.72727272727273%, ambiguity：0
+2020-12-10 20:44:06,927|kbqa_test.py[line:166]|kb_fuzzy_classify_test|INFO|类别 0.9923194
+版次 0.013562034
+中文别名 0.0026364217
+产生原因 0.0015668783
+研究方向 0.0014632151
+出品公司 0.0013953543
+制作人 0.001317023
+颜色 0.0012714353
+操作系统 0.0012588253
+标志 0.0012352113
+曲长 0.0010421823
+专业方向 0.0009716155
+制作成本 0.0008819052
+上市时间 0.0008775799
+录制 0.00075001444
+职称 0.00073789223
+顾问 0.0007191021
+人口数量 0.0007188732
+cpu频率 0.0006405605
+果期 0.0006318824
+2020-12-10 20:44:06,928|kbqa_test.py[line:175]|kb_fuzzy_classify_test|INFO|红	类别	恋爱少年
+2020-12-10 20:44:07,929|kbqa_test.py[line:177]|kb_fuzzy_classify_test|INFO|total: 23, recall: 23, correct:16, accuracy: 69.56521739130434%, ambiguity：0
+2020-12-10 20:44:07,993|kbqa_test.py[line:166]|kb_fuzzy_classify_test|INFO|毕业院校 0.9971206
+毕业院校 0.9971206
+职业 0.0035902266
+主要成就 0.0006973878
+出生日期 0.00060734875
+其他作品 0.0006019283
+2020-12-10 20:44:07,994|kbqa_test.py[line:175]|kb_fuzzy_classify_test|INFO|王强	毕业院校	湖北音乐学院
+2020-12-10 20:44:08,994|kbqa_test.py[line:177]|kb_fuzzy_classify_test|INFO|total: 24, recall: 24, correct:17, accuracy: 70.83333333333333%, ambiguity：0
+2020-12-10 20:44:09,023|kbqa_test.py[line:166]|kb_fuzzy_classify_test|INFO|国籍 0.9970714
+2020-12-10 20:44:10,023|kbqa_test.py[line:177]|kb_fuzzy_classify_test|INFO|total: 25, recall: 25, correct:18, accuracy: 72.0%, ambiguity：0
+2020-12-10 20:44:10,051|kbqa_test.py[line:166]|kb_fuzzy_classify_test|INFO|总部地点 0.047425278
+2020-12-10 20:44:11,052|kbqa_test.py[line:177]|kb_fuzzy_classify_test|INFO|total: 26, recall: 26, correct:19, accuracy: 73.07692307692308%, ambiguity：0
+2020-12-10 20:44:11,087|kbqa_test.py[line:166]|kb_fuzzy_classify_test|INFO|性别 0.9912764
+血型 0.0008158867
+2020-12-10 20:44:12,089|kbqa_test.py[line:177]|kb_fuzzy_classify_test|INFO|total: 27, recall: 27, correct:20, accuracy: 74.07407407407408%, ambiguity：0
+2020-12-10 20:44:12,137|kbqa_test.py[line:166]|kb_fuzzy_classify_test|INFO|面积 0.9914882
+国土面积 0.047391377
+年平均气温 0.0006584034
+2020-12-10 20:44:13,139|kbqa_test.py[line:177]|kb_fuzzy_classify_test|INFO|total: 28, recall: 28, correct:21, accuracy: 75.0%, ambiguity：0
+2020-12-10 20:44:13,182|kbqa_test.py[line:166]|kb_fuzzy_classify_test|INFO|所属地区 0.9967482
+隶属于 0.9947766
+村内企业 0.007991188
+主要产业 0.0010722424
+户数 0.00062326324
+2020-12-10 20:44:14,183|kbqa_test.py[line:177]|kb_fuzzy_classify_test|INFO|total: 29, recall: 29, correct:22, accuracy: 75.86206896551724%, ambiguity：0
+2020-12-10 20:44:14,214|kbqa_test.py[line:166]|kb_fuzzy_classify_test|INFO|地理位置 0.9954531
+所属地区 0.99356467
+行政区类别 0.04632231
+2020-12-10 20:44:15,215|kbqa_test.py[line:177]|kb_fuzzy_classify_test|INFO|total: 30, recall: 30, correct:23, accuracy: 76.66666666666667%, ambiguity：0
+2020-12-10 20:44:15,242|kbqa_test.py[line:166]|kb_fuzzy_classify_test|INFO|成立时间 0.9966149
+2020-12-10 20:44:16,243|kbqa_test.py[line:177]|kb_fuzzy_classify_test|INFO|total: 31, recall: 31, correct:24, accuracy: 77.41935483870968%, ambiguity：0
+2020-12-10 20:44:16,282|kbqa_test.py[line:166]|kb_fuzzy_classify_test|INFO|职业 0.9970559
+去世年月 0.00081305
+逝世日期 0.0006858854
+国籍 0.00053956674
+2020-12-10 20:44:17,285|kbqa_test.py[line:177]|kb_fuzzy_classify_test|INFO|total: 32, recall: 32, correct:25, accuracy: 78.125%, ambiguity：0
+2020-12-10 20:44:17,313|kbqa_test.py[line:166]|kb_fuzzy_classify_test|INFO|经营范围 0.005045369
+2020-12-10 20:44:18,314|kbqa_test.py[line:177]|kb_fuzzy_classify_test|INFO|total: 33, recall: 33, correct:26, accuracy: 78.78787878787878%, ambiguity：0
+2020-12-10 20:44:18,354|kbqa_test.py[line:166]|kb_fuzzy_classify_test|INFO|中文学名 0.0014226169
+别称 0.0006748452
+2020-12-10 20:44:19,355|kbqa_test.py[line:177]|kb_fuzzy_classify_test|INFO|total: 34, recall: 34, correct:27, accuracy: 79.41176470588235%, ambiguity：0
+2020-12-10 20:44:19,426|kbqa_test.py[line:166]|kb_fuzzy_classify_test|INFO|出生年月 0.9963238
+生于 0.9876951
+籍贯 0.0053274403
+职业 0.0011837691
+身高 0.0009984791
+星座 0.00057534553
+职称 0.00056353974
+2020-12-10 20:44:20,426|kbqa_test.py[line:177]|kb_fuzzy_classify_test|INFO|total: 35, recall: 35, correct:28, accuracy: 80.0%, ambiguity：0
+2020-12-10 20:44:20,455|kbqa_test.py[line:166]|kb_fuzzy_classify_test|INFO|界 0.0031610378
+2020-12-10 20:44:21,457|kbqa_test.py[line:177]|kb_fuzzy_classify_test|INFO|total: 36, recall: 36, correct:29, accuracy: 80.55555555555556%, ambiguity：0
+2020-12-10 20:44:21,484|kbqa_test.py[line:166]|kb_fuzzy_classify_test|INFO|别名 0.9938306
+2020-12-10 20:44:22,486|kbqa_test.py[line:177]|kb_fuzzy_classify_test|INFO|total: 37, recall: 37, correct:30, accuracy: 81.08108108108108%, ambiguity：0
+2020-12-10 20:44:22,544|kbqa_test.py[line:166]|kb_fuzzy_classify_test|INFO|主要成就 0.99614245
+出生日期 0.020793604
+学历 0.017457627
+出生地 0.007966048
+女 0.0034384744
+2020-12-10 20:44:23,545|kbqa_test.py[line:177]|kb_fuzzy_classify_test|INFO|total: 38, recall: 38, correct:31, accuracy: 81.57894736842105%, ambiguity：0
+2020-12-10 20:44:23,571|kbqa_test.py[line:166]|kb_fuzzy_classify_test|INFO|公司性质 0.996967
+年营业额 0.00056556455
+2020-12-10 20:44:24,571|kbqa_test.py[line:177]|kb_fuzzy_classify_test|INFO|total: 39, recall: 39, correct:32, accuracy: 82.05128205128206%, ambiguity：0
+2020-12-10 20:44:24,616|kbqa_test.py[line:166]|kb_fuzzy_classify_test|INFO|人口 0.9951466
+耕地 0.0032804532
+地理位置 0.0025947934
+2020-12-10 20:44:25,617|kbqa_test.py[line:177]|kb_fuzzy_classify_test|INFO|total: 40, recall: 40, correct:33, accuracy: 82.5%, ambiguity：0
+2020-12-10 20:44:25,641|kbqa_test.py[line:166]|kb_fuzzy_classify_test|INFO|科 0.99625164
+2020-12-10 20:44:26,643|kbqa_test.py[line:177]|kb_fuzzy_classify_test|INFO|total: 41, recall: 41, correct:34, accuracy: 82.92682926829268%, ambiguity：0
+2020-12-10 20:44:26,690|kbqa_test.py[line:166]|kb_fuzzy_classify_test|INFO|英文名 0.9970066
+2020-12-10 20:44:27,691|kbqa_test.py[line:177]|kb_fuzzy_classify_test|INFO|total: 42, recall: 42, correct:35, accuracy: 83.33333333333333%, ambiguity：0
+2020-12-10 20:44:27,751|kbqa_test.py[line:166]|kb_fuzzy_classify_test|INFO|制片人 0.96803576
+每集长度 0.750743
+其他 0.04453098
+类别 0.015776452
+2020-12-10 20:44:27,752|kbqa_test.py[line:175]|kb_fuzzy_classify_test|INFO|《神雕侠侣》	制片人	张纪中
+2020-12-10 20:44:28,753|kbqa_test.py[line:177]|kb_fuzzy_classify_test|INFO|total: 43, recall: 43, correct:35, accuracy: 81.3953488372093%, ambiguity：0
+2020-12-10 20:44:28,788|kbqa_test.py[line:166]|kb_fuzzy_classify_test|INFO|代表作品 0.996999
+出生地点 0.0012541709
+2020-12-10 20:44:29,789|kbqa_test.py[line:177]|kb_fuzzy_classify_test|INFO|total: 44, recall: 44, correct:36, accuracy: 81.81818181818181%, ambiguity：0
+2020-12-10 20:44:29,833|kbqa_test.py[line:166]|kb_fuzzy_classify_test|INFO|地质学 0.020663638
+门 0.01683357
+2020-12-10 20:44:29,834|kbqa_test.py[line:175]|kb_fuzzy_classify_test|INFO|三墩乌龟石	地质学	“龟裂状风化火山岩”
+2020-12-10 20:44:30,834|kbqa_test.py[line:177]|kb_fuzzy_classify_test|INFO|total: 45, recall: 45, correct:36, accuracy: 80.0%, ambiguity：0
+2020-12-10 20:44:30,875|kbqa_test.py[line:166]|kb_fuzzy_classify_test|INFO|性质 0.99691665
+本质 0.99015594
+gps芯片 0.004157758
+2020-12-10 20:44:31,876|kbqa_test.py[line:177]|kb_fuzzy_classify_test|INFO|total: 46, recall: 46, correct:37, accuracy: 80.43478260869566%, ambiguity：0
+2020-12-10 20:44:31,921|kbqa_test.py[line:166]|kb_fuzzy_classify_test|INFO|籍贯 0.9911947
+出生地 0.92370594
+参加工作 0.01895393
+2020-12-10 20:44:32,921|kbqa_test.py[line:177]|kb_fuzzy_classify_test|INFO|total: 47, recall: 47, correct:38, accuracy: 80.85106382978724%, ambiguity：0
+2020-12-10 20:44:32,954|kbqa_test.py[line:166]|kb_fuzzy_classify_test|INFO|游戏类型 0.054107282
+2020-12-10 20:44:33,955|kbqa_test.py[line:177]|kb_fuzzy_classify_test|INFO|total: 48, recall: 48, correct:39, accuracy: 81.25%, ambiguity：0
+2020-12-10 20:44:33,993|kbqa_test.py[line:166]|kb_fuzzy_classify_test|INFO|目 0.9966462
+2020-12-10 20:44:34,994|kbqa_test.py[line:177]|kb_fuzzy_classify_test|INFO|total: 49, recall: 49, correct:40, accuracy: 81.63265306122449%, ambiguity：0
+2020-12-10 20:44:35,034|kbqa_test.py[line:166]|kb_fuzzy_classify_test|INFO|地点 0.9942543
+主峰海拔 0.9927382
+2020-12-10 20:44:36,035|kbqa_test.py[line:177]|kb_fuzzy_classify_test|INFO|total: 50, recall: 50, correct:41, accuracy: 82.0%, ambiguity：0
+2020-12-10 20:44:36,056|kbqa_test.py[line:166]|kb_fuzzy_classify_test|INFO|纲 0.9968336
+2020-12-10 20:44:37,057|kbqa_test.py[line:177]|kb_fuzzy_classify_test|INFO|total: 51, recall: 51, correct:42, accuracy: 82.3529411764706%, ambiguity：0
+2020-12-10 20:44:37,088|kbqa_test.py[line:166]|kb_fuzzy_classify_test|INFO|过世 0.9920604
+逝世日期 0.98546845
+家族 0.031261332
+2020-12-10 20:44:37,089|kbqa_test.py[line:175]|kb_fuzzy_classify_test|INFO|斐迪南一世	过世	1927年7月20日（61岁）锡纳亚,罗马尼亚王国
+2020-12-10 20:44:38,089|kbqa_test.py[line:177]|kb_fuzzy_classify_test|INFO|total: 52, recall: 52, correct:42, accuracy: 80.76923076923077%, ambiguity：0
+2020-12-10 20:44:38,138|kbqa_test.py[line:166]|kb_fuzzy_classify_test|INFO|民族 0.9968003
+籍贯 0.001275402
+主要成就 0.0010114532
+出生年月 0.00081379764
+2020-12-10 20:44:39,139|kbqa_test.py[line:177]|kb_fuzzy_classify_test|INFO|total: 53, recall: 53, correct:43, accuracy: 81.13207547169812%, ambiguity：0
+2020-12-10 20:44:39,187|kbqa_test.py[line:166]|kb_fuzzy_classify_test|INFO|拼音 0.99704283
+日文 0.00065996865
+出处 0.000656809
+写作进程 0.0006181638
+2020-12-10 20:44:40,188|kbqa_test.py[line:177]|kb_fuzzy_classify_test|INFO|total: 54, recall: 54, correct:44, accuracy: 81.48148148148148%, ambiguity：0
+2020-12-10 20:44:40,264|kbqa_test.py[line:166]|kb_fuzzy_classify_test|INFO|外文名 0.9931211
+外文名称 0.0012676175
+机场 0.00079044164
+别称 0.0007041851
+市镇 0.0006824635
+建立时间 0.00065614324
+地域名人 0.00062089815
+场上位置 0.0005614033
+2020-12-10 20:44:40,265|kbqa_test.py[line:175]|kb_fuzzy_classify_test|INFO|圣地亚哥	外文名	saintjakob
+2020-12-10 20:44:41,266|kbqa_test.py[line:177]|kb_fuzzy_classify_test|INFO|total: 55, recall: 55, correct:44, accuracy: 80.0%, ambiguity：0
+2020-12-10 20:44:41,412|kbqa_test.py[line:166]|kb_fuzzy_classify_test|INFO|拉丁学名 0.9971194
+命名者及年代 0.001921934
+其他特点 0.000662843
+特色 0.00064346293
+参考价格 0.0006060789
+主要性能 0.00057399884
+读者对象 0.0005630581
+业务地区 0.0005395017
+出版商 0.00053917046
+cas号 0.00053423893
+字幕 0.0005311337
+发货重量 0.00052291394
+创办人 0.00051776576
+病原 0.0005140841
+所属品牌 0.00051017967
+员工数 0.0005082229
+适用机型 0.00049835915
+年营业额 0.0004840022
+cpu型号 0.0004774247
+cpu频率 0.00047643099
+2020-12-10 20:44:41,412|kbqa_test.py[line:175]|kb_fuzzy_classify_test|INFO|苹果	拉丁学名	maluspumilamill.
+2020-12-10 20:44:42,414|kbqa_test.py[line:177]|kb_fuzzy_classify_test|INFO|total: 56, recall: 56, correct:44, accuracy: 78.57142857142857%, ambiguity：0
+2020-12-10 20:44:42,441|kbqa_test.py[line:166]|kb_fuzzy_classify_test|INFO|行政区类别 0.99653983
+2020-12-10 20:44:43,443|kbqa_test.py[line:177]|kb_fuzzy_classify_test|INFO|total: 57, recall: 57, correct:45, accuracy: 78.94736842105263%, ambiguity：0
+2020-12-10 20:44:43,471|kbqa_test.py[line:166]|kb_fuzzy_classify_test|INFO|分类 0.0027865795
+2020-12-10 20:44:44,474|kbqa_test.py[line:177]|kb_fuzzy_classify_test|INFO|total: 58, recall: 58, correct:46, accuracy: 79.3103448275862%, ambiguity：0
+2020-12-10 20:44:44,502|kbqa_test.py[line:166]|kb_fuzzy_classify_test|INFO|属 0.9887388
+2020-12-10 20:44:45,504|kbqa_test.py[line:177]|kb_fuzzy_classify_test|INFO|total: 59, recall: 59, correct:47, accuracy: 79.66101694915254%, ambiguity：0
+2020-12-10 20:44:45,534|kbqa_test.py[line:166]|kb_fuzzy_classify_test|INFO|身高 0.9958008
+2020-12-10 20:44:46,535|kbqa_test.py[line:177]|kb_fuzzy_classify_test|INFO|total: 60, recall: 60, correct:48, accuracy: 80.0%, ambiguity：0
+2020-12-10 20:44:46,557|kbqa_test.py[line:166]|kb_fuzzy_classify_test|INFO|地区 0.98760915
+2020-12-10 20:44:47,558|kbqa_test.py[line:177]|kb_fuzzy_classify_test|INFO|total: 61, recall: 61, correct:49, accuracy: 80.32786885245902%, ambiguity：0
+2020-12-10 20:44:47,587|kbqa_test.py[line:166]|kb_fuzzy_classify_test|INFO|作品名称 0.9969229
+2020-12-10 20:44:48,589|kbqa_test.py[line:177]|kb_fuzzy_classify_test|INFO|total: 62, recall: 62, correct:50, accuracy: 80.64516129032258%, ambiguity：0
+2020-12-10 20:44:48,638|kbqa_test.py[line:166]|kb_fuzzy_classify_test|INFO|创作年代 0.99556434
+2020-12-10 20:44:49,639|kbqa_test.py[line:177]|kb_fuzzy_classify_test|INFO|total: 63, recall: 63, correct:51, accuracy: 80.95238095238095%, ambiguity：0
+2020-12-10 20:44:49,815|kbqa_test.py[line:166]|kb_fuzzy_classify_test|INFO|导演 0.99690884
+导演 0.99690884
+编剧 0.038955085
+编剧 0.038955085
+主演 0.019848976
+主演 0.019848976
+制片地区 0.0024522778
+上映地区 0.0018142186
+上映时间 0.0015819354
+上映时间 0.0015819354
+首播时间 0.0015401975
+出品公司 0.0009928804
+画面颜色 0.00071018323
+出版时间 0.00060444634
+简介 0.0005841063
+获得奖项 0.0005745526
+出版社 0.0005663797
+类别 0.00054200075
+中文名 0.0005407878
+类型 0.0005384237
+2020-12-10 20:44:49,816|kbqa_test.py[line:175]|kb_fuzzy_classify_test|INFO|《红楼梦》	导演	胡雪扬
+2020-12-10 20:44:50,817|kbqa_test.py[line:177]|kb_fuzzy_classify_test|INFO|total: 64, recall: 64, correct:52, accuracy: 81.25%, ambiguity：0
+2020-12-10 20:44:50,847|kbqa_test.py[line:166]|kb_fuzzy_classify_test|INFO|特点 0.002235596
+2020-12-10 20:44:51,847|kbqa_test.py[line:177]|kb_fuzzy_classify_test|INFO|total: 65, recall: 65, correct:53, accuracy: 81.53846153846153%, ambiguity：0
+2020-12-10 20:44:51,903|kbqa_test.py[line:166]|kb_fuzzy_classify_test|INFO|参战方 0.61742157
+时间 0.51450354
+结果 0.08170686
+结果 0.08170686
+地点 0.0025010733
+2020-12-10 20:44:51,904|kbqa_test.py[line:175]|kb_fuzzy_classify_test|INFO|平壤之战	参战方	中国；日本
+2020-12-10 20:44:52,905|kbqa_test.py[line:177]|kb_fuzzy_classify_test|INFO|total: 66, recall: 66, correct:53, accuracy: 80.3030303030303%, ambiguity：0
+2020-12-10 20:44:52,932|kbqa_test.py[line:166]|kb_fuzzy_classify_test|INFO|中文学名 0.9963085
+2020-12-10 20:44:53,933|kbqa_test.py[line:177]|kb_fuzzy_classify_test|INFO|total: 67, recall: 67, correct:54, accuracy: 80.59701492537313%, ambiguity：0
+2020-12-10 20:44:53,961|kbqa_test.py[line:166]|kb_fuzzy_classify_test|INFO|界 0.9968675
+2020-12-10 20:44:54,963|kbqa_test.py[line:177]|kb_fuzzy_classify_test|INFO|total: 68, recall: 68, correct:55, accuracy: 80.88235294117646%, ambiguity：0
+2020-12-10 20:44:54,992|kbqa_test.py[line:166]|kb_fuzzy_classify_test|INFO|别称 0.9953719
+2020-12-10 20:44:55,993|kbqa_test.py[line:177]|kb_fuzzy_classify_test|INFO|total: 69, recall: 69, correct:56, accuracy: 81.15942028985508%, ambiguity：0
+2020-12-10 20:44:56,054|kbqa_test.py[line:166]|kb_fuzzy_classify_test|INFO|出生地 0.99654216
+出生日期 0.97806054
+女 0.0015672903
+学历 0.0008725899
+主要成就 0.0005611757
+2020-12-10 20:44:57,054|kbqa_test.py[line:177]|kb_fuzzy_classify_test|INFO|total: 70, recall: 70, correct:57, accuracy: 81.42857142857143%, ambiguity：0
+2020-12-10 20:44:57,085|kbqa_test.py[line:166]|kb_fuzzy_classify_test|INFO|文学体裁 0.9969928
+作品出处 0.0010655879
+所属文库 0.0007834272
+2020-12-10 20:44:58,086|kbqa_test.py[line:177]|kb_fuzzy_classify_test|INFO|total: 71, recall: 71, correct:58, accuracy: 81.69014084507042%, ambiguity：0
+2020-12-10 20:44:58,113|kbqa_test.py[line:166]|kb_fuzzy_classify_test|INFO|国家 0.996815
+2020-12-10 20:44:59,114|kbqa_test.py[line:177]|kb_fuzzy_classify_test|INFO|total: 72, recall: 72, correct:59, accuracy: 81.94444444444444%, ambiguity：0
+2020-12-10 20:44:59,144|kbqa_test.py[line:166]|kb_fuzzy_classify_test|INFO|纲 0.9673711
+2020-12-10 20:44:59,145|kbqa_test.py[line:175]|kb_fuzzy_classify_test|INFO|倭叉角羚	纲	哺乳纲mammalia
+2020-12-10 20:45:00,146|kbqa_test.py[line:177]|kb_fuzzy_classify_test|INFO|total: 73, recall: 73, correct:59, accuracy: 80.82191780821918%, ambiguity：0
+2020-12-10 20:45:00,210|kbqa_test.py[line:166]|kb_fuzzy_classify_test|INFO|亚目 0.9713292
+纲 0.9566321
+亚门 0.87287325
+属 0.08055644
+科 0.032585192
+门 0.005415086
+2020-12-10 20:45:00,211|kbqa_test.py[line:175]|kb_fuzzy_classify_test|INFO|极乐吻鰕虎	亚目	鰕虎亚目gobioidei
+2020-12-10 20:45:01,212|kbqa_test.py[line:177]|kb_fuzzy_classify_test|INFO|total: 74, recall: 74, correct:59, accuracy: 79.72972972972973%, ambiguity：0
+2020-12-10 20:45:01,254|kbqa_test.py[line:166]|kb_fuzzy_classify_test|INFO|科 0.9960943
+纲 0.99455005
+目 0.9849488
+2020-12-10 20:45:02,255|kbqa_test.py[line:177]|kb_fuzzy_classify_test|INFO|total: 75, recall: 75, correct:60, accuracy: 80.0%, ambiguity：0
+2020-12-10 20:45:02,318|kbqa_test.py[line:166]|kb_fuzzy_classify_test|INFO|制片地区 0.9956644
+摄制格式 0.9006636
+级别 0.0009380651
+幅面 0.0007299288
+摄影 0.0006685947
+其它译名 0.00065548014
+2020-12-10 20:45:03,319|kbqa_test.py[line:177]|kb_fuzzy_classify_test|INFO|total: 76, recall: 76, correct:61, accuracy: 80.26315789473684%, ambiguity：0
+2020-12-10 20:45:03,348|kbqa_test.py[line:166]|kb_fuzzy_classify_test|INFO|运动项目 0.9970161
+2020-12-10 20:45:04,348|kbqa_test.py[line:177]|kb_fuzzy_classify_test|INFO|total: 77, recall: 77, correct:62, accuracy: 80.51948051948052%, ambiguity：0
+2020-12-10 20:45:04,385|kbqa_test.py[line:166]|kb_fuzzy_classify_test|INFO|译者 0.9911305
+语言 0.029617537
+2020-12-10 20:45:04,386|kbqa_test.py[line:175]|kb_fuzzy_classify_test|INFO|真相	译者	陈睿杨通
+2020-12-10 20:45:05,387|kbqa_test.py[line:177]|kb_fuzzy_classify_test|INFO|total: 78, recall: 78, correct:62, accuracy: 79.48717948717949%, ambiguity：0
+2020-12-10 20:45:05,415|kbqa_test.py[line:166]|kb_fuzzy_classify_test|INFO|体重 0.99689204
+2020-12-10 20:45:06,416|kbqa_test.py[line:177]|kb_fuzzy_classify_test|INFO|total: 79, recall: 79, correct:63, accuracy: 79.74683544303798%, ambiguity：0
+2020-12-10 20:45:07,427|kbqa_test.py[line:177]|kb_fuzzy_classify_test|INFO|total: 80, recall: 79, correct:63, accuracy: 79.74683544303798%, ambiguity：0
+2020-12-10 20:45:07,544|kbqa_test.py[line:166]|kb_fuzzy_classify_test|INFO|作者 0.9911822
+isbn 0.9907285
+影片片长 0.9833066
+上映地区 0.9659941
+开本 0.9444533
+出版时间 0.9253491
+上映时间 0.8508903
+语言版本 0.70475435
+主要奖项 0.06447329
+语种 0.05585597
+编剧 0.041391775
+类别 0.019380696
+导演 0.019370694
+简介 0.005595892
+主演 0.0019829131
+2020-12-10 20:45:07,544|kbqa_test.py[line:175]|kb_fuzzy_classify_test|INFO|《兄弟》	作者	余华著
+2020-12-10 20:45:08,545|kbqa_test.py[line:177]|kb_fuzzy_classify_test|INFO|total: 81, recall: 80, correct:63, accuracy: 78.75%, ambiguity：0
+2020-12-10 20:45:08,573|kbqa_test.py[line:166]|kb_fuzzy_classify_test|INFO|创办时间 0.8684469
+2020-12-10 20:45:09,574|kbqa_test.py[line:177]|kb_fuzzy_classify_test|INFO|total: 82, recall: 81, correct:64, accuracy: 79.01234567901234%, ambiguity：0
+2020-12-10 20:45:09,654|kbqa_test.py[line:166]|kb_fuzzy_classify_test|INFO|主演 0.9952702
+片尾曲 0.89850634
+其它译名 0.7607906
+主题曲 0.19940363
+监制 0.0042356155
+编剧 0.0030156805
+编导 0.0009402109
+媒介 0.00066341524
+2020-12-10 20:45:10,656|kbqa_test.py[line:177]|kb_fuzzy_classify_test|INFO|total: 83, recall: 82, correct:65, accuracy: 79.26829268292683%, ambiguity：0
+2020-12-10 20:45:10,716|kbqa_test.py[line:166]|kb_fuzzy_classify_test|INFO|出生日期 0.98060703
+毕业院校 0.043729905
+毕业院校 0.043729905
+主要成就 0.035220873
+其他作品 0.016273445
+职业 0.00079489674
+2020-12-10 20:45:10,717|kbqa_test.py[line:175]|kb_fuzzy_classify_test|INFO|王强	出生日期	1911年
+2020-12-10 20:45:11,718|kbqa_test.py[line:177]|kb_fuzzy_classify_test|INFO|total: 84, recall: 83, correct:65, accuracy: 78.3132530120482%, ambiguity：0
+2020-12-10 20:45:11,812|kbqa_test.py[line:166]|kb_fuzzy_classify_test|INFO|出处 0.9966659
+竣工时间 0.0027972802
+著名人物 0.0011566068
+所属市 0.00084566994
+方言 0.00072864385
+水库位置 0.00068385195
+面积 0.00066705985
+坝顶长度 0.0006364675
+灌溉面积 0.00062948134
+重修时间 0.00057361467
+人口 0.0005690739
+总库容 0.00055236154
+2020-12-10 20:45:12,814|kbqa_test.py[line:177]|kb_fuzzy_classify_test|INFO|total: 85, recall: 84, correct:66, accuracy: 78.57142857142857%, ambiguity：0
+2020-12-10 20:45:12,843|kbqa_test.py[line:166]|kb_fuzzy_classify_test|INFO|主要食材 0.9943737
+2020-12-10 20:45:12,844|kbqa_test.py[line:175]|kb_fuzzy_classify_test|INFO|焖子	主要食材	地瓜淀粉精瘦肉
+2020-12-10 20:45:13,844|kbqa_test.py[line:177]|kb_fuzzy_classify_test|INFO|total: 86, recall: 85, correct:66, accuracy: 77.6470588235294%, ambiguity：0
+2020-12-10 20:45:13,877|kbqa_test.py[line:166]|kb_fuzzy_classify_test|INFO|占地面积 0.95260745
+2020-12-10 20:45:14,879|kbqa_test.py[line:177]|kb_fuzzy_classify_test|INFO|total: 87, recall: 86, correct:67, accuracy: 77.90697674418605%, ambiguity：0
+2020-12-10 20:45:14,925|kbqa_test.py[line:166]|kb_fuzzy_classify_test|INFO|语种 0.99279845
+创刊时间 0.6930235
+主办单位 0.00069995626
+2020-12-10 20:45:15,925|kbqa_test.py[line:177]|kb_fuzzy_classify_test|INFO|total: 88, recall: 87, correct:68, accuracy: 78.16091954022988%, ambiguity：0
+2020-12-10 20:45:15,985|kbqa_test.py[line:166]|kb_fuzzy_classify_test|INFO|页数 0.9883858
+出版社 0.9838546
+作者 0.97959983
+isbn 0.96942645
+开本 0.95227796
+价格 0.025787715
+简介 0.01599895
+2020-12-10 20:45:15,986|kbqa_test.py[line:175]|kb_fuzzy_classify_test|INFO|《内科学》	页数	1331
+2020-12-10 20:45:16,987|kbqa_test.py[line:177]|kb_fuzzy_classify_test|INFO|total: 89, recall: 88, correct:68, accuracy: 77.27272727272727%, ambiguity：0
+2020-12-10 20:45:17,009|kbqa_test.py[line:166]|kb_fuzzy_classify_test|INFO|副标题 0.013341653
+2020-12-10 20:45:18,010|kbqa_test.py[line:177]|kb_fuzzy_classify_test|INFO|total: 90, recall: 89, correct:69, accuracy: 77.52808988764045%, ambiguity：0
+2020-12-10 20:45:18,068|kbqa_test.py[line:166]|kb_fuzzy_classify_test|INFO|游戏大小 0.9954072
+操作指南 0.0027415177
+发明 0.000719344
+带宽 0.0006449832
+显卡 0.0005967803
+2020-12-10 20:45:18,070|kbqa_test.py[line:175]|kb_fuzzy_classify_test|INFO|雷电	游戏大小	7.87mb
+2020-12-10 20:45:19,070|kbqa_test.py[line:177]|kb_fuzzy_classify_test|INFO|total: 91, recall: 90, correct:69, accuracy: 76.66666666666667%, ambiguity：0
+2020-12-10 20:45:19,101|kbqa_test.py[line:166]|kb_fuzzy_classify_test|INFO|属 0.9134104
+2020-12-10 20:45:20,102|kbqa_test.py[line:177]|kb_fuzzy_classify_test|INFO|total: 92, recall: 91, correct:70, accuracy: 76.92307692307692%, ambiguity：0
+2020-12-10 20:45:20,252|kbqa_test.py[line:166]|kb_fuzzy_classify_test|INFO|地点 0.9875787
+建筑面积 0.9827278
+城市 0.9815391
+地址 0.98031485
+楼盘地址 0.9761839
+总建筑面积 0.97432864
+位置 0.96444184
+占地面积 0.9638936
+物业类别 0.9587869
+总用地面积 0.9587638
+开业时间 0.95831835
+用地面积 0.95430094
+楼盘名 0.94291127
+占地 0.13966785
+绿化率 0.025763202
+总投资 0.022166394
+所在城市 0.0043523945
+所在地区 0.0027540107
+外文名 0.0008352605
+性质 0.0007976214
+2020-12-10 20:45:20,252|kbqa_test.py[line:175]|kb_fuzzy_classify_test|INFO|万达广场	地点	福州
+2020-12-10 20:45:21,252|kbqa_test.py[line:177]|kb_fuzzy_classify_test|INFO|total: 93, recall: 92, correct:70, accuracy: 76.08695652173913%, ambiguity：0
+2020-12-10 20:45:21,399|kbqa_test.py[line:166]|kb_fuzzy_classify_test|INFO|播映 0.99301803
+出品公司 0.9488224
+制作统筹 0.94271624
+制作国家／地区 0.923894
+无线电视翡翠台首播 0.04307243
+片头曲 0.009325682
+片尾曲 0.0055445745
+主题曲 0.0055144965
+出品人 0.004959745
+导演 0.0049399137
+集数 0.004200518
+故事 0.003102974
+主演 0.0029846118
+编剧 0.0012753024
+作词 0.0011921687
+作曲 0.00094696245
+类型 0.00078992394
+语言 0.0007534128
+外景 0.0006274535
+编审 0.0006171736
+2020-12-10 20:45:21,399|kbqa_test.py[line:175]|kb_fuzzy_classify_test|INFO|神雕侠侣	播映	台视
+2020-12-10 20:45:22,400|kbqa_test.py[line:177]|kb_fuzzy_classify_test|INFO|total: 94, recall: 93, correct:70, accuracy: 75.26881720430107%, ambiguity：0
+2020-12-10 20:45:22,429|kbqa_test.py[line:166]|kb_fuzzy_classify_test|INFO|属性 0.025638899
+2020-12-10 20:45:22,430|kbqa_test.py[line:175]|kb_fuzzy_classify_test|INFO|西藏大学	属性	211工程中西部高校基础能力建设工程西藏自治区人民政府与教育部共建高校
+2020-12-10 20:45:23,430|kbqa_test.py[line:177]|kb_fuzzy_classify_test|INFO|total: 95, recall: 94, correct:70, accuracy: 74.46808510638297%, ambiguity：0
+2020-12-10 20:45:23,454|kbqa_test.py[line:166]|kb_fuzzy_classify_test|INFO|出版时间 0.9236552
+2020-12-10 20:45:24,456|kbqa_test.py[line:177]|kb_fuzzy_classify_test|INFO|total: 96, recall: 95, correct:71, accuracy: 74.73684210526316%, ambiguity：0
+2020-12-10 20:45:24,604|kbqa_test.py[line:166]|kb_fuzzy_classify_test|INFO|语言 0.9954224
+出品公司 0.08746665
+上映时间 0.073539265
+香港首播 0.02940631
+上映地区 0.019840457
+国家／地区 0.0134131275
+制片人 0.01334338
+开发商 0.012700457
+播映 0.0019826263
+编剧 0.0010981483
+类别 0.0010782192
+主演 0.0008076775
+主演 0.0008076775
+集数 0.00076540746
+外景 0.00060938037
+2020-12-10 20:45:25,606|kbqa_test.py[line:177]|kb_fuzzy_classify_test|INFO|total: 97, recall: 96, correct:72, accuracy: 75.0%, ambiguity：0
+2020-12-10 20:45:25,637|kbqa_test.py[line:166]|kb_fuzzy_classify_test|INFO|装帧 0.9464939
+2020-12-10 20:45:26,638|kbqa_test.py[line:177]|kb_fuzzy_classify_test|INFO|total: 98, recall: 97, correct:73, accuracy: 75.25773195876289%, ambiguity：0
+2020-12-10 20:45:26,749|kbqa_test.py[line:166]|kb_fuzzy_classify_test|INFO|所属地区 0.99104226
+地方特产 0.9851757
+建立时间 0.5120093
+机场 0.057658136
+邮编区码 0.04158255
+著名景点 0.02014148
+友好城市 0.019518998
+中文名 0.015201299
+知名产业 0.0134509895
+电话区码 0.004570548
+面积 0.003933581
+别称 0.0014770171
+2020-12-10 20:45:26,750|kbqa_test.py[line:175]|kb_fuzzy_classify_test|INFO|龙泉镇	所属地区	中国四川
+2020-12-10 20:45:27,750|kbqa_test.py[line:177]|kb_fuzzy_classify_test|INFO|total: 99, recall: 98, correct:73, accuracy: 74.48979591836735%, ambiguity：0
+2020-12-10 20:45:27,782|kbqa_test.py[line:166]|kb_fuzzy_classify_test|INFO|分布 0.956837
+2020-12-10 20:45:28,783|kbqa_test.py[line:177]|kb_fuzzy_classify_test|INFO|total: 100, recall: 99, correct:74, accuracy: 74.74747474747475%, ambiguity：0
+2020-12-10 20:45:28,812|kbqa_test.py[line:166]|kb_fuzzy_classify_test|INFO|种 0.99626875
+2020-12-10 20:45:29,812|kbqa_test.py[line:177]|kb_fuzzy_classify_test|INFO|total: 101, recall: 100, correct:75, accuracy: 75.0%, ambiguity：0
+2020-12-10 20:45:29,843|kbqa_test.py[line:166]|kb_fuzzy_classify_test|INFO|分布区域 0.9962613
+采收时间 0.004091861
+用量 0.00055984216
+2020-12-10 20:45:30,845|kbqa_test.py[line:177]|kb_fuzzy_classify_test|INFO|total: 102, recall: 101, correct:76, accuracy: 75.24752475247524%, ambiguity：0
+2020-12-10 20:45:30,903|kbqa_test.py[line:166]|kb_fuzzy_classify_test|INFO|歌曲原唱 0.9880825
+所属专辑 0.9128004
+发行时间 0.8819444
+填词 0.54800195
+谱曲 0.4339016
+2020-12-10 20:45:30,904|kbqa_test.py[line:175]|kb_fuzzy_classify_test|INFO|因为有你	歌曲原唱	j.p.m组合
+2020-12-10 20:45:31,905|kbqa_test.py[line:177]|kb_fuzzy_classify_test|INFO|total: 103, recall: 102, correct:76, accuracy: 74.50980392156863%, ambiguity：0
+2020-12-10 20:45:31,987|kbqa_test.py[line:166]|kb_fuzzy_classify_test|INFO|编剧 0.9850749
+片长 0.96172667
+导演 0.9585069
+出品公司 0.9211334
+上映时间 0.8769537
+洗印格式 0.046981208
+出品时间 0.032057222
+混音 0.01529468
+2020-12-10 20:45:31,988|kbqa_test.py[line:175]|kb_fuzzy_classify_test|INFO|安娜·卡列尼娜	编剧	winstonbeard
+2020-12-10 20:45:32,988|kbqa_test.py[line:177]|kb_fuzzy_classify_test|INFO|total: 104, recall: 103, correct:76, accuracy: 73.7864077669903%, ambiguity：0
+2020-12-10 20:45:33,021|kbqa_test.py[line:166]|kb_fuzzy_classify_test|INFO|本名 0.997079
+所处时代 0.021642284
+去世时间 0.009995657
+2020-12-10 20:45:34,022|kbqa_test.py[line:177]|kb_fuzzy_classify_test|INFO|total: 105, recall: 104, correct:77, accuracy: 74.03846153846153%, ambiguity：0
+2020-12-10 20:45:34,052|kbqa_test.py[line:166]|kb_fuzzy_classify_test|INFO|口味 0.960506
+2020-12-10 20:47:37,574|kbqa_test.py[line:168]|kb_fuzzy_classify_test|INFO|丛书名 0.9785018
+isbn 0.9735252
+出版社 0.9712975
+作者 0.96681666
+页数 0.96666193
+出版时间 0.95589656
+字数 0.9414359
+开本 0.9318901
+定价 0.053798284
+2020-12-10 20:47:37,575|kbqa_test.py[line:177]|kb_fuzzy_classify_test|INFO|计算机应用基础	丛书名	中等职业教育课程改革规划新教材
+2020-12-10 20:47:38,575|kbqa_test.py[line:179]|kb_fuzzy_classify_test|INFO|total: 1, recall: 1, correct:0, accuracy: 0.0%, ambiguity：0
+2020-12-10 20:47:38,661|kbqa_test.py[line:168]|kb_fuzzy_classify_test|INFO|丛书名 0.993057
+出版社 0.985781
+页数 0.98561597
+作者 0.9795338
+开本 0.9701497
+字数 0.96848786
+出版时间 0.9323635
+isbn 0.8836545
+定价 0.05674148
+2020-12-10 20:47:38,662|kbqa_test.py[line:177]|kb_fuzzy_classify_test|INFO|计算机应用基础	丛书名	中等职业教育课程改革规划新教材
+2020-12-10 20:47:39,662|kbqa_test.py[line:179]|kb_fuzzy_classify_test|INFO|total: 2, recall: 2, correct:0, accuracy: 0.0%, ambiguity：0
+2020-12-10 20:47:39,726|kbqa_test.py[line:168]|kb_fuzzy_classify_test|INFO|出版社 0.99655163
+出版时间 0.99505854
+书名 0.038295217
+isbn 0.010564829
+开本 0.004035395
+定价 0.0012397693
+2020-12-10 20:47:39,726|kbqa_test.py[line:177]|kb_fuzzy_classify_test|INFO|高等数学	出版社	武汉大学出版社
+2020-12-10 20:47:40,726|kbqa_test.py[line:179]|kb_fuzzy_classify_test|INFO|total: 3, recall: 3, correct:0, accuracy: 0.0%, ambiguity：0
+2020-12-10 20:47:40,775|kbqa_test.py[line:168]|kb_fuzzy_classify_test|INFO|国籍 0.9964579
+运动项目 0.8912587
+吉祥物 0.01504335
+事迹 0.0021721178
+2020-12-10 20:47:41,776|kbqa_test.py[line:179]|kb_fuzzy_classify_test|INFO|total: 4, recall: 4, correct:1, accuracy: 25.0%, ambiguity：0
+2020-12-10 20:47:41,859|kbqa_test.py[line:168]|kb_fuzzy_classify_test|INFO|isbn 0.99642855
+出版社 0.02064116
+书名 0.012697432
+出版时间 0.0045123883
+开本 0.0037950126
+定价 0.0010511345
+2020-12-10 20:47:42,861|kbqa_test.py[line:179]|kb_fuzzy_classify_test|INFO|total: 5, recall: 5, correct:2, accuracy: 40.0%, ambiguity：0
+2020-12-10 20:48:16,520|kbqa_test.py[line:168]|kb_fuzzy_classify_test|INFO|丛书名 0.9785018
+isbn 0.9735252
+出版社 0.9712975
+作者 0.96681666
+页数 0.96666193
+出版时间 0.95589656
+字数 0.9414359
+开本 0.9318901
+定价 0.053798284
+2020-12-10 20:48:16,521|kbqa_test.py[line:177]|kb_fuzzy_classify_test|INFO|计算机应用基础	丛书名	中等职业教育课程改革规划新教材
+2020-12-10 20:48:17,521|kbqa_test.py[line:179]|kb_fuzzy_classify_test|INFO|total: 1, recall: 1, correct:0, accuracy: 0.0%, ambiguity：0
+2020-12-10 20:48:17,603|kbqa_test.py[line:168]|kb_fuzzy_classify_test|INFO|丛书名 0.993057
+出版社 0.985781
+页数 0.98561597
+作者 0.9795338
+开本 0.9701497
+字数 0.96848786
+出版时间 0.9323635
+isbn 0.8836545
+定价 0.05674148
+2020-12-10 20:48:17,604|kbqa_test.py[line:177]|kb_fuzzy_classify_test|INFO|计算机应用基础	丛书名	中等职业教育课程改革规划新教材
+2020-12-10 20:48:18,604|kbqa_test.py[line:179]|kb_fuzzy_classify_test|INFO|total: 2, recall: 2, correct:0, accuracy: 0.0%, ambiguity：0
+2020-12-10 20:48:18,657|kbqa_test.py[line:168]|kb_fuzzy_classify_test|INFO|出版社 0.99655163
+出版时间 0.99505854
+书名 0.038295217
+isbn 0.010564829
+开本 0.004035395
+定价 0.0012397693
+2020-12-10 20:48:18,658|kbqa_test.py[line:177]|kb_fuzzy_classify_test|INFO|高等数学	出版社	武汉大学出版社
+2020-12-10 20:48:19,659|kbqa_test.py[line:179]|kb_fuzzy_classify_test|INFO|total: 3, recall: 3, correct:0, accuracy: 0.0%, ambiguity：0
+2020-12-10 20:48:19,709|kbqa_test.py[line:168]|kb_fuzzy_classify_test|INFO|国籍 0.9964579
+运动项目 0.8912587
+吉祥物 0.01504335
+事迹 0.0021721178
+2020-12-10 20:48:20,711|kbqa_test.py[line:179]|kb_fuzzy_classify_test|INFO|total: 4, recall: 4, correct:1, accuracy: 25.0%, ambiguity：0
+2020-12-10 20:48:20,777|kbqa_test.py[line:168]|kb_fuzzy_classify_test|INFO|isbn 0.99642855
+出版社 0.02064116
+书名 0.012697432
+出版时间 0.0045123883
+开本 0.0037950126
+定价 0.0010511345
+2020-12-10 20:48:21,779|kbqa_test.py[line:179]|kb_fuzzy_classify_test|INFO|total: 5, recall: 5, correct:2, accuracy: 40.0%, ambiguity：0
+2020-12-10 20:48:21,808|kbqa_test.py[line:168]|kb_fuzzy_classify_test|INFO|书名 0.23398316
+2020-12-10 20:48:22,808|kbqa_test.py[line:179]|kb_fuzzy_classify_test|INFO|total: 6, recall: 6, correct:3, accuracy: 50.0%, ambiguity：0
+2020-12-10 20:48:22,931|kbqa_test.py[line:168]|kb_fuzzy_classify_test|INFO|外文名 0.9970187
+缩写 0.0012447046
+信噪比 0.0005706169
+数据传输率 0.00055944454
+发货重量 0.00055865647
+成像器件 0.0005502507
+网络接口 0.00054593553
+网络标准 0.0005384433
+网络类型 0.000530252
+摄像机类型 0.0005195332
+相机类型 0.00051748357
+生产公司 0.0005148317
+视频信号 0.00051427726
+举办城市 0.0005020155
+总像素 0.00049822143
+2020-12-10 20:48:23,932|kbqa_test.py[line:179]|kb_fuzzy_classify_test|INFO|total: 7, recall: 7, correct:4, accuracy: 57.142857142857146%, ambiguity：0
+2020-12-10 20:48:23,995|kbqa_test.py[line:168]|kb_fuzzy_classify_test|INFO|出生日期 0.9966635
+出生地 0.9954472
+别名 0.0005726121
+2020-12-10 20:48:24,996|kbqa_test.py[line:179]|kb_fuzzy_classify_test|INFO|total: 8, recall: 8, correct:5, accuracy: 62.5%, ambiguity：0
+2020-12-10 20:48:25,031|kbqa_test.py[line:168]|kb_fuzzy_classify_test|INFO|小说进度 0.99638844
+2020-12-10 20:48:26,031|kbqa_test.py[line:179]|kb_fuzzy_classify_test|INFO|total: 9, recall: 9, correct:6, accuracy: 66.66666666666667%, ambiguity：0
+2020-12-10 20:48:26,058|kbqa_test.py[line:168]|kb_fuzzy_classify_test|INFO|连载网站 0.99599826
+2020-12-10 20:48:27,059|kbqa_test.py[line:179]|kb_fuzzy_classify_test|INFO|total: 10, recall: 10, correct:7, accuracy: 70.0%, ambiguity：0
+2020-12-10 20:48:27,149|kbqa_test.py[line:168]|kb_fuzzy_classify_test|INFO|页数 0.9969505
+字数 0.02165117
+书号 0.0013797211
+出版社 0.0013532572
+isbn 0.0009928249
+作者 0.00093844946
+出版时间 0.00093369395
+定价 0.0008407944
+印次 0.00064436294
+作/译者 0.0006390614
+2020-12-10 20:48:28,151|kbqa_test.py[line:179]|kb_fuzzy_classify_test|INFO|total: 11, recall: 11, correct:8, accuracy: 72.72727272727273%, ambiguity：0
+2020-12-10 20:48:28,253|kbqa_test.py[line:168]|kb_fuzzy_classify_test|INFO|中文名 0.99687684
+邮编区码 0.0032801225
+别称 0.00080557686
+所属地区 0.00080218405
+电话区码 0.0006571051
+建立时间 0.000604459
+面积 0.0005991591
+机场 0.00059632346
+友好城市 0.00055873464
+著名景点 0.00055783434
+地方特产 0.0005316457
+知名产业 0.00052884896
+2020-12-10 20:48:29,255|kbqa_test.py[line:179]|kb_fuzzy_classify_test|INFO|total: 12, recall: 12, correct:9, accuracy: 75.0%, ambiguity：0
+2020-12-10 20:48:29,313|kbqa_test.py[line:168]|kb_fuzzy_classify_test|INFO|出生地 0.99672925
+代表作品 0.0024210198
+职业 0.0011631997
+毕业院校 0.0009741803
+毕业院校 0.0009741803
+2020-12-10 20:48:30,314|kbqa_test.py[line:179]|kb_fuzzy_classify_test|INFO|total: 13, recall: 13, correct:10, accuracy: 76.92307692307692%, ambiguity：0
+2020-12-10 20:48:30,377|kbqa_test.py[line:168]|kb_fuzzy_classify_test|INFO|定价 0.99690455
+书名 0.0076312455
+出版时间 0.004202182
+出版社 0.003307791
+开本 0.002343244
+isbn 0.0011613254
+2020-12-10 20:48:31,377|kbqa_test.py[line:179]|kb_fuzzy_classify_test|INFO|total: 14, recall: 14, correct:11, accuracy: 78.57142857142857%, ambiguity：0
+2020-12-10 20:48:31,427|kbqa_test.py[line:168]|kb_fuzzy_classify_test|INFO|职业 0.99710184
+籍贯 0.043541856
+去世年月 0.00063353736
+电视节目 0.0005329911
+2020-12-10 20:48:32,428|kbqa_test.py[line:179]|kb_fuzzy_classify_test|INFO|total: 15, recall: 15, correct:12, accuracy: 80.0%, ambiguity：0
+2020-12-10 20:48:32,601|kbqa_test.py[line:168]|kb_fuzzy_classify_test|INFO|中文名 0.9968541
+村级区划单位数 0.0014508484
+邮政区码 0.0012606377
+行政区划代码 0.001234949
+地理位置 0.0009612316
+地理、人口、经济 0.00072794146
+所属地区 0.0006476077
+所属地区 0.0006476077
+-行政村数 0.0006441803
+电话区号 0.00063101517
+下辖地区 0.00061638554
+上级行政区 0.000611326
+面积 0.00059103424
+面积 0.00059103424
+人口 0.00056655216
+人口 0.00056655216
+地方特产 0.0005421594
+知名产业 0.000541425
+-社区数 0.0005392233
+气候条件 0.00052273355
+2020-12-10 20:48:32,602|kbqa_test.py[line:177]|kb_fuzzy_classify_test|INFO|城关镇	中文名	城关镇[临澧县]
+2020-12-10 20:48:33,602|kbqa_test.py[line:179]|kb_fuzzy_classify_test|INFO|total: 16, recall: 16, correct:12, accuracy: 75.0%, ambiguity：0
+2020-12-10 20:48:33,674|kbqa_test.py[line:168]|kb_fuzzy_classify_test|INFO|民族 0.9965611
+参加工作 0.003336122
+主要成就 0.0012190731
+性别 0.00086259376
+职业 0.00082608365
+毕业院校 0.0007856787
+出生地 0.0007093377
+2020-12-10 20:48:34,674|kbqa_test.py[line:179]|kb_fuzzy_classify_test|INFO|total: 17, recall: 17, correct:13, accuracy: 76.47058823529412%, ambiguity：0
+2020-12-10 20:48:34,705|kbqa_test.py[line:168]|kb_fuzzy_classify_test|INFO|装帧 0.99697876
+2020-12-10 20:48:35,707|kbqa_test.py[line:179]|kb_fuzzy_classify_test|INFO|total: 18, recall: 18, correct:14, accuracy: 77.77777777777777%, ambiguity：0
+2020-12-10 20:48:35,871|kbqa_test.py[line:168]|kb_fuzzy_classify_test|INFO|播映 0.9717106
+片头曲 0.96550393
+出品公司 0.96186465
+片尾曲 0.94841945
+制作统筹 0.94601285
+出品人 0.94556105
+制作国家／地区 0.923894
+主题曲 0.8977218
+导演 0.19878405
+主演 0.15690346
+类型 0.14856341
+编剧 0.1333827
+故事 0.089225344
+集数 0.08542061
+作曲 0.05333538
+无线电视翡翠台首播 0.04307243
+作词 0.035272483
+语言 0.008785394
+外景 0.0073233084
+编审 0.0042927344
+2020-12-10 20:48:35,872|kbqa_test.py[line:177]|kb_fuzzy_classify_test|INFO|神雕侠侣	播映	台视
+2020-12-10 20:48:36,874|kbqa_test.py[line:179]|kb_fuzzy_classify_test|INFO|total: 19, recall: 19, correct:14, accuracy: 73.6842105263158%, ambiguity：0
+2020-12-10 20:48:36,902|kbqa_test.py[line:168]|kb_fuzzy_classify_test|INFO|性别 0.99011606
+2020-12-10 20:48:37,904|kbqa_test.py[line:179]|kb_fuzzy_classify_test|INFO|total: 20, recall: 20, correct:15, accuracy: 75.0%, ambiguity：0
+2020-12-10 20:48:37,967|kbqa_test.py[line:168]|kb_fuzzy_classify_test|INFO|开本 0.9964072
+书名 0.99452645
+出版社 0.97666353
+isbn 0.91869986
+出版时间 0.87425977
+定价 0.0042876317
+2020-12-10 20:48:37,968|kbqa_test.py[line:177]|kb_fuzzy_classify_test|INFO|高等数学	开本	787x9601/16
+2020-12-10 20:48:38,969|kbqa_test.py[line:179]|kb_fuzzy_classify_test|INFO|total: 21, recall: 21, correct:15, accuracy: 71.42857142857143%, ambiguity：0
+2020-12-10 20:48:38,998|kbqa_test.py[line:168]|kb_fuzzy_classify_test|INFO|公司名称 0.99561346
+2020-12-10 20:48:39,998|kbqa_test.py[line:179]|kb_fuzzy_classify_test|INFO|total: 22, recall: 22, correct:16, accuracy: 72.72727272727273%, ambiguity：0
+2020-12-10 20:48:40,158|kbqa_test.py[line:168]|kb_fuzzy_classify_test|INFO|类别 0.9923194
+版次 0.013562034
+中文别名 0.0026364217
+产生原因 0.0015668783
+研究方向 0.0014632151
+出品公司 0.0013953543
+制作人 0.001317023
+颜色 0.0012714353
+操作系统 0.0012588253
+标志 0.0012352113
+曲长 0.0010421823
+专业方向 0.0009716155
+制作成本 0.0008819052
+上市时间 0.0008775799
+录制 0.00075001444
+职称 0.00073789223
+顾问 0.0007191021
+人口数量 0.0007188732
+cpu频率 0.0006405605
+果期 0.0006318824
+2020-12-10 20:48:40,159|kbqa_test.py[line:177]|kb_fuzzy_classify_test|INFO|红	类别	恋爱少年
+2020-12-10 20:48:41,159|kbqa_test.py[line:179]|kb_fuzzy_classify_test|INFO|total: 23, recall: 23, correct:16, accuracy: 69.56521739130434%, ambiguity：0
+2020-12-10 20:48:41,220|kbqa_test.py[line:168]|kb_fuzzy_classify_test|INFO|毕业院校 0.9971206
+毕业院校 0.9971206
+职业 0.0035902266
+主要成就 0.0006973878
+出生日期 0.00060734875
+其他作品 0.0006019283
+2020-12-10 20:48:41,221|kbqa_test.py[line:177]|kb_fuzzy_classify_test|INFO|王强	毕业院校	湖北音乐学院
+2020-12-10 20:48:42,221|kbqa_test.py[line:179]|kb_fuzzy_classify_test|INFO|total: 24, recall: 24, correct:17, accuracy: 70.83333333333333%, ambiguity：0
+2020-12-10 20:48:42,241|kbqa_test.py[line:168]|kb_fuzzy_classify_test|INFO|国籍 0.9970714
+2020-12-10 20:48:43,243|kbqa_test.py[line:179]|kb_fuzzy_classify_test|INFO|total: 25, recall: 25, correct:18, accuracy: 72.0%, ambiguity：0
+2020-12-10 20:48:43,272|kbqa_test.py[line:168]|kb_fuzzy_classify_test|INFO|总部地点 0.047425278
+2020-12-10 20:48:44,274|kbqa_test.py[line:179]|kb_fuzzy_classify_test|INFO|total: 26, recall: 26, correct:19, accuracy: 73.07692307692308%, ambiguity：0
+2020-12-10 20:48:44,309|kbqa_test.py[line:168]|kb_fuzzy_classify_test|INFO|性别 0.9912764
+血型 0.0008158867
+2020-12-10 20:48:45,310|kbqa_test.py[line:179]|kb_fuzzy_classify_test|INFO|total: 27, recall: 27, correct:20, accuracy: 74.07407407407408%, ambiguity：0
+2020-12-10 20:48:45,357|kbqa_test.py[line:168]|kb_fuzzy_classify_test|INFO|面积 0.9914882
+国土面积 0.047391377
+年平均气温 0.0006584034
+2020-12-10 20:48:46,357|kbqa_test.py[line:179]|kb_fuzzy_classify_test|INFO|total: 28, recall: 28, correct:21, accuracy: 75.0%, ambiguity：0
+2020-12-10 20:48:46,414|kbqa_test.py[line:168]|kb_fuzzy_classify_test|INFO|所属地区 0.9967482
+隶属于 0.9947766
+村内企业 0.007991188
+主要产业 0.0010722424
+户数 0.00062326324
+2020-12-10 20:48:47,415|kbqa_test.py[line:179]|kb_fuzzy_classify_test|INFO|total: 29, recall: 29, correct:22, accuracy: 75.86206896551724%, ambiguity：0
+2020-12-10 20:48:47,452|kbqa_test.py[line:168]|kb_fuzzy_classify_test|INFO|地理位置 0.9954531
+所属地区 0.99356467
+行政区类别 0.04632231
+2020-12-10 20:48:48,453|kbqa_test.py[line:179]|kb_fuzzy_classify_test|INFO|total: 30, recall: 30, correct:23, accuracy: 76.66666666666667%, ambiguity：0
+2020-12-10 20:48:48,484|kbqa_test.py[line:168]|kb_fuzzy_classify_test|INFO|成立时间 0.9966149
+2020-12-10 20:48:49,486|kbqa_test.py[line:179]|kb_fuzzy_classify_test|INFO|total: 31, recall: 31, correct:24, accuracy: 77.41935483870968%, ambiguity：0
+2020-12-10 20:48:49,534|kbqa_test.py[line:168]|kb_fuzzy_classify_test|INFO|职业 0.9970559
+去世年月 0.00081305
+逝世日期 0.0006858854
+国籍 0.00053956674
+2020-12-10 20:48:50,535|kbqa_test.py[line:179]|kb_fuzzy_classify_test|INFO|total: 32, recall: 32, correct:25, accuracy: 78.125%, ambiguity：0
+2020-12-10 20:48:50,563|kbqa_test.py[line:168]|kb_fuzzy_classify_test|INFO|经营范围 0.005045369
+2020-12-10 20:48:51,563|kbqa_test.py[line:179]|kb_fuzzy_classify_test|INFO|total: 33, recall: 33, correct:26, accuracy: 78.78787878787878%, ambiguity：0
+2020-12-10 20:48:51,598|kbqa_test.py[line:168]|kb_fuzzy_classify_test|INFO|中文学名 0.0014226169
+别称 0.0006748452
+2020-12-10 20:48:52,599|kbqa_test.py[line:179]|kb_fuzzy_classify_test|INFO|total: 34, recall: 34, correct:27, accuracy: 79.41176470588235%, ambiguity：0
+2020-12-10 20:48:52,668|kbqa_test.py[line:168]|kb_fuzzy_classify_test|INFO|出生年月 0.9963238
+生于 0.9876951
+籍贯 0.0053274403
+职业 0.0011837691
+身高 0.0009984791
+星座 0.00057534553
+职称 0.00056353974
+2020-12-10 20:48:53,668|kbqa_test.py[line:179]|kb_fuzzy_classify_test|INFO|total: 35, recall: 35, correct:28, accuracy: 80.0%, ambiguity：0
+2020-12-10 20:48:53,687|kbqa_test.py[line:168]|kb_fuzzy_classify_test|INFO|界 0.0031610378
+2020-12-10 20:48:54,688|kbqa_test.py[line:179]|kb_fuzzy_classify_test|INFO|total: 36, recall: 36, correct:29, accuracy: 80.55555555555556%, ambiguity：0
+2020-12-10 20:48:54,716|kbqa_test.py[line:168]|kb_fuzzy_classify_test|INFO|别名 0.9938306
+2020-12-10 20:48:55,716|kbqa_test.py[line:179]|kb_fuzzy_classify_test|INFO|total: 37, recall: 37, correct:30, accuracy: 81.08108108108108%, ambiguity：0
+2020-12-10 20:48:55,771|kbqa_test.py[line:168]|kb_fuzzy_classify_test|INFO|主要成就 0.99614245
+出生日期 0.020793604
+学历 0.017457627
+出生地 0.007966048
+女 0.0034384744
+2020-12-10 20:48:56,772|kbqa_test.py[line:179]|kb_fuzzy_classify_test|INFO|total: 38, recall: 38, correct:31, accuracy: 81.57894736842105%, ambiguity：0
+2020-12-10 20:48:56,808|kbqa_test.py[line:168]|kb_fuzzy_classify_test|INFO|公司性质 0.996967
+年营业额 0.00056556455
+2020-12-10 20:48:57,809|kbqa_test.py[line:179]|kb_fuzzy_classify_test|INFO|total: 39, recall: 39, correct:32, accuracy: 82.05128205128206%, ambiguity：0
+2020-12-10 20:48:57,858|kbqa_test.py[line:168]|kb_fuzzy_classify_test|INFO|人口 0.9951466
+耕地 0.0032804532
+地理位置 0.0025947934
+2020-12-10 20:48:58,859|kbqa_test.py[line:179]|kb_fuzzy_classify_test|INFO|total: 40, recall: 40, correct:33, accuracy: 82.5%, ambiguity：0
+2020-12-10 20:48:58,887|kbqa_test.py[line:168]|kb_fuzzy_classify_test|INFO|科 0.99625164
+2020-12-10 20:48:59,888|kbqa_test.py[line:179]|kb_fuzzy_classify_test|INFO|total: 41, recall: 41, correct:34, accuracy: 82.92682926829268%, ambiguity：0
+2020-12-10 20:48:59,917|kbqa_test.py[line:168]|kb_fuzzy_classify_test|INFO|英文名 0.9970066
+2020-12-10 20:49:00,918|kbqa_test.py[line:179]|kb_fuzzy_classify_test|INFO|total: 42, recall: 42, correct:35, accuracy: 83.33333333333333%, ambiguity：0
+2020-12-10 20:49:00,960|kbqa_test.py[line:168]|kb_fuzzy_classify_test|INFO|制片人 0.96803576
+每集长度 0.750743
+其他 0.04453098
+类别 0.015776452
+2020-12-10 20:49:00,961|kbqa_test.py[line:177]|kb_fuzzy_classify_test|INFO|《神雕侠侣》	制片人	张纪中
+2020-12-10 20:49:01,961|kbqa_test.py[line:179]|kb_fuzzy_classify_test|INFO|total: 43, recall: 43, correct:35, accuracy: 81.3953488372093%, ambiguity：0
+2020-12-10 20:49:01,997|kbqa_test.py[line:168]|kb_fuzzy_classify_test|INFO|代表作品 0.996999
+出生地点 0.0012541709
+2020-12-10 20:49:02,998|kbqa_test.py[line:179]|kb_fuzzy_classify_test|INFO|total: 44, recall: 44, correct:36, accuracy: 81.81818181818181%, ambiguity：0
+2020-12-10 20:49:03,045|kbqa_test.py[line:168]|kb_fuzzy_classify_test|INFO|地质学 0.020663638
+门 0.01683357
+2020-12-10 20:49:03,046|kbqa_test.py[line:177]|kb_fuzzy_classify_test|INFO|三墩乌龟石	地质学	“龟裂状风化火山岩”
+2020-12-10 20:49:04,047|kbqa_test.py[line:179]|kb_fuzzy_classify_test|INFO|total: 45, recall: 45, correct:36, accuracy: 80.0%, ambiguity：0
+2020-12-10 20:49:04,094|kbqa_test.py[line:168]|kb_fuzzy_classify_test|INFO|性质 0.99691665
+本质 0.99015594
+gps芯片 0.004157758
+2020-12-10 20:49:05,094|kbqa_test.py[line:179]|kb_fuzzy_classify_test|INFO|total: 46, recall: 46, correct:37, accuracy: 80.43478260869566%, ambiguity：0
+2020-12-10 20:49:05,137|kbqa_test.py[line:168]|kb_fuzzy_classify_test|INFO|籍贯 0.9911947
+出生地 0.92370594
+参加工作 0.01895393
+2020-12-10 20:49:06,138|kbqa_test.py[line:179]|kb_fuzzy_classify_test|INFO|total: 47, recall: 47, correct:38, accuracy: 80.85106382978724%, ambiguity：0
+2020-12-10 20:49:06,169|kbqa_test.py[line:168]|kb_fuzzy_classify_test|INFO|游戏类型 0.054107282
+2020-12-10 20:49:07,170|kbqa_test.py[line:179]|kb_fuzzy_classify_test|INFO|total: 48, recall: 48, correct:39, accuracy: 81.25%, ambiguity：0
+2020-12-10 20:49:07,193|kbqa_test.py[line:168]|kb_fuzzy_classify_test|INFO|目 0.9966462
+2020-12-10 20:49:08,194|kbqa_test.py[line:179]|kb_fuzzy_classify_test|INFO|total: 49, recall: 49, correct:40, accuracy: 81.63265306122449%, ambiguity：0
+2020-12-10 20:49:08,233|kbqa_test.py[line:168]|kb_fuzzy_classify_test|INFO|地点 0.9942543
+主峰海拔 0.9927382
+2020-12-10 20:49:09,234|kbqa_test.py[line:179]|kb_fuzzy_classify_test|INFO|total: 50, recall: 50, correct:41, accuracy: 82.0%, ambiguity：0
+2020-12-10 20:51:42,140|kbqa.py[line:62]|<module>|INFO|中文名 0.99687684
+邮编区码 0.0032801225
+别称 0.00080557686
+所属地区 0.00080218405
+电话区码 0.0006571051
+建立时间 0.000604459
+面积 0.0005991591
+机场 0.00059632346
+友好城市 0.00055873464
+著名景点 0.00055783434
+地方特产 0.0005316457
+知名产业 0.00052884896
+2020-12-10 20:52:12,699|kbqa.py[line:62]|<module>|INFO|中文名 0.99687684
+邮编区码 0.0032801225
+别称 0.00080557686
+所属地区 0.00080218405
+电话区码 0.0006571051
+建立时间 0.000604459
+面积 0.0005991591
+机场 0.00059632346
+友好城市 0.00055873464
+著名景点 0.00055783434
+地方特产 0.0005316457
+知名产业 0.00052884896
+2020-12-10 20:53:08,700|kbqa.py[line:62]|<module>|INFO|中文名 0.99687684
+邮编区码 0.0032801225
+别称 0.00080557686
+所属地区 0.00080218405
+电话区码 0.0006571051
+建立时间 0.000604459
+面积 0.0005991591
+机场 0.00059632346
+友好城市 0.00055873464
+著名景点 0.00055783434
+地方特产 0.0005316457
+知名产业 0.00052884896
+2020-12-10 20:54:04,561|kbqa.py[line:62]|<module>|INFO|中文名 0.99687684
+邮编区码 0.0032801225
+别称 0.00080557686
+所属地区 0.00080218405
+电话区码 0.0006571051
+建立时间 0.000604459
+面积 0.0005991591
+机场 0.00059632346
+友好城市 0.00055873464
+著名景点 0.00055783434
+地方特产 0.0005316457
+知名产业 0.00052884896
+2020-12-10 21:28:41,906|kbqa.py[line:65]|<module>|INFO|中文名 0.99687684
+邮编区码 0.0032801225
+别称 0.00080557686
+所属地区 0.00080218405
+电话区码 0.0006571051
+建立时间 0.000604459
+面积 0.0005991591
+机场 0.00059632346
+友好城市 0.00055873464
+著名景点 0.00055783434
+地方特产 0.0005316457
+知名产业 0.00052884896
