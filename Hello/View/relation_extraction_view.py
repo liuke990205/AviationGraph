@@ -8,7 +8,7 @@ from django.contrib import messages
 from django.shortcuts import render, redirect
 
 from Hello.models import Relation, Temp, User, Annotation
-
+# from Hello.toolkit.deepke import predict1
 
 # 跳转到关系抽取页面
 def toRelation(request):
@@ -57,6 +57,7 @@ def upload3(request):
 def re_text(request):
     if request.POST:
         text = request.POST['user_text']
+        print(text)
         # 获取输入文本
         sen_list = []
 
@@ -69,18 +70,14 @@ def re_text(request):
             sen = str((result[i]).replace('\n', '').replace('\r', '') + "。\n")
             sen_list.append(sen)
 
-        dic_dir = "C:/Users/刘珂/PycharmProjects/HelloWorld/hello/toolkit/dic.txt"
-        temp_file_dir = "C:/Users/刘珂/PycharmProjects/HelloWorld/hello/toolkit/rel_data.csv"
+        dic_dir = "Hello/toolkit/dic.txt"
+        temp_file_dir = "Hello/toolkit/rel_data.csv"
 
         jieba.load_userdict(dic_dir)
 
         f = open(temp_file_dir, 'w')
         f.truncate()
-        '''
-        relList = Rel.objects.filter(re_flag=0)
-        for rel in relList:
-            rel.delete()
-        '''
+
 
         f1 = open(dic_dir, 'r', encoding='utf-8')
         f2 = open(temp_file_dir, 'a')
@@ -95,7 +92,7 @@ def re_text(request):
             w_array = w.split(" ")
             dic_entity.append(w_array[0])
             dic_entity_type_ori.append(w_array[2].replace("\n", ""))
-        # print(dic_entity)
+        print(dic_entity)
 
         for type in dic_entity_type_ori:
             if type == "hkq":
@@ -179,8 +176,8 @@ def re_text(request):
             sen_entity = []
             entity_type = []
         f2.close()
-        os.system("python C:/Users/刘珂/PycharmProjects/HelloWorld/hello/toolkit/deepke/predict1.py")
-
+        os.system("python Hello/toolkit/deepke/predict1.py")
+        #predict1.main()
         textfile = open(temp_file_dir, 'r')
         # 获取当前用户的ID
         username = request.session.get('username')
@@ -211,17 +208,10 @@ def re_text(request):
                 random_num = random.randint(10000, 90000)
                 temp_list = [ann.annotation_id, headEntity, headEntityType, tailEntity, tailEntityType,
                              relationshipCategory, user_id, "", random_num]
-                '''
-                 rel = Temp(temp_id=random_num, headEntity=headEntity, headEntityType=headEntityType, tailEntity=tailEntity,
-                          tailEntityType=tailEntityType, relationshipCategory=relationshipCategory,
-                           user_id=user_id, filename="", annotation_id_id=ann.annotation_id)               
-                 rel.save()
-                '''
 
                 resultList.append(temp_list)
-
+    print(resultList)
     request.session['resultList'] = resultList
-
     return render(request, 'relation_extract.html', {'resultList': resultList})
 
 
@@ -236,7 +226,6 @@ def relation_schema(type1, type2):
     for i in range(len(schema_type1)):
         if type2 == schema_type1[i] and type1 == schema_type2[i]:
             return 2
-
     return 0
 
 
@@ -245,12 +234,7 @@ def deleteRel(request):
     # 获取前端传过来的rel_id
     id = request.GET.get('rel_id')
     print(id)
-    '''
-    # 删除rel_id
-    rel = Temp.objects.get(temp_id=id)
-    rel.delete()
-    resultList = Temp.objects.all()
-    '''
+
     resultList = request.session.get('resultList')
     for data in resultList:
         if data[8] == int(id): ##注意强制类型转换
@@ -259,7 +243,6 @@ def deleteRel(request):
     #更新session域的内容
     request.session['resultList'] = resultList
     return render(request, 'relation_extract.html', {'resultList': resultList})
-
 
 # 修改Rel信息
 def modifyRel(request):
@@ -278,19 +261,13 @@ def modifyRel(request):
             data[3] = new_tailEntity
             data[4] = new_tailEntityType
             data[5] = new_relationshipCategory
-
     # 更新session域的内容
     request.session['resultList'] = resultList
 
     return render(request, 'relation_extract.html', {'resultList': resultList})
 
-
 def saveRel(request):
-    ##relList = Rel.objects.filter(re_flag=0)
-
     resultList = request.session.get('resultList')
-
-    ##print(relList)
 
     for list in resultList:
         rel = Temp(headEntity=list[1], headEntityType=list[2], tailEntity=list[3],

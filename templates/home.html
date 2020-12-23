@@ -5,7 +5,9 @@
         <title></title>
         <meta charset="utf-8"/>
         <link rel="stylesheet" href="/static/css/bootstrap.min.css"/>
+{% comment %}
         <link rel="stylesheet" href="http://cdn.static.runoob.com/libs/bootstrap/3.3.7/css/bootstrap.min.css">
+{% endcomment %}
         <link href="/static/css/font-awesome.min.css" rel="stylesheet"/>
         <link rel="stylesheet" href="/static/css/bootstrap.css"/>
         <link rel="stylesheet" href="/static/css/style2.css"/>
@@ -14,9 +16,16 @@
         <script type="text/javascript" src="/static/js/bootstrap.min.js"></script>
         <script src="/static/js/echarts.common.min.js"></script>
 
+{% comment %}
         <script src="http://cdn.static.runoob.com/libs/jquery/2.1.1/jquery.min.js"></script>
+{% endcomment %}
+{% comment %}
         <script src="http://cdn.static.runoob.com/libs/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+{% endcomment %}
+        <script type="text/javascript" src="/static/js/echarts-all-3.js"></script>
+        {% comment %}
         <script type="text/javascript" src="http://echarts.baidu.com/gallery/vendors/echarts/echarts-all-3.js"></script>
+{% endcomment %}
 
     </head>
     <title>主页面</title>
@@ -204,7 +213,6 @@
                 show: false
             },
             series: [
-
                 {
                     type: 'graph',
                     layout: 'force',

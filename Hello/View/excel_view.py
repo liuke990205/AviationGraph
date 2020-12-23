@@ -90,9 +90,7 @@ def flag(string, name_list) -> bool:
 
 def commit_properties(request):
     if request.method == 'POST':
-        '''
-        后期在前端限定   实体名只能选择一个
-        '''
+
         # 获取到前端选择的字段
         head_entity_list = request.POST.getlist('select2')
         head_property_list = request.POST.getlist('select3')
