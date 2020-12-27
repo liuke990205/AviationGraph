@@ -7,7 +7,7 @@
     <file url="file://$PROJECT_DIR$/Hello/View/excel_analysis.py" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/Hello/View/excel_view.py" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/Hello/View/home_view.py" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/Hello/View/k-means.py" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Hello/View/k-means_test.py" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/Hello/neo4j_models.py" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/Hello/ner_ch" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/Hello/ner_ch/data/uploadfile.txt" charset="UTF-8" />

@@ -43,8 +43,6 @@ def upload(request):
         else:
             messages.success(request, "文件为空！")
             return redirect('/toAnnotation/')
-
-
 result = []
 
 
@@ -138,6 +136,7 @@ def text_annotation(request):
         for entity in dictionary_entity:
             if text_current.content.find(entity.entity) != -1:
                 entityList[entity.entity] = entity.entity_type
+
 
         # 对实体进行排列组合
         for a in combinations(entityList, 2):

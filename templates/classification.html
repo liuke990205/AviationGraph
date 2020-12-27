@@ -107,17 +107,31 @@
 
                             </div>
                         </form>
-                        <form name="upload" enctype="multipart/form-data" method="post" action="/display_classification/">
+
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-12">
+                <div class="panel panel-default">
+                    <header class="panel-heading">
+                        聚类参数：
+                    </header>
+                    <div class="panel-body">
+                        <form name="k_value"  method="post" action="/display_classification/">
                             {% csrf_token %}
-                            <div class="input-append">
-                                <button type="submit"
-                                        style="background-color:#00aced; width: 116px;height: 36px; margin-left: 505px" name="upload">开始聚类
-                                </button>
+                            <div id="k_value" class="form-group" style="padding: 2%; margin-left: 200px; ">
+                                <input type="text" id="k_value" name="k_value" class="form-control" style="width: 400px"
+                                       placeholder="输入要聚类的组数!" aria-describedby="basic-addon1">
+                            </div>
+                            <div class="btn-group" style="padding: 2%">
+                                <button type="submit" id="btnSearch" class="btn btn-primary">开始聚类</button>
                             </div>
                         </form>
                     </div>
                 </div>
             </div>
+
+
 
             {% if  resultList_classification %}
                 <div class="col-md-12">

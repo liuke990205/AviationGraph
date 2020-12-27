@@ -103,11 +103,8 @@ def PDFsearch_title(key, filename):
 def searchAllPdf(request):
     key = request.POST.get("keywords")
     filename = "upload_file/Python.pdf"
-    print(filename)
     words = PDFreader(filename)
 
-    for i in range(len(words)):
-        print(words[i].getWord())
 
     pages = PDFsearch_title(key, filename)
     pages_content = PDFsearch(key, words)
@@ -117,13 +114,13 @@ def searchAllPdf(request):
             pages.append(pages_content[i])
     print(pages)
     if pages.__len__() == 0:
-        print(pages)
+        #print(pages)
         messages.success(request, "抱歉！在文件中没有找到该关键字！")
         return redirect("/toSearchAllPdf")
     else:
         page_content = []
         for i in range(pages.__len__()):
-            print(key + "在" + filename + "中出现的页码为" + str(pages[i]))
+            #print(key + "在" + filename + "中出现的页码为" + str(pages[i]))
             pdfReader = pdfplumber.open(filename)
             page_text = pdfReader.pages[ pages[i] - 1]
             page_content.append(page_text.extract_text())

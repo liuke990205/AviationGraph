@@ -90,7 +90,9 @@ def flag(string, name_list) -> bool:
 
 def commit_properties(request):
     if request.method == 'POST':
-
+        '''
+        后期在前端限定   实体名只能选择一个
+        '''
         # 获取到前端选择的字段
         head_entity_list = request.POST.getlist('select2')
         head_property_list = request.POST.getlist('select3')
@@ -159,8 +161,15 @@ def excel_extract(request):
             tail_entity = data[2]
             tail_property_list = data[3]
 
-            #根据表的字段名进行抽取
-            create_relation(head_entity, head_property_list, tail_entity, tail_property_list)
+            #根据表的字段名进行抽取，判断头实体和尾实体的属性表是否为空
+            if len(head_property_list) != 0 and len(tail_property_list) != 0:
+                create_relation(head_entity, head_property_list, tail_entity, tail_property_list)
+            elif len(head_property_list) == 0 and len(tail_property_list) != 0:
+                create_relation1(head_entity, tail_entity, tail_property_list)
+            elif len(head_property_list) != 0 and len(tail_property_list) == 0:
+                create_relation2(head_entity, head_property_list, tail_entity)
+            else:
+                create_relation3(head_entity, tail_entity)
 
     #获取session域中的name_list
     name_list = request.session.get('name_list')
@@ -252,6 +261,239 @@ def create_relation(head_entity, head_property_list, tail_entity, tail_property_
             else:
                 db.updateNode(head_entity_value, head_property_dict)
                 db.updateNode(tail_entity_value, tail_property_dict)
+                #判断两个实体间是否已存在关系，若不存在则创建关系
+                if db.findRelationByEntities(head_entity_value, tail_entity_value) or db.findRelationByEntities(tail_entity_value, head_entity_value):
+                    continue
+                else:
+                    db.insertExcelRelation(head_entity_value, head_entity_typename, tail_entity_value, tail_entity_typename,
+                                           tail_entity_typename)
+        else:
+            continue
+    cursor.close()  # 关闭游标
+    conn.close()  # 关闭连接
+
+def create_relation1(head_entity, tail_entity, tail_property_list):
+
+    conn = pymysql.connect(host='123.56.52.53', port=3306, user='root', password='root',
+                           database='source')
+    cursor = conn.cursor()
+
+    # ['故障件','故障件编号']
+    tail_property_list_last = tail_property_list.split(',')
+
+    # 获取头实体属性列表的个数
+    tail_property_num = len(tail_property_list_last)
+
+    #头实体类型名
+    head_entity_typename = head_entity
+    #尾实体类型名 / 关系名
+    tail_entity_typename = tail_entity
+
+    # 根据查询条件编写的查询语句
+    sql = "select %s, %s, %s from name" % (head_entity_typename, tail_entity_typename, tail_property_list)
+    count = cursor.execute(sql)
+
+    # 连接neo4j数据库
+    db = neo4jconn
+
+    # 循环来遍历游标指针
+    for i in range(count):
+        result = cursor.fetchone()
+        # 将查询结果转换成列表存储
+        result = list(result)
+        # 查询出来的头实体名的value
+        head_entity_value = result[0]
+        # 查询出来的尾实体名的value
+        tail_entity_value = result[1]
+        # 查询出来的尾实体的属性列表的value
+        tail_property_list_value = result[2:tail_property_num + 2]
+        # 存储尾实体属性结果集（字典存储）
+        tail_property_dict = {}
+
+        # 生成尾实体属性字典 例如：{“故障件”：显示器}
+        for j in range(len(tail_property_list_last)):
+            tail_property_dict.update({tail_property_list_last[j]: tail_property_list_value[j]})
+
+        # 根据头实体名来查找neo4j数据库是否已经存在实体
+        select_head_entity = db.findEntity(head_entity_value)
+        # 根据尾实体名来查找neo4j数据库是否已经存在实体
+        select_tail_entity = db.findEntity(tail_entity_value)
+
+        '''
+            创建并更新节点和关系【先判断两个节点是否相同，再判断一下节点是否已经存在】
+        '''
+        #两个实体名不一样
+        if head_entity_value != tail_entity_value:
+            #两个实体都不存在，创建节点和关系
+            if len(select_head_entity) == 0 and len(select_tail_entity) == 0:
+                db.createNode2(head_entity_value, head_entity_typename)
+                db.createNode(tail_entity_value, tail_entity_typename, tail_property_dict)
+                db.insertExcelRelation(head_entity_value, head_entity_typename, tail_entity_value, tail_entity_typename, tail_entity_typename)
+
+            #头实体已经存在，创建尾实体和关系
+            elif len(select_head_entity) != 0 and len(select_tail_entity) == 0:
+                db.createNode(tail_entity_value, tail_entity_typename, tail_property_dict)
+                db.insertExcelRelation(head_entity_value, head_entity_typename, tail_entity_value, tail_entity_typename, tail_entity_typename)
+
+            #尾实体已经存在，更新尾实体属性，创建头实体和关系
+            elif len(select_head_entity) == 0 and len(select_tail_entity) != 0:
+                db.createNode2(head_entity_value, head_entity_typename)
+                db.updateNode(tail_entity_value, tail_property_dict)
+                db.insertExcelRelation(head_entity_value, head_entity_typename, tail_entity_value, tail_entity_typename, tail_entity_typename)
+
+            #两个实体都已经存在，更新尾实体的属性
+            else:
+                db.updateNode(tail_entity_value, tail_property_dict)
+                #判断两个实体间是否已存在关系，若不存在则创建关系
+                if db.findRelationByEntities(head_entity_value, tail_entity_value) or db.findRelationByEntities(tail_entity_value, head_entity_value):
+                    continue
+                else:
+                    db.insertExcelRelation(head_entity_value, head_entity_typename, tail_entity_value, tail_entity_typename,
+                                           tail_entity_typename)
+        else:
+            continue
+    cursor.close()  # 关闭游标
+    conn.close()  # 关闭连接
+
+def create_relation2(head_entity, head_property_list, tail_entity):
+
+    conn = pymysql.connect(host='123.56.52.53', port=3306, user='root', password='root',
+                           database='source')
+    cursor = conn.cursor()
+
+    # ['故障件','故障件编号']
+    head_property_list_last = head_property_list.split(',')
+
+    # 获取头实体属性列表的个数
+    head_property_num = len(head_property_list_last)
+
+    #头实体类型名
+    head_entity_typename = head_entity
+    #尾实体类型名 / 关系名
+    tail_entity_typename = tail_entity
+
+    # 根据查询条件编写的查询语句
+    sql = "select %s, %s, %s from name" % (head_entity_typename, tail_entity_typename, head_property_list)
+    count = cursor.execute(sql)
+
+    # 连接neo4j数据库
+    db = neo4jconn
+
+    # 循环来遍历游标指针
+    for i in range(count):
+        result = cursor.fetchone()
+        # 将查询结果转换成列表存储
+        result = list(result)
+        # 查询出来的头实体名的value
+        head_entity_value = result[0]
+        # 查询出来的尾实体名的value
+        tail_entity_value = result[1]
+        # 查询出来的头实体的属性列表的value
+        head_property_list_value = result[2:head_property_num + 2]
+        # 存储头实体属性结果集（字典存储）
+        head_property_dict = {}
+
+        #生成头实体属性字典 例如：{“故障件”：显示器}
+        for k in range(len(head_property_list_last)):
+            head_property_dict.update({head_property_list_last[k]: head_property_list_value[k]})
+
+        # 根据头实体名来查找neo4j数据库是否已经存在实体
+        select_head_entity = db.findEntity(head_entity_value)
+        # 根据尾实体名来查找neo4j数据库是否已经存在实体
+        select_tail_entity = db.findEntity(tail_entity_value)
+
+        '''
+            创建并更新节点和关系【先判断两个节点是否相同，再判断一下节点是否已经存在】
+        '''
+        #两个实体名不一样
+        if head_entity_value != tail_entity_value:
+            #两个实体都不存在，创建节点和关系
+            if len(select_head_entity) == 0 and len(select_tail_entity) == 0:
+                db.createNode(head_entity_value, head_entity_typename, head_property_dict)
+                db.createNode2(tail_entity_value, tail_entity_typename)
+                db.insertExcelRelation(head_entity_value, head_entity_typename, tail_entity_value, tail_entity_typename, tail_entity_typename)
+
+            #头实体已经存在，更新头实体属性，创建尾实体和关系
+            elif len(select_head_entity) != 0 and len(select_tail_entity) == 0:
+                db.updateNode(head_entity_value, head_property_dict)
+                db.createNode2(tail_entity_value, tail_entity_typename)
+                db.insertExcelRelation(head_entity_value, head_entity_typename, tail_entity_value, tail_entity_typename, tail_entity_typename)
+
+            #尾实体已经存在，创建头实体和关系
+            elif len(select_head_entity) == 0 and len(select_tail_entity) != 0:
+                db.createNode(head_entity_value, head_entity_typename, head_property_dict)
+                db.insertExcelRelation(head_entity_value, head_entity_typename, tail_entity_value, tail_entity_typename, tail_entity_typename)
+
+            #两个实体都已经存在，更新两个实体的属性
+            else:
+                db.updateNode(head_entity_value, head_property_dict)
+                #判断两个实体间是否已存在关系，若不存在则创建关系
+                if db.findRelationByEntities(head_entity_value, tail_entity_value) or db.findRelationByEntities(tail_entity_value, head_entity_value):
+                    continue
+                else:
+                    db.insertExcelRelation(head_entity_value, head_entity_typename, tail_entity_value, tail_entity_typename,
+                                           tail_entity_typename)
+        else:
+            continue
+    cursor.close()  # 关闭游标
+    conn.close()  # 关闭连接
+
+def create_relation3(head_entity, tail_entity):
+
+    conn = pymysql.connect(host='123.56.52.53', port=3306, user='root', password='root',
+                           database='source')
+    cursor = conn.cursor()
+
+    #头实体类型名
+    head_entity_typename = head_entity
+    #尾实体类型名 / 关系名
+    tail_entity_typename = tail_entity
+
+    # 根据查询条件编写的查询语句
+    sql = "select %s, %s from name" % (head_entity_typename, tail_entity_typename)
+    count = cursor.execute(sql)
+
+    # 连接neo4j数据库
+    db = neo4jconn
+
+    # 循环来遍历游标指针
+    for i in range(count):
+        result = cursor.fetchone()
+        # 将查询结果转换成列表存储
+        result = list(result)
+        # 查询出来的头实体名的value
+        head_entity_value = result[0]
+        # 查询出来的尾实体名的value
+        tail_entity_value = result[1]
+
+        # 根据头实体名来查找neo4j数据库是否已经存在实体
+        select_head_entity = db.findEntity(head_entity_value)
+        # 根据尾实体名来查找neo4j数据库是否已经存在实体
+        select_tail_entity = db.findEntity(tail_entity_value)
+
+        '''
+            创建并更新节点和关系【先判断两个节点是否相同，再判断一下节点是否已经存在】
+        '''
+        #两个实体名不一样
+        if head_entity_value != tail_entity_value:
+            #两个实体都不存在，创建节点和关系
+            if len(select_head_entity) == 0 and len(select_tail_entity) == 0:
+                db.createNode2(head_entity_value, head_entity_typename)
+                db.createNode2(tail_entity_value, tail_entity_typename)
+                db.insertExcelRelation(head_entity_value, head_entity_typename, tail_entity_value, tail_entity_typename, tail_entity_typename)
+
+            #头实体已经存在，创建尾实体和关系
+            elif len(select_head_entity) != 0 and len(select_tail_entity) == 0:
+                db.createNode2(tail_entity_value, tail_entity_typename)
+                db.insertExcelRelation(head_entity_value, head_entity_typename, tail_entity_value, tail_entity_typename, tail_entity_typename)
+
+            #尾实体已经存在，创建头实体和关系
+            elif len(select_head_entity) == 0 and len(select_tail_entity) != 0:
+                db.createNode2(head_entity_value, head_entity_typename)
+                db.insertExcelRelation(head_entity_value, head_entity_typename, tail_entity_value, tail_entity_typename, tail_entity_typename)
+
+            #两个实体都已经存在，更新两个实体的属性
+            else:
                 #判断两个实体间是否已存在关系，若不存在则创建关系
                 if db.findRelationByEntities(head_entity_value, tail_entity_value) or db.findRelationByEntities(tail_entity_value, head_entity_value):
                     continue
