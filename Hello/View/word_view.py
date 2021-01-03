@@ -1,23 +1,29 @@
 # -*- coding: utf-8 -*-
 
+import json
+
+import docx
 from django.contrib import messages
 from django.shortcuts import render, redirect
-import docx
-import csv
-import json
+
 '''
 跳转到基于规则的word知识提取
 '''
+
+
 def toWord(request):
     username = request.session.get('username')
     if username is None:
         return render(request, 'login.html')
     return render(request, "word.html")
 
+
 '''
 关系：【组成关系】
 对表格进行解析
 '''
+
+
 def table(line: str) -> list:
     result_list = []
     data = line.split()
@@ -26,12 +32,15 @@ def table(line: str) -> list:
         result_list.append(temp_list)
     return result_list
 
+
 '''
 关系：【组成关系】
 由...组成、由...构成
 sring = 组成 | 构成
 '''
-def made_of_1(string: str,line: str) -> list:
+
+
+def made_of_1(string: str, line: str) -> list:
     start0 = line.find("，")
     start1 = line.find("由")
     start2 = line.find(string)
@@ -43,10 +52,13 @@ def made_of_1(string: str,line: str) -> list:
             result_list.append(temp_list)
     return result_list
 
+
 '''
 关系：【组成关系】
 string = 主要包括|分为
 '''
+
+
 def made_of_2(string: str, line: str) -> list:
     start1 = line.find(string)
     end1 = line.find("。")
@@ -70,38 +82,44 @@ def made_of_2(string: str, line: str) -> list:
     for data in list.split("；"):
         index = data.find('）')
         if index != -1:
-            data2 = data[index+1:] #大型客车（3辆），分为铰接式客车，双层客车和多层客车
+            data2 = data[index + 1:]  # 大型客车（3辆），分为铰接式客车，双层客车和多层客车
             for i in range(1, 1000):
                 if data2.find(chr(i)) != -1:
                     beg_index = data2.find('（')
                     end_index = data2.find('）')
-                    tailEntity = data2[0:beg_index] #大型客车
+                    tailEntity = data2[0:beg_index]  # 大型客车
                     in_entity = data2[beg_index + 1:end_index]
-                    temp_list =[tailEntity, "数量关系", in_entity]
+                    temp_list = [tailEntity, "数量关系", in_entity]
                     result_list.append(temp_list)
 
-                    temp_list1 = [headEntity, "组成关系", tailEntity]  #, line.replace("\n", "")
+                    temp_list1 = [headEntity, "组成关系", tailEntity]  # , line.replace("\n", "")
                     result_list.append(temp_list1)
                     break
     return result_list
+
 
 '''
 关系：【位置关系】
 string  = 位于......
 '''
-def local(string :str, line: str) -> list:
-    #获取关键字位置
+
+
+def local(string: str, line: str) -> list:
+    # 获取关键字位置
     start = line.find(string)
-    #获取结束位置
+    # 获取结束位置
     end = line.find("。")
-    temp_list = [line[0:start], "位置关系", line[start + len(string):end], line.replace("\n", "")] #注意删除换行符
-    #print(temp_list)
+    temp_list = [line[0:start], "位置关系", line[start + len(string):end], line.replace("\n", "")]  # 注意删除换行符
+    # print(temp_list)
     return temp_list
+
 
 '''
 关系：【使用关系】
 string = 采用|使用
 '''
+
+
 def use(string: str, line: str) -> list:
     # 获取关键字位置
     start = line.find(string)
@@ -117,11 +135,11 @@ def use(string: str, line: str) -> list:
 
 def main(infile) -> list:
     infopen = open(infile, 'r', encoding="utf-8")
-    #加载json格式的配置文件 => 字典
+    # 加载json格式的配置文件 => 字典
     with open("configurateFile/rules.json", 'r', encoding='UTF-8') as f:
         load_dict = json.load(f)
 
-    #后期读取配置文件或者前端列表
+    # 后期读取配置文件或者前端列表
     ###relation = ["位于", "使用", "采用", "主要包括", "分为", "\t", "组成", "构成"]
     relation = ["\t"]
     for k, v in load_dict.items():
@@ -129,7 +147,7 @@ def main(infile) -> list:
             relation.append(listData)
     result_list = []
 
-    #读取格式化之后的文件
+    # 读取格式化之后的文件
     lines1 = infopen.readlines()
     for line in lines1:
         for r in relation:
@@ -198,8 +216,6 @@ def main(infile) -> list:
 
     infopen.close()
 
-
-
     return resultList
 
 
@@ -209,6 +225,8 @@ def main(infile) -> list:
 2.去掉数字开头的行
 3.将列表形式处理成一行（未完成）
 '''
+
+
 def format_file(infile) -> list:
     outfile = "upload_file/temp.txt"
 
@@ -222,17 +240,17 @@ def format_file(infile) -> list:
         if lines[j].split():
             if lines[j].find("主要包括") != -1:
                 for i in range(ord("a"), ord("z") + 1):
-                    if lines[j+1].startswith(chr(i)) == True:
+                    if lines[j + 1].startswith(chr(i)) == True:
                         t_list.append(lines[j].replace("\n", ""))
-                        t_list.append(lines[j+1].replace("\n", ""))
-                        for k in range(j+2, len(lines)):
+                        t_list.append(lines[j + 1].replace("\n", ""))
+                        for k in range(j + 2, len(lines)):
                             for i in range(ord("a"), ord("z") + 1):
                                 if lines[k].startswith(chr(i)) == True:
                                     t_list.append(lines[k].replace("\n", ""))
             list_str = ''.join(t_list)
             if list_str:
-                #print(list_str)
-                outfopen.writelines(list_str+"\n")
+                # print(list_str)
+                outfopen.writelines(list_str + "\n")
             t_list = []
             for i in range(9):
                 if lines[j].startswith(str(i)) == True:
@@ -243,12 +261,12 @@ def format_file(infile) -> list:
             outfopen.writelines("")
     infopen.close()
     outfopen.close()
-    #调用主处理函数
+    # 调用主处理函数
     resultList = main(outfile)
     return resultList
 
-def upload_word(request):
 
+def upload_word(request):
     # 上传文件，并且将数据保存到数据库中
     if request.method == 'POST':
         # 获取文件名
@@ -264,7 +282,7 @@ def upload_word(request):
             with open(infile, 'w+', encoding="utf-8") as outfopen:
                 for p in file.paragraphs:
                     data = p.text.strip('\n')
-                    outfopen.writelines(data+"\n")
+                    outfopen.writelines(data + "\n")
             resultList = format_file(infile)
             messages.success(request, "上传成功！")
 
@@ -274,6 +292,7 @@ def upload_word(request):
         else:
             messages.success(request, "文件为空！")
             return redirect('/toWord/')
+
 
 def display_word_result(request):
     resultList = request.session.get('word_list')

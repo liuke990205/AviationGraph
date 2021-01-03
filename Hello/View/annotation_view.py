@@ -1,5 +1,6 @@
 import csv
 from itertools import combinations
+
 import docx
 from django.contrib import messages
 from django.shortcuts import render, redirect
@@ -43,6 +44,8 @@ def upload(request):
         else:
             messages.success(request, "文件为空！")
             return redirect('/toAnnotation/')
+
+
 result = []
 
 
@@ -138,6 +141,9 @@ def text_annotation(request):
                 entityList[entity.entity] = entity.entity_type
 
 
+
+        '''
+        
         # 对实体进行排列组合
         for a in combinations(entityList, 2):
 
@@ -162,13 +168,53 @@ def text_annotation(request):
                 with open("temp_relation.csv", "a+", newline="") as csvfile:
                     write = csv.writer(csvfile)
                     write.writerow(dataList)
+        
+        '''
+
+        #headEntity = entityList[0]
+        entity_list = []
+        for entity in entityList.keys():
+            entity_list.append(entity)
+
+        print(entity_list)
+        # 对实体进行排列组合
+        head_entity = entity_list[0]
+        for i in range(1, len(entity_list)):
+
+            # 获取到头实体和尾实体的类型
+            headEntityType = Dictionary.objects.get(entity=head_entity).entity_type
+            tailEntityType = Dictionary.objects.get(entity=entity_list[i]).entity_type
+
+            # 根据头实体和尾实体来查询之间的关系
+            relationList = Relation.objects.filter(head_entity=headEntityType, tail_entity=tailEntityType)
+
+            for relation in relationList:
+                # print(a[0], headEntityType, a[1], tailEntityType, relation.relation)
+                # 将数据插入到Temp表
+                temp = Temp(headEntity=head_entity, headEntityType=headEntityType, tailEntity=entity_list[i],
+                            tailEntityType=tailEntityType, relationshipCategory=relation.relation,
+                            annotation_id_id=text_current.annotation_id, filename=filename, user_id=user_id)
+                temp.save()
+
+                # 插入到csv文件中
+                dataList = [head_entity, headEntityType, entity_list[i], tailEntityType, relation.relation, text_current.content]
+                # 将数据存到本地csv
+                with open("temp_relation.csv", "a+", newline="") as csvfile:
+                    write = csv.writer(csvfile)
+                    write.writerow(dataList)
+
+
+
+
         '''
         自动标注 end            ---数据输出：resultList（从数据库中查询出来的一个结果集）   写入到数据库的Temp表中---
         '''
 
         # 根据annotation_id查询自动识别的数据集合
         resultList = Temp.objects.filter(annotation_id_id=text_current.annotation_id)
-        return render(request, 'text_annotation.html', {'resultList': resultList, 'current_text': text_current.content, 'entityList': entityList, 'count': count})
+        return render(request, 'text_annotation.html',
+                      {'resultList': resultList, 'current_text': text_current.content, 'entityList': entityList,
+                       'count': count})
 
 
 # 增加一条标注信息
@@ -224,7 +270,6 @@ def deleteTemp(request):
     # 删除temp_id
     temp = Temp.objects.get(temp_id=id)
     temp.delete()
-
 
     # 获取当前用户的ID
     username = request.session.get('username')

@@ -1,16 +1,11 @@
 from django.shortcuts import render
-import pymysql
-import pandas as pd
-import os
-# Create your views here.
 
-# Create your views here.
-from django.http import HttpResponse
-
-from django.shortcuts import HttpResponse #导入HttpResponse模块
-from Hello.answer.kbqa import kbqans
 from Hello.answer.bm25data import similarity
 from Hello.models import Fault
+
+
+# Create your views here.
+# Create your views here.
 
 
 def simqa(question):
@@ -23,7 +18,7 @@ def simqa(question):
     for i in result:
         arr.append(i.reason)
     arr = set(arr)
-    return list,arr
+    return list, arr
 
 
 def toAnswer(request):
@@ -36,9 +31,9 @@ def answer_question(request):
     if request.POST:
         question = request.POST.get('question', None)
         if question:
-            #dp = kbqans.entity_ner(question)
-            #print(dp)
-            qlist,bm25 = simqa(question)
+            # dp = kbqans.entity_ner(question)
+            # print(dp)
+            qlist, bm25 = simqa(question)
             '''
                         if dp!="":
                 arr.append(dp)
@@ -46,4 +41,4 @@ def answer_question(request):
                 arr = bm25
             '''
             arr = bm25
-    return render(request, 'answer.html', {'answer':arr,'qlist': qlist})
+    return render(request, 'answer.html', {'answer': arr, 'qlist': qlist})

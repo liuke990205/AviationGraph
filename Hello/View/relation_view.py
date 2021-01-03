@@ -12,6 +12,7 @@ def toRelationeExtract(request):
         return render(request, 'login.html')
     return render(request, 'relation_extract.html')
 
+
 # 跳转到关系查询页面
 def toRelationSearch(request):
     return render(request, 'relation_search.html')

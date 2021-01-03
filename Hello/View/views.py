@@ -1,9 +1,11 @@
+import datetime
+
 import pymysql
 from django.contrib import messages
 from django.shortcuts import render, redirect
 
 from Hello.models import User, Log
-import datetime
+
 
 # 用户登录
 def login(request):
@@ -19,10 +21,10 @@ def login(request):
         for user in result:
             if user.password == password:
                 request.session['username'] = username
-                sql = "INSERT INTO login_log(username, login_time) VALUES ('%s','%s')" % (username, datetime.datetime.now())
+                sql = "INSERT INTO login_log(username, login_time) VALUES ('%s','%s')" % (
+                username, datetime.datetime.now())
                 cnt = cursor.execute(sql)
                 conn1.commit()
-
 
                 sql_select = "SELECT * FROM login_log"
                 cursor.execute(sql_select)

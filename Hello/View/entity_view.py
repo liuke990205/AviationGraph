@@ -3,7 +3,6 @@ from django.contrib import messages
 from django.shortcuts import render, redirect
 
 from Hello.models import Dictionary
-# 深处NER后需要注释
 from Hello.ner_ch.src.lstm_crf.main import NER
 
 
@@ -119,7 +118,6 @@ def modifyEntity(request):
     entity = request.POST.get('Entity')
     entityType = request.POST.get('EntityType')
     index = request.POST.get('index')
-    # print(index, entity, entityType)
     resultList = request.session.get('result_List')
 
     for data in resultList:

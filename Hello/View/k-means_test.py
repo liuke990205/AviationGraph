@@ -1,7 +1,8 @@
 # -*- coding: utf-8 -*-
 import jieba
-from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.cluster import KMeans
+from sklearn.feature_extraction.text import TfidfVectorizer
+
 
 def jieba_tokenize(text):
     return jieba.lcut(text)

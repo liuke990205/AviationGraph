@@ -1,21 +1,23 @@
 # -*- coding: utf-8 -*-
-from django.contrib import messages
-from django.shortcuts import render, redirect
 import docx
 import jieba
-from sklearn.feature_extraction.text import TfidfVectorizer
+from django.contrib import messages
+from django.shortcuts import render, redirect
 from sklearn.cluster import KMeans
+from sklearn.feature_extraction.text import TfidfVectorizer
+
 
 def jieba_tokenize(text):
     return jieba.lcut(text)
 
+
 # 跳转到分类界面
 def toClassification(request):
-
     username = request.session.get('username')
     if username is None:
         return render(request, 'login.html')
     return render(request, 'classification.html')
+
 
 def upload_classification_file(request):
     if request.method == 'POST':
@@ -31,10 +33,10 @@ def upload_classification_file(request):
             messages.success(request, "文件为空！")
             return redirect('/toClassification/')
 
+
 def display_classification(request):
     # 读取文件内容
     file = docx.Document("upload_file/classication_word.docx")
-
 
     k_value = request.POST.get('k_value')
     if k_value is None:

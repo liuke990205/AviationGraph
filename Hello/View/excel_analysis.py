@@ -1,8 +1,9 @@
 # coding=gbk
 
 import xlrd
-import csv
+
 from Hello.toolkit.pre_load import neo4jconn
+
 
 def excel_one_line_to_list():
     file_name = "C:/Users/刘珂/Desktop/excel_import.xlsx"
@@ -50,11 +51,11 @@ def excel_one_line_to_list():
     for data in data_list:
         # 存中间结果
         temp_list = [data[faulty_component], "故障件", data[professional], "专业", "所属专业"]
-        #temp_list = ["飞机", "飞机", data[faulty_component], "故障件", "包括"]
+        # temp_list = ["飞机", "飞机", data[faulty_component], "故障件", "包括"]
 
-        #写入到临时结果列表
+        # 写入到临时结果列表
         result_list.append(temp_list)
-        #将节点信息写入到Neo4j数据库
+        # 将节点信息写入到Neo4j数据库
         if db.findEntity(data[faulty_component]) is None:
             db.createNode2(data[faulty_component], "故障件")
         if db.findEntity(data[professional]) is None:
@@ -78,40 +79,39 @@ def excel_one_line_to_list():
         temp_list = [data[faulty_component], "故障件", data[department], "部门", "所属部门"]
         result_list.append(temp_list)
 
-        #db.createNode(data[faulty_component], "故障件", {})
+        # db.createNode(data[faulty_component], "故障件", {})
         db.insertExcelRelation(data[faulty_component], "故障件", data[department], "部门", "所属部门")
         temp_list = [data[faulty_component], "故障件", data[local], "所在位置", "所在位置"]
         result_list.append(temp_list)
 
-        #db.createNode(data[faulty_component], "故障件", {})
+        # db.createNode(data[faulty_component], "故障件", {})
         db.insertExcelRelation(data[faulty_component], "故障件", data[local], "所在位置", "所在位置")
         temp_list = [data[faulty_component], "故障件", data[failure_phenomenon], "故障现象", "故障现象"]
         result_list.append(temp_list)
 
-
-        #db.createNode(data[faulty_component], "故障件", {})
+        # db.createNode(data[faulty_component], "故障件", {})
         db.insertExcelRelation(data[faulty_component], "故障件", data[failure_phenomenon], "故障现象", "故障现象")
         temp_list = [data[failure_phenomenon], "故障现象", data[find_the_opportunity], "发现时机", "发现时机"]
         result_list.append(temp_list)
 
-        #db.createNode(data[failure_phenomenon], "故障现象", {})
+        # db.createNode(data[failure_phenomenon], "故障现象", {})
         db.insertExcelRelation(data[failure_phenomenon], "故障现象", data[find_the_opportunity], "发现时机", "发现时机")
         temp_list = [data[failure_phenomenon], "故障现象", data[cause_of_failure], "故障原因", "故障原因"]
         result_list.append(temp_list)
 
-        #db.createNode(data[failure_phenomenon], "故障现象", {})
+        # db.createNode(data[failure_phenomenon], "故障现象", {})
         db.insertExcelRelation(data[failure_phenomenon], "故障现象", data[cause_of_failure], "故障原因", "故障原因")
         temp_list = [data[cause_of_failure], "故障原因", data[ruled_out], "排除经过", "排除经过"]
         result_list.append(temp_list)
 
         db.insertExcelRelation("飞机", "飞机", data[faulty_component], "故障件", "包括")
 
-        #db.createNode(data[cause_of_failure], "故障原因", {})
+        # db.createNode(data[cause_of_failure], "故障原因", {})
         db.insertExcelRelation(data[cause_of_failure], "故障原因", data[ruled_out], "排除经过", "排除经过")
         temp_list = ["飞机", "飞机", data[faulty_component], "故障件", "包括"]
         result_list.append(temp_list)
 
-    #将列表信息存储到Excel中
+    # 将列表信息存储到Excel中
     '''
     with open("C:/Users/刘珂/Desktop//export.csv", "w", newline="") as csvfile:
     for data in result_list:

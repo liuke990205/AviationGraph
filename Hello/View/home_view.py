@@ -18,5 +18,5 @@ def toHome(request):
 
     return render(request, 'home.html',
                   {'searchResult': json.dumps(searchResult, ensure_ascii=False), 'relation_amount': len(searchResult),
-                   'searchEntity': json.dumps(searchEntity, ensure_ascii=False),'entity_amount': len(searchEntity),
+                   'searchEntity': json.dumps(searchEntity, ensure_ascii=False), 'entity_amount': len(searchEntity),
                    'number': number})

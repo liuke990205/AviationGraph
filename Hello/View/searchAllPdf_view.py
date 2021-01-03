@@ -1,19 +1,23 @@
 # -*- coding: utf-8 -*-
+import jieba
+import pdfplumber
+from PyPDF2 import PdfFileReader
 from django.contrib import messages
 from django.shortcuts import render, redirect
-import pdfplumber
+
 from Hello.Entity.WORD.word import Word
-import jieba
-from PyPDF2 import PdfFileReader
 
 '''
 跳转到全文搜索界面
 '''
+
+
 def toSearchAllPdf(request):
     username = request.session.get('username')
     if username is None:
         return render(request, 'login.html')
     return render(request, "searchAllPdf.html")
+
 
 def upload_pdf(request):
     if request.method == 'POST':
@@ -45,7 +49,7 @@ def PDFreader(filename):
         for j in range(seg_list.__len__()):
             tem_word = Word()
             tem_word.setWord(seg_list[j])
-            tem_word.setPageNo(i+1)
+            tem_word.setPageNo(i + 1)
             wordlist.append(tem_word)
     return wordlist
 
@@ -54,7 +58,7 @@ def PDFsearch(key, words):
     # 搜索关键词
     Tem_PageNo = list()
     for i in range(words.__len__()):
-        if(key == words[i].getWord()):
+        if (key == words[i].getWord()):
             Tem_PageNo.append(words[i].getPageNo())
     PageNo = list()
     for i in range(Tem_PageNo.__len__()):
@@ -82,6 +86,7 @@ def PDFreader_title(pdf):
                 tem_word.setWord(seg_list[j])
                 tem_word.setPageNo(pg_num)
                 wordlist.append(tem_word)
+
     title_split(pdf.getOutlines())
     return wordlist
 
@@ -92,7 +97,7 @@ def PDFsearch_title(key, filename):
         words = PDFreader_title(pdf)
         Tem_PageNo = list()
         for i in range(words.__len__()):
-            if(key == words[i].getWord()):
+            if (key == words[i].getWord()):
                 Tem_PageNo.append(words[i].getPageNo())
         PageNo = list()
         for i in range(Tem_PageNo.__len__()):
@@ -100,11 +105,11 @@ def PDFsearch_title(key, filename):
                 PageNo.append(Tem_PageNo[i])
     return PageNo
 
+
 def searchAllPdf(request):
     key = request.POST.get("keywords")
     filename = "upload_file/Python.pdf"
     words = PDFreader(filename)
-
 
     pages = PDFsearch_title(key, filename)
     pages_content = PDFsearch(key, words)
@@ -114,16 +119,16 @@ def searchAllPdf(request):
             pages.append(pages_content[i])
     print(pages)
     if pages.__len__() == 0:
-        #print(pages)
+        # print(pages)
         messages.success(request, "抱歉！在文件中没有找到该关键字！")
         return redirect("/toSearchAllPdf")
     else:
         page_content = []
         for i in range(pages.__len__()):
-            #print(key + "在" + filename + "中出现的页码为" + str(pages[i]))
+            # print(key + "在" + filename + "中出现的页码为" + str(pages[i]))
             pdfReader = pdfplumber.open(filename)
-            page_text = pdfReader.pages[ pages[i] - 1]
+            page_text = pdfReader.pages[pages[i] - 1]
             page_content.append(page_text.extract_text())
 
         content_dict = dict(zip(pages, page_content))
-        return render(request, 'searchAllPdf.html',{'content_dict': content_dict})
+        return render(request, 'searchAllPdf.html', {'content_dict': content_dict})

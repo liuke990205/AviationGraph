@@ -1,13 +1,16 @@
 import csv
 import os
-import re
 import random
+import re
+
 import docx
 import jieba
 from django.contrib import messages
 from django.shortcuts import render, redirect
 
 from Hello.models import Relation, Temp, User, Annotation
+
+
 # from Hello.toolkit.deepke import predict1
 
 # 跳转到关系抽取页面
@@ -77,7 +80,6 @@ def re_text(request):
 
         f = open(temp_file_dir, 'w')
         f.truncate()
-
 
         f1 = open(dic_dir, 'r', encoding='utf-8')
         f2 = open(temp_file_dir, 'a')
@@ -177,7 +179,7 @@ def re_text(request):
             entity_type = []
         f2.close()
         os.system("python Hello/toolkit/deepke/predict1.py")
-        #predict1.main()
+        # predict1.main()
         textfile = open(temp_file_dir, 'r')
         # 获取当前用户的ID
         username = request.session.get('username')
@@ -186,7 +188,7 @@ def re_text(request):
 
         reader = csv.reader(textfile)
 
-        #将session域初始化
+        # 将session域初始化
         request.session['resultList'] = []
 
         resultList = []
@@ -237,12 +239,13 @@ def deleteRel(request):
 
     resultList = request.session.get('resultList')
     for data in resultList:
-        if data[8] == int(id): ##注意强制类型转换
-            #删除列表元素
+        if data[8] == int(id):  ##注意强制类型转换
+            # 删除列表元素
             resultList.remove(data)
-    #更新session域的内容
+    # 更新session域的内容
     request.session['resultList'] = resultList
     return render(request, 'relation_extract.html', {'resultList': resultList})
+
 
 # 修改Rel信息
 def modifyRel(request):
@@ -265,6 +268,7 @@ def modifyRel(request):
     request.session['resultList'] = resultList
 
     return render(request, 'relation_extract.html', {'resultList': resultList})
+
 
 def saveRel(request):
     resultList = request.session.get('resultList')
