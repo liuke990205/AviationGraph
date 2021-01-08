@@ -9,19 +9,19 @@
     <link href="/static/css/font-awesome.min.css" rel="stylesheet"/>
     <link rel="stylesheet" href="/static/css/bootstrap.css"/>
     <link rel="stylesheet" href="/static/css/style2.css"/>
-{% comment %}
+<!--
     <link rel="stylesheet" href="http://cdn.static.runoob.com/libs/bootstrap/3.3.7/css/bootstrap.min.css">
-{% endcomment %}
+-->
 
     <script type="text/javascript" src="/static/js/jquery.min.js"></script>
     <script type="text/javascript" src="/static/js/bootstrap.min.js"></script>
     <script src="/static/js/echarts.common.min.js"></script>
     <script type="text/javascript" src="/static/js/echarts-all-3.js"></script>
 
-{% comment %}    <script src="http://cdn.static.runoob.com/libs/jquery/2.1.1/jquery.min.js"></script>
+<!--  <script src="http://cdn.static.runoob.com/libs/jquery/2.1.1/jquery.min.js"></script>
     <script src="http://cdn.static.runoob.com/libs/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
-    <script type="text/javascript" src="http://echarts.baidu.com/gallery/vendors/echarts/echarts-all-3.js"></script>{% endcomment %}
+    <script type="text/javascript" src="http://echarts.baidu.com/gallery/vendors/echarts/echarts-all-3.js"></script>-->
 
 </head>
 <title>关系</title>
@@ -130,7 +130,7 @@
                                                            document.getElementById('headEntity').value='{{ list.0 }}';
                                                            document.getElementById('relationshipCategory').value='{{ list.1 }}';
                                                            document.getElementById('tailEntity').value='{{ list.2 }}';
-                                                           document.getElementById('temp_id').value={{ list.3 }};
+                                                           document.getElementById('temp_id').value='{{ list.3 }}';
                                                            ">
                                             <a href="{% url 'relation_delete' %}?temp_id={{ list.3 }}">
                                                 <button class="btn btn-danger" type="button"

@@ -20,17 +20,24 @@ def toExcel(request):
 def upload_excel(request):
     if request.method == 'POST':
         # 获取文件名
-        file = request.FILES.get('file')
+        file = request.FILES.get('excel_file')
         if file:
+            with open('upload_file/excel_import.xlsx', 'wb+') as destination:
+                for chunk in file.chunks():
+                    destination.write(chunk)
+
             # 下面代码作用：获取到excel中的字段和数据
-            excel = xlrd.open_workbook(file.name)
+            excel = xlrd.open_workbook("upload_file/excel_import.xlsx")
             sheet = excel.sheet_by_index(0)
             row_number = sheet.nrows
             column_number = sheet.ncols
             field_list = sheet.row_values(0)
+            print(field_list)
             data_list = []
             for i in range(1, row_number):
                 data_list.append(sheet.row_values(i))
+            print(data_list)
+
             # 下面代码作用：根据字段创建表，根据数据执行插入语句
             conn = pymysql.connect(host='123.56.52.53', port=3306, user='root', password='root',
                                    database='source')
@@ -41,6 +48,7 @@ def upload_excel(request):
             for field in field_list[:-1]:
                 create_sql += "{} varchar(50),".format(field)
             create_sql += "{} varchar(50))".format(field_list[-1])
+            print(create_sql)
             cursor.execute(create_sql)
             for data in data_list:
                 new_data = ["'{}'".format(i) for i in data]
@@ -57,7 +65,6 @@ def upload_excel(request):
             conn.commit()
 
             request.session['name_list'] = name_list
-
             '''
             将上传的表中的字段名和  数据库中的规则进行匹配   tableData存储匹配之后的list
             '''
@@ -74,7 +81,6 @@ def upload_excel(request):
                 temp_list = []
                 for a in result:
                     temp_list.append(a)
-                # for data in temp_list:
                 if flag(temp_list[0], name_list) and flag(temp_list[2], name_list):
                     tableData.append(temp_list)
 
@@ -103,6 +109,9 @@ def commit_properties(request):
         tail_entity_list = request.POST.getlist('select22')
         tail_property_list = request.POST.getlist('select33')
 
+        if len(head_entity_list) == 0 or len(tail_entity_list) == 0:
+            messages.success(request, "规则为空，请重新添加规则！")
+            return redirect('/toExcel/')
         tableData = request.session.get('tableData')
         name_list = request.session.get('name_list')
 
@@ -143,6 +152,14 @@ def excel_delete(request):
     id = request.GET.get('id')
     tableData = request.session.get('tableData')
     name_list = request.session.get('name_list')
+    # 连接数据库
+    conn = pymysql.connect(host='123.56.52.53', port=3306, user='root', password='root',
+                           database='source')
+    cursor = conn.cursor()
+    sql = "DELETE FROM excel_relation WHERE id = '%s'" % id
+    cursor.execute(sql)
+    conn.commit()
+
     for data in tableData:
         if data[4] == int(id):
             tableData.remove(data)
@@ -165,6 +182,8 @@ def excel_extract(request):
             head_property_list = data[1]
             tail_entity = data[2]
             tail_property_list = data[3]
+
+            print(data)
 
             # 根据表的字段名进行抽取，判断头实体和尾实体的属性表是否为空
             if len(head_property_list) != 0 and len(tail_property_list) != 0:

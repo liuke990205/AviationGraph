@@ -37,7 +37,6 @@ def upload_classification_file(request):
 def display_classification(request):
     # 读取文件内容
     file = docx.Document("upload_file/classication_word.docx")
-
     k_value = request.POST.get('k_value')
     if k_value is None:
         k_value = request.session.get('k_value')
@@ -66,6 +65,10 @@ def display_classification(request):
     并行计算只是针对与不同初始值的计算。比如n_init=10，n_jobs=40, 
     服务器上面有20个CPU可以开40个进程，最终只会开10个进程
     '''
+
+    print(k_value)
+    if len(k_value) == 0:
+        k_value = "10"
     num_clusters = int(k_value)
     km_cluster = KMeans(n_clusters=num_clusters, max_iter=300, n_init=1, init='k-means++', n_jobs=1)
 

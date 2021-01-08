@@ -9,22 +9,35 @@
         <link href="/static/css/style.css" rel="stylesheet">
         <link href="/static/css/elegant-icons-style.css" rel="stylesheet">
         <link rel="stylesheet" href="/static/css/bootstrap.min.css"/>
-{% comment %}
-        <link rel="stylesheet" href="http://cdn.static.runoob.com/libs/bootstrap/3.3.7/css/bootstrap.min.css">
-{% endcomment %}
         <link href="/static/css/font-awesome.min.css" rel="stylesheet"/>
         <link rel="stylesheet" href="/static/css/bootstrap.css"/>
         <link rel="stylesheet" href="/static/css/style2.css"/>
-        <script type="text/javascript" src="/static/js/jquery.min.js"></script>
+        <script type="text/javascript" src="/static/js/jquery-1.8.3.min.js"></script>
         <script type="text/javascript" src="/static/js/bootstrap.min.js"></script>
         <script src="/static/js/echarts.common.min.js"></script>
         <script src="/static/js/echarts-all-3.js"></script>
 
-{% comment %}        <script src="http://cdn.static.runoob.com/libs/jquery/2.1.1/jquery.min.js"></script>
-        <script src="http://cdn.static.runoob.com/libs/bootstrap/3.3.7/js/bootstrap.min.js"></script>{% endcomment %}
-{% comment %}
-        <script type="text/javascript" src="http://echarts.baidu.com/gallery/vendors/echarts/echarts-all-3.js"></script>
-{% endcomment %}
+      <!--
+        <link rel="stylesheet" href="http://cdn.static.runoob.com/libs/bootstrap/3.3.7/css/bootstrap.min.css">
+        <script src="http://cdn.static.runoob.com/libs/jquery/2.1.1/jquery.min.js"></script>
+        <script src="http://cdn.static.runoob.com/libs/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        <script type="text/javascript" src="http://echarts.baidu.com/gallery/vendors/echarts/echarts-all-3.js"></script>-->
+        <script>
+            function checkAll() {
+                var hobby = document.getElementsByName("boxList");
+                for (var i = 0; i < hobby.length; i++) {
+                    var h = hobby[i];
+                    h.checked = true;
+                }
+            }
+            function checkNoAll() {
+                var hobby = document.getElementsByName("boxList");
+                for (var i = 0; i < hobby.length; i++) {
+                    var h = hobby[i];
+                    h.checked = false;
+                }
+            }
+        </script>
     </head>
     <body>
 
@@ -51,6 +64,7 @@
                                     style="text-align:center; font-size:15px; float: left;" name="upload">
                                 批量导入Neo4j
                             </button>
+
                             <a href="{% url 'deleteAllNeo4j' %}">
                                 <button class="btn btn-danger" type="button"
                                         onclick="return confirm('是否确认全部删除？');"
@@ -59,14 +73,15 @@
                                 </button>
                             </a>
                             <div class="show-list" style="position: relative;top: 30px; text-align: center">
-
                                 <table style="width: 1100px" class="table table-bordered table-hover" align="center"
                                        border="solid 3px">
                                     <thead>
                                     <tr align="center" class="text-danger">
-                                        <th align="center" width="50" class="text-center" style="font-size: 16px">
-                                            批量
+                                        <th align="center" width="200" class="text-center" style="font-size: 16px">
+                                            <button class="btn btn-warning btn-sm doProModify" type="button"  style="text-align: center; font-size:15px;" value="全选" onclick="checkAll()">全选</button>
+                                            <button class="btn btn-warning btn-sm doProModify" type="button"  style="text-align: center; font-size:15px;" value="全不选" onclick="checkNoAll()">全不选</button>
                                         </th>
+
                                         <th align="center" width="150" class="text-center" style="font-size: 16px">
                                             头实体
                                         </th>
@@ -88,11 +103,11 @@
                                     </tr>
                                     </thead>
                                     <tbody id="tb">
-                                    {% autopaginate tempList 5 %}
+                                    {% autopaginate tempList 8 %}
                                     {% for list in tempList %}
                                         <tr>
-                                            <td><input id="box" name="boxList" style="zoom:180%" type="checkbox"
-                                                       value="{{ list.temp_id }}" onclick="checkonebox()"/></td>
+                                            <td><input name="boxList" style="zoom:180%" type="checkbox"
+                                                       value="{{ list.temp_id }}"/></td>
                                             <td align="center"
                                                 style="display:table-cell; vertical-align:middle; font-size: 15px">{{ list.headEntity }}</td>
                                             <td align="center"
@@ -128,10 +143,10 @@
                     </div>
                 </div>
             </div>
-            {% endif %}
             <div class="footers">
                 <span style="color: white;">© 2020 东北大学-数字线技术项目团队 版权所有</span>
             </div>
+            {% endif %}
         </div>
     </div>
     {% if messages %}

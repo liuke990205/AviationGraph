@@ -149,6 +149,22 @@
                     </div>
                 </div>
             {% endif %}
+            <div class="col-md-12">
+                <div class="panel panel-default">
+                    <header class="panel-heading">
+                        导入到Neo4j数据库：
+                    </header>
+                    <div class="panel-body">
+                        <form name="insert" method="post" action="/wordExtractInsertNeo4j/">
+                            {% csrf_token %}
+                            <button type="submit"
+                                    style="background-color:#8fd19e; width: 200px;height: 36px; margin-left: 440px"
+                                    name="upload">导入到Neo4j数据库
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
             <div class="footers">
                 <span style="color: white;">© 2020 东北大学-数字线技术项目团队 版权所有</span>
             </div>

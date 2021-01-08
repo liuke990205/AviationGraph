@@ -69,13 +69,16 @@ def relation_search(request):
         # 若输入entity1,entity2和relation,则输出entity1、entity2是否具有相应的关系
         if (len(entity1) != 0 and len(entity2) != 0 and len(relation) != 0):
             searchResult = db.findEntityRelation(entity1, relation, entity2)
-
+        # 若只输入relation,则输出entity1、entity2是否具有相应的关系
+        if (len(entity1) == 0 and len(entity2) == 0 and len(relation) != 0):
+            searchResult = db.findOthersByRelation(relation)
         # 全为空
         if (len(entity1) == 0 and len(relation) == 0 and len(entity2) == 0):
             searchResult = db.findAll()
 
         tableData = Screen(searchResult)
         if (len(searchResult) > 0):
+            print(tableData)
             return render(request, 'relation_search.html',
                           {'searchResult': json.dumps(searchResult, ensure_ascii=False), 'tableData': tableData,
                            'entity1': entity1, 'entity2': entity2, 'relation': relation})

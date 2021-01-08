@@ -133,6 +133,7 @@ urlpatterns = [
     path('display_word_result/', word_view.display_word_result),
 
 
+    path('wordExtractInsertNeo4j/', word_view.wordExtractInsertNeo4j),
 
     #跳转到问答系统
     path('toAnswer/', answer_view.toAnswer),

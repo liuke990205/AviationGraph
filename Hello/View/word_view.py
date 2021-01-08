@@ -5,6 +5,7 @@ import json
 import docx
 from django.contrib import messages
 from django.shortcuts import render, redirect
+from Hello.toolkit.pre_load import neo4jconn
 
 '''
 跳转到基于规则的word知识提取
@@ -293,6 +294,61 @@ def upload_word(request):
             messages.success(request, "文件为空！")
             return redirect('/toWord/')
 
+def wordExtractInsertNeo4j(request):
+    resultList = request.session.get('word_list')
+    print(resultList)
+    if len(resultList) == 0:
+        messages.success(request, "请抽取后再导入数据！")
+        return redirect('/toWord/')
+    db = neo4jconn
+    for data in resultList:
+        head_entity_value = data[0]
+        head_entity_typename = data[1]
+        tail_entity_value = data[3]
+        tail_entity_typename = data[4]
+        relation = data[2]
+
+
+        # 根据头实体名来查找neo4j数据库是否已经存在实体
+        select_head_entity = db.findEntity(head_entity_value)
+        # 根据尾实体名来查找neo4j数据库是否已经存在实体
+        select_tail_entity = db.findEntity(tail_entity_value)
+
+        '''
+            创建并更新节点和关系【先判断两个节点是否相同，再判断一下节点是否已经存在】
+        '''
+        # 两个实体名不一样
+        if head_entity_value != tail_entity_value:
+            # 两个实体都不存在，创建节点和关系
+            if len(select_head_entity) == 0 and len(select_tail_entity) == 0:
+                db.createNode2(head_entity_value, head_entity_typename)
+                db.createNode2(tail_entity_value, tail_entity_typename)
+                db.insertExcelRelation(head_entity_value, head_entity_typename, tail_entity_value, tail_entity_typename,
+                                       relation)
+
+            # 头实体已经存在，更新头实体属性，创建尾实体和关系
+            elif len(select_head_entity) != 0 and len(select_tail_entity) == 0:
+                db.createNode2(tail_entity_value, tail_entity_typename)
+                db.insertExcelRelation(head_entity_value, head_entity_typename, tail_entity_value, tail_entity_typename,
+                                       relation)
+
+            # 尾实体已经存在，更新尾实体属性，创建头实体和关系
+            elif len(select_head_entity) == 0 and len(select_tail_entity) != 0:
+                db.createNode2(head_entity_value, head_entity_typename)
+                db.insertExcelRelation(head_entity_value, head_entity_typename, tail_entity_value, tail_entity_typename,
+                                       relation)
+
+            # 两个实体都已经存在，更新两个实体的属性
+            else:
+                # 判断两个实体间是否已存在关系，若不存在则创建关系
+                if db.findRelationByEntities(head_entity_value, tail_entity_value) or db.findRelationByEntities(
+                        tail_entity_value, head_entity_value):
+                    continue
+                else:
+                    db.insertExcelRelation(head_entity_value, head_entity_typename, tail_entity_value,
+                                           tail_entity_typename,
+                                           relation)
+    return render(request, 'word.html', {'resultList': resultList})
 
 def display_word_result(request):
     resultList = request.session.get('word_list')

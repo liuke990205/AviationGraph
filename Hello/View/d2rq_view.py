@@ -245,9 +245,11 @@ def insertNode(table, entity_name, entity_property, database, host, username, pa
     conn.close()  # 关闭连接
 
 
+sum = 300
+
+
 def insertKnow(table2, entity_name2, re_name, database, host, username, password, db_name, port):
     global sum
-    sum = 300
 
     # 连接关系数据库
     conn = connDB(database, host, int(port), username, password, db_name).connectDB()
@@ -278,6 +280,9 @@ def insertKnow(table2, entity_name2, re_name, database, host, username, password
                 break
         db = neo4jconn
         sum += 1
-        db.insertRelation(result[0], type0, relation.relation, result[1], type1, str(sum))
+        if db.findRelationByEntities(result[0], result[1]):
+            continue;
+        else:
+            db.insertRelation(result[0], type0, relation.relation, result[1], type1, str(sum))
     cursor.close()  # 关闭游标
     conn.close()  # 关闭连接

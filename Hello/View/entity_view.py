@@ -12,9 +12,7 @@ def toEntityRecognition(request):
         return render(request, 'login.html')
     return render(request, 'entity_recognition.html')
 
-
 index = 0
-
 
 def convert(dict, sentence):
     lables = {'AIR': '航空器', 'WEA': '武器', 'MATH': '数学模型', 'SYS': '系统', 'TAR': '性能指标', 'DOC': '参考文档'}

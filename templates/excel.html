@@ -119,7 +119,7 @@
                     <div class="panel-body">
                         <form name="upload" enctype="multipart/form-data" method="post" action="/upload_excel/">
                             {% csrf_token %}
-                            <input name="file" id="file" type="file" style="display: none"/>
+                            <input name="excel_file" id="file" type="file" style="display: none"/>
                             <div class="input-append">
                                 <input id="photoCover" type="text" class="form-control"
                                        style="float: left; width: 350px">

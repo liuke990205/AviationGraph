@@ -11,7 +11,7 @@ class Neo4j_Handle():
         pass
 
     def connectDB(self):
-        self.graph = Graph("bolt: // localhost:7687", username="neo4j", password="root")
+        self.graph = Graph("bolt://123.56.52.53:7687", username="neo4j", password="root")
         self.matcher = NodeMatcher(self.graph)
 
     # 实体查询
@@ -50,6 +50,12 @@ class Neo4j_Handle():
             "MATCH (n1{name:'" + entity1 + "'})- [rel] -> (n2{name:'" + entity2 + "'}) RETURN n1,rel,n2").data()
         return answer
 
+    # 关系查询：关系
+    def findOthersByRelation(self, relation):
+        answer = self.graph.run(
+            "MATCH (n1)- [rel:" + relation + " {type:'" + relation + "'}] -> (n2) RETURN n1,rel,n2").data()
+        return answer
+
     # 查询数据库中是否有对应的实体-关系匹配
     def findEntityRelation(self, entity1, relation, entity2):
         answer = self.graph.run(
@@ -68,15 +74,15 @@ class Neo4j_Handle():
         answer = self.graph.run("MATCH(x) WHERE x.name = '" + entity + "' return x").data()
         return answer
 
-    def insertRelation(self, entity1, type1, relation, entity2, type2):
+    def insertRelation(self, entity1, type1, relation, entity2, type2, temp_id):
         #self.graph.run("MERGE (x{name:\"" + entity1 + "\"})-[jx:" + relation + "{type: \"" + relation + "\", id: \"" + id + "\"}]->(y{name:\"" + entity2 + "\"})")
         self.graph.run(
-            "MATCH (x:" + type1 + "{name:'" + entity1 + "'}), (y:" + type2 + "{name:'" + entity2 + "'}) MERGE (x)-[jx:" + relation + "{type: '" + relation + "'}]->(y)")
+            "MATCH (x:" + type1 + "{name:'" + entity1 + "'}), (y:" + type2 + "{name:'" + entity2 + "'}) MERGE (x)-[jx:" + relation + "{type: '" + relation + "',id: '" + temp_id + "'}]->(y)")
 
     def insertExcelRelation(self, entity1, type1, entity2, type2, relation):
         self.graph.run(
             "MATCH (x:" + type1 + "{name:'" + entity1 + "'}), (y:" + type2 + "{name:'" + entity2 + "'}) MERGE (x)-[jx:" + relation + "{type: '" + relation + "'}]->(y)")
-
+        print("MATCH (x:" + type1 + "{name:'" + entity1 + "'}), (y:" + type2 + "{name:'" + entity2 + "'}) MERGE (x)-[jx:" + relation + "{type: '" + relation + "'}]->(y)")
     def createNode(self, entity, type, dict):
         string_list = []
         for key, value in dict.items():

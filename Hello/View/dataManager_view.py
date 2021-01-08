@@ -41,10 +41,10 @@ def importNeo4j(request):
     if result1 and result2:
         # 判断是否存在关系
         if db.findRelationByEntities(relation.headEntity, relation.tailEntity):  # 如果存在关系，更新关系
-            db.modifyRelation(relation.headEntity, relation.tailEntity, relation.relationshipCategory)
+            db.modifyRelation(relation.headEntity, relation.tailEntity, relation.relationshipCategory, id)
         else:  # 如果两个实体不存在关系，则直接创建关系
             db.insertRelation(relation.headEntity, relation.headEntityType, relation.relationshipCategory,
-                              relation.tailEntity, relation.tailEntityType)
+                              relation.tailEntity, relation.tailEntityType, id)
         temp = Temp.objects.get(temp_id=id)
         temp.delete()
         return redirect('/toDataManager/')
@@ -53,7 +53,7 @@ def importNeo4j(request):
         db.createNode2(relation.tailEntity, relation.tailEntityType)
         # 插入一条neo4j数据库信息
         db.insertRelation(relation.headEntity, relation.headEntityType, relation.relationshipCategory,
-                          relation.tailEntity, relation.tailEntityType)
+                          relation.tailEntity, relation.tailEntityType, id)
         temp = Temp.objects.get(temp_id=id)
         temp.delete()
         tempList = Temp.objects.filter(user_id=user_id)
@@ -63,20 +63,19 @@ def importNeo4j(request):
         db.createNode2(relation.headEntity, relation.headEntityType)
         # 插入一条neo4j数据库信息
         db.insertRelation(relation.headEntity, relation.headEntityType, relation.relationshipCategory,
-                          relation.tailEntity, relation.tailEntityType)
+                          relation.tailEntity, relation.tailEntityType, id)
         temp = Temp.objects.get(temp_id=id)
         temp.delete()
         tempList = Temp.objects.filter(user_id=user_id)
         return redirect('/toDataManager/')
     else:
-        print(111111)
         # 创建头实体
         db.createNode2(relation.headEntity, relation.headEntityType)
         # 创建尾实体
         db.createNode2(relation.tailEntity, relation.tailEntityType)
         # 插入一条neo4j数据库信息
         db.insertRelation(relation.headEntity, relation.headEntityType, relation.relationshipCategory,
-                          relation.tailEntity, relation.tailEntityType)
+                          relation.tailEntity, relation.tailEntityType, id)
         temp = Temp.objects.get(temp_id=id)
         temp.delete()
         tempList = Temp.objects.filter(user_id=user_id)
@@ -100,7 +99,7 @@ def importNeo4jMuilt(request):
                     db.modifyRelation(relation.headEntity, relation.tailEntity, relation.relationshipCategory, temp_id)
                 else:  # 如果两个实体不存在关系，则直接创建关系
                     db.insertRelation(relation.headEntity, relation.headEntityType, relation.relationshipCategory,
-                                      relation.tailEntity, relation.tailEntityType)
+                                      relation.tailEntity, relation.tailEntityType, temp_id)
                 temp = Temp.objects.get(temp_id=temp_id)
                 temp.delete()
             elif result1:
@@ -108,7 +107,7 @@ def importNeo4jMuilt(request):
                 db.createNode2(relation.tailEntity, relation.tailEntityType)
                 # 插入一条neo4j数据库信息
                 db.insertRelation(relation.headEntity, relation.headEntityType, relation.relationshipCategory,
-                                  relation.tailEntity, relation.tailEntityType)
+                                  relation.tailEntity, relation.tailEntityType, temp_id)
                 temp = Temp.objects.get(temp_id=temp_id)
                 temp.delete()
             elif result2:
@@ -116,7 +115,7 @@ def importNeo4jMuilt(request):
                 db.createNode2(relation.headEntity, relation.headEntityType)
                 # 插入一条neo4j数据库信息
                 db.insertRelation(relation.headEntity, relation.headEntityType, relation.relationshipCategory,
-                                  relation.tailEntity, relation.tailEntityType)
+                                  relation.tailEntity, relation.tailEntityType, temp_id)
                 temp = Temp.objects.get(temp_id=id)
                 temp.delete()
             else:
@@ -126,7 +125,7 @@ def importNeo4jMuilt(request):
                 db.createNode2(relation.tailEntity, relation.tailEntityType)
                 # 插入一条neo4j数据库信息
                 db.insertRelation(relation.headEntity, relation.headEntityType, relation.relationshipCategory,
-                                  relation.tailEntity, relation.tailEntityType)
+                                  relation.tailEntity, relation.tailEntityType, temp_id)
                 temp = Temp.objects.get(temp_id=id)
                 temp.delete()
     else:
