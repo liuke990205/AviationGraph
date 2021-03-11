@@ -84,4 +84,11 @@ def display_classification(request):
         temp.append(k)
         temp.append(result_dict[k])
         resultList_classification.append(temp)
+
+    file = open("upload_file/output.txt", 'w')
+    for i in range(len(resultList_classification)):
+        s = str(resultList_classification[i][0]).replace('[', '').replace(']', '')  # 去除[],这两行按数据不同，可以选择
+        s = s.replace("'", '').replace(',', '') + '\n'  # 去除单引号，逗号，每行末尾追加换行符
+        file.write(s)
+    file.close()
     return render(request, 'classification.html', {'resultList_classification': resultList_classification})

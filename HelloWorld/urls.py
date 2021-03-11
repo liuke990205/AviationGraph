@@ -1,7 +1,8 @@
 from django.contrib import admin
 from django.urls import path
 
-from Hello.View import views, annotation_view, dataManager_view, entity_view, relation_view, home_view, d2rq_view, relation_extraction_view, excel_view, word_view, answer_view, classification_view, searchAllPdf_view
+from Hello.View import views, annotation_view, dataManager_view, entity_view, relation_view, home_view, d2rq_view, \
+    relation_extraction_view, excel_view, word_view, answer_view, classification_view, searchAllPdf_view, answer2_view
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -88,6 +89,9 @@ urlpatterns = [
 
     #进行关系抽取操作
     path('re_text/', relation_extraction_view.re_text),
+
+    path('display_re_text/', relation_extraction_view.display_re_text),
+
     #进行关系删除操作
     path('deleteRel/', relation_extraction_view.deleteRel, name='deleteRel'),
     #进行关系修改操作
@@ -132,18 +136,22 @@ urlpatterns = [
 
     path('display_word_result/', word_view.display_word_result),
 
-
     path('wordExtractInsertNeo4j/', word_view.wordExtractInsertNeo4j),
 
-    #跳转到问答系统
+    # 跳转到问答系统
     path('toAnswer/', answer_view.toAnswer),
 
     path('answer_question/', answer_view.answer_question),
 
-    #跳转到信息聚类模块
+    path('answer_feedback/', answer_view.answer_feedback),
+
+    path('toAnswer2/', answer2_view.toAnswer2),
+    path('answer_question2/', answer2_view.answer_question2),
+
+    # 跳转到信息聚类模块
     path('toClassification/', classification_view.toClassification),
 
-    #信息聚类模块上传excel文件
+    # 信息聚类模块上传excel文件
     path('upload_classification_file/', classification_view.upload_classification_file),
     path('display_classification/', classification_view.display_classification),
 

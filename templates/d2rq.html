@@ -1,53 +1,32 @@
 {% extends 'index.html' %}
+{% load pagination_tags %}
+{% block title %}
+    DB关系抽取
+{% endblock %}
+
 {% block en %}
-    {% load pagination_tags %}
-    <!DOCTYPE html>
-    <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <title>DB关系抽取</title>
-        <link href="/static/css/style.css" rel="stylesheet">
-        <link href="/static/css/elegant-icons-style.css" rel="stylesheet">
-        <link rel="stylesheet" href="/static/css/bootstrap.min.css"/>
-{% comment %}
-        <link rel="stylesheet" href="http://cdn.static.runoob.com/libs/bootstrap/3.3.7/css/bootstrap.min.css">
-{% endcomment %}
-        <link href="/static/css/font-awesome.min.css" rel="stylesheet"/>
-        <link rel="stylesheet" href="/static/css/bootstrap.css"/>
-        <link rel="stylesheet" href="/static/css/style2.css"/>
-
-        <script type="text/javascript" src="/static/js/jquery.min.js"></script>
-        <script type="text/javascript" src="/static/js/bootstrap.min.js"></script>
-        <script src="/static/js/echarts.common.min.js"></script>
-                <script src="/static/js/echarts-all-3.js"></script>
-
-{% comment %}
-        <script src="http://cdn.static.runoob.com/libs/jquery/2.1.1/jquery.min.js"></script>
-{% endcomment %}
-{% comment %}
-        <script src="http://cdn.static.runoob.com/libs/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-{% endcomment %}
-{% comment %}
-        <script type="text/javascript" src="http://echarts.baidu.com/gallery/vendors/echarts/echarts-all-3.js"></script>
-{% endcomment %}
-    </head>
-    <body>
+    <!-- breadcrumb -->
+    <section class="content-header">
+        <div class="container">
+            <div class="row mb-2">
+                <ol class="breadcrumb ">
+                    <li class="breadcrumb-item"><a href="/toHome/"><i class="fas fa-home"></i> 主页</a>
+                    </li>
+                    <li class="breadcrumb-item active">数据库抽取</li>
+                </ol>
+            </div>
+        </div>
+    </section><!-- breadcrumb-->
 
     <div class="container">
         <div class="row">
-            <div class="col-md-12">
-                <ol class="breadcrumb">
-                    <li><i class="fa fa-home"></i><a href="/toHome/">主页</a></li>
-                    <li><i class="fa fa-link" aria-hidden="true"></i>数据库抽取</li>
-                </ol>
-            </div>
             {% if tableList == null and database == null %}
-                <div class="col-md-12">
-                    <div class="panel panel-default">
-                        <header class="panel-heading">
-                            选择待抽取的数据库管理系统：
+                <div class="col-md-12 mb-4">
+                    <div class="card card-primary">
+                        <header class="card-header">
+                            <div>选择待抽取的数据库管理系统：</div>
                         </header>
-                        <div class="panel-body">
+                        <div class="card-body p-4">
                             <form name="commitDatabase" method="post" action="/commitDatabase/">
                                 {% csrf_token %}
                                 <div class="input-append">
@@ -57,7 +36,7 @@
                                         <option value="Oracle">Oracle</option>
                                     </select>
                                     <button type="submit"
-                                            style="background-color:#7abaff; width: 116px;height: 36px; text-align: center; margin-left: 200px"
+                                            class="btn btn-primary ml-4"
                                             name="upload">确认选择
                                     </button>
                                 </div>
@@ -67,112 +46,108 @@
                 </div>
             {% endif %}
             {% if database and tableList == null %}
-                <div class="col-md-12">
-                    <div class="panel panel-default">
-                        <header class="panel-heading">
-                            填写数据库连接配置：
+                <div class="col-md-12 mb-4">
+                    <div class="card card-primary">
+                        <header class="card-header">
+                            <div>填写数据库连接配置：</div>
                         </header>
-                        <div class="panel-body">
+                        <div class="card-body p-4">
                             <form name="commitConfiguration" method="post" action="/commitConfiguration/">
                                 {% csrf_token %}
                                 {% if database == "MySQL" %}
-                                    <div class="form-group" style="align-self: center">
-                                        <label class="col-sm-3 control-label">数据库IP：</label>
-                                        <div class="col-sm-3">
-                                            <input class="form-control" type="text" placeholder="请输入IP" name="host"
+                                    <div class="form-group row">
+                                        <label class="col-sm-2 col-form-label">数据库IP：</label>
+                                        <div class="col-md-4">
+                                            <input class="form-control" type="text" placeholder="请输入IP"
+                                                   name="host"
                                                    value="127.0.0.1">
                                         </div>
                                     </div>
-                                    <br>
-                                    <br>
-                                    <br>
-                                    <div class="form-group">
-                                        <label class="col-sm-3 control-label">端口号：</label>
-                                        <div class="col-sm-3">
-                                            <input class="form-control" type="text" placeholder="请输入端口号" name="port"
+                                    <div class="form-group row">
+                                        <label for="inputPassword"
+                                               class="col-md-2 col-form-label">端口号：</label>
+
+                                        <div class="col-md-4">
+                                            <input class="form-control" type="text" placeholder="请输入端口号"
+                                                   name="port"
                                                    value=3306>
                                         </div>
                                     </div>
-                                    <br>
-                                    <br>
-                                    <div class="form-group">
-                                        <label class="col-sm-3 control-label">用户名：</label>
-                                        <div class="col-sm-3">
-                                            <input class="form-control" type="text" placeholder="请输入用户名" name="username"
+                                    <div class="form-group row">
+                                        <label class="col-md-2 col-form-label">用户名：</label>
+                                        <div class="col-md-4">
+                                            <input class="form-control" type="text" placeholder="请输入用户名"
+                                                   name="username"
                                                    value="root">
                                         </div>
                                     </div>
-                                    <br>
-                                    <br>
-                                    <div class="form-group">
-                                        <label class="col-sm-3 control-label">密码：</label>
-                                        <div class="col-sm-3">
-                                            <input class="form-control" type="text" placeholder="请输入密码" name="password"
+                                    <div class="form-group row">
+                                        <label class="col-md-2 col-form-label">密码：</label>
+                                        <div class="col-md-4">
+                                            <input class="form-control" type="text" placeholder="请输入密码"
+                                                   name="password"
                                                    value="root">
                                         </div>
                                     </div>
-                                    <br>
-                                    <br>
-                                    <div class="form-group">
-                                        <label class="col-sm-3 control-label">数据库名：</label>
-                                        <div class="col-sm-3">
-                                            <input class="form-control" type="text" placeholder="请输入数据库名" name="db_name"
+                                    <div class="form-group row">
+                                        <label class="col-md-2 col-form-label">数据库名：</label>
+                                        <div class="col-md-4">
+                                            <input class="form-control" type="text" placeholder="请输入数据库名"
+                                                   name="db_name"
                                                    value="source">
                                         </div>
                                     </div>
+
                                 {% elif database == 'Oracle' %}
-                                    <div class="form-group">
-                                        <label class="col-sm-3 control-label">数据库IP：</label>
-                                        <div class="col-sm-3">
-                                            <input class="form-control" type="text" placeholder="请输入IP" name="host"
+
+                                    <div class="form-group row">
+                                        <label class="col-md-2 col-form-labell">数据库IP：</label>
+                                        <div class="col-md-4">
+                                            <input class="form-control" type="text" placeholder="请输入IP"
+                                                   name="host"
                                                    value="127.0.0.1">
                                         </div>
                                     </div>
-                                    <br>
-                                    <br>
-                                    <br>
-                                    <div class="form-group">
-                                        <label class="col-sm-3 control-label">端口号：</label>
-                                        <div class="col-sm-3">
-                                            <input class="form-control" type="text" placeholder="请输入端口号" name="port"
+                                    <div class="form-group row">
+                                        <label class="col-md-2 col-form-label">端口号：</label>
+                                        <div class="col-md-4">
+                                            <input class="form-control" type="text" placeholder="请输入端口号"
+                                                   name="port"
                                                    value=1521>
                                         </div>
                                     </div>
-                                    <br>
-                                    <br>
-                                    <div class="form-group">
-                                        <label class="col-sm-3 control-label">用户名：</label>
-                                        <div class="col-sm-3">
-                                            <input class="form-control" type="text" placeholder="请输入用户名" name="username"
+                                    <div class="form-group row">
+                                        <label class="col-md-2 col-form-label">用户名：</label>
+                                        <div class="col-md-4">
+                                            <input class="form-control" type="text" placeholder="请输入用户名"
+                                                   name="username"
                                                    value="root">
                                         </div>
                                     </div>
-                                    <br>
-                                    <br>
-                                    <div class="form-group">
-                                        <label class="col-sm-3 control-label">密码：</label>
-                                        <div class="col-sm-3">
-                                            <input class="form-control" type="text" placeholder="请输入密码" name="password"
+                                    <div class="form-group row">
+                                        <label class="col-md-2 col-form-label">密码：</label>
+                                        <div class="col-md-4">
+                                            <input class="form-control" type="text" placeholder="请输入密码"
+                                                   name="password"
                                                    value="root">
                                         </div>
                                     </div>
-                                    <br>
-                                    <br>
-                                    <div class="form-group">
-                                        <label class="col-sm-3 control-label">服务名：</label>
-                                        <div class="col-sm-3">
-                                            <input class="form-control" type="text" placeholder="请输入服务名" name="db_name"
+                                    <div class="form-group row">
+                                        <label class="col-md-2 col-form-label">服务名：</label>
+                                        <div class="col-md-4">
+                                            <input class="form-control" type="text" placeholder="请输入服务名"
+                                                   name="db_name"
                                                    value="orcl">
                                         </div>
                                     </div>
-
                                 {% endif %}
-                                <br>
-                                <br>
-                                <button type="submit"
-                                        style="background-color:#00aced; width: 116px;height: 36px; text-align: center; margin-left: 500px"
-                                        name="upload">提交配置
-                                </button>
+
+                                <div class="text-center">
+                                    <button type="submit"
+                                            class="btn btn-primary mt-4 "
+                                            name="upload">提交配置
+                                    </button>
+                                </div>
                             </form>
                         </div>
                     </div>
@@ -180,68 +155,79 @@
             {% endif %}
 
             {% if tableList %}
-                <div class="col-md-12">
-                    <div class="panel panel-default">
-                        <header class="panel-heading">
-                            选择待抽取的数据库表：
+                <div class="col-md-12 mb-4">
+                    <div class="card card-primary">
+                        <header class="card-header">
+                            <div>选择待抽取的数据库表：</div>
                         </header>
-                        <div class="panel-body">
+                        <div class="card-body p-4 ">
                             <form name="d2neo4j" method="post" action="/getTable/">
                                 {% csrf_token %}
                                 <div class="input-append">
                                     <select name="databaseTable" id="databaseTable" class="form-control"
                                             style="float: left; width: 300px">
-                                        {% for list in tableList %}
-                                            <option value="{{ list }}">{{ list }}</option>
-                                        {% endfor %}
+                                        <{% for list in tableList %}
+                                        <option value="{{ list }}">{{ list }}</option>
+                                    {% endfor %}
                                     </select>
-                                    <button type="submit"
-                                            style="background-color:#4cd964; width: 116px;height: 36px; text-align: center; margin-left: 200px"
+                                    <button type="submit" class="btn btn-primary ml-4"
                                             name="upload">确认选择
                                     </button>
                                 </div>
                             </form>
-                            <br>
                             <form name="d2neo4j" method="post" action="/d2neo4j/">
                                 {% csrf_token %}
-                                <div class="input-append">
-                                    实体名:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                                    {% for list in aList %}
+                                <div class="input-append mt-4">
+                                    <div>
+                                        <span class="font-weight-bold">实体名:</span>
+                                        {% for list in aList %}
+                                            {% if list == primary %}-
+                                                <label class="font-weight-normal">
+                                                    <input class="ml-4"
+                                                           name="entity_name"
+                                                           type="radio"
+                                                           value="{{ list }}"
+                                                           checked/> {{ list }}
+                                                </label>
+                                            {% else %}
+                                                <label class="font-weight-normal">
+                                                    <input class="ml-4"
+                                                           name="entity_name"
+                                                           type="radio"
+                                                           value="{{ list }}"/> {{ list }}
+                                                </label>
+                                            {% endif %}
+                                        {% endfor %}
+                                    </div>
 
-                                        {% if list == primary %}
-                                            <label><input name="entity_name" type="radio" value="{{ list }}"
-                                                          checked/>{{ list }} </label>
-                                            &nbsp;&nbsp;
-                                        {% else %}
-                                            <label><input name="entity_name" type="radio" value="{{ list }}"/>{{ list }}
-                                            </label>
-                                            &nbsp;&nbsp;
-                                        {% endif %}
-                                    {% endfor %}
-                                    <br>
-                                    实体属性:&nbsp;&nbsp;
-                                    {% for list in aList %}
-                                        {% if list != primary %}
-                                            <label><input name="entity_property" type="checkbox" value="{{ list }}"
-                                                          checked/>{{ list }} </label>
-                                            &nbsp;&nbsp;
-                                        {% else %}
-                                            <label><input name="entity_property" type="radio"
-                                                          value="{{ list }}"/>{{ list }}
-                                            </label>
-                                            &nbsp;&nbsp;
-                                        {% endif %}
-                                    {% endfor %}
-                                    <br>
+                                    <div>
+                                        <span class="font-weight-bold">实体属性:</span>
+                                        {% for list in aList %}
+                                            {% if list != primary %}
+                                                <label class="font-weight-normal">
+                                                    <input class="ml-4"
+                                                           name="entity_property"
+                                                           type="checkbox"
+                                                           value="{{ list }}"
+                                                           checked/> {{ list }}
+                                                </label>
+                                            {% else %}
+                                                <label class="font-weight-normal">
+                                                    <input class="ml-4"
+                                                           name="entity_property"
+                                                           type="radio"
+                                                           value="{{ list }}"/> {{ list }}
+                                                </label>
+                                            {% endif %}
+                                        {% endfor %}
+                                    </div>
 
 
-                                    <table style="width: 1100px" class="table table-bordered table-hover" align="center"
-                                           border="solid 2px">
+                                    <table class="table table-bordered table-hover text-center mt-2 align-middle">
                                         <thead>
-                                        <tr align="center" class="text-danger">
+                                        <tr class="text-primary font-weight-bold text-center">
                                             {% for list in  aList %}
-                                                <th align="center" width="200" class="text-center"
-                                                    style="font-size: 13px">{{ list }}
+                                                <th style="width:200px"> {{ list }}
                                                 </th>
                                             {% endfor %}
                                         </tr>
@@ -251,82 +237,105 @@
                                             {% autopaginate table1_result 4 %}
                                             {% for list in table1_result %}
                                                 <tr>
+
                                                     {% for data in list %}
-                                                        <td align="center"
-                                                            style="display:table-cell; vertical-align:middle; font-size: 12px">{{ data }}</td>
+                                                        <td> {{ data }}</td>
                                                     {% endfor %}
+
                                                 </tr>
                                             {% endfor %}
-                                            {% paginate %}
+                                            <div class="text-center">
+                                                {% paginate %}
+                                            </div>
+
                                         {% endif %}
                                     </table>
                                 </div>
 
-                                <br>
 
                                 {% if bList %}
 
-                                    <div class="input-append">
-                                        实体名:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                    <div class="input-append mt-4">
+                                    <div>
+                                            <span class="font-weight-bold">
+                                                 实体名:
+                                            </span>
+
                                         {% for list in bList %}
 
                                             {% if list == primary2 %}
-                                                <label><input name="entity_name2" type="radio" value="{{ list }}"
-                                                              checked/>{{ list }} </label>
+                                                <label class="font-weight-normal"><input class="ml-4"
+                                                                                         name="entity_name2"
+                                                                                         type="radio"
+                                                                                         value="{{ list }}"
+                                                                                         checked/> {{ list }}
+                                                </label>
                                                 &nbsp;&nbsp;
                                             {% else %}
-                                                <label><input name="entity_name2" type="radio"
-                                                              value="{{ list }}"/>{{ list }} </label>
+                                                <label class="font-weight-normal"><input class="ml-4"
+                                                                                         name="entity_name2"
+                                                                                         type="radio"
+                                                                                         value="{{ list }}"/> {{ list }}
+                                                </label>
                                                 &nbsp;&nbsp;
                                             {% endif %}
                                         {% endfor %}
-                                        <br>
-                                        实体属性:&nbsp;&nbsp;
+                                    </div>
+                                    <div>
+                                            <span class="font-weight-bold">
+                                                实体属性:
+                                            </span>
+
                                         {% for list in bList %}
                                             {% if list != primary2 %}
-                                                <label><input name="entity_property2" type="checkbox" value="{{ list }}"
-                                                              checked/>{{ list }} </label>
-                                                &nbsp;&nbsp;
+                                                <label class="font-weight-normal"><input class="ml-4"
+                                                                                         name="entity_property2"
+                                                                                         type="checkbox"
+                                                                                         value="{{ list }}"
+                                                                                         checked/> {{ list }}
+                                                </label>
                                             {% else %}
-                                                <label><input name="entity_property2" type="radio"
-                                                              value="{{ list }}"/>{{ list }} </label>
-                                                &nbsp;&nbsp;
+                                                <label class="font-weight-normal"><input class="ml-4"
+                                                                                         name="entity_property2"
+                                                                                         type="radio"
+                                                                                         value="{{ list }}"/> {{ list }}
+                                                </label>
                                             {% endif %}
                                         {% endfor %}
 
-                                        <table style="width: 1100px" class="table table-bordered table-hover"
-                                               align="center"
-                                               border="solid 2px">
-                                            <thead>
-                                            <tr align="center" class="text-danger">
-                                                {% for list in  bList %}
-                                                    <th align="center" width="200" class="text-center"
-                                                        style="font-size: 13px">{{ list }}
-                                                    </th>
+                                    </div>
+
+                                    <table class="table table-bordered table-hover mt-2 text-center align-middle">
+                                        <thead>
+                                        <tr class="text-primary font-weight-bold">
+                                            {% for list in  bList %}
+                                                <th width="200">{{ list }}
+                                                </th>
+                                            {% endfor %}
+                                        </tr>
+                                        </thead>
+                                        <tbody id="tb" class="text-center">
+                                        {% if  table2_result %}
+                                            {% autopaginate table2_result 4 %}
+                                            <tr>
+                                                {% for list in table2_result %}
+                                                    {% for data in list %}
+                                                        <td> {{ data }}</td>
+                                                    {% endfor %}
                                                 {% endfor %}
                                             </tr>
-                                            </thead>
-                                            <tbody id="tb">
-                                            {% if  table2_result %}
-                                                {% autopaginate table2_result 4 %}
-                                                {% for list in table2_result %}
-                                                    <tr>
-                                                        {% for data in list %}
-                                                            <td align="center"
-                                                                style="display:table-cell; vertical-align:middle; font-size: 12px">{{ data }}</td>
-                                                        {% endfor %}
-                                                    </tr>
-                                                {% endfor %}
+                                            <div class="text-center">
                                                 {% paginate %}
-                                            {% endif %}
-                                        </table>
-                                    </div>
-                                {% endif %}
+                                            </div>
 
-                                <button type="submit"
-                                        style="background-color: #00A8B3; width: 116px;height: 36px; text-align: center;margin-left: 500px"
-                                        name="upload">开始抽取
-                                </button>
+                                        {% endif %}
+                                    </table>
+                                {% endif %}
+                                </div>
+                                <div class="text-center">
+                                    <button type="submit" name="upload" class="btn btn-primary">开始抽取
+                                    </button>
+                                </div>
                             </form>
 
                         </div>
@@ -334,26 +343,23 @@
                 </div>
             {% endif %}
 
-
-            <div class="footers">
-                <span style="color: white;">© 2020 东北大学-数字线技术项目团队 版权所有</span>
-            </div>
         </div>
     </div>
 
+{% endblock %}
+
+{% block js %}
+    <script src="/static/js/echarts.common.min.js"></script>
+    <script src="/static/js/echarts-all-3.js"></script>
     {% if messages %}
         <script>
+
             {% for msg in messages %}
                 alert('{{ msg.message }}');
             {% endfor %}
+
         </script>
     {% endif %}
-    <script type="text/javascript">
-        $('input[id=file]').change(function () {
-            $('#photoCover').val($(this).val());
-        });
-    </script>
-    </body>
-    </html>
+{% endblock %}
 
-{% endblock en %}
+

@@ -1,194 +1,169 @@
 {% extends 'index.html' %}
-{% block en %}
 {% load pagination_tags %}
-    <!DOCTYPE html>
-    <html lang="en">
-    <head>
-        <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-        <title></title>
-        <meta charset="utf-8"/>
-        <link rel="stylesheet" href="/static/css/bootstrap.min.css"/>
-{% comment %}
-        <link rel="stylesheet" href="http://cdn.static.runoob.com/libs/bootstrap/3.3.7/css/bootstrap.min.css">
-{% endcomment %}
-        <link href="/static/css/font-awesome.min.css" rel="stylesheet"/>
-        <link rel="stylesheet" href="/static/css/bootstrap.css"/>
-        <link rel="stylesheet" href="/static/css/style2.css"/>
-        <link rel="stylesheet" href="/static/css/ner.css"/>
 
-        <script type="text/javascript" src="/static/js/jquery.min.js"></script>
-        <script type="text/javascript" src="/static/js/bootstrap.min.js"></script>
-        <script type="text/javascript" src="/static/js/ner.js"></script>
-        <script type="text/javascript" src="/static/js/layer.js"></script>
+{% block title %}
+    信息聚类
+{% endblock %}
+{% block css %}
+    <style>
 
+        input[type="checkbox"] {
+            -webkit-appearance: none;
+            vertical-align: middle;
+            margin-top: 0;
+            background: #fff;
+            border: #999 solid 1px;
+            border-radius: 3px;
+            min-height: 12px;
+            min-width: 12px;
+        }
 
-{% comment %}
-        <script src="https://cdn.bootcdn.net/ajax/libs/layer/2.3/layer.js"></script>
-{% endcomment %}
+        input[type="checkbox"]:checked {
+            background: #3190e8;
+        }
 
-{% comment %}
-        <script src="http://cdn.static.runoob.com/libs/jquery/2.1.1/jquery.min.js"></script>
-{% endcomment %}
-{% comment %}
-        <script src="http://cdn.static.runoob.com/libs/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-{% endcomment %}
-        <style>
-            .file input {
-                position: absolute;
-                font-size: 100px;
-                right: 0;
-                top: 0;
-                opacity: 0;
-            }
-
-            input[type="checkbox"] {
-                -webkit-appearance: none;
-                vertical-align: middle;
-                margin-top: 0;
-                background: #fff;
-                border: #999 solid 1px;
-                border-radius: 3px;
-                min-height: 12px;
-                min-width: 12px;
-            }
-
-            input[type="checkbox"]:checked {
-                background: #3190e8;
-            }
-
-            input[type="checkbox"]:checked::after {
-                content: '';
-                top: 3px;
-                left: 3px;
-                position: absolute;
-                background: transparent;
-                border: #fff solid 2px;
-                border-top: none;
-                border-right: none;
-                height: 6px;
-                width: 10px;
-                -moz-transform: rotate(-45deg);
-                -ms-transform: rotate(-45deg);
-                -webkit-transform: rotate(-45deg);
-                transform: rotate(-45deg);
-            }
-        </style>
-
-    <body>
-    <div class="container">
-        <div class="row">
-            <!--head start-->
-            <div class="col-md-12">
-                <ol class="breadcrumb">
-                    <li><i class="fa fa-home"></i><a href="/toHome/">主页</a></li>
-                    <li><i class="fa fa-link" aria-hidden="true"></i>信息聚类</li>
+        input[type="checkbox"]:checked::after {
+            content: '';
+            top: 3px;
+            left: 3px;
+            position: absolute;
+            background: transparent;
+            border: #fff solid 2px;
+            border-top: none;
+            border-right: none;
+            height: 6px;
+            width: 10px;
+            -moz-transform: rotate(-45deg);
+            -ms-transform: rotate(-45deg);
+            -webkit-transform: rotate(-45deg);
+            transform: rotate(-45deg);
+        }
+    </style>
+{% endblock %}
+{% block en %}
+    <!-- breadcrumb -->
+    <section class="content-header">
+        <div class="container">
+            <div class="row mb-2">
+                <ol class="breadcrumb ">
+                    <li class="breadcrumb-item"><a href="/toHome/"><i class="fas fa-home"></i>主页</a></li>
+                    <li class="breadcrumb-item active">信息聚类</li>
                 </ol>
             </div>
+        </div>
+    </section><!-- breadcrumb-->
 
-            <div class="col-md-12">
-                <div class="panel panel-default">
-                    <header class="panel-heading">
-                        待聚类文档上传：
-                    </header>
-                    <div class="panel-body">
-                        <form name="upload" enctype="multipart/form-data" method="post" action="/upload_classification_file/">
-                            {% csrf_token %}
-                            <input name="file" id="file" type="file" style="display: none"/>
-                            <div class="input-append">
-                                <input id="photoCover" type="text" class="form-control"
-                                       style="float: left; width: 350px">
-                                <a class="btn btn-default" style="border-radius: 0px; width: 50px"
-                                   onclick="$('input[id=file]').click();">
-                                    浏览
-                                </a>
-                                <button type="submit"
-                                        style="background-color:#8fd19e; width: 116px;height: 36px; margin-left: 100px" name="upload">上传文档
-                                </button>
-
+    <!-- Main content -->
+    <section class="content">
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <!-- general form elements -->
+                    <div class="card card-primary mb-5">
+                        <div class="card-header">
+                            <div>待聚类文档上传：</div>
+                        </div>
+                        <!-- /.card-header -->
+                        <div class="card-body p-4">
+                            <div class="col-lg-8 m-auto">
+                                <!-- form start -->
+                                <form name="upload" enctype="multipart/form-data" method="post"
+                                      action="/upload_classification_file/">
+                                    {% csrf_token %}
+                                    <div class="form-group my-4">
+                                        <div class="input-group">
+                                            <div class="custom-file">
+                                                <input type="file" name="file" id="file"
+                                                       class="custom-file-input "
+                                                       lang="cn">
+                                                <label class="custom-file-label" for="file">选择文件</label>
+                                            </div>
+                                            <div class="input-group-append">
+                                                <button type="submit" class="btn btn-primary">上传文档</button>
+                                            </div>
+                                        </div>
+                                    </div><!-- /.form group -->
+                                </form>
                             </div>
-                        </form>
+
+                        </div>
+                        <!-- /.card-body -->
 
                     </div>
-                </div>
-            </div>
-            <div class="col-md-12">
-                <div class="panel panel-default">
-                    <header class="panel-heading">
-                        聚类参数：
-                    </header>
-                    <div class="panel-body">
-                        <form name="k_value"  method="post" action="/display_classification/">
-                            {% csrf_token %}
-                            <div id="k_value" class="form-group" style="padding: 2%; margin-left: 200px; ">
-                                <input type="text" id="k_value" name="k_value" class="form-control" style="width: 400px"
-                                       placeholder="输入要聚类的组数!" aria-describedby="basic-addon1">
+                    <!-- /.card -->
+                    <div class="card card-primary mb-5">
+                        <div class="card-header">
+                            <div>聚类参数：</div>
+                        </div>
+                        <!-- /.card-header -->
+                        <div class="card-body text-center p-4">
+                            <div class="col-lg-8 m-auto">
+                                <form name="k_value" method="post" action="/display_classification/">
+                                    {% csrf_token %}
+                                    <input type="text" id="k_value" name="k_value"
+                                           class="form-control mx-auto m-4"
+                                           placeholder="输入要聚类的组数!" aria-describedby="basic-addon1">
+                                    <button type="submit" id="btnSearch" class="btn btn-primary">开始聚类
+                                    </button>
+                                </form>
                             </div>
-                            <div class="btn-group" style="padding: 2%">
-                                <button type="submit" id="btnSearch" class="btn btn-primary">开始聚类</button>
-                            </div>
-                        </form>
+
+
+                        </div>
+
                     </div>
-                </div>
-            </div>
+                    {% if  resultList_classification %}
+                        <div class="card card-primary mb-5">
+                            <div class="card-header">
+                                <div> 结果显示：</div>
+                            </div><!-- /.card-header -->
 
-
-
-            {% if  resultList_classification %}
-                <div class="col-md-12">
-                    <div class="panel panel-default">
-                        <header class="panel-heading">
-                            结果显示：
-                        </header>
-                        <div class="panel-body">
-                            <div class="show-list" style="position: relative;top: 30px; text-align: center">
-                                <table  class="table table-bordered table-hover" align="center"
-                                       border="solid 3px">
+                            <div class="card-body p-4">
+                                <table class="table table-bordered mb-4 table-valign-middle text-center">
                                     <thead>
-                                    <tr align="center" class="text-danger">
-                                        <th align="center" width="100" class="text-center">分类序号</th>
-                                        <th align="center" width="150" class="text-center">文本</th>
+                                    <tr class="text-primary">
+                                        <th>分类序号</th>
+                                        <th>文本</th>
                                     </tr>
                                     </thead>
-                                    <tbody id="tb">
+                                    <tbody>
                                     {% autopaginate resultList_classification 10 %}
                                     {% for list in resultList_classification %}
                                         <tr>
-                                            <td align="center">{{ list.1 }}</td>
-                                            <td align="center">{{ list.0 }}</td>
+                                            <td>{{ list.1 }}</td>
+                                            <td>{{ list.0 }}</td>
                                         </tr>
-                                        </tbody>
                                     {% endfor %}
+                                    </tbody>
                                 </table>
-                            {% paginate %}
+                                {% paginate %}
                             </div>
-                            <br>
-
+                            <!-- /.card-body -->
                         </div>
-                    </div>
+                    {% endif %}
+                    {% if searchResult %}
+                        <!--为ECharts准备一个具备大小（宽高）的Dom -->
+                        <div class="card card-primary mb-5">
+                            <div class="card-header">
+                                <div> 关系图：</div>
+                            </div><!-- /.card-header -->
+
+                            <div class="card-body p-4">
+                                <div id="graph" style="width: 100%;height:600px;"></div>
+                            </div>
+                        </div>
+
+                    {% endif %}
                 </div>
-            {% endif %}
-
-            {% if searchResult %}
-            <!-- 为ECharts准备一个具备大小（宽高）的Dom -->
-            <div class="col-md-12">
-                <div class="panel panel-default ">
-                    <header class="panel-heading">
-                        关系图 :
-                    </header>
-                    <div class="panel-body ">
-                        <div id="graph" style="width: 100%;height:600px;"></div>
-                    </div>
-                </div>
+                <!--/.col -->
             </div>
-            {% endif %}
+            <!-- /.row -->
+        </div><!-- /.container -->
+    </section>
 
-            <div class="footers">
-                <span style="color: white;">© 2020 东北大学-数字线技术项目团队 版权所有</span>
-            </div>
-        </div>
-    </div>
+{% endblock en %}
 
-
+{% block js %}
     {% if messages %}
         <script>
             {% for msg in messages %}
@@ -196,30 +171,20 @@
             {% endfor %}
         </script>
     {% endif %}
-
-
-    <script type="text/javascript" src="/static/js/jquery.min.js"></script>
-    <script type="text/javascript" src="/static/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="/static/js/layer.js"></script>
     <script type="text/javascript" src="/static/js/moment.js"></script>
-
-    <script type="text/javascript">
-        $('input[id=file]').change(function () {
-            $('#photoCover').val($(this).val());
+    <script src="/static/js/echarts.js"></script>
+    <script src="/static/js/bs-custom-file-input.min.js"></script>
+    <script>
+        $(function () {
+            bsCustomFileInput.init();
         });
-        function loading() {
-            layer.msg("加载中", {
-                icon: 16,
-                shade: [0.6, '#000005'],//遮罩的颜色与透明度
-                time: false  //取消自动关闭
-            })
-        };
     </script>
 
-    <script src="/static/js/echarts.js"></script>
-    <script src="/static/js/jquery-1.8.3.min.js"></script>
     {% if searchResult %}
         <script type="text/javascript">
-            var searchResult ={{searchResult|safe}}
+            var searchResult =
+            {{searchResult|safe}}
             //echarts 数据
             var data = [];
             var links = [];
@@ -227,7 +192,7 @@
             //构造展示的数据
             var maxDisPlayNode = 100;
             var id = 0;
-            for (var i = 0; id <maxDisPlayNode && i < searchResult.length; i++) {
+            for (var i = 0; id < maxDisPlayNode && i < searchResult.length; i++) {
                 //获取node1
                 node1 = {};
                 node1['name'] = searchResult[i]['n1']['name'];
@@ -347,7 +312,7 @@
                             name: 'Serise',
                             itemStyle: {
                                 normal: {
-                                    color: "#C71585",
+                                    color: "#c0dbc5",
                                 }
                             }
                         }],
@@ -390,22 +355,33 @@
         </script>
     {% endif %}
     <script>
-	$(".dropdown-menu li a").click(function(){
-	   var selText = $(this).text();
-	   $(this).parents('.btn-group').find('.dropdown-toggle').html(selText+' <span class="caret"></span>');
-	   if(selText.trim()!="Other"){
-	   	$("#relationshipCategory").val(selText.trim()) ;
-	   }
-	   //combobox behavior
-	   if (selText.trim()==="Other") {
-	       $("#relation_name").removeClass("hide");
-	   }
-	   else{
-	   	   $("#relation_name").addClass("hide");
-	   }
+        $(".dropdown-menu li a").click(function () {
+            var selText = $(this).text();
+            $(this).parents('.btn-group').find('.dropdown-toggle').html(selText + ' <span class="caret"></span>');
+            if (selText.trim() != "Other") {
+                $("#relationshipCategory").val(selText.trim());
+            }
+            //combobox behavior
+            if (selText.trim() === "Other") {
+                $("#relation_name").removeClass("hide");
+            } else {
+                $("#relation_name").addClass("hide");
+            }
+        });
+    </script>
 
-	});
-</script>
-    </body>
-    </html>
-{% endblock en %}
+    <script>
+        function loading() {
+            layer.msg("加载中", {
+                icon: 16,
+                shade: [0.6, '#000005'],//遮罩的颜色与透明度
+                time: false  //取消自动关闭
+            })
+        };
+    </script>
+
+{% endblock %}
+
+
+
+

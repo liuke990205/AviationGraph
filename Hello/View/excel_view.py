@@ -5,7 +5,6 @@ import pymysql
 import xlrd
 from django.contrib import messages
 from django.shortcuts import render, redirect
-
 from Hello.toolkit.pre_load import neo4jconn
 
 
@@ -32,31 +31,31 @@ def upload_excel(request):
             row_number = sheet.nrows
             column_number = sheet.ncols
             field_list = sheet.row_values(0)
-            print(field_list)
             data_list = []
             for i in range(1, row_number):
                 data_list.append(sheet.row_values(i))
-            print(data_list)
 
             # 下面代码作用：根据字段创建表，根据数据执行插入语句
             conn = pymysql.connect(host='123.56.52.53', port=3306, user='root', password='root',
                                    database='source')
             cursor = conn.cursor()
-            drop_sql = "drop table if exists {}".format('name')
+            drop_sql = "drop table if exists {}".format('excel_data')
             cursor.execute(drop_sql)
-            create_sql = "create table {}(".format('name')
+            conn.commit()
+            create_sql = "create table {}(".format('excel_data')
             for field in field_list[:-1]:
                 create_sql += "{} varchar(50),".format(field)
             create_sql += "{} varchar(50))".format(field_list[-1])
-            print(create_sql)
             cursor.execute(create_sql)
+            conn.commit()
             for data in data_list:
                 new_data = ["'{}'".format(i) for i in data]
-                insert_sql = "insert into {} values({})".format('name', ','.join(new_data))
+                insert_sql = "insert into {} values({})".format('excel_data', ','.join(new_data))
                 cursor.execute(insert_sql)
 
-            sql = "select COLUMN_NAME from information_schema.COLUMNS where table_name = '%s'" % ('name')
+            sql = "select COLUMN_NAME from information_schema.COLUMNS where table_name = '%s'" % ('excel_data')
             count = cursor.execute(sql)
+            conn.commit()
             name_list = list()
             for i in range(count):
                 rr = cursor.fetchone()[0]

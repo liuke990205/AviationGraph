@@ -1,94 +1,345 @@
 {% extends 'index.html' %}
-<!DOCTYPE html>
+
+{% block title %}
+    问答系统
+{% endblock %}
+
 {% block en %}
-    <head>
-        <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-        <title></title>
-        <meta charset="utf-8"/>
-        <link rel="stylesheet" href="/static/css/bootstrap.min.css"/>
-        {% comment %}<link rel="stylesheet" href="http://cdn.static.runoob.com/libs/bootstrap/3.3.7/css/bootstrap.min.css">{% endcomment %}
-        <link href="/static/css/font-awesome.min.css" rel="stylesheet"/>
-        <link rel="stylesheet" href="/static/css/bootstrap.css"/>
-        <link rel="stylesheet" href="/static/css/style2.css"/>
-
-        <script type="text/javascript" src="/static/js/jquery.min.js"></script>
-        <script type="text/javascript" src="/static/js/bootstrap.min.js"></script>
-        <script src="/static/js/echarts.common.min.js"></script>
-        <script src="/static/js/echarts-all-3.js"></script>
-
-{% comment %}
-        <script src="http://cdn.static.runoob.com/libs/jquery/2.1.1/jquery.min.js"></script>
-{% endcomment %}
-{% comment %}
-        <script src="http://cdn.static.runoob.com/libs/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-{% endcomment %}
-{% comment %}
-        <script type="text/javascript" src="http://echarts.baidu.com/gallery/vendors/echarts/echarts-all-3.js"></script>
-{% endcomment %}
-
-    </head>
-    <title>问答系统</title>
-    <div class="container">
-
-
-        <div class="row">
-            <!--head start-->
-            <div class="col-md-12">
-                <ol class="breadcrumb">
-                    <li><i class="fa fa-home"></i><a href="/toHome/">主页</a></li>
-                    <li><i class="fa fa-link" aria-hidden="true"></i>问答系统</li>
+    <!-- breadcrumb -->
+    <section class="content-header">
+        <div class="container">
+            <div class="row mb-2">
+                <ol class="breadcrumb ">
+                    <li class="breadcrumb-item"><a href="/toHome/"><i class="fas fa-home"></i> 主页</a></li>
+                    <li class="breadcrumb-item active">问答系统</li>
                 </ol>
             </div>
-
-            <div class="col-md-12">
-                <div class="panel panel-default">
-                    <header class="panel-heading">
-                        查询条件：
-                    </header>
-                    <div class="panel-body">
-
-                        <form id="searchRelationForm" class="form-inline" style="padding-left: 10% ; padding-right: 10%"
-                              method="post" action="/answer_question/">
-                            {% csrf_token %}
-                            <div id="entity1" class="form-group" style="padding: 2%; margin-left: 200px; ">
-                                <input type="text" id="question" name="question" class="form-control" style="width: 400px"
-                                       placeholder="您可以输入您要查询的语句!" aria-describedby="basic-addon1" value="{{ question }}">
-                            </div>
-
-                            <div class="btn-group" style="padding: 2%">
-                                <button type="submit" id="btnSearch" class="btn btn-primary">Search</button>
-                            </div>
-                        </form>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-md-12">
-                <div class="panel panel-default">
-                    <header class="panel-heading">
-                        查询结果：
-                    </header>
-                    <div class="panel-body">
-                        <div style="padding: 2%">
-                             {%for a in answer%}
-                                <div>{{a}}</div>
-                            {% endfor %}
-                        </div>
-                        <div style="padding: 2%">
-                             {%for q in qlist%}
-                                <div>{{q}}</div>
-                            {% endfor %}
-                        </div>
-                    </div>
-                </div>
-            </div>
-        <div class="footers">
-            <span style="color: white;">© 2020 东北大学-数字线技术项目团队 版权所有</span>
         </div>
-    </div>
+    </section><!-- breadcrumb-->
+    <!-- Main content -->
+    <section class="content">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 my-4">
+                    <div class="text-center text-muted">
+                        当前系统共提问 <span class="text-danger">{{ question_sum }}</span> 个问题，评分为<span
+                            class="text-danger">{{ score }}</span>分，准确率为<span
+                            class="text-danger">{{ accuracy_rate }}%</span>!
+                    </div>
+                </div>
+                <div class="col-12 mb-4">
+                    <div class="card card-primary">
+                        <div class="card-header">
+                            <div>查询条件：</div>
+                        </div>
+                        <!-- /.card-header -->
+
+                        <div class="card-body p-4">
+                            <div class="col-lg-8 m-auto">
+                                <form id="searchRelationForm" method="post" action="/answer_question/">
+                                    {% csrf_token %}
+                                    <div class="form-group">
+                                        <div class="input-group m-auto">
+                                            <input type="text" id="question" name="question"
+                                                   class="form-control"
+                                                   placeholder="您可以输入您要查询的语句!" aria-describedby="basic-addon1"
+                                                   value="{{ question }}">
+                                            <div class="input-group-append">
+                                                <button type="submit" id="btnSearch" class="btn btn-primary">
+                                                    搜索
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </form>
+                            </div>
+
+                        </div>
+                        <!-- /.card-body -->
+
+                    </div>
+                    <!-- /.card -->
+                </div>
+                {% if answer %}
+                    <div class="col-12 mb-4">
+                        <div class="card card-primary">
+                            <div class="card-header">
+                                <div>查询结果：</div>
+                            </div><!-- /.card-header -->
+                            <div class="card-body p-4">
+                                <table class="table table-bordered my-4 text-center">
+                                    <thead>
+                                    <tr class="text-primary">
+                                        <th style="width: 10%">编号</th>
+                                        <th>用户答案</th>
+                                        <th style="width: 10%">用户操作</th>
+                                    </tr>
+                                    </thead>
+                                    <tbody>
+                                    {% for a in answer %}
+                                        <tr>
+                                            <td>{{ a.0 }}</td>
+                                            <td>{{ a.1 }}</td>
+                                            <td>
+                                                <a href="{% url 'deleteDictionary' %}?entity={{ key }}">
+                                                    <button class="btn btn-danger btn-sm" type="button"
+                                                            onclick="return confirm('是否确认删除？');">
+                                                        <i class="fa fa-trash-o"></i>
+                                                        删除
+                                                    </button>
+                                                </a>
+                                            </td>
+                                        </tr>
+                                    {% endfor %}
+
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                {% endif %}
+
+                {% if qlist %}
+                    <div class="col-12 mb-4">
+                        <div class="card card-primary">
+                            <div class="card-header">
+                                <div>推荐问题：</div>
+                            </div><!-- /.card-header -->
+                            <div class="card-body p-4">
+                                <table class="table table-bordered my-4 text-center">
+                                    <thead>
+                                    <tr class="text-primary">
+                                        <th style="width: 10%">编号</th>
+                                        <th>推荐问题</th>
+
+                                    </tr>
+                                    </thead>
+                                    <tbody>
+                                    {% for q in qlist %}
+                                        <tr>
+                                            <td>{{ q.0 }}</td>
+                                            <td>{{ q.1 }}</td>
+                                        </tr>
+                                    {% endfor %}
+
+                                    </tbody>
+                                </table>
+                            </div>
+
+                        </div>
+                    </div>
+                {% endif %}
+
+                {% if searchResult %}
+                    <div class="col-12 mb-4">
+
+                        <div class="card card-primary">
+                            <div class="card-header">
+                                <div>查询路径图：</div>
+                            </div><!-- /.card-header -->
+                            <div class="card-body">
+                                <div id="graph" style="width: 100%;height:400px;"></div>
+                            </div><!-- /.card-body -->
+
+                        </div>
+                    </div>
+                {% endif %}
+                <!--/.col -->
+            </div>
+            <!-- /.row -->
+        </div><!-- /.container -->
+    </section>
+{% endblock %}
+
+{% block js %}
+    <script src="/static/js/echarts.common.min.js"></script>
+    <script src="/static/js/echarts-all-3.js"></script>
+    <script type="text/javascript" src="/static/js/moment.js"></script>
+    <script>
+        $(document).ready(function () {
+            $(".attr").click(function () {
+                $("#question").val($(this).text())
+                $("#btnSearch").trigger("click")
+            });
+        });
+    </script>
+
+    {% if searchResult %}
+        <script type="text/javascript">
+            var searchResult =
+            {{searchResult|safe}}
+            //echarts 数据
+            var data = [];
+            var links = [];
+
+            //构造展示的数据
+            var maxDisPlayNode = 100;
+            var id = 0;
+            for (var i = 0; id < maxDisPlayNode && i < searchResult.length; i++) {
+                //获取node1
+                node1 = {};
+                node1['name'] = searchResult[i]['n1']['name'];
+                node1['draggable'] = true;
+                if ('url' in searchResult[i]['n1']) {
+                    node1['category'] = 1;
+                } else {
+                    node1['category'] = 2;
+                }
+                var flag = 1;
+
+                relationTarget = id.toString();
+                for (var j = 0; j < data.length; j++) {
+                    if (data[j]['name'] === node1['name']) {
+                        flag = 0;
+                        relationTarget = data[j]['id'];
+                        break;
+                    }
+                }
+
+                node1['id'] = relationTarget;
+                if (flag === 1) {
+                    id++;
+                    data.push(node1);
+                }
+
+                //获取node2
+                node2 = {};
+                node2['name'] = searchResult[i]['n2']['name'];
+                node2['draggable'] = true;
+                if ('url' in searchResult[i]['n2']) {
+                    node2['category'] = 1;
+                } else {
+                    node2['category'] = 2;
+                }
+                flag = 1;
+                relationTarget = id.toString();
+                for (var j = 0; j < data.length; j++) {
+                    if (data[j]['name'] === node2['name']) {
+                        flag = 0;
+                        relationTarget = data[j]['id'];
+                        break;
+                    }
+                }
+                node2['id'] = relationTarget;
+                if (flag === 1) {
+                    id++;
+                    data.push(node2);
+                }
+
+                //获取relation
+                relation = {};
+                relation['source'] = node1['id'];
+                relation['target'] = node2['id'];
+                relation['category'] = 0;
+                flag = 1;
+                for (var j = 0; j < links.length; j++) {
+                    if (links[j]['source'] == relation['source'] && links[j]['target'] == relation['target']) {
+                        links[j]['value'] = links[j]['value'] + searchResult[i]['rel']['type'];
+                        flag = 0;
+                        break;
+                    }
+                }
+                if (flag === 1) {
+                    relation['value'] = searchResult[i]['rel']['type'];
+                    relation['symbolSize'] = 10;
+                    links.push(relation);
+                }
+
+            }
+            // Echarts初始化设置
+            var myChart = echarts.init(document.getElementById('graph'));
+
+            option = {
+                title: {
+                    text: ''
+                },
+                tooltip: {},
+                animationDurationUpdate: 1500,
+                animationEasingUpdate: 'quinticInOut',
+                label: {
+                    normal: {
+                        show: true,
+                        textStyle: {
+                            fontSize: 12
+                        },
+                    }
+                },
+                legend: {
+                    x: "center",
+                    show: false
+                },
+                series: [
+
+                    {
+                        type: 'graph',
+                        layout: 'force',
+                        symbolSize: 45,
+                        focusNodeAdjacency: true,
+                        roam: true,
+                        edgeSymbol: ['none', 'arrow'],
+                        categories: [{
+                            name: '查询实体',
+                            itemStyle: {
+                                normal: {
+                                    color: "#009800",
+                                }
+                            }
+                        }, {
+                            name: 'Bank',
+                            itemStyle: {
+                                normal: {
+                                    color: "#4592FF",
+                                }
+                            }
+                        }, {
+                            name: 'Serise',
+                            itemStyle: {
+                                normal: {
+                                    color: "rgba(192,219,197,0.65)",
+                                }
+                            }
+                        }],
+                        label: {
+                            normal: {
+                                show: true,
+                                textStyle: {
+                                    fontSize: 12,
+                                },
+                            }
+                        },
+                        force: {
+                            repulsion: 1000
+                        },
+                        edgeSymbolSize: [4, 50],
+                        edgeLabel: {
+                            normal: {
+                                show: true,
+                                textStyle: {
+                                    fontSize: 10
+                                },
+                                formatter: "{c}"
+                            }
+                        },
+                        data: data,
+                        links: links,
+                        lineStyle: {
+                            normal: {
+                                opacity: 0.9,
+                                width: 1.3,
+                                curveness: 0,
+                                color: "#262626",
+                            }
+                        }
+                    }
+                ]
+            };
+            // 使用刚指定的配置项和数据显示图表。
+            myChart.setOption(option);
+        </script>
+    {% endif %}
+{% endblock %}
 
 
-    <script src="/static/js/jquery-1.8.3.min.js"></script>
-    <script src="/static/js/echarts.js"></script>
-    </div>
-{% endblock en %}
+
+

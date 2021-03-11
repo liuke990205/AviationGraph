@@ -15,7 +15,7 @@ def toHome(request):
     searchEntity = db.findAllEntity()
 
     number = request.session.get('number')
-
+    print(searchResult)
     return render(request, 'home.html',
                   {'searchResult': json.dumps(searchResult, ensure_ascii=False), 'relation_amount': len(searchResult),
                    'searchEntity': json.dumps(searchEntity, ensure_ascii=False), 'entity_amount': len(searchEntity),

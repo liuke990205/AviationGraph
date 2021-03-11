@@ -10,7 +10,7 @@ dictionary_path = "Hello/answer/kbqa/data/dictionary.txt"
 with open(dictionary_path, "r", encoding="utf-8") as f:
     dic_list = f.read().splitlines()
 
-max_length=len(sorted(dic_list, key=lambda x: len(x))[-1])
+max_length = len(sorted(dic_list, key=lambda x: len(x))[-1])
 
 def entity_seq(question):
     entity_res = []
@@ -81,7 +81,7 @@ def entity_seq(question):
     res = list(set(entity_res))
     return res
 
-if __name__ == '__main__':
-    question = "研究生命起源"
-    res = entity_seq(question)
-    print(res)
+# if __name__ == '__main__':
+#     question = "研究生命起源"
+#     res = entity_seq(question)
+#     print(res)

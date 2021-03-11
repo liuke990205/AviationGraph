@@ -140,8 +140,6 @@ def text_annotation(request):
             if text_current.content.find(entity.entity) != -1:
                 entityList[entity.entity] = entity.entity_type
 
-
-
         '''
         
         # 对实体进行排列组合
@@ -168,7 +166,6 @@ def text_annotation(request):
                 with open("temp_relation.csv", "a+", newline="") as csvfile:
                     write = csv.writer(csvfile)
                     write.writerow(dataList)
-        
         '''
 
         #headEntity = entityList[0]
@@ -202,9 +199,6 @@ def text_annotation(request):
                 with open("temp_relation.csv", "a+", newline="") as csvfile:
                     write = csv.writer(csvfile)
                     write.writerow(dataList)
-
-
-
 
         '''
         自动标注 end            ---数据输出：resultList（从数据库中查询出来的一个结果集）   写入到数据库的Temp表中---

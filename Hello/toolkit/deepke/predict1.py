@@ -20,8 +20,8 @@ logger = logging.getLogger(__name__)
 
 
 def _preprocess_data(data, cfg):
-    vocab = load_pkl('Hello/toolkit/deepke/data/out/vocab.pkl', verbose=False)
-    relation_data = load_csv('Hello/toolkit/deepke/data/origin/relation.csv', verbose=False)
+    vocab = load_pkl('/usr/project/test/HelloWorld0/Hello/toolkit/deepke/data/out/vocab.pkl', verbose=False)
+    relation_data = load_csv('/usr/project/test/HelloWorld0/Hello/toolkit/deepke/data/origin/relation.csv', verbose=False)
     rels = _handle_relation_data(relation_data)
     cfg.vocab_size = vocab.count
     serializer = Serializer(do_chinese_split=cfg.chinese_split)
@@ -84,12 +84,12 @@ def _get_predict_instance(cfg,relationlist):
 
 
 # 自定义模型存储的路径
-fp = 'Hello/toolkit/deepke/checkpoints/2020-07-09_20-39-47/cnn_epoch50.pth'
-temp_file_dir = "Hello/toolkit/rel_data.csv"
+fp = '/usr/project/test/HelloWorld0/Hello/toolkit/deepke/checkpoints/2020-07-09_20-39-47/cnn_epoch50.pth'
+temp_file_dir = "/usr/project/test/HelloWorld0/Hello/toolkit/rel_data.csv"
 
 @hydra.main(config_path='conf/config.yaml')
 def main(cfg):
-    print("1111")
+    #print("1111")
     cwd = utils.get_original_cwd()
     cfg.cwd = cwd
     cfg.pos_size = 2 * cfg.pos_limit + 2

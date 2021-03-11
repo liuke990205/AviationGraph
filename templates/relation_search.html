@@ -1,171 +1,182 @@
-{% extends "index.html" %}
-{% block en %}
+{% extends 'index.html' %}
 {% load pagination_tags %}
-<head>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-    <title></title>
-    <meta charset="utf-8"/>
-    <link rel="stylesheet" href="/static/css/bootstrap.min.css"/>
-    <link href="/static/css/font-awesome.min.css" rel="stylesheet"/>
-    <link rel="stylesheet" href="/static/css/bootstrap.css"/>
-    <link rel="stylesheet" href="/static/css/style2.css"/>
-<!--
-    <link rel="stylesheet" href="http://cdn.static.runoob.com/libs/bootstrap/3.3.7/css/bootstrap.min.css">
--->
-
-    <script type="text/javascript" src="/static/js/jquery.min.js"></script>
-    <script type="text/javascript" src="/static/js/bootstrap.min.js"></script>
-    <script src="/static/js/echarts.common.min.js"></script>
-    <script type="text/javascript" src="/static/js/echarts-all-3.js"></script>
-
-<!--  <script src="http://cdn.static.runoob.com/libs/jquery/2.1.1/jquery.min.js"></script>
-    <script src="http://cdn.static.runoob.com/libs/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-
-    <script type="text/javascript" src="http://echarts.baidu.com/gallery/vendors/echarts/echarts-all-3.js"></script>-->
-
-</head>
-<title>关系</title>
-    <div class="container">
-        <div class="row">
-            <!--head start-->
-            <div class="col-md-12">
-                <ol class="breadcrumb">
-                    <li><i class="fa fa-home"></i><a href="/toHome/">主页</a></li>
-                    <li><i class="fa fa-link" aria-hidden="true"></i>知识查询</li>
+{% block title %}
+    知识查询
+{% endblock %}
+{% block en %}
+    <!-- breadcrumb -->
+    <section class="content-header">
+        <div class="container">
+            <div class="row mb-2">
+                <ol class="breadcrumb ">
+                    <li class="breadcrumb-item"><a href="/toHome/"><i class="fas fa-home"></i> 主页</a></li>
+                    <li class="breadcrumb-item active">知识查询</li>
                 </ol>
             </div>
-
-            <div class="col-md-12">
-                <div class="panel panel-default">
-                    <header class="panel-heading">
-                        查询条件：
-                    </header>
-                    <div class="panel-body">
-
-                        <form id="searchRelationForm" class="form-inline" style="padding-left: 10% ; padding-right: 10%"
-                              method="post" action="/relation_search/">
-                            {% csrf_token %}
-                            <div id="entity1" class="form-group" style="padding: 2%; margin-left: 130px">
-                                <input type="text" id="entity1_text" name="entity1_text" class="form-control"
-                                       placeholder="实体１" aria-describedby="basic-addon1" value="{{ entity1 }}">
-                            </div>
-                            <div class="form-group" style="padding: 2%">
-                                <select name="relation_text" id="relation_text" class="form-control" style="text-align: center">
-                                    <option value="">--选择关系名--</option>
-                                    <option value="参考">参考</option>
-                                    <option value="组成">组成</option>
-                                    <option value="性能指标">性能指标</option>
-                                    <option value="使用">使用</option>
-                                    <option value="上下位">上下位</option>
-                                </select>
-                            </div>
-
-                            <div id="entity2" class="form-group" style="padding: 2%">
-                                <input type="text" id="entity2_text" name="entity2_text" class="form-control"
-                                       placeholder="实体２" aria-describedby="basic-addon1" value="{{ entity2 }}">
-                            </div>
-                            <div class="btn-group" style="padding: 2%">
-                                <button type="submit" id="btnSearch" class="btn btn-primary">Search</button>
-                            </div>
-                        </form>
-                    </div>
-                </div>
-            </div>
-
-            {% if ctx %}
-                <div class="col-md-12">
-                    <div class="panel panel-default">
-                        <header class="panel-heading">
-                            查询结果：
-                        </header>
-                        <div class="panel-body">
-                            <div style="padding: 2%">
-                                <h2>暂未找到相应的匹配</h2>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            {% endif %}
-
-            {% if searchResult %}
-                <!-- 为ECharts准备一个具备大小（宽高）的Dom -->
-                <div class="col-md-12">
-                    <div class="panel panel-default ">
-                        <header class="panel-heading">
-                            关系图 :
-                        </header>
-                        <div class="panel-body ">
-                            <div id="graph" style="width: 100%;height:600px;"></div>
-                        </div>
-                    </div>
-                </div>
-
-            <div class="col-md-12">
-                <div class="panel panel-default">
-                    <header class="panel-heading">
-                        关系列表 :
-                    </header>
-                    <div class="panel-body" style="text-align: center">
-                        <div class="show-list" style="position: relative;top: 30px;">
-                            <table class="table table-bordered table-hover" align="center" border="solid 3px">
-                                <thead>
-                                <tr align="center" class="text-danger">
-                                    <th align="center" width="150" class="text-center" style="font-size:16px; ">头实体</th>
-                                    <th align="center" width="150" class="text-center" style="font-size:16px; ">关系类别</th>
-                                    <th align="center" width="100" class="text-center" style="font-size:16px; ">尾实体</th>
-                                    <th align="center" width="250" class="text-center" style="font-size:16px; ">用户操作</th>
-                                </tr>
-                                </thead>
-                                <tbody id="tb">
-                                {% for list in tableData %}
-                                    <tr>
-                                        <td align="center" style="font-size:15px; display:table-cell; vertical-align:middle">{{ list.0 }}</td>
-                                        <td align="center" style="font-size:15px; display:table-cell; vertical-align:middle">{{ list.1 }}</td>
-                                        <td align="center" style="font-size:15px; display:table-cell; vertical-align:middle">{{ list.2 }}</td>
-                                        <td class="text-center">
-                                            <!-- 按钮触发模态框 -->
-                                            <input type="button" class="btn btn-warning btn-sm doProModify"
-                                                   data-toggle="modal" data-target="#myModal" value="Modify" style="font-size: 15px"
-                                                   onclick="
-                                                           document.getElementById('headEntity').value='{{ list.0 }}';
-                                                           document.getElementById('relationshipCategory').value='{{ list.1 }}';
-                                                           document.getElementById('tailEntity').value='{{ list.2 }}';
-                                                           document.getElementById('temp_id').value='{{ list.3 }}';
-                                                           ">
-                                            <a href="{% url 'relation_delete' %}?temp_id={{ list.3 }}">
-                                                <button class="btn btn-danger" type="button"
-                                                        onclick="return confirm('是否确认删除？');">
-                                                    <span class="glyphicon glyphicon-remove"
-                                                          aria-hidden="true"></span> Delete
-                                                </button>
-                                            </a>
-                                        </td>
-                                    </tr>
-                                {% endfor %}
-                                </tbody>
-                            </table>
-                        </div>
-                    </div>
-                </div>
-                <div class="footers">
-                    <span style="color: white;">© 2020 东北大学-数字线技术项目团队 版权所有</span>
-                </div>
-            {% endif %}
         </div>
+    </section><!-- breadcrumb-->
 
-    </div>
+    <!-- Main content -->
+    <section class="content">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 mb-4">
+                    <div class="card card-primary">
+                        <div class="card-header">
+                            <div>查询条件：</div>
+                        </div>
+                        <!-- /.card-header -->
+                        <div class="card-body p-4">
+                            <form id="searchRelationForm" method="post" action="/relation_search/"
+                                  class="form-inline">
+                                {% csrf_token %}
 
-        <!-- 模态框（Modal） 修改-->
-    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                                <div id="entity1" class="form-group mr-4 my-4">
+                                    <input type="text" id="entity1_text" name="entity1_text"
+                                           class="form-control"
+                                           placeholder="实体１" aria-describedby="basic-addon1"
+                                           value="{{ entity1 }}">
+                                </div>
+                                <div class="form-group mr-4 my-4">
+                                    <select name="relation_text" id="relation_text" class="form-control"
+                                            style="text-align: center">
+                                        <option value="">--选择关系名--</option>
+                                        <option value="参考">参考</option>
+                                        <option value="组成">组成</option>
+                                        <option value="性能指标">性能指标</option>
+                                        <option value="使用">使用</option>
+                                        <option value="上下位">上下位</option>
+                                    </select>
+                                </div>
+
+                                <div id="entity2" class="form-group mr-4 my-4">
+                                    <input type="text" id="entity2_text" name="entity2_text"
+                                           class="form-control"
+                                           placeholder="实体２" aria-describedby="basic-addon1"
+                                           value="{{ entity2 }}">
+                                </div>
+
+                                <button type="submit" id="btnSearch" class="btn btn-primary">开始查询
+                                </button>
+
+                            </form>
+                        </div>
+                    </div>
+                </div>
+
+                {% if ctx %}
+                    <div class="col-12 mb-4">
+                        <div class="card card-primary">
+                            <div class="card-header">
+                                <div>查询结果：</div>
+                            </div>
+                            <!-- /.card-header -->
+                            <div class="card-body p-4">
+                                <div>
+                                    <div class="">暂未找到相应的匹配</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                {% endif %}
+
+                {% if searchResult %}
+                    <!-- 为ECharts准备一个具备大小（宽高）的Dom -->
+                    <div class="col-12 mb-4">
+                        <div class="card card-primary">
+                            <div class="card-header">
+                                <div>关系图：</div>
+                            </div>
+                            <!-- /.card-header -->
+                            <div class="card-body p-4 overflow-auto">
+                                <div id="graph" style="width: 100%;height:600px;"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 mb-4">
+                        <div class="card card-primary">
+                            <div class="card-header">
+                                <div>关系列表：</div>
+                            </div>
+                            <!-- /.card-header -->
+                            <div class="card-body p-4 overflow-auto">
+                                <div class="show-list">
+                                    <table class="table table-bordered table-hover table-valign-middle text-center">
+                                        <thead>
+                                        <tr align="center" class="text-primary font-weight-bold">
+                                            <th align="center" width="150" class="text-center"
+                                                style="font-size:16px; ">头实体
+                                            </th>
+                                            <th align="center" width="150" class="text-center"
+                                                style="font-size:16px; ">关系类别
+                                            </th>
+                                            <th align="center" width="100" class="text-center"
+                                                style="font-size:16px; ">尾实体
+                                            </th>
+                                            <th align="center" width="250" class="text-center"
+                                                style="font-size:16px; ">用户操作
+                                            </th>
+                                        </tr>
+                                        </thead>
+                                        <tbody id="tb">
+                                        {% for list in tableData %}
+                                            <tr>
+                                                <td align="center"
+                                                    style="font-size:15px; display:table-cell; vertical-align:middle">{{ list.0 }}</td>
+                                                <td align="center"
+                                                    style="font-size:15px; display:table-cell; vertical-align:middle">{{ list.1 }}</td>
+                                                <td align="center"
+                                                    style="font-size:15px; display:table-cell; vertical-align:middle">{{ list.2 }}</td>
+                                                <td class="text-center">
+                                                    <!-- 按钮触发模态框 -->
+                                                    <button type="button"
+                                                            class="btn btn-primary btn-sm"
+                                                            data-toggle="modal" data-target="#myModal"
+                                                            value="Modify"
+                                                            style="font-size: 15px"
+                                                            onclick="
+                                                                    document.getElementById('headEntity').value='{{ list.0 }}';
+                                                                    document.getElementById('relationshipCategory').value='{{ list.1 }}';
+                                                                    document.getElementById('tailEntity').value='{{ list.2 }}';
+                                                                    document.getElementById('temp_id').value='{{ list.3 }}';
+                                                                    "><i class="fa fa-pencil-square-o"></i> 修改
+                                                    </button>
+                                                    <a href="{% url 'relation_delete' %}?temp_id={{ list.3 }}">
+                                                        <button class="btn btn-danger btn-sm" type="button"
+                                                                onclick="return confirm('是否确认删除？');">
+                                                            <i class="fa fa-trash-o"></i> 删除
+                                                        </button>
+                                                    </a>
+                                                </td>
+                                            </tr>
+                                        {% endfor %}
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                {% endif %}
+
+                <!--/.col -->
+            </div>
+            <!-- /.row -->
+        </div><!-- /.container -->
+    </section>
+
+    <!-- 模态框（Modal） 修改-->
+    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+         aria-hidden="true">
         <div class="modal-dialog modal-lg">
             <div class="modal-content">
                 <div class="modal-header">
+
+                    <h4 class="modal-title" id="myModalLabel" style="font-size:20px;">
+                        修改关系信息
+                    </h4>
                     <button type="button" class="close" data-dismiss="modal"
                             aria-hidden="true">×
                     </button>
-                    <h4 class="modal-title" id="myModalLabel" style="font-size:20px;">
-                        Modify Relation Information
-                    </h4>
                 </div>
                 <div class="modal-body">
                     <form id="modifyTemp" class="form-horizontal" action="/relation_modify/" method="post">
@@ -211,12 +222,22 @@
             </div><!-- /.modal-content -->
         </div><!-- /.modal-dialog -->
     </div><!-- /.modal -->
+{% endblock %}
 
-        <script src="/static/js/echarts.js"></script>
-    <script src="/static/js/jquery-1.8.3.min.js"></script>
+{% block js %}
+    {% if messages %}
+        <script>
+            {% for msg in messages %}
+                alert('{{ msg.message }}');
+            {% endfor %}
+        </script>
+    {% endif %}
+    <script src="/static/js/echarts.js"></script>
+
     {% if searchResult %}
         <script type="text/javascript">
-            var searchResult ={{searchResult|safe}}
+            var searchResult =
+            {{searchResult|safe}}
             //echarts 数据
             var data = [];
             var links = [];
@@ -224,7 +245,7 @@
             //构造展示的数据
             var maxDisPlayNode = 100;
             var id = 0;
-            for (var i = 0; id <maxDisPlayNode && i < searchResult.length; i++) {
+            for (var i = 0; id < maxDisPlayNode && i < searchResult.length; i++) {
                 //获取node1
                 node1 = {};
                 node1['name'] = searchResult[i]['n1']['name'];
@@ -344,7 +365,7 @@
                             name: 'Serise',
                             itemStyle: {
                                 normal: {
-                                    color: "#C71585",
+                                    color: "#c0dbc5",
                                 }
                             }
                         }],
@@ -387,21 +408,26 @@
         </script>
     {% endif %}
     <script>
-	$(".dropdown-menu li a").click(function(){
-	   var selText = $(this).text();
-	   $(this).parents('.btn-group').find('.dropdown-toggle').html(selText+' <span class="caret"></span>');
-	   if(selText.trim()!="Other"){
-	   	$("#relationshipCategory").val(selText.trim()) ;
-	   }
-	   //combobox behavior
-	   if (selText.trim()==="Other") {
-	       $("#relation_name").removeClass("hide");
-	   }
-	   else{
-	   	   $("#relation_name").addClass("hide");
-	   }
+        $(".dropdown-menu li a").click(function () {
+            var selText = $(this).text();
+            $(this).parents('.btn-group').find('.dropdown-toggle').html(selText + ' <span class="caret"></span>');
+            if (selText.trim() != "Other") {
+                $("#relationshipCategory").val(selText.trim());
+            }
+            //combobox behavior
+            if (selText.trim() === "Other") {
+                $("#relation_name").removeClass("hide");
+            } else {
+                $("#relation_name").addClass("hide");
+            }
+        });
+    </script>
+{% endblock %}
 
-	});
-</script>
-    </div>
-{% endblock en %}
+
+
+
+
+
+
+

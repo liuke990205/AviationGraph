@@ -77,6 +77,7 @@ def relation_search(request):
             searchResult = db.findAll()
 
         tableData = Screen(searchResult)
+        print(tableData)
         if (len(searchResult) > 0):
             print(tableData)
             return render(request, 'relation_search.html',

@@ -281,7 +281,7 @@ def insertKnow(table2, entity_name2, re_name, database, host, username, password
         db = neo4jconn
         sum += 1
         if db.findRelationByEntities(result[0], result[1]):
-            continue;
+            continue
         else:
             db.insertRelation(result[0], type0, relation.relation, result[1], type1, str(sum))
     cursor.close()  # πÿ±’”Œ±Í

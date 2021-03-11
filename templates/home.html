@@ -1,283 +1,256 @@
-{% extends "index.html" %}
+{% extends 'index.html' %}
+{% block title %}
+    航空领域知识图谱
+{% endblock %}
+
 {% block en %}
-    <head>
-        <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-        <title></title>
-        <meta charset="utf-8"/>
-        <link rel="stylesheet" href="/static/css/bootstrap.min.css"/>
-{% comment %}
-        <link rel="stylesheet" href="http://cdn.static.runoob.com/libs/bootstrap/3.3.7/css/bootstrap.min.css">
-{% endcomment %}
-        <link href="/static/css/font-awesome.min.css" rel="stylesheet"/>
-        <link rel="stylesheet" href="/static/css/bootstrap.css"/>
-        <link rel="stylesheet" href="/static/css/style2.css"/>
+    <!-- Main content -->
+    <section class="content">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="card my-5">
+                        <div class="card-body">
+                            <div class="">网站历史访问人数：<span class="text-primary">1000</span></div>
+                        </div>
+                    </div> <!-- /.card -->
+                </div>
 
-        <script type="text/javascript" src="/static/js/jquery.min.js"></script>
-        <script type="text/javascript" src="/static/js/bootstrap.min.js"></script>
-        <script src="/static/js/echarts.common.min.js"></script>
+                {% if searchResult %}
+                    <!-- 为ECharts准备一个具备大小（宽高）的Dom -->
+                    <div class="col-12 mb-4">
+                        <div class="card card-primary">
+                            <div class="card-header">
+                                关系图 :
+                            </div>
+                            <div class="card-body ">
+                                <div id="graph" style="width: 100%;height:600px;"></div>
+                            </div>
+                        </div>
+                    </div>
+                    {% endif %}
 
-{% comment %}
-        <script src="http://cdn.static.runoob.com/libs/jquery/2.1.1/jquery.min.js"></script>
-{% endcomment %}
-{% comment %}
-        <script src="http://cdn.static.runoob.com/libs/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-{% endcomment %}
-        <script type="text/javascript" src="/static/js/echarts-all-3.js"></script>
-        {% comment %}
-        <script type="text/javascript" src="http://echarts.baidu.com/gallery/vendors/echarts/echarts-all-3.js"></script>
-{% endcomment %}
-
-    </head>
-    <title>主页面</title>
-    <div class="container">
-
-            <div class="col-md-12">
-                <div class="panel panel-default">
-
-                    <div class="panel-body">
-                        <div style="padding: 2%">
-                            <h2 style="align-content: center">网站历史访问人数：{{ number }}</h2>
+                <div class="col-12 mb-4">
+                    <div class="card card-primary">
+                        <div class="card-header">
+                            <div class="row">
+                                <div class="col text-center border-right">实体数</div>
+                                <div class="col text-center">关系数</div>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <div class="row">
+                                <div class="col text-center border-right">{{ entity_amount }}</div>
+                                <div class="col text-center">{{ relation_amount }}</div>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
 
-        {% if searchResult %}
-            <!-- 为ECharts准备一个具备大小（宽高）的Dom -->
-            <div class="col-md-12">
-                <div class="panel panel-default ">
-                    <header class="panel-heading">
-                        关系图 :
-                    </header>
-                    <div class="panel-body ">
-                        <div id="graph" style="width: 100%;height:600px;"></div>
-                    </div>
-                </div>
-            </div>
-        {% endif %}
-
-        <div class="col-md-12">
-            <div class="panel panel-default">
-                <div class="panel-body">
-                    <div class="show-list" style="position: relative;top: 10px;">
-                        <table class="table table-bordered table-hover" align="center" border="solid 3px">
-                            <thead>
-                            <tr align="center" class="text-danger">
-                                <th align="center" width="150" class="text-center">实体数</th>
-                                <th align="center" width="150" class="text-center">关系数量</th>
-                            </tr>
-                            </thead>
-                            <tbody id="tb">
-                            <tr>
-                                <td align="center">{{ entity_amount }}</td>
-                                <td align="center">{{ relation_amount }}</td>
-                            </tr>
-                            </tbody>
-                        </table>
-                    </div>
-
-                </div>
-            </div>
         </div>
-        <div class="footers">
-            <span style="color: white;">© 2020 东北大学-数字线技术项目团队 版权所有</span>
-        </div>
-    </div>
+    </section>
+{% endblock %}
 
 
+{% block js %}
     <script src="/static/js/jquery-1.8.3.min.js"></script>
     <script src="/static/js/echarts.js"></script>
     {% if searchResult %}
-    <script type="text/javascript">
-        var searchResult ={{searchResult|safe}}
-        var searchEntity ={{searchEntity|safe}}
-        //echarts 数据
-        var data = [];
-        var links = [];
+        <script type="text/javascript">
+            var searchResult =
+            {{searchResult|safe}}
+            var searchEntity =
+            {{searchEntity|safe}}
+            //echarts 数据
+            var data = [];
+            var links = [];
 
-        //构造展示的数据
-        var maxDisPlayNode = 100;
-        var id = 0;
-        for (var i = 0; id < maxDisPlayNode && i < searchResult.length; i++) {
-            //获取node1
-            node1 = {};
-            node1['name'] = searchResult[i]['n1']['name'];
-            node1['draggable'] = true;
-            if ('url' in searchResult[i]['n1']) {
-                node1['category'] = 1;
-            } else {
-                node1['category'] = 2;
-            }
-            var flag = 1;
-
-            relationTarget = id.toString();
-            for (var j = 0; j < data.length; j++) {
-                if (data[j]['name'] === node1['name']) {
-                    flag = 0;
-                    relationTarget = data[j]['id'];
-                    break;
+            //构造展示的数据
+            var maxDisPlayNode = 100;
+            var id = 0;
+            for (var i = 0; id < maxDisPlayNode && i < searchResult.length; i++) {
+                //获取node1
+                node1 = {};
+                node1['name'] = searchResult[i]['n1']['name'];
+                node1['draggable'] = true;
+                if ('url' in searchResult[i]['n1']) {
+                    node1['category'] = 1;
+                } else {
+                    node1['category'] = 2;
                 }
-            }
+                var flag = 1;
 
-            node1['id'] = relationTarget;
-            if (flag === 1) {
-                id++;
-                data.push(node1);
-            }
-
-            //获取node2
-            node2 = {};
-            node2['name'] = searchResult[i]['n2']['name'];
-            node2['draggable'] = true;
-            if ('url' in searchResult[i]['n2']) {
-                node2['category'] = 1;
-            } else {
-                node2['category'] = 2;
-            }
-            flag = 1;
-            relationTarget = id.toString();
-            for (var j = 0; j < data.length; j++) {
-                if (data[j]['name'] === node2['name']) {
-                    flag = 0;
-                    relationTarget = data[j]['id'];
-                    break;
-                }
-            }
-            node2['id'] = relationTarget;
-            if (flag === 1) {
-                id++;
-                data.push(node2);
-            }
-
-            //获取relation
-            relation = {};
-            relation['source'] = node1['id'];
-            relation['target'] = node2['id'];
-            relation['category'] = 0;
-            flag = 1;
-            for (var j = 0; j < links.length; j++) {
-                if (links[j]['source'] == relation['source'] && links[j]['target'] == relation['target']) {
-                    links[j]['value'] = links[j]['value'] + searchResult[i]['rel']['type'];
-                    flag = 0;
-                    break;
-                }
-            }
-            if (flag === 1) {
-                relation['value'] = searchResult[i]['rel']['type'];
-                relation['symbolSize'] = 10;
-                links.push(relation);
-            }
-
-        }
-
-        for (var i = 0; i < searchEntity.length; i++) {
-            node = {};
-            node['name'] = searchEntity[i]['n']['name'];
-            var flag = 1;
-
-            for (var j = 0; j < data.length; j++) {
-                if (data[j]['name'] === node['name']) {
-                    flag = 0;
-                    break;
-                }
-            }
-
-            if (flag === 1) {
-                node['id'] = id.toString();
-                id++;
-                data.push(node);
-            }
-        }
-
-        // Echarts初始化设置
-        var myChart = echarts.init(document.getElementById('graph'));
-
-        option = {
-            title: {
-                text: ''
-            },
-            tooltip: {},
-            animationDurationUpdate: 1500,
-            animationEasingUpdate: 'quinticInOut',
-            backgroundColor: '#01DFD7',
-            label: {
-                normal: {
-                    show: true,
-                    textStyle: {
-                        fontSize: 12
-                    },
-                }
-            },
-            legend: {
-                x: "center",
-                show: false
-            },
-            series: [
-                {
-                    type: 'graph',
-                    layout: 'force',
-                    symbolSize: 45,
-                    focusNodeAdjacency: true,
-                    roam: true,
-                    edgeSymbol: ['none', 'arrow'],
-                    categories: [{
-                        name: '查询实体',
-                        itemStyle: {
-                            normal: {
-                                color: "#009800",
-                            }
-                        }
-                    }, {
-                        name: 'Bank',
-                        itemStyle: {
-                            normal: {
-                                color: "#4592FF",
-                            }
-                        }
-                    }, {
-                        name: 'Serise',
-                        itemStyle: {
-                            normal: {
-                                color: "#C71585",
-                            }
-                        }
-                    }],
-                    label: {
-                        normal: {
-                            show: true,
-                            textStyle: {
-                                fontSize: 12,
-                            },
-                        }
-                    },
-                    force: {
-                        repulsion: 1000
-                    },
-                    edgeSymbolSize: [4, 50],
-                    edgeLabel: {
-                        normal: {
-                            show: true,
-                            textStyle: {
-                                fontSize: 10
-                            },
-                            formatter: "{c}"
-                        }
-                    },
-                    data: data,
-                    links: links,
-                    lineStyle: {
-                        normal: {
-                            opacity: 0.9,
-                            width: 1.3,
-                            curveness: 0,
-                            color: "#262626",
-                        }
+                relationTarget = id.toString();
+                for (var j = 0; j < data.length; j++) {
+                    if (data[j]['name'] === node1['name']) {
+                        flag = 0;
+                        relationTarget = data[j]['id'];
+                        break;
                     }
                 }
-            ]
-        };
-        // 使用刚指定的配置项和数据显示图表。
-        myChart.setOption(option);
-    </script>
+
+                node1['id'] = relationTarget;
+                if (flag === 1) {
+                    id++;
+                    data.push(node1);
+                }
+
+                //获取node2
+                node2 = {};
+                node2['name'] = searchResult[i]['n2']['name'];
+                node2['draggable'] = true;
+                if ('url' in searchResult[i]['n2']) {
+                    node2['category'] = 1;
+                } else {
+                    node2['category'] = 2;
+                }
+                flag = 1;
+                relationTarget = id.toString();
+                for (var j = 0; j < data.length; j++) {
+                    if (data[j]['name'] === node2['name']) {
+                        flag = 0;
+                        relationTarget = data[j]['id'];
+                        break;
+                    }
+                }
+                node2['id'] = relationTarget;
+                if (flag === 1) {
+                    id++;
+                    data.push(node2);
+                }
+
+                //获取relation
+                relation = {};
+                relation['source'] = node1['id'];
+                relation['target'] = node2['id'];
+                relation['category'] = 0;
+                flag = 1;
+                for (var j = 0; j < links.length; j++) {
+                    if (links[j]['source'] == relation['source'] && links[j]['target'] == relation['target']) {
+                        links[j]['value'] = links[j]['value'] + searchResult[i]['rel']['type'];
+                        flag = 0;
+                        break;
+                    }
+                }
+                if (flag === 1) {
+                    relation['value'] = searchResult[i]['rel']['type'];
+                    relation['symbolSize'] = 10;
+                    links.push(relation);
+                }
+
+            }
+
+            for (var i = 0; i < searchEntity.length; i++) {
+                node = {};
+                node['name'] = searchEntity[i]['n']['name'];
+                var flag = 1;
+
+                for (var j = 0; j < data.length; j++) {
+                    if (data[j]['name'] === node['name']) {
+                        flag = 0;
+                        break;
+                    }
+                }
+
+                if (flag === 1) {
+                    node['id'] = id.toString();
+                    id++;
+                    data.push(node);
+                }
+            }
+
+            // Echarts初始化设置
+            var myChart = echarts.init(document.getElementById('graph'));
+
+            option = {
+                title: {
+                    text: ''
+                },
+                tooltip: {},
+                animationDurationUpdate: 1500,
+                animationEasingUpdate: 'quinticInOut',
+                backgroundColor: '#01DFD7',
+                label: {
+                    normal: {
+                        show: true,
+                        textStyle: {
+                            fontSize: 12
+                        },
+                    }
+                },
+                legend: {
+                    x: "center",
+                    show: false
+                },
+                series: [
+                    {
+                        type: 'graph',
+                        layout: 'force',
+                        symbolSize: 45,
+                        focusNodeAdjacency: true,
+                        roam: true,
+                        edgeSymbol: ['none', 'arrow'],
+                        categories: [{
+                            name: '查询实体',
+                            itemStyle: {
+                                normal: {
+                                    color: "#009800",
+                                }
+                            }
+                        }, {
+                            name: 'Bank',
+                            itemStyle: {
+                                normal: {
+                                    color: "#4592FF",
+                                }
+                            }
+                        }, {
+                            name: 'Serise',
+                            itemStyle: {
+                                normal: {
+                                    color: "#c0dbc5",
+                                }
+                            }
+                        }],
+                        label: {
+                            normal: {
+                                show: true,
+                                textStyle: {
+                                    fontSize: 12,
+                                },
+                            }
+                        },
+                        force: {
+                            repulsion: 1000
+                        },
+                        edgeSymbolSize: [4, 50],
+                        edgeLabel: {
+                            normal: {
+                                show: true,
+                                textStyle: {
+                                    fontSize: 10
+                                },
+                                formatter: "{c}"
+                            }
+                        },
+                        data: data,
+                        links: links,
+                        lineStyle: {
+                            normal: {
+                                opacity: 0.9,
+                                width: 1.3,
+                                curveness: 0,
+                                color: "#262626",
+                            }
+                        }
+                    }
+                ]
+            };
+            // 使用刚指定的配置项和数据显示图表。
+            myChart.setOption(option);
+        </script>
     {% endif %}
-{% endblock en %}
+
+{% endblock %}
+

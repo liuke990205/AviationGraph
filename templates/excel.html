@@ -1,295 +1,290 @@
 {% extends 'index.html' %}
-<!DOCTYPE html>
+{% load pagination_tags %}
+{% block title %}
+    信息故障抽取
+{% endblock %}
+
+{% block css %}
+    <style>
+
+        input[type="checkbox"]:checked {
+            background: #337ab7;
+        }
+
+        .selectbox {
+            width: 1000px;
+            height: 220px;
+            margin: 20px auto;
+        }
+
+        .selectbox div {
+            float: left;
+        }
+
+        .selectbox .select-bar {
+            padding: 0 20px;
+        }
+
+        .selectbox .select-bar select {
+            width: 200px;
+            height: 200px;
+            border: 1px solid #dee2e6;
+            padding: 4px;
+            font-size: 14px;
+        }
+
+        .btn-bar {
+
+        }
+
+        .btn-bar p {
+            margin-top: 40px;
+        }
+
+        .btn-bar p .btn {
+            width: 50px;
+            height: 30px;
+            cursor: pointer;
+            font-size: 14px;
+        }
+
+    </style>
+{% endblock %}
+
 {% block en %}
-    <html lang="en">
-    <head>
-        <title>故障信息抽取</title>
-        <meta charset="utf-8">
-        <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-        <link rel="stylesheet" href="/static/css/bootstrap.min.css"/>
-{% comment %}
-        <link rel="stylesheet" href="http://cdn.static.runoob.com/libs/bootstrap/3.3.7/css/bootstrap.min.css">
-{% endcomment %}
-        <link href="/static/css/font-awesome.min.css" rel="stylesheet"/>
-        <link rel="stylesheet" href="/static/css/bootstrap.css"/>
-        <link rel="stylesheet" href="/static/css/style2.css"/>
-        <link rel="stylesheet" href="/static/css/ner.css"/>
-
-        <script type="text/javascript" src="/static/js/jquery.min.js"></script>
-        <script type="text/javascript" src="/static/js/bootstrap.min.js"></script>
-
- {% comment %}       <script src="http://cdn.static.runoob.com/libs/jquery/2.1.1/jquery.min.js"></script>
-        <script src="http://cdn.static.runoob.com/libs/bootstrap/3.3.7/js/bootstrap.min.js"></script>{% endcomment %}
-        <style>
-            .file input {
-                position: absolute;
-                font-size: 100px;
-                right: 0;
-                top: 0;
-                opacity: 0;
-            }
-
-            input[type="checkbox"] {
-                -webkit-appearance: none;
-                vertical-align: middle;
-                margin-top: 0;
-                background: #fff;
-                border: #999 solid 1px;
-                border-radius: 3px;
-                min-height: 12px;
-                min-width: 12px;
-            }
-
-            input[type="checkbox"]:checked {
-                background: #3190e8;
-            }
-
-            input[type="checkbox"]:checked::after {
-                content: '';
-                top: 3px;
-                left: 3px;
-                position: absolute;
-                background: transparent;
-                border: #fff solid 2px;
-                border-top: none;
-                border-right: none;
-                height: 6px;
-                width: 10px;
-                -moz-transform: rotate(-45deg);
-                -ms-transform: rotate(-45deg);
-                -webkit-transform: rotate(-45deg);
-                transform: rotate(-45deg);
-            }
-
-
-            .selectbox {
-                width: 1000px;
-                height: 220px;
-                margin: 20px auto;
-            }
-
-            .selectbox div {
-                float: left;
-            }
-
-            .selectbox .select-bar {
-                padding: 0 20px;
-            }
-
-            .selectbox .select-bar select {
-                width: 200px;
-                height: 200px;
-                border: 1px #A0A0A4 solid;
-                padding: 4px;
-                font-size: 14px;
-            }
-
-            .btn-bar {
-
-            }
-
-            .btn-bar p {
-                margin-top: 40px;
-            }
-
-            .btn-bar p .btn {
-                width: 50px;
-                height: 30px;
-                cursor: pointer;
-                font-size: 14px;
-            }
-        </style>
-    </head>
-    <body>
-
-    <div class="container">
-        <div class="row">
-            <div class="col-md-12">
-                <ol class="breadcrumb">
-                    <li><i class="fa fa-home"></i><a href="/toHome/">主页</a></li>
-                    <li><i class="fa fa-link" aria-hidden="true"></i>故障信息抽取</li>
+    <!-- breadcrumb -->
+    <section class="content-header">
+        <div class="container">
+            <div class="row mb-2">
+                <ol class="breadcrumb ">
+                    <li class="breadcrumb-item"><a href="/toHome/"><i class="fas fa-home"></i> 主页</a></li>
+                    <li class="breadcrumb-item active">信息故障抽取</li>
                 </ol>
             </div>
-
-            <div class="col-md-12">
-                <div class="panel panel-default">
-                    <header class="panel-heading">
-                        待抽取Excel上传：
-                    </header>
-                    <div class="panel-body">
-                        <form name="upload" enctype="multipart/form-data" method="post" action="/upload_excel/">
-                            {% csrf_token %}
-                            <input name="excel_file" id="file" type="file" style="display: none"/>
-                            <div class="input-append">
-                                <input id="photoCover" type="text" class="form-control"
-                                       style="float: left; width: 350px">
-                                <a class="btn btn-default" style="border-radius: 0px; width: 50px"
-                                   onclick="$('input[id=file]').click();">
-                                    浏览
-                                </a>
-                                <button type="submit"
-                                        style="background-color:#8fd19e; width: 140px;height: 36px; margin-left: 100px"
-                                        name="upload">上传Excel
-                                </button>
-                            </div>
-                        </form>
-                    </div>
-                </div>
-            </div>
-
-
-            <div class="col-md-12">
-                <div class="panel panel-default">
-                    <header class="panel-heading">
-                        实体和属性选择：
-                    </header>
-                    <div class="panel-body" style="text-align: center">
-                        <form action="/commit_properties/" name="select_name" method="post">
-                            {% csrf_token %}
-                            <div class="selectbox">
-                                <div class="select-bar">
-                                    <select multiple="multiple" id="select2" name="select2"></select>
-                                </div>
-
-                                <div class="btn-bar">
-                                    <p><span id="add1"><input type="button" class="btn" value="<-Add" title="移动选择项到左侧"
-                                                             style="width: 80px"/></span>
-                                    </p>
-                                    <p><span id="remove1"><input type="button" class="btn" value="Del->"
-                                                                title="移动选择项到右侧" style="width: 80px"/></span></p>
-                                </div>
-
-                                <div class="select-bar">
-                                    <select multiple="multiple" id="select1">
-                                        {% for name in name_list %}
-                                            <option value="{{ name }}">{{ name }}</option>
-                                        {% endfor %}
-                                    </select>
-                                </div>
-
-                                <div class="btn-bar">
-                                    <p><span id="add2"><input type="button" class="btn" value="Add->" title="移动选择项到右侧"
-                                                              style="width: 80px"/></span>
-                                    </p>
-                                    <p><span id="remove2"><input type="button" class="btn" value="<-Del"
-                                                                 title="移动选择项到左侧" style="width: 80px"/></span></p>
-                                </div>
-
-                                <div class="select-bar">
-                                    <select multiple="multiple" id="select3" name="select3"></select>
-                                </div>
-                            </div>
-                            <div class="selectbox">
-                                <div class="select-bar">
-                                    <select multiple="multiple" id="select22" name="select22"></select>
-                                </div>
-
-                                <div class="btn-bar">
-                                    <p><span id="add11"><input type="button" class="btn" value="<-Add" title="移动选择项到左侧"
-                                                             style="width: 80px"/></span>
-                                    </p>
-                                    <p><span id="remove11"><input type="button" class="btn" value="Del->"
-                                                                title="移动选择项到右侧" style="width: 80px"/></span></p>
-                                </div>
-
-                                <div class="select-bar">
-                                    <select multiple="multiple" id="select11">
-                                        {% for name in name_list %}
-                                            <option value="{{ name }}">{{ name }}</option>
-                                        {% endfor %}
-                                    </select>
-                                </div>
-
-                                <div class="btn-bar">
-                                    <p><span id="add22"><input type="button" class="btn" value="Add->" title="移动选择项到右侧"
-                                                              style="width: 80px"/></span>
-                                    </p>
-                                    <p><span id="remove22"><input type="button" class="btn" value="<-Del"
-                                                                 title="移动选择项到左侧" style="width: 80px"/></span></p>
-                                </div>
-
-                                <div class="select-bar">
-                                    <select multiple="multiple" id="select33" name="select33"></select>
-                                </div>
-                            </div>
-                                <button type="submit" style="background-color: #01a7b3; width: 140px;height: 36px; margin-left: 100px" name="upload">提交规则</button>
-
-                        </form>
-
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-12">
-                <div class="panel panel-default">
-                    <header class="panel-heading">
-                        关系确定：
-                    </header>
-                    <div class="panel-body">
-                        <form name="upload" enctype="multipart/form-data" method="post" action="/excel_extract/">
-                            {% csrf_token %}
-                            <table class="table table-bordered table-hover" align="center" border="solid 3px">
-                                <thead>
-                                <tr align="center" class="text-danger">
-                                    <th align="center" width="100" class="text-center" style="font-size:16px; ">编号
-                                    </th>
-                                    <th align="center" width="100" class="text-center" style="font-size:16px; ">头实体名
-                                    </th>
-                                    <th align="center" width="150" class="text-center" style="font-size:16px; ">头实体属性名
-                                    </th>
-                                    <th align="center" width="100" class="text-center" style="font-size:16px; ">尾实体名
-                                    </th>
-                                    <th align="center" width="150" class="text-center" style="font-size:16px; ">尾实体属性名
-                                    </th>
-                                    <th align="center" width="100" class="text-center" style="font-size:16px; ">操作</th>
-                                </tr>
-                                </thead>
-                                <tbody id="tb">
-                                {% for list in tableData %}
-                                    <tr>
-                                        <td align="center"
-                                            style="font-size:15px; display:table-cell; vertical-align:middle">{{ list.4 }}</td>
-                                        <td align="center"
-                                            style="font-size:15px; display:table-cell; vertical-align:middle">{{ list.0 }}</td>
-                                        <td align="center"
-                                            style="font-size:15px; display:table-cell; vertical-align:middle">{{ list.1 }}</td>
-                                        <td align="center"
-                                            style="font-size:15px; display:table-cell; vertical-align:middle">{{ list.2 }}</td>
-                                        <td align="center"
-                                            style="font-size:15px; display:table-cell; vertical-align:middle">{{ list.3 }}</td>
-
-                                        <td class="text-center">
-                                            <a href="{% url 'excel_delete' %}?id={{ list.4 }}">
-                                                <button id="delete" name="delete" class="btn btn-danger" type="button"
-                                                        onclick="return confirm('是否确认删除？');">
-                                                    <span class="glyphicon glyphicon-remove"
-                                                          aria-hidden="true"></span> Delete
-                                                </button>
-                                            </a>
-                                        </td>
-                                    </tr>
-                                {% endfor %}
-                                </tbody>
-                            </table>
-                            <button type="submit" style="background-color: #00aced; width: 140px;height: 36px; margin-left: 100px" name="upload">开始抽取</button>
-
-                        </form>
-                    </div>
-                </div>
-            </div>
-
-
-            <div class="footers">
-                <span style="color: white;">© 2020 东北大学-数字线技术项目团队 版权所有</span>
-            </div>
         </div>
-    </div>
+    </section><!-- breadcrumb-->
+    <!-- Main content -->
+    <section class="content">
+        <div class="container">
+            <div class="row">
+
+                <div class="col-12 mb-4">
+                    <div class="card card-primary ">
+                        <div class="card-header">
+                            <div>待抽取Excel上传：</div>
+                        </div>
+                        <!-- /.card-header -->
+                        <div class="card-body m-4">
+
+                            <form name="upload" enctype="multipart/form-data" method="post" action="/upload_excel/">
+                                {% csrf_token %}
+                                <div class="col-lg-8">
+                                    <div class="form-group">
+                                        <div class="input-group">
+                                            <div class="custom-file">
+                                                <input type="file" name="excel_file" id="file"
+                                                       class="custom-file-input "
+                                                       lang="cn">
+                                                <label class="custom-file-label" for="file">选择文件</label>
+                                            </div>
+                                            <div class="input-group-append">
+                                                <button type="submit" class="btn btn-primary">上传Excel</button>
+                                            </div>
+                                        </div>
+                                    </div><!-- /.form group -->
+                                </div>
+
+                            </form>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="col-12 mb-4">
+                    <div class="card card-primary ">
+                        <div class="card-header">
+                            <div>实体和属性选择：</div>
+                        </div>
+                        <!-- /.card-header -->
+                        <div class="card-body m-4 overflow-auto">
+                            <form action="/commit_properties/" name="select_name" method="post">
+                                {% csrf_token %}
+                                <div class="selectbox">
+                                    <div class="select-bar">
+                                        <select multiple="multiple" id="select2" name="select2"></select>
+                                    </div>
+
+                                    <div class="btn-bar">
+                                        <p><span id="add1"><input type="button" class="btn" value="<-Add"
+                                                                  title="移动选择项到左侧"
+                                                                  style="width: 80px"/></span>
+                                        </p>
+                                        <p><span id="remove1"><input type="button" class="btn" value="Del->"
+                                                                     title="移动选择项到右侧" style="width: 80px"/></span>
+                                        </p>
+                                    </div>
+
+                                    <div class="select-bar">
+                                        <select multiple="multiple" id="select1">
+                                            {% for name in name_list %}
+                                                <option value="{{ name }}">{{ name }}</option>
+                                            {% endfor %}
+                                        </select>
+                                    </div>
+
+                                    <div class="btn-bar">
+                                        <p><span id="add2"><input type="button" class="btn" value="Add->"
+                                                                  title="移动选择项到右侧"
+                                                                  style="width: 80px"/></span>
+                                        </p>
+                                        <p><span id="remove2"><input type="button" class="btn" value="<-Del"
+                                                                     title="移动选择项到左侧" style="width: 80px"/></span>
+                                        </p>
+                                    </div>
+
+                                    <div class="select-bar">
+                                        <select multiple="multiple" id="select3" name="select3"></select>
+                                    </div>
+                                </div>
+                                <div class="selectbox">
+                                    <div class="select-bar">
+                                        <select multiple="multiple" id="select22" name="select22"></select>
+                                    </div>
+
+                                    <div class="btn-bar">
+                                        <p><span id="add11"><input type="button" class="btn" value="<-Add"
+                                                                   title="移动选择项到左侧"
+                                                                   style="width: 80px"/></span>
+                                        </p>
+                                        <p><span id="remove11"><input type="button" class="btn" value="Del->"
+                                                                      title="移动选择项到右侧" style="width: 80px"/></span>
+                                        </p>
+                                    </div>
+
+                                    <div class="select-bar">
+                                        <select multiple="multiple" id="select11">
+                                            {% for name in name_list %}
+                                                <option value="{{ name }}">{{ name }}</option>
+                                            {% endfor %}
+                                        </select>
+                                    </div>
+
+                                    <div class="btn-bar">
+                                        <p><span id="add22"><input type="button" class="btn" value="Add->"
+                                                                   title="移动选择项到右侧"
+                                                                   style="width: 80px"/></span>
+                                        </p>
+                                        <p><span id="remove22"><input type="button" class="btn" value="<-Del"
+                                                                      title="移动选择项到左侧" style="width: 80px"/></span>
+                                        </p>
+                                    </div>
+
+                                    <div class="select-bar">
+                                        <select multiple="multiple" id="select33" name="select33"></select>
+                                    </div>
+                                </div>
+                                <div class="text-center">
+                                    <button type="submit" class="btn btn-primary mt-4"
+                                            name="upload">提交规则
+                                    </button>
+                                </div>
+
+                            </form>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 mb-4">
+                    <div class="card card-primary ">
+                        <div class="card-header">
+                            <div>关系确定：</div>
+                        </div>
+                        <!-- /.card-header -->
+                        <div class="card-body p-4">
+                            <form name="upload" enctype="multipart/form-data" method="post"
+                                  action="/excel_extract/">
+                                {% csrf_token %}
+                                <table class="table table-bordered table-hover table-valign-middle text-center mb-4">
+                                    <thead>
+                                    <tr class="text-primary font-weight-bold">
+                                        <th align="center" width="100" class="text-center" style="font-size:16px; ">
+                                            编号
+                                        </th>
+                                        <th align="center" width="100" class="text-center" style="font-size:16px; ">
+                                            头实体名
+                                        </th>
+                                        <th align="center" width="150" class="text-center" style="font-size:16px; ">
+                                            头实体属性名
+                                        </th>
+                                        <th align="center" width="100" class="text-center" style="font-size:16px; ">
+                                            尾实体名
+                                        </th>
+                                        <th align="center" width="150" class="text-center" style="font-size:16px; ">
+                                            尾实体属性名
+                                        </th>
+                                        <th align="center" width="100" class="text-center" style="font-size:16px; ">
+                                            操作
+                                        </th>
+                                    </tr>
+                                    </thead>
+                                    <tbody id="tb">
+                                    {% for list in tableData %}
+                                        <tr>
+                                            <td align="center"
+                                                style="font-size:15px; display:table-cell; vertical-align:middle">{{ list.4 }}</td>
+                                            <td align="center"
+                                                style="font-size:15px; display:table-cell; vertical-align:middle">{{ list.0 }}</td>
+                                            <td align="center"
+                                                style="font-size:15px; display:table-cell; vertical-align:middle">{{ list.1 }}</td>
+                                            <td align="center"
+                                                style="font-size:15px; display:table-cell; vertical-align:middle">{{ list.2 }}</td>
+                                            <td align="center"
+                                                style="font-size:15px; display:table-cell; vertical-align:middle">{{ list.3 }}</td>
+
+                                            <td class="text-center">
+                                                <a href="{% url 'excel_delete' %}?id={{ list.4 }}">
+                                                    <button id="delete" name="delete" class="btn btn-danger btn-sm"
+                                                            type="button"
+                                                            onclick="return confirm('是否确认删除？');">
+                                                        <i class="fa fa-trash-o"></i> 删除
+                                                    </button>
+                                                </a>
+                                            </td>
+                                        </tr>
+                                     {% endfor %}
+                                    </tbody>
+                                </table>
+                                <div class="text-center">
+                                    <button type="submit" class="btn btn-primary"
+                                            name="upload">开始抽取
+                                    </button>
+                                </div>
+
+
+                            </form>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <!-- /.row -->
+        </div><!-- /.container -->
+    </section>
+{% endblock en %}
+
+{% block js %}
+    <script src="/static/js/echarts.common.min.js"></script>
+    <script src="/static/js/echarts-all-3.js"></script>
+    <script type="text/javascript" src="/static/js/moment.js"></script>
+    <script src="/static/js/bs-custom-file-input.min.js"></script>
+    <script>
+        $(function () {
+            bsCustomFileInput.init();
+        });
+    </script>
 
     <script>
 
-
-        $('input[id=file]').change(function () {
-            $('#photoCover').val($(this).val());
-        });
         $(function () {
             //移到左边
             $('#add1').click(function () {
@@ -349,9 +344,6 @@
             });
 
 
-
-
-
             //移到左边
             $('#add11').click(function () {
                 //先判断是否有选中
@@ -397,12 +389,10 @@
                 }
             });
 
-
             //双击选项
             $('#select22').dblclick(function () {
                 $("option:selected", this).appendTo('#select11');
             });
-
 
             //双击选项
             $('#select33').dblclick(function () {
@@ -412,12 +402,13 @@
         });
     </script>
     {% if messages %}
-    <script>
-        {% for msg in messages %}
-            alert('{{ msg.message }}');
-        {% endfor %}
-    </script>
-{% endif %}
-    </body>
-    </html>
-{% endblock en %}
+        <script>
+            {% for msg in messages %}
+                alert('{{ msg.message }}');
+            {% endfor %}
+        </script>
+    {% endif %}
+{% endblock %}
+
+
+

@@ -118,7 +118,6 @@ def initbm(question):
     for i in range(5):
         list.append(res[i][0])
     return list
-    #弄好了！
 
 
 

@@ -1,263 +1,198 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>航空领域知识图谱</title>
-    <link rel="shortcut icon" href="/static/img/favicon.png">
-    <link href="/static/css/bootstrap.min.css" rel="stylesheet">
-    <link href="/static/css/style.css" rel="stylesheet">
-    <link href="/static/css/elegant-icons-style.css" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>{% block title %}航空领域知识图谱{% endblock %}</title>
+
+
+    <!-- Google Font: Source Sans Pro -->
+    <link rel="stylesheet"
+          href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="/static/fontawesome-free/css/all.min.css">
+    <link rel="stylesheet" href="/static/font-awesome-4.7.0/css/font-awesome.min.css">
+    <!-- Theme style -->
+    <link rel="stylesheet" href="/static/css/custom.css">
+    {% block css %}
+    {% endblock %}
 </head>
-<body>
-<section id="container" class="">
-    <header class="header dark-bg">
-        <div class="toggle-nav">
-            <div class="icon-reorder tooltips" data-original-title="隐藏/显示侧栏" data-placement="bottom">
-                <i class="fa fa-bars" aria-hidden="true"></i>
-            </div>
+<body class="hold-transition sidebar-mini">
+<!-- wrapper -->
+<div class="wrapper">
+
+    <!-- Navbar -->
+    <nav class="main-header navbar navbar-expand navbar-dark navbar-primary">
+        <!-- Left navbar links -->
+        <ul class="navbar-nav">
+            <li class="nav-item">
+                <a class="nav-link" data-widget="pushmenu" href="#" role="button"><i class="fas fa-bars"></i></a>
+            </li>
+            <li class="nav-item d-none d-sm-inline-block">
+                <a href="" class="nav-link font-weight-bold "></a>
+            </li>
+        </ul>
+
+        <!-- Right navbar links -->
+        <ul class="navbar-nav ml-auto">
+
+            <li class="nav-item">
+                <a class="nav-link" href="http://123.56.52.53:8002/exit/" role="button">
+                    退出
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="http://123.56.52.53:8002/help/" role="button">
+                    帮助
+                </a>
+            </li>
+        </ul>
+    </nav>
+    <!-- /.navbar -->
+    <!-- Main Sidebar Container -->
+    <aside class="main-sidebar sidebar-dark-white elevation-4 bg-primary">
+        <!-- Brand Logo -->
+        <a href="#" class="brand-link">
+            <span class="brand-text font-weight-light pl-2 font-weight-bold">航空领域知识图谱 V1.0</span>
+        </a>
+
+        <!-- Sidebar -->
+        <div class="sidebar">
+
+            <!-- Sidebar Menu -->
+            <nav class="mt-2">
+                <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu"
+                    data-accordion="false">
+                    <li class="nav-item border-bottom border-secondary">
+                        <a href="http://123.56.52.53:8002/toHome/" class="nav-link">
+                            <i class="nav-icon fas fa-home"></i>
+                            <p>
+                                主界面
+                            </p>
+                        </a>
+                    </li>
+
+                    <li class="nav-item border-bottom border-secondary">
+                        <a href="http://123.56.52.53:8002/toAnnotation/"
+                           class="nav-link">
+                            <i class="nav-icon fas fa-pencil-square-o"></i>
+                            <p>
+                                文本标注
+                            </p>
+                        </a>
+                    </li>
+                    <li class="nav-item border-bottom border-secondary">
+                        <a href="http://123.56.52.53:8002/toClassification/" class="nav-link">
+                            <i class="nav-icon fas fa-pie-chart"></i>
+                            <p>
+                                信息聚类
+                            </p>
+                        </a>
+                    </li>
+
+                    <li class="nav-item border-bottom border-secondary menu-open">
+                        <a href="#" class="nav-link">
+                            <i class="nav-icon fas fa-pencil-square-o"></i>
+                            <p>
+                                <i class="right fas fa-angle-left"></i>
+                                知识抽取
+                            </p>
+                        </a>
+                        <ul class="nav nav-treeview pl-3">
+                            <li class="nav-item">
+                                <a href="#" class="nav-link">
+                                    <i class="fas fa-cubes nav-icon"></i>
+                                    <p>实体抽取</p>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="http://123.56.52.53:8002/toRelation/" class="nav-link">
+                                    <i class="fas fa-sitemap nav-icon"></i>
+                                    <p>关系抽取</p>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="http://123.56.52.53:8002/toD2rq/" class="nav-link">
+                                    <i class="fas fa-database nav-icon"></i>
+                                    <p>数据库抽取</p>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="http://123.56.52.53:8002/toExcel/" class="nav-link">
+                                    <i class="fas fa-wrench nav-icon"></i>
+                                    <p>故障信息抽取</p>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="http://123.56.52.53:8002/toWord/" class="nav-link">
+                                    <i class="fas fa-file nav-icon"></i>
+                                    <p>技术文档抽取</p>
+                                </a>
+                            </li>
+
+                        </ul>
+                    </li>
+                    <li class="nav-item border-bottom border-secondary">
+                        <a href="http://123.56.52.53:8002/toDataManager/" class="nav-link">
+                            <i class="nav-icon fas fa-th"></i>
+                            <p>
+                                知识存储
+                            </p>
+                        </a>
+                    </li>
+                    <li class="nav-item border-bottom border-secondary">
+                        <a href="http://123.56.52.53:8002/toRelationSearch/" class="nav-link">
+                            <i class="nav-icon fas fa-hand-o-right "></i>
+                            <p>
+                                知识查询
+                            </p>
+                        </a>
+                    </li>
+                    <li class="nav-item border-bottom border-secondary">
+                        <a href="http://123.56.52.53:8002/toAnswer2/" class="nav-link">
+                            <i class="nav-icon fas fa-comments"></i>
+                            <p>
+                                问答系统
+                            </p>
+                        </a>
+                    </li>
+                    <li class="nav-item border-bottom border-secondary">
+                        <a href="http://123.56.52.53:8002/toSearchAllPdf/" class="nav-link">
+                            <i class="nav-icon fas fa-search-plus"></i>
+                            <p>
+                                全文搜索
+                            </p>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+            <!-- /.sidebar-menu -->
         </div>
-
-        <!--logo start   123.56.52.53 -->
-        <a href="#" class="logo" style="font-size:25px;"> 航空领域知识图谱 V1.0</a>
-        <!--logo end-->
-        <div class="top-nav notification-row">
-            <ul class="nav pull-right top-menu">
-                <li>
-                    <a href='http://123.56.52.53:8002/help/'>
-                        <i class="fa" aria-hidden="true" style="font-size:25px;">Help</i>
-                    </a>
-                </li>
-            </ul>
-            <ul class="nav pull-right top-menu">
-                <li>
-                    <a href='http://123.56.52.53:8002/exit/'>
-                        <i class="fa" aria-hidden="true" style="font-size:25px;">退出</i>
-                    </a>
-                </li>
-            </ul>
-
-        </div>
-    </header>
-    <!--header end-->
-
-    <!--sidebar start-->
-    <aside>
-        <div id="sidebar" class="nav-collapse " style="width: 220px">
-            <!-- sidebar menu start-->
-            <ul class="sidebar-menu" style="width: 220px">
-                <li>
-                    <a href="http://123.56.52.53:8002/toHome/">
-                        <i class="icon_house_alt"></i>
-                        <span style="font-size:22px;text-align: center">主界面</span>
-                    </a>
-                </li>
-
-
-                <li>
-                    <a href="http://123.56.52.53:8002/toAnnotation/">
-                        <i class="icon_genius"></i>
-                        <span style="font-size:22px;">文本标注</span>
-                    </a>
-                </li>
-                <li>
-                    <a href="http://123.56.52.53:8002/toClassification/">
-                        <i class="icon-charts-l"></i>
-                        <span style="font-size:22px;">信息聚类</span>
-                    </a>
-                </li>
-                <li>
-                    <a>
-                        <i class="icon_bag"></i>
-                        <span style="font-size:22px;">知识抽取</span>
-                    </a>
-                    <ul>
-                        <li>
-                            <a href="http://123.56.52.53:8002/toEntityRecognition/">
-                                <i class=" social_googledrive"></i>
-                                <span style="font-size:22px;">实体抽取</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a class="" href="http://123.56.52.53:8002/toRelation/">
-                                <i class="icon_bag_alt"></i>
-                                <span style="font-size:22px;">关系抽取</span>
-                            </a>
-                        </li>
-                        {% comment %}<li>
-                            <a href="http://123.56.52.53:8002/toD2rq/">
-                                <i class="icon_plus-box"></i>
-                                <span style="font-size:22px;">数据库抽取</span>
-                            </a>
-                        </li>{% endcomment %}
-                        <li>
-                            <a href="http://123.56.52.53:8002/toExcel/">
-                                <i class="icon-pages-l"></i>
-                                <span style="font-size:22px;">故障信息抽取</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="http://123.56.52.53:8002/toWord/">
-                                <i class="icon_book_alt"></i>
-                                <span style="font-size:22px;">技术文档抽取</span>
-                            </a>
-                        </li>
-                    </ul>
-                </li>
-                <li>
-                    <a href="http://123.56.52.53:8002/toDataManager/">
-                        <i class="icon_piechart"></i>
-                        <span style="font-size:22px;">知识存储</span>
-                    </a>
-                </li>
-                <li>
-                    <a class="" href="http://123.56.52.53:8002/toRelationSearch/">
-                        <i class="icon-bell-l"></i>
-                        <span style="font-size:22px;">知识查询</span>
-                    </a>
-                </li>
-                <li>
-                    <a class="" href="http://123.56.52.53:8002/toAnswer/">
-                        <i class="icon_chat_alt"></i>
-                        <span style="font-size:22px;">问答系统</span>
-                    </a>
-                </li>
-                <li>
-                    <a class="" href="http://123.56.52.53:8002/toSearchAllPdf/">
-                        <i class="icon-pages-l"></i>
-                        <span style="font-size:22px;">全文搜索</span>
-                    </a>
-                </li>
-            </ul>
-            <!-- sidebar menu end-->
-        </div>
+        <!-- /.sidebar -->
     </aside>
-    <!--sidebar end-->
 
-        <!-- 测试界面 -->
-{% comment %}
-    <!--logo start   127.0.0.1 -->
-        <a href="#" class="logo" style="font-size:25px;"> 航空领域知识图谱 V1.0</a>
-        <!--logo end-->
-        <div class="top-nav notification-row">
-            <ul class="nav pull-right top-menu">
-                <li>
-                    <a href='http://127.0.0.1:8002/help/'>
-                        <i class="fa" aria-hidden="true" style="font-size:25px;">Help</i>
-                    </a>
-                </li>
-            </ul>
-            <ul class="nav pull-right top-menu">
-                <li>
-                    <a href='http://127.0.0.1:8002/exit/'>
-                        <i class="fa" aria-hidden="true" style="font-size:25px;">退出</i>
-                    </a>
-                </li>
-            </ul>
+    <!-- Content Wrapper. Contains page content -->
+    <div class="content-wrapper">
+        {% block en %}
+        {% endblock en %}
+    </div><!-- /.content-wrapper -->
 
+    {% block footer %}
+        <!-- Main footer -->
+        <div class="main-footer text-center">
+            <span>© 2020 东北大学-数字线技术项目团队 版权所有</span>
         </div>
-    </header>
-    <!--header end-->
+    {% endblock %}
 
-    <!--sidebar start-->
-    <aside>
-        <div id="sidebar" class="nav-collapse " style="width: 220px">
-            <!-- sidebar menu start-->
-            <ul class="sidebar-menu" style="width: 220px">
-                <li>
-                    <a href="http://127.0.0.1:8002/toHome/">
-                        <i class="icon_house_alt"></i>
-                        <span style="font-size:22px;text-align: center">主界面</span>
-                    </a>
-                </li>
+</div><!-- ./wrapper -->
 
+<!-- REQUIRED SCRIPTS -->
+<script src="/static/jquery/jquery.min.js"></script>
+<script src="/static/bootstrap/js/bootstrap.bundle.min.js"></script>
+<script src="/static/js/adminlte.min.js"></script>
+{% block js %}
+{% endblock %}
 
-                <li>
-                    <a href="http://127.0.0.1:8002/toAnnotation/">
-                        <i class="icon_genius"></i>
-                        <span style="font-size:22px;">文本标注</span>
-                    </a>
-                </li>
-                <li>
-                    <a href="http://127.0.0.1:8002/toClassification/">
-                        <i class="icon-charts-l"></i>
-                        <span style="font-size:22px;">信息聚类</span>
-                    </a>
-                </li>
-                <li>
-                    <a>
-                        <i class="icon_bag"></i>
-                        <span style="font-size:22px;">知识抽取</span>
-                    </a>
-                    <ul>
-                        <li>
-                            <a href="http://127.0.0.1:8002/toEntityRecognition/">
-                                <i class=" social_googledrive"></i>
-                                <span style="font-size:22px;">实体抽取</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a class="" href="http://127.0.0.1:8002/toRelation/">
-                                <i class="icon_bag_alt"></i>
-                                <span style="font-size:22px;">关系抽取</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="http://127.0.0.1:8002/toD2rq/">
-                                <i class="icon_plus-box"></i>
-                                <span style="font-size:22px;">数据库抽取</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="http://127.0.0.1:8002/toExcel/">
-                                <i class="icon-pages-l"></i>
-                                <span style="font-size:22px;">故障信息抽取</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="http://127.0.0.1:8002/toWord/">
-                                <i class="icon_book_alt"></i>
-                                <span style="font-size:22px;">技术文档抽取</span>
-                            </a>
-                        </li>
-                    </ul>
-                </li>
-                <li>
-                    <a href="http://127.0.0.1:8002/toDataManager/">
-                        <i class="icon_piechart"></i>
-                        <span style="font-size:22px;">知识存储</span>
-                    </a>
-                </li>
-                <li>
-                    <a class="" href="http://127.0.0.1:8002/toRelationSearch/">
-                        <i class="icon-bell-l"></i>
-                        <span style="font-size:22px;">知识查询</span>
-                    </a>
-                </li>
-                <li>
-                    <a class="" href="http://127.0.0.1:8002/toAnswer/">
-                        <i class="icon_chat_alt"></i>
-                        <span style="font-size:22px;">问答系统</span>
-                    </a>
-                </li>
-                <li>
-                    <a class="" href="http://127.0.0.1:8002/toSearchAllPdf/">
-                        <i class="icon-pages-l"></i>
-                        <span style="font-size:22px;">全文搜索</span>
-                    </a>
-                </li>
-            </ul>
-            <!-- sidebar menu end-->
-        </div>
-    </aside>{% endcomment %}
-
-    <!--main content start-->
-    <section id="main-content">
-        <section class="wrapper">
-            {% block en %}
-            {% endblock en %}
-        </section>
-    </section>
-</section>
 </body>
 </html>

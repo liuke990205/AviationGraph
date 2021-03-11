@@ -8,7 +8,7 @@ class Neo4j_Handle():
     matcher = None
 
     def __init__(self):
-        pass
+        print("----------neo4j数据库已连接---------")
 
     def connectDB(self):
         self.graph = Graph("bolt://123.56.52.53:7687", username="neo4j", password="root")
@@ -78,7 +78,7 @@ class Neo4j_Handle():
         #self.graph.run("MERGE (x{name:\"" + entity1 + "\"})-[jx:" + relation + "{type: \"" + relation + "\", id: \"" + id + "\"}]->(y{name:\"" + entity2 + "\"})")
         self.graph.run(
             "MATCH (x:" + type1 + "{name:'" + entity1 + "'}), (y:" + type2 + "{name:'" + entity2 + "'}) MERGE (x)-[jx:" + relation + "{type: '" + relation + "',id: '" + temp_id + "'}]->(y)")
-
+        print("MATCH (x:" + type1 + "{name:'" + entity1 + "'}), (y:" + type2 + "{name:'" + entity2 + "'}) MERGE (x)-[jx:" + relation + "{type: '" + relation + "',id: '" + temp_id + "'}]->(y)")
     def insertExcelRelation(self, entity1, type1, entity2, type2, relation):
         self.graph.run(
             "MATCH (x:" + type1 + "{name:'" + entity1 + "'}), (y:" + type2 + "{name:'" + entity2 + "'}) MERGE (x)-[jx:" + relation + "{type: '" + relation + "'}]->(y)")
@@ -122,3 +122,12 @@ class Neo4j_Handle():
         st_list = "".join(string_list)
         str = "MATCH(x) WHERE x.name='" + entity + "' SET " + st_list
         self.graph.run(str)
+    def findWeiEntity(self, rel):
+        string = "match(x:现象{name:'" + rel + "'})-[jx:`原因`]->(y) return y.name"
+        answer = self.graph.run(string).data()
+        return answer
+
+    def findWeiEntity2(self, e):
+        string = "match(x:" + e + "{name:'" + e + "'})-[jx:`现象`]->(y) return y.name"
+        answer = self.graph.run(string).data()
+        return answer
